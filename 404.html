@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>404</title>
+    <script type="text/javascript">
+        var imgArray= new Array();
+        imgArray[0]="/images/403.png";  //사진
+        imgArray[1]="/images/404.jpg"; //사진
+        imgArray[2]="/images/418.png";    //사진
+        imgArray[3]="/images/728.jpg";    //사진
+        imgArray[4]="/images/e.png";    //사진
+        imgArray[5]="/images/0002.gif";    //사진
+        imgArray[6]="/images/0007.gif";    //사진
+        
+        function showImage()
+        {
+            var imgNum=Math.round(Math.random()*6);
+            var objImg=document.getElementById("introImg");
+            objImg.src=imgArray[imgNum];
+        }
+    </script>
+</head>
+<body onload="showImage()">
+    <img id="introImg" border="0"><br>
+    Sorry this page does not exist =(
+</body>
+</html>

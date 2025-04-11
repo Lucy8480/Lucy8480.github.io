@@ -1,0 +1,156 @@
+/* Developed by Harold Kim 2018 */
+
+* { border:0; margin:0; }
+html, body { font-family: 'Ubuntu', sans-serif; }
+a { text-decoration:none; }
+a:visited { color: blue; }
+a:hover { text-decoration:underline; }
+hr { width:0; border:0; height:30px; }
+small { color: #333;  font-size:8pt; }
+ul, li { list-style: none; padding: 0; }
+.info { font-size:12pt; letter-spacing: -.5px; margin-top: 10px; margin-bottom: 20px; }
+.info > span { display:none; }
+.sub { font-size: 12pt; margin: 20px 0; }
+.sub > .head { font-size: 18pt; margin-bottom: 10px; }
+.sub > .body { padding-left: 30px; }
+.profile {border-radius: 1em; width:100px; margin-top:10px; }
+.tab { margin-left: 40px; }
+.tab > span { display:none; }
+.header { background-color: #eee; width:100%; padding: 13px 0; margin-bottom: 20px; }
+.header small { float:right; padding-top: 5px; color: #333; font-size:8pt; }
+.pad { margin: 0 10px; }
+.container { min-width: 400px; max-width:1000px; margin: 0px auto; }
+
+/* ランダムイラスト ~ラテール~ bootstrap0 */
+.Uru { position: fixed; right: 0; bottom:0; background: url(/static/Uru.png) center; width:150px; height:150px; background-image:cover; background-size: cover; background-repeat: no-repeat; }
+.Sodian { position: fixed; right: 0; bottom:0; background: url(/static/Sodian.png) center; width:150px; height:150px; background-image:cover; background-size: cover; background-repeat: no-repeat; }
+.iris { position: fixed; right: 0; bottom:0; background: url(/static/iris.png) center; width:150px; height:150px; background-image:cover; background-size: cover; background-repeat: no-repeat; }
+.media { position: fixed; right: 0; bottom:0; background: url(/static/media.png) center; width:150px; height:150px; background-image:cover; background-size: cover; background-repeat: no-repeat; }
+.Jewelster { position: fixed; right: 0; bottom:0; background: url(/static/Jewelster.png) center; width:150px; height:150px; background-image:cover; background-size: cover; background-repeat: no-repeat; }
+.Shinic { position: fixed; right: 0; bottom:0; background: url(/static/Shinic.png) center; width:150px; height:150px; background-image:cover; background-size: cover; background-repeat: no-repeat; }
+.bellred { position: fixed; right: 0; bottom:0; background: url(/static/bellred.png) center; width:150px; height:150px; background-image:cover; background-size: cover; background-repeat: no-repeat; }
+.release { position: fixed; right: 0; bottom:0; background: url(/static/release.png) center; width:150px; height:150px; background-image:cover; background-size: cover; background-repeat: no-repeat; }
+.Asmodea { position: fixed; right: 0; bottom:0; background: url(/static/Asmodea.png) center; width:150px; height:150px; background-image:cover; background-size: cover; background-repeat: no-repeat; }
+
+
+/* ランダムイラスト ~ラテール~ bootstrap1 */
+@Uru(max-width:800px){ body{ margin-left:0;margin-right:0 } .Uru{ width:80px; height:80px;} } /*Uru*/
+
+@Sodian(max-width:800px){ body{ margin-left:0;margin-right:0 } .Sodian{ width:80px; height:80px;} } /*Sodian*/
+
+@iris(max-width:800px){ body{ margin-left:0;margin-right:0 } .iris{ width:80px; height:80px;} } /*iris*/
+
+@media(max-width:800px){ body{ margin-left:0;margin-right:0 } .media{ width:80px; height:80px;} } /*media*/
+
+@Jewelster(max-width:800px){ body{ margin-left:0;margin-right:0 } .media{ width:80px; height:80px;} } /*Jewelster*/
+
+@Shinic(max-width:800px){ body{ margin-left:0;margin-right:0 } .Shinic{ width:80px; height:80px;} } /*Shinic*/
+
+@bellred(max-width:800px){ body{ margin-left:0;margin-right:0 } .bellred{ width:80px; height:80px;} } /*bellred*/
+
+@release(max-width:800px){ body{ margin-left:0;margin-right:0 } .release{ width:80px; height:80px;} } /*release*/
+
+@Asmodea(max-width:800px){ body{ margin-left:0;margin-right:0 } .Asmodea{ width:80px; height:80px;} } /*Asmodea*/
+
+/* End for sub bootstrap */
+
+.tag { font-size: 10pt; letter-spacing:-.5px; background-color: #fcd; border-radius: 0.4em; padding:3px; font-weight:normal; }
+.category { font-size: 10pt; letter-spacing:-.5px; background-color: #dcf; border-radius: 0.4em; padding:3px; font-weight:normal; }
+.header h1 { font-size: 18pt; margin-bottom: 2pt;}
+
+/* ランダムイラスト ~ラテール~ bootstrap2 */
+@Uru(max-width:800px){ .Uru { width:80px; height:80px; } .head { position: initial; } .split-begin { margin-top: 10px; height: 0; } .tag { display:none; } .list {font-size:80%; } .category { display:none; } }
+@Uru(max-width:500px){ body { margin-left:0;margin-right:0 } .tag { font-size: 10pt; letter-spacing:-.5px; background-color: #fcd; border-radius: 0.4em; padding:3px; font-weight:normal; margin:-1px;} h1 {font-size: 15pt; } .tag { dislpay: none; } .tag { display:none; } .list {font-size:80%; } .category { display:none; } .header .tags { display:none; } }
+
+@Sodian(max-width:800px){ .Sodian { width:80px; height:80px; } .head { position: initial; } .split-begin { margin-top: 10px; height: 0; } .tag { display:none; } .list {font-size:80%; } .category { display:none; } }
+@Sodian(max-width:500px){ body { margin-left:0;margin-right:0 } .tag { font-size: 10pt; letter-spacing:-.5px; background-color: #fcd; border-radius: 0.4em; padding:3px; font-weight:normal; margin:-1px;} h1 {font-size: 15pt; } .tag { dislpay: none; } .tag { display:none; } .list {font-size:80%; } .category { display:none; } .header .tags { display:none; } }
+
+@Iris(max-width:800px){ .Iris { width:80px; height:80px; } .head { position: initial; } .split-begin { margin-top: 10px; height: 0; } .tag { display:none; } .list {font-size:80%; } .category { display:none; } }
+@Iris(max-width:500px){ body { margin-left:0;margin-right:0 } .tag { font-size: 10pt; letter-spacing:-.5px; background-color: #fcd; border-radius: 0.4em; padding:3px; font-weight:normal; margin:-1px;} h1 {font-size: 15pt; } .tag { dislpay: none; } .tag { display:none; } .list {font-size:80%; } .category { display:none; } .header .tags { display:none; } }
+
+@media(max-width:800px){ .Sodian { width:80px; height:80px; } .head { position: initial; } .split-begin { margin-top: 10px; height: 0; } .tag { display:none; } .list {font-size:80%; } .category { display:none; } }
+@media(max-width:500px){ body { margin-left:0;margin-right:0 } .tag { font-size: 10pt; letter-spacing:-.5px; background-color: #fcd; border-radius: 0.4em; padding:3px; font-weight:normal; margin:-1px;} h1 {font-size: 15pt; } .tag { dislpay: none; } .tag { display:none; } .list {font-size:80%; } .category { display:none; } .header .tags { display:none; } }
+
+@Jewelster(max-width:800px){ .Jewelster { width:80px; height:80px; } .head { position: initial; } .split-begin { margin-top: 10px; height: 0; } .tag { display:none; } .list {font-size:80%; } .category { display:none; } }
+@Jewelster(max-width:500px){ body { margin-left:0;margin-right:0 } .tag { font-size: 10pt; letter-spacing:-.5px; background-color: #fcd; border-radius: 0.4em; padding:3px; font-weight:normal; margin:-1px;} h1 {font-size: 15pt; } .tag { dislpay: none; } .tag { display:none; } .list {font-size:80%; } .category { display:none; } .header .tags { display:none; } }
+
+@Shinic(max-width:800px){ .Shinic { width:80px; height:80px; } .head { position: initial; } .split-begin { margin-top: 10px; height: 0; } .tag { display:none; } .list {font-size:80%; } .category { display:none; } }
+@Shinic(max-width:500px){ body { margin-left:0;margin-right:0 } .tag { font-size: 10pt; letter-spacing:-.5px; background-color: #fcd; border-radius: 0.4em; padding:3px; font-weight:normal; margin:-1px;} h1 {font-size: 15pt; } .tag { dislpay: none; } .tag { display:none; } .list {font-size:80%; } .category { display:none; } .header .tags { display:none; } }
+
+@bellred(max-width:800px){ .bellred { width:80px; height:80px; } .head { position: initial; } .split-begin { margin-top: 10px; height: 0; } .tag { display:none; } .list {font-size:80%; } .category { display:none; } }
+@bellred(max-width:500px){ body { margin-left:0;margin-right:0 } .tag { font-size: 10pt; letter-spacing:-.5px; background-color: #fcd; border-radius: 0.4em; padding:3px; font-weight:normal; margin:-1px;} h1 {font-size: 15pt; } .tag { dislpay: none; } .tag { display:none; } .list {font-size:80%; } .category { display:none; } .header .tags { display:none; } }
+
+@release(max-width:800px){ .release { width:80px; height:80px; } .head { position: initial; } .split-begin { margin-top: 10px; height: 0; } .tag { display:none; } .list {font-size:80%; } .category { display:none; } }
+@release(max-width:500px){ body { margin-left:0;margin-right:0 } .tag { font-size: 10pt; letter-spacing:-.5px; background-color: #fcd; border-radius: 0.4em; padding:3px; font-weight:normal; margin:-1px;} h1 {font-size: 15pt; } .tag { dislpay: none; } .tag { display:none; } .list {font-size:80%; } .category { display:none; } .header .tags { display:none; } }
+
+@Asmodea(max-width:800px){ .Asmodea { width:80px; height:80px; } .head { position: initial; } .split-begin { margin-top: 10px; height: 0; } .tag { display:none; } .list {font-size:80%; } .category { display:none; } }
+@Asmodea(max-width:500px){ body { margin-left:0;margin-right:0 } .tag { font-size: 10pt; letter-spacing:-.5px; background-color: #fcd; border-radius: 0.4em; padding:3px; font-weight:normal; margin:-1px;} h1 {font-size: 15pt; } .tag { dislpay: none; } .tag { display:none; } .list {font-size:80%; } .category { display:none; } .header .tags { display:none; } }
+
+
+/* ランダムイラスト ~魔法陣グルグル~ bootstrap0 */
+.Nike { position: fixed; right: 0; bottom:0; background: url(/static/Uru.png) center; width:150px; height:150px; background-image:cover; background-size: cover; background-repeat: no-repeat; }
+
+.Kukuri { position: fixed; right: 0; bottom:0; background: url(/static/Uru.png) center; width:150px; height:150px; background-image:cover; background-size: cover; background-repeat: no-repeat; }
+
+.Juju { position: fixed; right: 0; bottom:0; background: url(/static/Uru.png) center; width:150px; height:150px; background-image:cover; background-size: cover; background-repeat: no-repeat; }
+
+.Toma { position: fixed; right: 0; bottom:0; background: url(/static/Uru.png) center; width:150px; height:150px; background-image:cover; background-size: cover; background-repeat: no-repeat; }
+
+.Runrun { position: fixed; right: 0; bottom:0; background: url(/static/Uru.png) center; width:150px; height:150px; background-image:cover; background-size: cover; background-repeat: no-repeat; }
+
+/* ランダムイラスト ~魔法陣グルグル~ bootstrap1 */
+@Nike(max-width:800px){ body{ margin-left:0;margin-right:0 } .Nike{ width:80px; height:80px;} } /*Uru*/
+
+@Kukuri(max-width:800px){ body{ margin-left:0;margin-right:0 } .Kukuri{ width:80px; height:80px;} } /*Uru*/
+
+@Juju(max-width:800px){ body{ margin-left:0;margin-right:0 } .Juju{ width:80px; height:80px;} } /*Uru*/
+
+@Toma(max-width:800px){ body{ margin-left:0;margin-right:0 } .Toma{ width:80px; height:80px;} } /*Uru*/
+
+@Runrun(max-width:800px){ body{ margin-left:0;margin-right:0 } .Runrun{ width:80px; height:80px;} } /*Uru*/
+
+/* ランダムイラスト ~魔法陣グルグル~ bootstrap2 */
+@Nike(max-width:800px){ .nike { width:80px; height:80px; } .head { position: initial; } .split-begin { margin-top: 10px; height: 0; } .tag { display:none; } .list {font-size:80%; } .category { display:none; } }
+@Nike(max-width:500px){ body { margin-left:0;margin-right:0 } .tag { font-size: 10pt; letter-spacing:-.5px; background-color: #fcd; border-radius: 0.4em; padding:3px; font-weight:normal; margin:-1px;} h1 {font-size: 15pt; } .tag { dislpay: none; } .tag { display:none; } .list {font-size:80%; } .category { display:none; } .header .tags { display:none; } }
+
+@Kukuri(max-width:800px){ .Kukuri { width:80px; height:80px; } .head { position: initial; } .split-begin { margin-top: 10px; height: 0; } .tag { display:none; } .list {font-size:80%; } .category { display:none; } }
+@Kukuri(max-width:500px){ body { margin-left:0;margin-right:0 } .tag { font-size: 10pt; letter-spacing:-.5px; background-color: #fcd; border-radius: 0.4em; padding:3px; font-weight:normal; margin:-1px;} h1 {font-size: 15pt; } .tag { dislpay: none; } .tag { display:none; } .list {font-size:80%; } .category { display:none; } .header .tags { display:none; } }
+
+@Juju(max-width:800px){ .Juju { width:80px; height:80px; } .head { position: initial; } .split-begin { margin-top: 10px; height: 0; } .tag { display:none; } .list {font-size:80%; } .category { display:none; } }
+@Juju(max-width:500px){ body { margin-left:0;margin-right:0 } .tag { font-size: 10pt; letter-spacing:-.5px; background-color: #fcd; border-radius: 0.4em; padding:3px; font-weight:normal; margin:-1px;} h1 {font-size: 15pt; } .tag { dislpay: none; } .tag { display:none; } .list {font-size:80%; } .category { display:none; } .header .tags { display:none; } }
+
+@Toma(max-width:800px){ .Toma { width:80px; height:80px; } .head { position: initial; } .split-begin { margin-top: 10px; height: 0; } .tag { display:none; } .list {font-size:80%; } .category { display:none; } }
+@Toma(max-width:500px){ body { margin-left:0;margin-right:0 } .tag { font-size: 10pt; letter-spacing:-.5px; background-color: #fcd; border-radius: 0.4em; padding:3px; font-weight:normal; margin:-1px;} h1 {font-size: 15pt; } .tag { dislpay: none; } .tag { display:none; } .list {font-size:80%; } .category { display:none; } .header .tags { display:none; } }
+
+@Runrun(max-width:800px){ .Runrun { width:80px; height:80px; } .head { position: initial; } .split-begin { margin-top: 10px; height: 0; } .tag { display:none; } .list {font-size:80%; } .category { display:none; } }
+@Runrun(max-width:500px){ body { margin-left:0;margin-right:0 } .tag { font-size: 10pt; letter-spacing:-.5px; background-color: #fcd; border-radius: 0.4em; padding:3px; font-weight:normal; margin:-1px;} h1 {font-size: 15pt; } .tag { dislpay: none; } .tag { display:none; } .list {font-size:80%; } .category { display:none; } .header .tags { display:none; } }
+
+
+/*
+body  { max-width: 1000px; min-width: 400px; margin: 0 auto; }
+
+code { background:#dceeff; font-family: 'Ubuntu Mono', monospace; padding: 2px 3px; border-radius: 0.3em; font-size: 11pt; }
+pre{ background:#dceeff; border-radius: 0.3em; padding: 10px; }
+pre > code { margin:0; padding:0; }
+
+
+.list { font-family: 'Ubuntu Mono', monospace; line-height: 1.3em; font-size: 18px; letter-spacing: -.5px; }
+.list > h2 { margin-top: 10px; margin-bottom:10px; }
+
+.header { background-color: #eee; width:100%; padding: 13px 0; margin-bottom: 20px; }
+
+.info { font-size:12pt; letter-spacing: -.5px; margin-top: 10px; margin-bottom: 20px; }
+.info > span { display:none; }
+.header > .info p { float:right; }
+.header > .info h1 { padding:0; margin:0; font-size: 20pt; }
+.header > .info .tags { display: inline-block; padding-top: 3px; }
+.header > .menu { float:right; padding-top: 5px; color: #333; font-size:8pt; }
+
+.article .content { padding-left: 20px; }
+.article .head .category { font-size: 10pt; letter-spacing:-.5px; background-color: #cdf; border-radius: 0.4em; padding:3px; font-weight:normal;}
+.article small { font-size: 10pt; letter-spacing: -1px; }
+
+.pad { margin: 0 10px; }
+
+*/
+
