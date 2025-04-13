@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="/css/header.css">
+<div class="header">
+  <div class="logo">
+    <span class="pull-left">
+      <a id="site-name" href="/">
+        <%= theme.menuname %>
+      </a>
+    </span>
+  </div>
+  <ul class="nav-list">
+    <% Object.keys(theme.topmenu).forEach(key=> { %>
+      <li>
+        <a href="<%=theme.topmenu[key]%>">
+          <%=key%>
+        </a>
+      </li>
+      <% }); %>
+  </ul>
+</div>
