@@ -5,8 +5,21 @@
     <url>/2019/07/28/JSP-Project-7-28-2019/</url>
     <content><![CDATA[<p><img border="0" width="80%" height="80%" src="https://KuraiLuna.github.io/PostImages/JSP 프로젝트 완성 2019년 7월 28일
 /02 사진.0 미리보기 방지.jpg"> <br><br>사진.0 미리보기 방지* <br><br><br><br>드리어 완성 군요..;;<br><br>이제야 게시글 작업합니다,<br><br>작성하기에 앞서 아래 시연 영상부터<br><br>가겠습니다.<br></p>
-<p>&lt;시연영상&gt;<br><br><video src="https://drive.google.com/file/d/1oYfR1idPNq_dInaAUBpETv1gKT9vKCAu/view?usp=sharing"></video></p>
-<p style="text-align: left; color: white;">동영상1.시연영상</p>
+<br>
+<div class="widget-wrap">
+  <div class="widget-title"><시연영상></div>
+  <div class="widget-body">
+    <iframe
+      width="200"
+      height="180"
+      src="https://www.youtube.com/embed/9Y_ed7URWjE?si=njd40Zs0gsx_CbfP"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+동영상1.시연영상</p>
 <br>
 
 <p><img border="0" width="80%" height="80%" src="https://raw.githubusercontent.com/KuraiLuna/KuraiLuna.github.io/refs/heads/master/PostImages/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.1%20%EC%82%AC%EC%9D%B4%ED%8A%B8%20%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4%20%ED%99%88_%EC%82%AC%EC%9D%B4%ED%8A%B8_%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4.png"> <br><br>사진.1 사이트 메인화면<br><br><br><br>사이트 메인화면입니다. 원래 계획상 좀 더 많은 기능을<br><br>넣으려고 했다만은 개인적인 사정으로 커뮤니티 기능만 하기로 했습니다.<br> 아래 사진6-7 말이죠^ㅅ^; <br></p>
