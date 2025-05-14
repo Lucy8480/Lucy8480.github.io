@@ -1,6 +1,348 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>CTF-Hack-The-Box-pilgrimage</title>
+    <url>/2025/05/15/CTF-Hack-The-Box-pilgrimage-md/</url>
+    <content><![CDATA[<h1 id="CTF-Hack-The-Box-pilgrimage"><a href="#CTF-Hack-The-Box-pilgrimage" class="headerlink" title="[CTF]Hack The Box : pilgrimage"></a>[CTF]Hack The Box : pilgrimage</h1><p>Original posting date  : 2023년 07월 11일</p>
+<p style="text-align:center">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FSzeS4%2FbtsNYVWBC2K%2F0wHcje8JglMATkRR13sakk%2Fimg.webp"><br></p>
+
+<h2 id="CTF-Hack-The-Box-Pilgrimage-모의침투-테스트"><a href="#CTF-Hack-The-Box-Pilgrimage-모의침투-테스트" class="headerlink" title="[CTF]Hack The Box : Pilgrimage&#x2F; 모의침투 테스트(?)"></a>[CTF]Hack The Box : Pilgrimage&#x2F; 모의침투 테스트(?)</h2><p>미루고 미뤘던 Hack The Box모의침투(?)</p>
+<p>CTF문제풀이 시작했다. 이제부터는 본인이</p>
+<p>유니티 팬메이트 게임 개발&amp;일본어 공부 하다가</p>
+<p>남은 일과 잔여시간에 하루에 혹은 일주일에 지문 1문제씩 풀어볼 생각이다.</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbqJmuu%2FbtsNX1QSjpM%2FSdDQ2m7J3Z27R8FWVxD6Ok%2Fimg.webp"><br></p>
+
+<p>스크린샷.1 첫번째 지문</p>
+<p>처음 계정을 생성하고 지문들이 너무 많았다.</p>
+<p>(약80% 이상이 유료지문이다 ㅡㅠ)</p>
+<p>많은 지문들 중에 훈련소 첫 훈련 지문 첫 번째 지문으로</p>
+<p><strong>“</strong></p>
+<p><strong>Pilgrimage</strong></p>
+<p><strong>“</strong></p>
+<p>지문을 풀어 보기로 했다.</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FFvrxe%2FbtsNX2hTu6F%2FKKwBrreb03T4Bb0aYqZo41%2Fimg.png"><br></p>
+
+<p>스크린샷.2 openvpn· · ·</p>
+<p>이CTF 시스템은 상당히 독특한데</p>
+<p>전용 openvpn에 파일을 다운받은 후 접속하고 지문을 풀 수있다.</p>
+<p>깜빡하고 스크린샷을 못 찍었는데 먼저 다운로드를 받고 커맨트창에</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">openvpn lab_&#123;본인 유저 닉네임&#125;.ovpn</span><br></pre></td></tr></table></figure>
+
+<p>작성하고 엔터를 친다.</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FckjKdy%2FbtsNWmIreE4%2F4uk0NtEkSOmlLChqYcC0zK%2Fimg.png"><br></p>
+
+<p>스크린샷.3 nmap 넷 서버(?) 스캔</p>
+<p>그리고 스크린샷.1에 해당지문 머신IP을 Copy후 아래 커멘드를 nmap로</p>
+<p>스캔한다.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nmap -sV -sC &#123;Pilgrimage지문 머신IP&#125;</span><br></pre></td></tr></table></figure>
+
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdHZBOC%2FbtsNYqJAUXo%2FVuSFH5PlU25tI4jSyc4h01%2Fimg.webp"><br></p>
+
+<p>스크린샷.4 nmap 넷서버 스캔</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcE5AZA%2FbtsNWfbHqEa%2Fz9qk3mnYt8ieNImowq8mtk%2Fimg.webp"><br></p>
+
+<p>스크린샷.5 호스트 파일</p>
+<p>nmap스캔이 끝나면 텍스트 편집 커멘드</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FIFNJF%2FbtsNWZeXe63%2FNwsRVAyvN2rBCmAPGHQdik%2Fimg.webp"><br></p>
+스크린샷.6 호스트 등록 후 세이브
+
+<p>스크린샷6 처럼 호스트 파일 부분에 머신IP,</p>
+<p>nmap스캔으로 나온 pilgrimage.htb 작성 후 세이브해 둔다.</p>
+<p>이렇게 하는 이유는 바로 접속하면 접속이 안되기 때문이다.</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FZWPZ3%2FbtsNWUdP9qH%2Fc4Wg6pSZBrP626JOKR95y0%2Fimg.webp"><br></p>
+
+<p>스크린샷.7 pilgrimage.htb</p>
+<p>pilgrimage.htb에 접속한 스크린샷이다.</p>
+<p>해당 지문 타캣 사이트는 이미지를 업로드하는 사이트다.</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbbavar%2FbtsNWQCzO85%2F7q1vZppHu6Tmgi2P4Pxgrk%2Fimg.webp"><br></p>
+
+<p>스크린샷.8 pilgrimage.htb</p>
+<p>Login창에 들어가본다.</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbbavar%2FbtsNWQCzO85%2F7q1vZppHu6Tmgi2P4Pxgrk%2Fimg.webp"><br></p>
+
+<p>스크린샷.9 로그인 시도(?)</p>
+<p>접속 시도해본다.</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FADQhA%2FbtsNWkqBDRW%2Ff1ImSgiz4SGkjZscbumQak%2Fimg.webp"><br></p>
+
+<p>스크린샷.10 로그인 시도2(?)</p>
+<p>접속시도를 해보니 당연히 접속불가.</p>
+<p>애초에 해당 SQL유저계정 목록에 없기 때문에</p>
+<p>접속이 이루어지지 않는다.</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbwIuUC%2FbtsNXpkqAY3%2FFYbtuKhJO6yj2103VYYKLk%2Fimg.webp"><br></p>
+
+<p>스크린샷.12 이미지 업로드 테스트 해보기</p>
+<p>다시 이미지 파일 가지고</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FWdKBG%2FbtsNWkc20yz%2FC899llj2eKAJbbQ7LbooHK%2Fimg.webp"><br></p>
+
+<p>스크린샷.13 이미지 업로드 테스트 해보기2</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FVvS4M%2FbtsNXPivGja%2FuMYOciSBT5BDDS5cztrK30%2Fimg.webp"><br></p>
+
+<p>스크린샷.14 애옹ニャー</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdJDiRx%2FbtsNXEaxis9%2F70QNtkb0l4iRB46CNmKr3k%2Fimg.webp"><br></p>
+
+<p>스크린샷.15 이미지 업로드 테스트 해보기3</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fc4tbPz%2FbtsNXCcKNHl%2FpTvYY4wGI8JjdhFx3ix6DK%2Fimg.webp"><br></p>
+
+<p>스크린샷.16 유저등록후 업로드 된 이미지 확인1</p>
+<p>깜빡하고 유저등록 스크린샷을 촬영을 못했는데</p>
+<p>텍스트 게시글로 설명하자면</p>
+<ol>
+<li>Regoster로 진입해서</li>
+<li>UI지시대로 원하는 닉네임과 비밀번호 작성</li>
+</ol>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FkJTyg%2FbtsNWJi3Ol2%2Fq8btmp94NrRdkbKKXKhBL0%2Fimg.webp"><br></p>
+
+<p>스크린샷.17 유저등록후 업로드 된 이미지 확인2</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmvHQ4%2FbtsNYCQw1Ke%2FkVUHDkRuC3dYAnsMLP2Cj0%2Fimg.webp"><br></p>
+
+<p>스크린샷.18 유저등록후 업로드 된 이미지 확인3</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbj5gdN%2FbtsNYsm6eOP%2FdzYagWpORmyI7Rp57pMfiK%2Fimg.webp"><br></p>
+
+<p>스크린샷.19 유저등록후 업로드 된 이미지 확인4</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdkBWc2%2FbtsNWS8bwJo%2FbtmxFoTIj2OgiJ9AglnHd0%2Fimg.webp"><br></p>
+
+<p>스크린샷.20 유저등록후 업로드 된 이미지 확인5</p>
+<p>새로 이미지가 업로드가 되어 새로운 링크가 생성되었다.</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FNxCfn%2FbtsNW7jIPfd%2FRqKyPM0UxoQw0RKBg38AVk%2Fimg.webp"><br></p>
+
+<p>스크린샷.21 유저등록후 업로드 된 이미지 확인6</p>
+<p>Dashboard에 들어가보면  db에도 올라왔음을 확인할 수 있다.</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcEYLF4%2FbtsNYf84l9e%2Fy1NkCecyN6b3KpnXAZ0Ed1%2Fimg.webp"><br></p>
+
+<p>스크린샷.22 다시 커멘드 창</p>
+<p>다시 커멘드 창으로 돌아와서</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/Sybil-Scan/imagegick-lfi-poc.git</span><br></pre></td></tr></table></figure>
+
+<p>위 커멘드 데로 작성하고 이미지 코드 해독 툴 프로그램을 받아둔다.</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FyDn7o%2FbtsNWIj7ygf%2FW6nz7JkqAOdgbrTRsolUsk%2Fimg.webp"><br></p>
+
+<p>스크린샷.23 이미지 코드 해독 툴 다운로드 완료</p>
+<p>이미지 코드 해독 툴을 다 다운로드가 완료되었다면,</p>
+<p>다운받은 디렉토리로 이동한다.</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fc5Ifrr%2FbtsNYZLsFMP%2FzgtWIjKhgKK6kYJKWkO4V1%2Fimg.webp"><br></p>
+
+<p>스크린샷.24 이미지 코드 해독 툴 다운로드 완료</p>
+<p style="text-align:cleft">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FFvM0W%2FbtsNYGL9D9s%2FbjMZIBGWCSDpvMU5xJiwz1%2Fimg.webp"><br></p>
+
+<p>스크린샷.25 디렉토리 내부 확인</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbppJ91%2FbtsNXn7WbJl%2FuOXnHkrKPjXNgKvaVU2qF0%2Fimg.webp"><br></p>
+
+<p>스크린샷.26 해당 툴 가이드라인 확인 해보기</p>
+<p>디렉토리 에 파일 확인후 해당 툴 가이드라인 확인해본다</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python3 generate.py</span><br></pre></td></tr></table></figure>
+
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdFniBQ%2FbtsNXTL0XVk%2F1rg12jWICTk9W7z3aDQKi1%2Fimg.webp"><br></p>
+
+<p>스크린샷.27 해당 툴 git사이트</p>
+<p>해당 툴 git사이트에 들어가서 커맨드 명령어 입력해서</p>
+<p>익스플로잇 파일을 생성한다.</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmlXfh%2FbtsNXzNM94Z%2FkSikAXvQZI4Wblj90acrY1%2Fimg.webp"><br></p>
+
+<p>스크린샷.28 익스플로잇 파일 생성</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python3 generate.py -f &quot;/etc/passwd&quot; -o exploit.png</span><br></pre></td></tr></table></figure>
+
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FHAb9S%2FbtsNWn8qpau%2F4TELNxRSntEUwX8An4H841%2Fimg.webp"><br></p>
+
+<p>스크린샷.29 익스플로잇 파일 생성 확인</p>
+<p>익스플로잇 파일이 제대로 생성이 됐는지 확인해본다.</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbyqlGY%2FbtsNWT65Wj0%2FNQzESN6uKSDII4MP8dkMG0%2Fimg.webp"><br></p>
+
+<p>스크린샷.30 익스플로잇 파일을 업로드한다.</p>
+<p>이제 생성한 익스플로잇 파일을 업로드 해본다.</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FzTfTa%2FbtsNWIR0LNs%2F8iwOkAWgbYtkdsA6hJELz0%2Fimg.webp"><br></p>
+
+<p>스크린샷.31 새로 생성된 링크</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcbTW56%2FbtsNXBSmvxz%2Ff8P9ZXWu8Tx15XHbLKIYN1%2Fimg.webp"><br></p>
+
+<p>스크린샷.32 링크 이미지</p>
+<p>업로드 된 이미지 링크 오른쪽 마우스 눌려서 확인 해본다.</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FGSy5M%2FbtsNYJB6zSa%2FB5YbhFEatcojMzv631RAvk%2Fimg.webp"><br></p>
+
+<p>스크린샷.33 제 다운로드</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wget http://pitgrimage.htb/shrunk/&#123;업로드한 이미지&#125;.png</span><br></pre></td></tr></table></figure>
+
+<p>업로드한 이미지를 다시 제 다운로드한다.</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb9etMB%2FbtsNYYZ4lOD%2FvyqCXUhRpHloDk75hzmv0K%2Fimg.webp"><br></p>
+
+<p>스크린샷.34 내부 코드 확인</p>
+<p>제 다운로드 한 이미지 파일을 아래 커맨드 명령어로  </p>
+<p>파일 내부 코드를 확인 해본다.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">indentify -verbose result.png</span><br></pre></td></tr></table></figure>
+
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbmZwAr%2FbtsNW3IpH7U%2F6TaffX3MZJ0XFjyqIclNzk%2Fimg.webp"><br></p>
+
+<p>스크린샷.35 내부 코드 확인2</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F10a4h%2FbtsNW0kzlV5%2FsUS1B13zgrI6cdq3K9UQkk%2Fimg.webp"><br></p>
+
+<p>스크린샷.36 헥스코드 해독기 CyberChef 사이트 접속</p>
+<p>위 스크린샷 33 의 이미지 파일 코드를 가지고 해독을 해야  </p>
+<p>원하는 결과를 도출되기에 먼저 Cyber Chef 사이트에 접속한다.</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbNrlP4%2FbtsNW0ESiGw%2FbJkxno3Dj7XrUrWbpNfzjK%2Fimg.webp"><br></p>
+
+<p>스크린샷.37 헥스코드 해독</p>
+<p>자 이제 From Hex 선택하고 해당 이미지 로 추출한 헥스코드  </p>
+<p>가지고 코드를 해독을 시도한다.</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcCc4yb%2FbtsNYW82W0d%2FOwvbARBpromGs891kZhfwK%2Fimg.webp"><br></p>
+
+<p>스크린샷.38 헥스코드 해독2</p>
+<p>헥스코드 를 해독해보니 다음과 같이 도출되었다.  </p>
+<p>이제 이걸 토대로 작업을 진행한다.</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FlwoZ0%2FbtsNXQBIMBf%2FLnfRWlE3Fo8NnpJHsKE9cK%2Fimg.webp"><br></p>
+
+<p>스크린샷.39 제시도</p>
+<p>이제 어느정도 힌트 가 보인다.  </p>
+<p>위에 방식 대로 이번에는 일부 커맨드 를 수정해서 다시 생성해본다.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python3 generate.py -f &quot;/ver/www/pilgrimage.htb&quot; -o exploit.png</span><br></pre></td></tr></table></figure>
+
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FsSYHQ%2FbtsNWIxEMeo%2FlqgwSt5ehK2Hg3fBz8N1uK%2Fimg.webp"><br></p>
+
+<p>스크린샷.40 제시도2</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdXbiAr%2FbtsNW50vq8D%2FckvUhaIFVXcVOwyIILASxk%2Fimg.webp"><br></p>
+
+<p>스크린샷.41 제시도3</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fba06Z0%2FbtsNXUYtoJ2%2F9II6tskeqL33g7Kpizwme1%2Fimg.webp"><br></p>
+
+<p>스크린샷.42 제시도4</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python3 generate.py -f &quot;/ver/db/pilgrimage&quot; -o exploit.png</span><br></pre></td></tr></table></figure>
+
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fc7c7vi%2FbtsNXXt6xUs%2FDkfABL7TqmbkHjZINBKpsK%2Fimg.webp"><br></p>
+
+<p>스크린샷.43 제시도5</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbrENBe%2FbtsNYi5Pnoq%2FWmsV9z4So0b7iiiYTC4N11%2Fimg.webp"><br></p>
+
+<p>스크린샷.44 제시도6</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbaETJr%2FbtsNYYlsPkQ%2FSaWVVZguXSStNDkAh2smJk%2Fimg.webp"><br></p>
+
+<p>스크린샷.45 제시도7</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbyFpo5%2FbtsNWJXHOWU%2FzdHW5eBP0w5ZxiSTTsux11%2Fimg.webp"><br></p>
+
+<p>스크린샷.46 제시도8</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fzc2JX%2FbtsNYjcy2rO%2FqZFVPkxQQyZpmi2Dv3Qwz0%2Fimg.webp"><br></p>
+스크린샷.47 제시도9
+
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FqKLRk%2FbtsNWpyl8MK%2Fr9tya96RVEh7lethA1DdIk%2Fimg.webp"><br></p>
+
+<p>스크린샷.48 제시도10</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fs2jED%2FbtsNYJhMh8Z%2FqL3uBpK9Iz59xcbQWUmwOK%2Fimg.webp"><br></p>
+
+<p>스크린샷.49 제시도11</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FGTk4e%2FbtsNWofdeMs%2F1B3JKIxQ6Yd7AitpXLHwy0%2Fimg.webp"><br></p>
+
+<p>스크린샷.50 제시도12</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FOqQye%2FbtsNWo0Bn4I%2FJrSg3hHLLRo0HP5KfbHNGK%2Fimg.webp"><br></p>
+
+<p>스크린샷.51 헥스코드 재해독</p>
+<p>위 스크린샷 37-38 재시도 하고  </p>
+<p>새로 취득한 헥스코드를  </p>
+<p>재 해독 한다.</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb0p8N8%2FbtsNYkWSNv8%2F5ov3VrCWOQcSNBVtaP1wgk%2Fimg.webp"><br></p>
+
+<p>스크린샷.52 헥스코드 일부 복사</p>
+<p>재 해독을 하면 이제 머신 사이트 SSH 계정이 노출되는데  </p>
+<p>이제 이걸 가지고 SSH접속 시도를 해볼 것이기에 복사해 둔다.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">emity : abigchonkyboi123</span><br></pre></td></tr></table></figure>
+
+<p>그리고 SSH접속하기전 해당 지문  </p>
+<p>머신으로 돌아가서 해당 IP를 조합해서 아래  </p>
+<p>커맨드 작성해서 SSH접속 시도한다.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">emity@&#123;해당 지문머신IP&#125;</span><br></pre></td></tr></table></figure>
+
+<p>PW도 작성하라고 나오는데 추출한 헥스코드 가지고 접근 시도한다.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">abigchonkyboi123</span><br></pre></td></tr></table></figure>
+
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F4A132%2FbtsNXsg3pMM%2FevN3jYllPkcryu0bFyq9Y0%2Fimg.webp"><br></p>
+
+<p>스크린샷.53 지문 머신 SSH 계정</p>
+<p>SSH 계정접속에 성공했다.</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdlL96D%2FbtsNWK94AmH%2FIbNuoArXW5ytZvoogklaZ0%2Fimg.webp"><br></p>
+
+<p>스크린샷.54 지문 머신 SSH 디렉토리</p>
+<p>자 이제 해당지문 서버(?)침투에 성공했으니 Flag  </p>
+<p>가 들어있는지 확인한다. user.txt 가 보이는데  </p>
+<p>수상해 보이니(?) 확인해본다.</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbdZCBh%2FbtsNWFOylGv%2FakZJsM0v9g5mXjcSJrId2K%2Fimg.webp"><br></p>
+
+<p>스크린샷.55 user.txt 확인</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat user.txt</span><br></pre></td></tr></table></figure>
+
+<p>확인 해보니 역시 Flag가 도출되었다.!</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FblyoPn%2FbtsNXPJBAdp%2FVmt8TKLlpxKJlHUZk0bFU0%2Fimg.webp"><br></p>
+
+<p>스크린샷.56 Flag 입력</p>
+<p>이제 도출한 Flag를 작성하고  </p>
+<p>Susmit Flag 버튼을 누르면</p>
+<p style="text-align:left">
+<img border="0" width="70%" height="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FnI0hC%2FbtsNWn1DrwW%2FfWJ7sc3RTBfpRSo2vjW8nK%2Fimg.webp"><br></p>
+
+<p>스크린샷.57 clear!  </p>
+<p>Success.</p>
+]]></content>
+      <categories>
+        <category>White Hacking</category>
+        <category>CTF</category>
+        <category>Hack-The-Box</category>
+      </categories>
+      <tags>
+        <tag>White Hacking</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Front End Project</title>
     <url>/2018/09/09/Front-End-Project/</url>
     <content><![CDATA[<p style="text-align:center">
