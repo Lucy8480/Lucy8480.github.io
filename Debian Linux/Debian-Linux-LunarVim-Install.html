@@ -22,19 +22,22 @@
     var CONFIG = {"hostname":"kurailuna.github.io","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","width":240,"display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="SCHD 배당재투자계산기              body { font-family: &#39;Segoe UI&#39;, sans-serif; background: linear-gradient(150deg, #e3fef2, #d1f7e6); color: #065a4e; padding: 20px; }     h1 { text-align: center; m">
+  <meta name="description" content="function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: &#39;ko&#39;,autoDisplay: false}, &#39;google_transl">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Luna&#39;s Developer Diary">
-<meta property="og:url" content="https://kurailuna.github.io/made/Stock/schd_Re.html">
+<meta property="og:title" content="(Linux) Debian Linux LunarVim Install">
+<meta property="og:url" content="https://kurailuna.github.io/Debian%20Linux/Debian-Linux-LunarVim-Install.html">
 <meta property="og:site_name" content="Luna&#39;s Developer Diary">
-<meta property="og:description" content="SCHD 배당재투자계산기              body { font-family: &#39;Segoe UI&#39;, sans-serif; background: linear-gradient(150deg, #e3fef2, #d1f7e6); color: #065a4e; padding: 20px; }     h1 { text-align: center; m">
+<meta property="og:description" content="function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: &#39;ko&#39;,autoDisplay: false}, &#39;google_transl">
 <meta property="og:locale" content="ko_KR">
-<meta property="article:published_time" content="2025-04-25T14:23:20.122Z">
-<meta property="article:modified_time" content="2025-04-25T14:23:20.122Z">
+<meta property="og:image" content="https://kurailuna.github.io/images/posts/LunarVim.png">
+<meta property="article:published_time" content="2025-08-05T16:50:36.000Z">
+<meta property="article:modified_time" content="2025-08-05T17:35:14.931Z">
 <meta property="article:author" content="Luna">
+<meta property="article:tag" content="Debian Linux">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kurailuna.github.io/images/posts/LunarVim.png">
 
-<link rel="canonical" href="https://kurailuna.github.io/made/Stock/schd_Re">
+<link rel="canonical" href="https://kurailuna.github.io/Debian%20Linux/Debian-Linux-LunarVim-Install">
 
 
 <script id="page-configurations">
@@ -46,7 +49,7 @@
   };
 </script>
 
-  <title> | Luna's Developer Diary
+  <title>(Linux) Debian Linux LunarVim Install | Luna's Developer Diary
   </title>
   
 
@@ -204,18 +207,11 @@
     <div class="post-block" lang="ko">
       <header class="post-header">
 
-<h2 class="post-title" itemprop="name headline">
+<h2 class="post-title" itemprop="name headline">(Linux) Debian Linux LunarVim Install
 </h2>
 
 <div class="post-meta">
   
-  <ul class="breadcrumb">
-          
-            <li><a href="/made/">MADE</a></li>
-            <li><a href="/made/Stock/">STOCK</a></li>
-            <li>SCHD_RE</li>
-          
-  </ul>
 
 </div>
 
@@ -225,290 +221,63 @@
       
       
       <div class="post-body">
-          <!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SCHD 배당재투자계산기</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
-  <style>
-    body { font-family: 'Segoe UI', sans-serif; background: linear-gradient(150deg, #e3fef2, #d1f7e6); color: #065a4e; padding: 20px; }
-    h1 { text-align: center; margin-bottom: 20px; }
-    .card { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(8px); border: 2px solid #9cdbd3; border-radius: 16px; padding: 20px; margin-bottom: 20px; }
-    .btn { background: #65c4b0; color: #fff; border: none; border-radius: 12px; padding: 10px 18px; font-size: 14px; cursor: pointer; transition: background 0.3s; }
-    .btn:hover { background: #4aa891; }
-    .share-btn { text-align: center; margin-top: 20px; }
-    .flex { display: flex; gap: 20px; flex-wrap: wrap; }
-    .flex > .card { flex: 1 1 45%; }
-    .card.double { flex: 1 1 100%; }
-    .form-group { display: flex; flex-direction: column; align-items: center; margin-bottom: 16px; }
-    .form-group label { font-size: 14px; margin-bottom: 6px; text-align: center; }
-    .form-group input[type=number] { width: 80%; padding: 8px 12px; font-size: 16px; border: 1px solid #9cdbd3; border-radius: 8px; }
-    .tax-group .tax-input, .freq-group .freq-input { display: flex; align-items: center; justify-content: center; gap: 8px; }
-    .tax-group input[type=number], .freq-group input[type=number] { width: 60px; }
-    .btn-inline-group { display: flex; gap: 6px; }
-    .tax-btn, .freq-btn {
-      background: #fff; color: #065a4e; border: 1px solid #9cdbd3;
-      border-radius: 8px; padding: 6px 12px; cursor: pointer;
-    }
-    .tax-btn.selected, .freq-btn.selected {
-      background: #65c4b0; color: #fff;
-    }
-    #chart { width: 100% !important; height: 400px !important; }
-    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-    th, td { border: 1px solid #9cdbd3; padding: 8px; text-align: center; font-size: 14px; }
-    th { background: #e3fcef; }
-    #input-summary p, #result-summary p { margin: 8px 0; font-size: 16px; font-weight: 600; text-align: center; }
-    #error-msg { color: red; text-align: center; margin: 10px 0; font-weight: bold; }
-    .right-align { text-align: right; margin-top: 10px; }
-  </style>
-</head>
-<body>
-  <h1>🍃 SCHD 배당재투자계산기</h1>
-  <p align="center">SCHD 배당재투자로 복리의 놀라움을 느껴보세요 🚀</p>
+          <div style="TEXT-ALIGN: center">
+        <div id="google_translate_element"></div>
+            <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                <script type="text/javascript">
+                            function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: 'ko',autoDisplay: false}, 'google_translate_element');}
+                </script>
+                    </script>
+</div>
 
-  <div class="card">
-    <div class="form-group"><label>초기 투자금 (만원)</label><input id="initial" type="number" value="100"></div>
-    <div class="form-group"><label>월 매수금액 (만원)</label><input id="monthly" type="number" value="50"></div>
-    <div class="form-group"><label>투자 기간 (년)</label><input id="years" type="number" value="10"></div>
-    <div class="form-group"><label>시가 배당률 (%)</label><input id="divYield" type="number" value="3.5" step="0.1"></div>
-    <div class="form-group"><label>배당 성장률 (%)</label><input id="divGrowth" type="number" value="12" step="0.1"></div>
-    <div class="form-group"><label>주당 가격 (만원)</label><input id="price" type="number" value="4.0" step="0.1"></div>
-    <div class="form-group"><label>주가 상승률 (%)</label><input id="priceGrowth" type="number" value="10" step="0.1"></div>
 
-    <div class="form-group tax-group">
-      <label>과세 비율</label>
-      <div class="tax-input">
-        <input id="taxRateInput" type="number" value="15.4" step="0.1"><span>%</span>
-        <div class="btn-inline-group">
-          <button class="tax-btn selected" data-val="15.4">15.4%</button>
-          <button class="tax-btn" data-val="0">0%</button>
-        </div>
-      </div>
-    </div>
+<h1 id="Debian-Linux-LunarVim-Install"><a href="#Debian-Linux-LunarVim-Install" class="headerlink" title="[Debian Linux] LunarVim Install"></a>[Debian Linux] LunarVim Install</h1><p style="text-align:center">
+<img border="0" width="60%" height="70%" src="https://kurailuna.github.io/images/posts/LunarVim.png"><br></p>
 
-    <div class="form-group freq-group">
-      <label>배당 주기</label>
-      <div class="freq-input">
-        <input id="freqCount" type="number" value="4" min="1"><span>회/년</span>
-        <div class="btn-inline-group">
-          <button class="freq-btn" data-val="12">월</button>
-          <button class="freq-btn selected" data-val="4">분기</button>
-          <button class="freq-btn" data-val="1">연</button>
-        </div>
-      </div>
-    </div>
+<h2 id="Debian-LunarVim-Install"><a href="#Debian-LunarVim-Install" class="headerlink" title="[Debian]LunarVim Install"></a>[Debian]LunarVim Install</h2><p>Kali Linux is used for ethical hacking activities,<br><br>but this Debian Linux is for <code>Baekjoon</code> <br><br><a target="_blank" rel="noopener" href="https://www.acmicpc.net/">Baekjoon</a> algorithms and various programming activities<br><br><br><br>I’ve added another virtual OS for this purpose.<br><br>Of course, the most critical drawback is that it consumes quite a bit of memory ;ㅅ; <br><br><br></p>
+<p>Among <code>NeoVim</code> editors, one that could be installed instantly<br><br>existed, but its support has ended,<br><br>so I ended up using <code>LunarVim</code>.<br></p>
+<h3 id="Step-1-Upgrade-and-Refresh"><a href="#Step-1-Upgrade-and-Refresh" class="headerlink" title="Step 1. Upgrade and Refresh"></a>Step 1. Upgrade and Refresh</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Upgrade and Refresh</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt update &amp;&amp; <span class="built_in">sudo</span> apt upgrade</span><br><span class="line"></span><br><span class="line"><span class="comment"># This updates all packages on the system</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt upgrade -y</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<br>
 
-    <div id="error-msg"></div>
-    <div style="text-align:center;"><button class="btn" onclick="simulate()">계산하기</button></div>
-  </div>
-
-  <div class="card double" id="output-section" style="display:none;">
-    <div class="flex">
-      <div class="card" id="input-summary"></div>
-      <div class="card" id="result-summary"></div>
-    </div>
-    <br>
-    <canvas id="chart"></canvas>
-    <div class="right-align">
-      <button class="btn" onclick="downloadExcel()">CSV/엑셀 다운로드</button>
-    </div>
-    <table id="data-table">
-      <thead>
-        <tr>
-          <th>년차</th>
-          <th>연감배당금<br>(배당률%)</th>
-          <th>연말총자산</th>
-          <th>투자원금</th>
-          <th>주당가격</th>
-          <th>보유수량</th>
-          <th>매수수량</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-  </div>
-
-  <div class="share-btn">
-    <button class="btn" onclick="copyShareLink()">🔗 결과 공유 링크 복사</button>
-  </div>
-
-  <script>
-    let chartInst;
-    let latestTable = [];
-
-    document.addEventListener("DOMContentLoaded", function () {
-      // 과세 버튼 처리
-      document.querySelectorAll('.tax-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          document.querySelectorAll('.tax-btn').forEach(b => b.classList.remove('selected'));
-          btn.classList.add('selected');
-          document.getElementById('taxRateInput').value = btn.dataset.val;
-        });
-      });
-
-      // 배당 주기 버튼 처리
-      document.querySelectorAll('.freq-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          document.querySelectorAll('.freq-btn').forEach(b => b.classList.remove('selected'));
-          btn.classList.add('selected');
-          document.getElementById('freqCount').value = btn.dataset.val;
-        });
-      });
-    });
-
-    function fmtKRW(v) {
-      if (v >= 1e12) return (v / 1e12).toFixed(1).replace(/\.0$/, '') + '조';
-      if (v >= 1e8)  return (v / 1e8 ).toFixed(1).replace(/\.0$/, '') + '억';
-      if (v >= 1e4)  return (v / 1e4 ).toLocaleString('ko-KR') + '만';
-      return v.toLocaleString('ko-KR') + '원';
-    }
-
-    function simulate() {
-      const init     = +document.getElementById('initial').value * 10000;
-      const monthly  = +document.getElementById('monthly').value * 10000;
-      const years    = +document.getElementById('years').value;
-      const divY     = +document.getElementById('divYield').value / 100;
-      const divG     = +document.getElementById('divGrowth').value / 100;
-      const price0   = +document.getElementById('price').value * 10000;
-      const pG       = +document.getElementById('priceGrowth').value / 100;
-      const tax      = +document.getElementById('taxRateInput').value / 100;
-      const freq     = +document.getElementById('freqCount').value;
-
-      let shares = init / price0;
-      let price = price0;
-      let divPS = price0 * divY;
-      let grossAcc = 0;
-      const table = [];
-
-      for (let y = 1; y <= years; y++) {
-        const prevShares = shares;
-        const prevGrossAcc = grossAcc;
-        price *= (1 + pG);
-        divPS *= (1 + divG);
-
-        for (let m = 1; m <= 12; m++) {
-          shares += monthly / price;
-          if (m % (12 / freq) === 0) {
-            const gross = Math.floor(shares * (divPS / freq));
-            const net = Math.floor(gross * (1 - tax));
-            grossAcc += gross;
-            shares += net / price;
-          }
-        }
-
-        const annualGross = grossAcc - prevGrossAcc;
-        const yieldPct    = ((divPS / price) * 100).toFixed(1);
-        const totalValue  = Math.floor(shares * price);
-        const principal   = init + monthly * 12 * y;
-        const purchased   = shares - prevShares;
-
-        table.push({
-          year: `${y}년`, gross: annualGross, yieldPct,
-          totalAsset: totalValue, principal,
-          price: Math.floor(price), shares, purchased
-        });
-      }
-
-      latestTable = table;
-      const last = table[table.length - 1];
-      document.getElementById('input-summary').innerHTML = `
-        <p>초기투자금: ${fmtKRW(init)}</p>
-        <p>월 투자금: ${fmtKRW(monthly)}</p>
-        <p>시가배당률: ${(divY * 100).toFixed(1)}%</p>
-        <p>투자기간: ${years}년</p>
-        <p>배당성장률: ${(divG * 100).toFixed(1)}%</p>`;
-      document.getElementById('result-summary').innerHTML = `
-        <p><strong>${years}년 뒤</strong></p>
-        <p>총 투자금: ${fmtKRW(last.principal)}</p>
-        <p>총 평가금액: ${fmtKRW(last.totalAsset)}</p>
-        <p style="color:#dc3545">월 배당금: ${fmtKRW(Math.floor(last.gross/12))}</p>
-        <p style="color:#dc3545">연 배당금: ${fmtKRW(last.gross)}</p>`;
-
-      document.querySelector('#data-table tbody').innerHTML = table.map(r => `
-        <tr>
-          <td>${r.year}</td>
-          <td>${fmtKRW(r.gross)} (${r.yieldPct}%)</td>
-          <td>${fmtKRW(r.totalAsset)}</td>
-          <td>${fmtKRW(r.principal)}</td>
-          <td>${fmtKRW(r.price)}</td>
-          <td>${r.shares.toFixed(2)}</td>
-          <td>${r.purchased.toFixed(2)}</td>
-        </tr>`).join('');
-
-      if (chartInst) chartInst.destroy();
-      chartInst = new Chart(document.getElementById('chart'), {
-        type: 'bar',
-        data: {
-          labels: table.map(r => r.year),
-          datasets: [
-            { label: '투자원금',      data: table.map(r => r.principal/10000), stack: 'a', backgroundColor: '#4187f6' },
-            { label: '재투자금액',    data: table.map(r => (r.shares*r.price - r.principal)/10000), stack: 'a', backgroundColor: '#3ec07e' },
-            { label: '연감배당금',    data: table.map(r => r.gross/10000), stack: 'a', backgroundColor: '#f26b7a' }
-          ]
-        },
-        options: {
-          responsive: true,
-          scales: {
-            x: { stacked: true },
-            y: { stacked: true, beginAtZero: true, ticks: { callback: v => v.toLocaleString() + '만' } }
-          }
-        }
-      });
-
-      document.getElementById('output-section').style.display = 'block';
-    }
-
-    function downloadExcel() {
-      const ws = XLSX.utils.json_to_sheet(
-        latestTable.map(r => ({
-          년차: r.year, 연감배당금: r.gross,
-          배당률: r.yieldPct + '%', 연말총자산: r.totalAsset,
-          투자원금: r.principal, 주당가격: r.price,
-          보유수량: r.shares.toFixed(2), 매수수량: r.purchased.toFixed(2)
-        }))
-      );
-      const wb = XLSX.utils.book_new();
-      XLSX.utils.book_append_sheet(wb, ws, 'SCHD');
-      XLSX.writeFile(wb, 'SCHD_계산결과.xlsx');
-    }
-
-    function copyShareLink() {
-      navigator.clipboard.writeText(location.href).then(() => {
-        alert("링크가 복사되었어요! ✨");
-      });
-    }
-  </script>
-</body>
+<h3 id="Step-2-Debian-Linux-Nerd-Font-Install"><a href="#Step-2-Debian-Linux-Nerd-Font-Install" class="headerlink" title="Step 2. Debian Linux Nerd Font Install"></a>Step 2. Debian Linux Nerd Font Install</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Nerd Font Install</span></span><br><span class="line">$ <span class="built_in">mkdir</span> -p ~/.local/share/fonts</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cd</span> ~/.local/share/fonts &amp;&amp; curl -fLO https://raw.githubusercontent.com/choikangjae/.dotfiles/main/font/JetBrainsMonoNerdFont-Regular.ttf</span><br><span class="line"></span><br><span class="line">$ ~/.local/share/fonts </span><br><span class="line"></span><br><span class="line"><span class="comment"># Font Setting</span></span><br><span class="line"></span><br><span class="line">$ fc-cache -f -v</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <br>
-<div align="right">
-  <script width="0.5px" height="0.5px"  type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="Luna0x03" data-color="#BD5FFF" data-emoji="" data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
-</div>
-by. <a target="_blank" rel="noopener" href="https://github.com/Luna0x03">Luna0x03</a>
 
-<footer> 
-  <div align="center"> 
-    <small>Copyright &copy; Kurai Luna(Luna0x03)</small>
-  </div>  
-</footer>
+<h3 id="Step-3-NeoVim-0-9-5-Install"><a href="#Step-3-NeoVim-0-9-5-Install" class="headerlink" title="Step 3. NeoVim 0.9.5 Install"></a>Step 3. NeoVim 0.9.5 Install</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># NeoVim 0.9.5 Install</span></span><br><span class="line"></span><br><span class="line">$ wget https://github.com/neovim/neovim/releases/download/v0.9.5/nvim-linux64.tar.gz</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">chmod</span> u+x nvim-linux64.tar.gz</span><br><span class="line"></span><br><span class="line">$ tar -zxvf nvim-linux64.tar.gz</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">sudo</span> <span class="built_in">cp</span> -r nvim-linux64/* /usr/local/</span><br><span class="line"></span><br><span class="line">$ make CMAKE_BUILD_TYPE=Release</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">sudo</span> make install</span><br><span class="line"></span><br><span class="line">$ nvim --version</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-</html>
+<br>
+
+<h3 id="Step-4-Ruby-Install"><a href="#Step-4-Ruby-Install" class="headerlink" title="Step 4. Ruby Install"></a>Step 4. Ruby Install</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Ruby Install</span></span><br><span class="line"></span><br><span class="line">   $ <span class="built_in">sudo</span> apt upgrade -y</span><br><span class="line"></span><br><span class="line">   $ <span class="built_in">sudo</span> apt install ruby-full</span><br><span class="line"></span><br><span class="line">   $ ruby --version</span><br><span class="line"></span><br><span class="line">   $ gem --version</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="Step-5-LunarVim-Install"><a href="#Step-5-LunarVim-Install" class="headerlink" title="Step 5. LunarVim Install"></a>Step 5. LunarVim Install</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># LunarVim Install</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt install make git python3 python3-pip npm nodejs <span class="comment"># Install necessary dependencies</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Install rustup</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt update <span class="comment"># Initialise and refresh</span></span><br><span class="line">  </span><br><span class="line">$ <span class="built_in">sudo</span> apt install curl build-essential</span><br><span class="line"></span><br><span class="line">$ curl --proto <span class="string">&#x27;=https&#x27;</span> --tlsv1.2 -sSf https://sh.rustup.rs | sh</span><br><span class="line"></span><br><span class="line">$ rustup --version</span><br><span class="line"></span><br><span class="line"><span class="comment"># Install necessary dependencies 2</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt install cargo </span><br><span class="line"></span><br><span class="line">$ LV_BRANCH=<span class="string">&#x27;release-1.4/neovim-0.9&#x27;</span> bash &lt;(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.4/neovim-0.9/utils/installer/install.sh)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Semi-permanent usage</span></span><br><span class="line">$ <span class="built_in">alias</span> lvim=<span class="string">&#x27;~/.local/bin/lvim&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Permanent usage</span></span><br><span class="line">$ <span class="built_in">sudo</span> ~/.bashrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># Add to the very bottom, then save</span></span><br><span class="line">$ <span class="built_in">alias</span> lvim=<span class="string">&#x27;~/.local/bin/lvim&#x27;</span> </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://kurailuna.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
       </div>
       
       
       
     </div>
     
-  <ul class="breadcrumb">
-          
-            <li><a href="/made/">MADE</a></li>
-            <li><a href="/made/Stock/">STOCK</a></li>
-            <li>SCHD_RE</li>
-          
-  </ul>
 
     
     
@@ -564,7 +333,7 @@ by. <a target="_blank" rel="noopener" href="https://github.com/Luna0x03">Luna0x0
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">🍃 SCHD 배당재투자계산기</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Debian-Linux-LunarVim-Install"><span class="nav-number">1.</span> <span class="nav-text">[Debian Linux] LunarVim Install</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Debian-LunarVim-Install"><span class="nav-number">1.1.</span> <span class="nav-text">[Debian]LunarVim Install</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-1-Upgrade-and-Refresh"><span class="nav-number">1.1.1.</span> <span class="nav-text">Step 1. Upgrade and Refresh</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-2-Debian-Linux-Nerd-Font-Install"><span class="nav-number">1.1.2.</span> <span class="nav-text">Step 2. Debian Linux Nerd Font Install</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-3-NeoVim-0-9-5-Install"><span class="nav-number">1.1.3.</span> <span class="nav-text">Step 3. NeoVim 0.9.5 Install</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-4-Ruby-Install"><span class="nav-number">1.1.4.</span> <span class="nav-text">Step 4. Ruby Install</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-5-LunarVim-Install"><span class="nav-number">1.1.5.</span> <span class="nav-text">Step 5. LunarVim Install</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
