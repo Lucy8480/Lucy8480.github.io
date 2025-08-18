@@ -22,90 +22,27 @@
     var CONFIG = {"hostname":"kurailuna.github.io","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","width":240,"display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: &#39;ko&#39;,autoDisplay: false}, &#39;google_transl">
-<meta property="og:type" content="article">
-<meta property="og:title" content="(CTF) Hack The Box:pilgrimage">
-<meta property="og:url" content="https://kurailuna.github.io/2023/07/11/CTF-Hack-The-Box-pilgrimage-md/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Luna&#39;s Developer Diary">
+<meta property="og:url" content="https://kurailuna.github.io/page/5/index.html">
 <meta property="og:site_name" content="Luna&#39;s Developer Diary">
-<meta property="og:description" content="function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: &#39;ko&#39;,autoDisplay: false}, &#39;google_transl">
 <meta property="og:locale" content="ko_KR">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FSzeS4%2FbtsNYVWBC2K%2F0wHcje8JglMATkRR13sakk%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbqJmuu%2FbtsNX1QSjpM%2FSdDQ2m7J3Z27R8FWVxD6Ok%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FFvrxe%2FbtsNX2hTu6F%2FKKwBrreb03T4Bb0aYqZo41%2Fimg.png">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FckjKdy%2FbtsNWmIreE4%2F4uk0NtEkSOmlLChqYcC0zK%2Fimg.png">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdHZBOC%2FbtsNYqJAUXo%2FVuSFH5PlU25tI4jSyc4h01%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcE5AZA%2FbtsNWfbHqEa%2Fz9qk3mnYt8ieNImowq8mtk%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FIFNJF%2FbtsNWZeXe63%2FNwsRVAyvN2rBCmAPGHQdik%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FZWPZ3%2FbtsNWUdP9qH%2Fc4Wg6pSZBrP626JOKR95y0%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbbavar%2FbtsNWQCzO85%2F7q1vZppHu6Tmgi2P4Pxgrk%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbbavar%2FbtsNWQCzO85%2F7q1vZppHu6Tmgi2P4Pxgrk%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FADQhA%2FbtsNWkqBDRW%2Ff1ImSgiz4SGkjZscbumQak%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbwIuUC%2FbtsNXpkqAY3%2FFYbtuKhJO6yj2103VYYKLk%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FWdKBG%2FbtsNWkc20yz%2FC899llj2eKAJbbQ7LbooHK%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FVvS4M%2FbtsNXPivGja%2FuMYOciSBT5BDDS5cztrK30%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdJDiRx%2FbtsNXEaxis9%2F70QNtkb0l4iRB46CNmKr3k%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fc4tbPz%2FbtsNXCcKNHl%2FpTvYY4wGI8JjdhFx3ix6DK%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FkJTyg%2FbtsNWJi3Ol2%2Fq8btmp94NrRdkbKKXKhBL0%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmvHQ4%2FbtsNYCQw1Ke%2FkVUHDkRuC3dYAnsMLP2Cj0%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbj5gdN%2FbtsNYsm6eOP%2FdzYagWpORmyI7Rp57pMfiK%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdkBWc2%2FbtsNWS8bwJo%2FbtmxFoTIj2OgiJ9AglnHd0%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FNxCfn%2FbtsNW7jIPfd%2FRqKyPM0UxoQw0RKBg38AVk%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcEYLF4%2FbtsNYf84l9e%2Fy1NkCecyN6b3KpnXAZ0Ed1%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FyDn7o%2FbtsNWIj7ygf%2FW6nz7JkqAOdgbrTRsolUsk%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fc5Ifrr%2FbtsNYZLsFMP%2FzgtWIjKhgKK6kYJKWkO4V1%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FFvM0W%2FbtsNYGL9D9s%2FbjMZIBGWCSDpvMU5xJiwz1%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbppJ91%2FbtsNXn7WbJl%2FuOXnHkrKPjXNgKvaVU2qF0%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdFniBQ%2FbtsNXTL0XVk%2F1rg12jWICTk9W7z3aDQKi1%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmlXfh%2FbtsNXzNM94Z%2FkSikAXvQZI4Wblj90acrY1%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FHAb9S%2FbtsNWn8qpau%2F4TELNxRSntEUwX8An4H841%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbyqlGY%2FbtsNWT65Wj0%2FNQzESN6uKSDII4MP8dkMG0%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FzTfTa%2FbtsNWIR0LNs%2F8iwOkAWgbYtkdsA6hJELz0%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcbTW56%2FbtsNXBSmvxz%2Ff8P9ZXWu8Tx15XHbLKIYN1%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FGSy5M%2FbtsNYJB6zSa%2FB5YbhFEatcojMzv631RAvk%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb9etMB%2FbtsNYYZ4lOD%2FvyqCXUhRpHloDk75hzmv0K%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbmZwAr%2FbtsNW3IpH7U%2F6TaffX3MZJ0XFjyqIclNzk%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F10a4h%2FbtsNW0kzlV5%2FsUS1B13zgrI6cdq3K9UQkk%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbNrlP4%2FbtsNW0ESiGw%2FbJkxno3Dj7XrUrWbpNfzjK%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcCc4yb%2FbtsNYW82W0d%2FOwvbARBpromGs891kZhfwK%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FlwoZ0%2FbtsNXQBIMBf%2FLnfRWlE3Fo8NnpJHsKE9cK%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FsSYHQ%2FbtsNWIxEMeo%2FlqgwSt5ehK2Hg3fBz8N1uK%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdXbiAr%2FbtsNW50vq8D%2FckvUhaIFVXcVOwyIILASxk%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fba06Z0%2FbtsNXUYtoJ2%2F9II6tskeqL33g7Kpizwme1%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fc7c7vi%2FbtsNXXt6xUs%2FDkfABL7TqmbkHjZINBKpsK%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbrENBe%2FbtsNYi5Pnoq%2FWmsV9z4So0b7iiiYTC4N11%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbaETJr%2FbtsNYYlsPkQ%2FSaWVVZguXSStNDkAh2smJk%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbyFpo5%2FbtsNWJXHOWU%2FzdHW5eBP0w5ZxiSTTsux11%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fzc2JX%2FbtsNYjcy2rO%2FqZFVPkxQQyZpmi2Dv3Qwz0%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FqKLRk%2FbtsNWpyl8MK%2Fr9tya96RVEh7lethA1DdIk%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fs2jED%2FbtsNYJhMh8Z%2FqL3uBpK9Iz59xcbQWUmwOK%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FGTk4e%2FbtsNWofdeMs%2F1B3JKIxQ6Yd7AitpXLHwy0%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FOqQye%2FbtsNWo0Bn4I%2FJrSg3hHLLRo0HP5KfbHNGK%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb0p8N8%2FbtsNYkWSNv8%2F5ov3VrCWOQcSNBVtaP1wgk%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F4A132%2FbtsNXsg3pMM%2FevN3jYllPkcryu0bFyq9Y0%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdlL96D%2FbtsNWK94AmH%2FIbNuoArXW5ytZvoogklaZ0%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbdZCBh%2FbtsNWFOylGv%2FakZJsM0v9g5mXjcSJrId2K%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FblyoPn%2FbtsNXPJBAdp%2FVmt8TKLlpxKJlHUZk0bFU0%2Fimg.webp">
-<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FnI0hC%2FbtsNWn1DrwW%2FfWJ7sc3RTBfpRSo2vjW8nK%2Fimg.webp">
-<meta property="article:published_time" content="2023-07-10T18:19:50.000Z">
-<meta property="article:modified_time" content="2025-05-15T14:50:08.548Z">
 <meta property="article:author" content="Luna">
-<meta property="article:tag" content="White Hacking">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FSzeS4%2FbtsNYVWBC2K%2F0wHcje8JglMATkRR13sakk%2Fimg.webp">
 
-<link rel="canonical" href="https://kurailuna.github.io/2023/07/11/CTF-Hack-The-Box-pilgrimage-md/">
+<link rel="canonical" href="https://kurailuna.github.io/page/5/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : false,
-    isPost : true
+    isHome : true,
+    isPost : false
   };
 </script>
 
-  <title>(CTF) Hack The Box:pilgrimage | Luna's Developer Diary</title>
+  <title>Luna's Developer Diary</title>
   
 
 
@@ -254,10 +191,10 @@
             
 
   <div class="posts-expand">
-      
+        
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="ko">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
     <link itemprop="mainEntityOfPage" href="https://kurailuna.github.io/2023/07/11/CTF-Hack-The-Box-pilgrimage-md/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -271,7 +208,8 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          (CTF) Hack The Box:pilgrimage
+          
+            <a href="/2023/07/11/CTF-Hack-The-Box-pilgrimage-md/" class="post-title-link" itemprop="url">(CTF) Hack The Box:pilgrimage</a>
         </h2>
 
         <div class="post-meta">
@@ -309,13 +247,6 @@
             </span>
 
           
-            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">Views: </span>
-              <span id="busuanzi_value_page_pv"></span>
-            </span>
 
         </div>
       </header>
@@ -326,7 +257,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <div style="TEXT-ALIGN: center">
+          <div style="TEXT-ALIGN: center">
         <div id="google_translate_element"></div>
             <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
                 <script type="text/javascript">
@@ -682,39 +613,27 @@
     (d.head || d.body).appendChild(s);
     })();
 </script>
+      
     </div>
 
     
     
     
-
       <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/White-Hacking/" rel="tag"># White Hacking</a>
-          </div>
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2019/07/28/JSP-Project-7-28-2019/" rel="prev" title="JSP Project 7_28_2019">
-      <i class="fa fa-chevron-left"></i> JSP Project 7_28_2019
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2025/04/12/hello-world/" rel="next" title="Hello World">
-      Hello World <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
+        <div class="post-eof"></div>
       </footer>
-    
   </article>
   
   
   
 
   </div>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
+  </nav>
+
 
 
           </div>
@@ -765,7 +684,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CTF-Hack-The-Box-pilgrimage"><span class="nav-number">1.</span> <span class="nav-text">[CTF]Hack The Box : pilgrimage</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#CTF-Hack-The-Box-Pilgrimage-%EB%AA%A8%EC%9D%98%EC%B9%A8%ED%88%AC-%ED%85%8C%EC%8A%A4%ED%8A%B8"><span class="nav-number">1.1.</span> <span class="nav-text">[CTF]Hack The Box : Pilgrimage&#x2F; 모의침투 테스트(?)</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
