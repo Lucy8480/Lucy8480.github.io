@@ -22,23 +22,19 @@
     var CONFIG = {"hostname":"kurailuna.github.io","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","width":240,"display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="와 ㄷㄷ 예상했지만 난이도가 완전     lunatic(루나틱)해 ōxō;;  lunatic(루나틱) 합니다 ōxō;;    ε-(´・｀) Perhaps because it involves a system hack,it’s a whole level above the usual web-basedwar games on Wargame.kr in terms">
+  <meta name="description" content="💸 배당으로 파이어족 전직 학습공간        body {       font-family: &#39;Segoe UI&#39;, sans-serif;       background: #f9f9f9;       margin: 0;       padding: 20px;       color: #333;     }     .center { text-al">
 <meta property="og:type" content="website">
-<meta property="og:title" content="『pwnable.kr』 Collision 문제풀이">
-<meta property="og:url" content="https://kurailuna.github.io/pwnable-kr-Collision-%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/index.html">
+<meta property="og:title" content="Luna&#39;s Developer Diary">
+<meta property="og:url" content="https://kurailuna.github.io/Finance.html">
 <meta property="og:site_name" content="Luna&#39;s Developer Diary">
-<meta property="og:description" content="와 ㄷㄷ 예상했지만 난이도가 완전     lunatic(루나틱)해 ōxō;;  lunatic(루나틱) 합니다 ōxō;;    ε-(´・｀) Perhaps because it involves a system hack,it’s a whole level above the usual web-basedwar games on Wargame.kr in terms">
+<meta property="og:description" content="💸 배당으로 파이어족 전직 학습공간        body {       font-family: &#39;Segoe UI&#39;, sans-serif;       background: #f9f9f9;       margin: 0;       padding: 20px;       color: #333;     }     .center { text-al">
 <meta property="og:locale" content="ko_KR">
-<meta property="og:image" content="https://blog.kakaocdn.net/dna/cLfFcr/btrusOXLnQN/AAAAAAAAAAAAAAAAAAAAAJ5BhyyPdUns5zgKe_iJ9h2mV0Ng4Zf-haLrgzIs1mxK/img.gif?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1756652399&allow_ip=&allow_referer=&signature=Jm83%2FRN8CU0u60xahKgpZ4VsOlE%3D">
-<meta property="og:image" content="https://blog.kakaocdn.net/dna/cumSbl/btrupHLR2P5/AAAAAAAAAAAAAAAAAAAAAKKF68gPtXGWotw5iIJ87Dm4GxWiTJCNZobghVxuECal/img.gif?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1756652399&allow_ip=&allow_referer=&signature=0PjQLdvFJhG546LAnQ7pM46iK6s%3D">
-<meta property="article:published_time" content="2020-08-01T09:38:11.000Z">
-<meta property="article:modified_time" content="2025-08-19T08:53:00.439Z">
+<meta property="article:published_time" content="2025-04-26T19:36:46.278Z">
+<meta property="article:modified_time" content="2025-04-26T19:31:02.793Z">
 <meta property="article:author" content="Luna">
-<meta property="article:tag" content="White Hacking">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://blog.kakaocdn.net/dna/cLfFcr/btrusOXLnQN/AAAAAAAAAAAAAAAAAAAAAJ5BhyyPdUns5zgKe_iJ9h2mV0Ng4Zf-haLrgzIs1mxK/img.gif?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1756652399&allow_ip=&allow_referer=&signature=Jm83%2FRN8CU0u60xahKgpZ4VsOlE%3D">
 
-<link rel="canonical" href="https://kurailuna.github.io/pwnable-kr-Collision-%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/">
+<link rel="canonical" href="https://kurailuna.github.io/Finance">
 
 
 <script id="page-configurations">
@@ -50,7 +46,7 @@
   };
 </script>
 
-  <title>『pwnable.kr』 Collision 문제풀이 | Luna's Developer Diary
+  <title> | Luna's Developer Diary
   </title>
   
 
@@ -208,7 +204,7 @@
     <div class="post-block" lang="ko">
       <header class="post-header">
 
-<h2 class="post-title" itemprop="name headline">『pwnable.kr』 Collision 문제풀이
+<h2 class="post-title" itemprop="name headline">
 </h2>
 
 <div class="post-meta">
@@ -222,94 +218,125 @@
       
       
       <div class="post-body">
-          <div style="text-align: center;">
-<img src="https://blog.kakaocdn.net/dna/cLfFcr/btrusOXLnQN/AAAAAAAAAAAAAAAAAAAAAJ5BhyyPdUns5zgKe_iJ9h2mV0Ng4Zf-haLrgzIs1mxK/img.gif?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1756652399&allow_ip=&allow_referer=&signature=Jm83%2FRN8CU0u60xahKgpZ4VsOlE%3D" alt="미리보기 방지" width="300">
-</div>
-와 ㄷㄷ
-예상했지만
-난이도가 완전  
+          <!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>💸 배당으로 파이어족 전직 학습공간</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    .center { text-align: center; }
+    .flex-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-between;
+      margin-top: 2rem;
+    }
+    .card {
+      flex: 1;
+      min-width: 300px;
+      background: #fff;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .card h3 {
+      margin-top: 1rem;
+    }
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      background: #0052FF;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+    }
+    .card-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      color: white;
+    }
+  </style>
+</head>
+<body>
 
-<div style="text-align: ">
-lunatic(루나틱)해 ōxō;;<img src="https://blog.kakaocdn.net/dna/cumSbl/btrupHLR2P5/AAAAAAAAAAAAAAAAAAAAAKKF68gPtXGWotw5iIJ87Dm4GxWiTJCNZobghVxuECal/img.gif?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1756652399&allow_ip=&allow_referer=&signature=0PjQLdvFJhG546LAnQ7pM46iK6s%3D" alt="미리보기 방지" width="60">
-</div>
-<s>lunatic(루나틱) 합니다 ōxō;;</s>
+  <h1>💸 배당으로 파이어족 전직을 위한 학습공간 (?)</h1>
+  <p class="center">
+    <a style="color:#4CAF50"> ＞</a> 노후준비부터 경제적 자유까지 여기서(?)
+  </p>
 
+  <!-- 구글 번역기 -->
+  <div class="center" style="margin:1rem 0;">
+    <div id="google_translate_element"></div>
+  </div>
 
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'ko',
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
 
-<p>ε-(´・｀)</p>
-<p>Perhaps because it involves a system hack,<br>it’s a whole level above the usual web-based<br>war games on Wargame.kr in terms of difficulty.</p>
-<p>I ended up referring to someone else’s<br>solution while working through it.<br>And since posting the actual<br>source code would make the thread messy,</p>
-<p>I’ll place it in a text file so it can simply be copy-pasted.<br>Anyway, let’s get started right away.</p>
-<p>[##<em>Image|kage@3C53e&#x2F;btruyNKhi3y&#x2F;AAAAAAAAAAAAAAAAAAAAAMQ-vygG68SjqK7K7570o-NOC-Ac5nfja3f1ny_uHHWg&#x2F;img.png?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;pGLUu7m0P066IMxNAFoZTYWZtMQ%3D|CDM|1.3|{“originWidth”:400,”originHeight”:17,”style”:”alignCenter”,”width”:400,”height”:17}</em>##][##<em>Image|kage@R3guH&#x2F;btrusO4yhlK&#x2F;AAAAAAAAAAAAAAAAAAAAAPgYq4EKGfNwpqPZAXIiUs8YRODrSsUbhqghhsLgOV51&#x2F;img.png?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;9Hc56jhS0XUUffGqmxAslXcD9gE%3D|CDM|1.3|{“originWidth”:550,”originHeight”:367,”style”:”alignCenter”,”width”:602,”height”:402}</em>##]</p>
-<p>지문부터 대충 마이웨이로</p>
-<p>직역하면 다음과 같습니다.</p>
-<p>“아따 MD5 해시 충돌 말한당께?”(…)</p>
-<p>자 아무튼</p>
-<p>[##<em>Image|kage@oGZh2&#x2F;btruxjioAVs&#x2F;AAAAAAAAAAAAAAAAAAAAAHL9EVJaCmOgZdvpxW4fR0KPg5dBnzRp7d4_jG98TDji&#x2F;img.png?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;LtgrVsfkuPZcUIc9lBgnb3D%2FMSI%3D|CDM|1.3|{“originWidth”:550,”originHeight”:356,”style”:”alignCenter”,”width”:621,”height”:402}</em>##]</p>
-<p>리눅스 터미널을 열고</p>
-<p>ssh <a href="mailto:&#99;&#111;&#x6c;&#x40;&#x70;&#119;&#110;&#x61;&#x62;&#x6c;&#x65;&#46;&#107;&#x72;">col@pwnable.kr</a> -p2222</p>
-<p>로 접속해줍니다. 비밀번호는</p>
-<p>안 보일 텐데 그양 무시하고</p>
-<p>작성 후 엔터 치면 접속됩니다:)</p>
-<p>[##<em>Image|kage@n3cpX&#x2F;btruokDmMxY&#x2F;AAAAAAAAAAAAAAAAAAAAALEPFkAUa_oIRRovOPfT_ugLhTdgCDuS7moRIPr692Q2&#x2F;img.png?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;AmuR7%2F9ar3%2B4%2FWmjJhQgYwE1uj0%3D|CDM|1.3|{“originWidth”:550,”originHeight”:65,”style”:”alignCenter”,”width”:594,”height”:70}</em>##]</p>
-<p>ls 명령어를 입력해서</p>
-<p>파일 목록을 확인해</p>
-<p>봅니다.</p>
-<p>col은 아마 exe 나 파이썬</p>
-<p>파일로 추측되는 거 같고</p>
-<p>우리가 집중해야 하는 파일은</p>
-<p>col.c 파일입니다.</p>
-<p><strong>1. 파일 확인</strong></p>
-<p>cat col.c 입력하면 아래</p>
-<p>다음과 같은 소스코드가</p>
-<p>보입니다.</p>
-<p>[##<em>Image|kage@czLRUe&#x2F;btruyMECWrK&#x2F;AAAAAAAAAAAAAAAAAAAAAPb8rQiQf5tH-GnJ01NYJXuZXhOn_02Jo1czpR4iqG6V&#x2F;img.png?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;xaVjqOKzVzP2UgZE7WZ17fMiEdE%3D|CDM|1.3|{“originWidth”:479,”originHeight”:479,”style”:”alignCenter”,”width”:479,”height”:479}</em>##]</p>
-<p>메인부터 훑어보면 암호는 20여자어야</p>
-<p>해시 코드(0x21DD09EC)와 패스워드 리턴 값</p>
-<p>이 모두 동일해야 한답니다.</p>
-<p>check_password(const char* p)에서</p>
-<p>각  int의 크기인 4바이트 앞부터</p>
-<p>데이터를 잘라서 5번 res에 누적</p>
-<p>시킵니다. 같은 값을 5번 더해</p>
-<p>해시 코드를 나오게 하면 될지 싶습니다.</p>
-<p><strong>2. 결과 도출</strong></p>
-<p>[##<em>Image|kage@btqSCG&#x2F;btruqEnMze0&#x2F;AAAAAAAAAAAAAAAAAAAAADpv_5NUbUBLc1Grsp-V_ywQaxYtHYRjig2rHsoPvX85&#x2F;img.png?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;eChXoKAJOZlMTNgT5sZd7ar7LL8%3D|CDM|1.3|{“originWidth”:550,”originHeight”:170,”style”:”alignCenter”,”width”:586,”height”:181}</em>##]</p>
-<p>&lt;그림.1&gt; int형 4바이트씩 끊어서 표현한 for 과 res 데이터</p>
-<p>res 값은 for문의 값을 5번 누적한 결과.</p>
-<p>res 값을 5로 나누어봤을때 for에서 쓰인</p>
-<p>데이터는 한번당 0x6C5CEC8입니다.</p>
-<p>이것을 다시 5로 곱해지면 0x4가 부족.</p>
-<p>데이터는 0x6C5CEC8 4개와</p>
-<p>0x6C5CECC의 데이터를</p>
-<p>더하는 것으로 가정을 하고</p>
-<p>프로그램에 입력값으로 넣어주면 됩니다.</p>
-<p>[##<em>Image|kage@cISDmB&#x2F;btrunO5G7OP&#x2F;AAAAAAAAAAAAAAAAAAAAAG9RFFP6I__ubjI0x0QEEOAqlpxFEB9Dbw06XVOG3DT4&#x2F;img.png?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;DPpWC9QIiXMqJyXlgg4o0sLi330%3D|CDM|1.3|{“originWidth”:550,”originHeight”:28,”style”:”alignCenter”,”width”:838,”height”:42}</em>##]</p>
-<p>&lt;그림. 2&gt; little endian으로 표현한 데이터</p>
-<p>그렇다면 little endian을 따르고 있어</p>
-<p>다음과 같은 순차적으로 프로그램에</p>
-<p>16진수로 데이터를 전달해주면 됩니다.</p>
-<p>[##<em>Image|kage@cCgcBs&#x2F;btruxkhhxq2&#x2F;AAAAAAAAAAAAAAAAAAAAAON2FDRJf_RadGiu8FDH4YwgPpu8GxKwUGRh-DSJMH58&#x2F;img.png?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;kGjoJgWFu6GCrEZN9yzPkq%2FDzHY%3D|CDM|1.3|{“originWidth”:550,”originHeight”:36,”style”:”alignCenter”,”width”:605,”height”:40}</em>##]</p>
-<p>파이썬을 이용해서 16진수로 값을 전달했습니다.</p>
-<p>프로그램에서 입력한 값으로 받으면</p>
-<p>char로 인식하기에 주의가 요합니다.</p>
-<p><strong>3. Flag</strong></p>
-<p>[##<em>Image|kage@r4I6T&#x2F;btruxjpajyN&#x2F;AAAAAAAAAAAAAAAAAAAAAFK3cWqAWsrZho5brrue7OdkGNWcYDt4vPa5IQxDf3_1&#x2F;img.png?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;g7gwHgVXYwXzhPLWaxZ2HIggid4%3D|CDM|1.3|{“originWidth”:550,”originHeight”:412,”style”:”alignCenter”,”width”:619,”height”:464}</em>##]</p>
-<p>이렇게 키값을 얻었읍니다.</p>
-<p>그리고 이 얻어챙긴 키값을 가지고</p>
-<p>다시 처음 위치로 돌아와</p>
-<p>[##<em>Image|kage@cuAgTX&#x2F;btruokXGO4i&#x2F;AAAAAAAAAAAAAAAAAAAAAM-CyMnNwKoSjv3JRJStP6CnqhwxzTCm193TA8CEdlw1&#x2F;img.png?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;eTJMjZ4seWEa0TkVDpUeiG2bwtM%3D|CDM|1.3|{“originWidth”:550,”originHeight”:378,”style”:”alignCenter”,”width”:598,”height”:411}</em>##]</p>
-<p>밑에 Flag?: 부분에 키캆을 넣어주시고</p>
-<p>auth 버튼을 누르면</p>
-<p>[##<em>Image|kage@bYSeWH&#x2F;btruqE89Wxt&#x2F;AAAAAAAAAAAAAAAAAAAAAK02foBZl8aPhGjDf_C5sRmCjSTluR3D9N4ISpNvcZme&#x2F;img.png?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;FXfXthZzOARYwINQ%2B3pX%2F9c7pAA%3D|CDM|1.3|{“originWidth”:541,”originHeight”:420,”style”:”alignCenter”,”width”:541,”height”:420}</em>##]</p>
-<p>3포인트 받아챙겼다네요</p>
-<p>[##<em>Image|kage@dahZKF&#x2F;btrusO4yhnb&#x2F;AAAAAAAAAAAAAAAAAAAAAPf0pEFseQHHur6GGkYga0LO-F3gtSxtyezg5JuU8Fc4&#x2F;img.png?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;076rkBLjeu9BpekfnSfGUJtJ7ho%3D|CDM|1.3|{“originWidth”:550,”originHeight”:438,”style”:”alignCenter”,”width”:716,”height”:570}</em>##]</p>
-<p>그리고 돌아와보면 이렇게</p>
-<p>풀었다는 뜻으로 녹색 점선으로</p>
-<p>표시가 되었습니다.</p>
-<p>긴 글을 보시느라 감사합니다.<br>수고하셨습니다:)</p>
-<p>[##<em>Image|kage@cKOciM&#x2F;btrunPcvbE2&#x2F;AAAAAAAAAAAAAAAAAAAAAFFm4SyNihIjEXuPxB-jxIFYe5MTNcfh0mXNbyxwgJSj&#x2F;img.png?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;A9sJ70vlxfQxWV47llne3v1SKy4%3D|CDM|1.3|{“originWidth”:400,”originHeight”:17,”style”:”alignCenter”,”width”:400,”height”:17}</em>##]</p>
-<p>좋은 하루 되시고 하시는 일 잘 되시고<br>날이 덥습니다 더위 먹지 않게 유의하시고<br>코로나 조심하세요</p>
-<p>[##<em>Image|kage@cI0Fp0&#x2F;btruqF74JW8&#x2F;AAAAAAAAAAAAAAAAAAAAAPtBuNGf3fy8JxA_2CeAoe2mKYUFNTicn60yaSrHR-AT&#x2F;img.jpg?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;tYfAHfrtnNJGI%2FnJWIiOxUMpWgI%3D|CDM|1.3|{“originWidth”:36,”originHeight”:36,”style”:”alignLeft”}</em>##][##<em>Image|kage@cgwTgj&#x2F;btruvuEtCAK&#x2F;AAAAAAAAAAAAAAAAAAAAAPPFhXb_B6wJYPMOJQzzXwgq_A2npVuhR5TcNpnqqJxP&#x2F;img.png?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;r%2BIQMJGzwaCij5xeFcLRrLIFBIQ%3D|CDM|1.3|{“originWidth”:320,”originHeight”:320,”style”:”alignCenter”,”width”:220,”height”:220}</em>##]</p>
+  <!-- 버튼 그룹 -->
+  <div class="center" style="margin:2rem 0;">
+    <a href="https://kurailuna.github.io/made/Stock/stock.html" target="_blank" class="btn">심플 주식계산기</a>
+    <a href="https://kurailuna.github.io/made/Stock/schd_Re.html" target="_blank" class="btn">SCHD 배당계산기</a>
+  </div>
+
+  <!-- 카드 섹션 -->
+  <div class="flex-wrap">
+
+    <div class="card" style="background:#FFF3E0;">
+      <img src="" alt="JEPI 배당계산기 준비중">
+      <h3>JEPI 배당투자 계산기</h3>
+      <p>월급처럼 받는 고배당 ETF 배당금 계산</p>
+      <a href="https://kurailuna.github.io/made/Stock/JEPI_Re.html" class="card-btn" style="background:#FF9800;">지금 계산하기</a>
+    </div>
+
+    <div class="card" style="background:#E8F5E9;">
+      <img src="" alt="ISA, IRP 가이드 준비중">
+      <h3>ISA, IRP, 연금저축 완벽 가이드 (준비중)</h3>
+      <p>절세+노후준비 3종 세트 : 장기투자하면서 세금도 아끼자!</p>
+      <a href="/guide/isa" class="card-btn" style="background:#4CAF50;">가이드 보기</a>
+    </div>
+
+    <div class="card" style="background:#E3F2FD;">
+      <img src="" alt="타미당, 슬미당, 에미당 vs SCHD 분석 준비중">
+      <h3>타미당, 슬미당, 에미당 vs SCHD (준비중)</h3>
+      <p>결산+배당성장 모두 잡을 분석(?)</p>
+      <a href="/analysis/schd" class="card-btn" style="background:#2196F3;">분석보기</a>
+    </div>
+
+  </div>
+
+  <!-- 블로그 최신 글 (구현중) -->
+  <br><br>
+  <h2>📝 블로그 최신 글</h2>
+  <h3>구현중</h3>
+
+</body>
+</html>
 
       </div>
       
@@ -372,6 +399,7 @@ lunatic(루나틱)해 ōxō;;<img src="https://blog.kakaocdn.net/dna/cumSbl/btru
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">💸 배당으로 파이어족 전직을 위한 학습공간 (?)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.0.1.</span> <span class="nav-text">JEPI 배당투자 계산기</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.0.2.</span> <span class="nav-text">ISA, IRP, 연금저축 완벽 가이드 (준비중)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.0.3.</span> <span class="nav-text">타미당, 슬미당, 에미당 vs SCHD (준비중)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.1.</span> <span class="nav-text">📝 블로그 최신 글</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.1.1.</span> <span class="nav-text">구현중</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
