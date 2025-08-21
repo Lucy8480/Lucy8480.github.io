@@ -3,7 +3,9 @@
   <entry>
     <title>(CTF) Hack The Box:pilgrimage</title>
     <url>/2023/07/11/CTF-Hack-The-Box-pilgrimage-md/</url>
-    <content><![CDATA[<div style="TEXT-ALIGN: center">
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div style="TEXT-ALIGN: center">
         <div id="google_translate_element"></div>
             <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
                 <script type="text/javascript">
@@ -369,8 +371,8 @@
       </tags>
   </entry>
   <entry>
-    <title>(Linux) Debian Linux LunarVim Install</title>
-    <url>/2025/08/06/Debian-Linux-LunarVim-Install/</url>
+    <title>Front End Project</title>
+    <url>/2018/09/09/Front-End-Project/</url>
     <content><![CDATA[<div style="TEXT-ALIGN: center">
         <div id="google_translate_element"></div>
             <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
@@ -381,8 +383,84 @@
 </div>
 
 
+<p style="text-align:center">
+<img border="0" width="70%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/02%20%EC%82%AC%EC%A7%84.0%20%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0%20%EB%B0%A9%EC%A7%80.jpg"><br></p>
+
+ 
+<!-- center -->
+<p><a style="text-align:left"><img border="0" width="20%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Front-End/Front%20End%20Project/original_73.png"></a> <br></p>
+<p>드리어 완성했지요…. ㅎㅎ<br><br>포트폴리오 말이지요. 문서화도 끝났습니다.<br><br>끝에 낙은 오더군요. 기분만큼 좋습니다.<br></p>
+<p>이젠 진짜 들어가게 만들어야 하는데<br><br><a style="text-align:left"><img border="0" width="20%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Front-End/Front%20End%20Project/original_36.png"></a> <br><br>웹호스팅 등 이 부분에서 애를 먹었습니다.<br></p>
+<p><a style="text-align:left"><img border="0" width="20%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Front-End/Front%20End%20Project/original_22.png"></a> <br></p>
+<p>다행이 깃허브 에서 호스팅을 지원해줘<br><br>우여곡절 끝에 끝났지만, 말이죠 ㅎㅁㅎ<br></p>
+<p>이젠 정말 없체 공채 등등에사<br><br>이력서와 만들어둔 포트폴리오<br><br>집어넣고 해야겠습니다.<br></p>
+<p>아래 완성된 포트폴리오 웹사이트입니다. : )<br></p>
+<p>&lt;소스코드&gt;<br><br><a href="https://kurailuna.github.io/PP/index.html">https://kurailuna.github.io/PP/index.html</a></p>
+<p>이 게시글 읽어주신 분들께 감사드립니다.<br><br>오늘 하루 잘 보내시고 접하시는 일마다 <br><br>다 잘 되시길 빕니다. : &gt;<br></p>
+<p align="center"><img  width="60%" height="60%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%98%A4%EB%8A%98%EB%8F%84_%EC%A2%8B%EC%9D%80_%ED%95%98%EB%A3%A8.png" ></p><br>
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://kurailuna.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://kurailuna.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>]]></content>
+      <categories>
+        <category>Portfolio</category>
+        <category>Front-End</category>
+      </categories>
+      <tags>
+        <tag>Front End</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(Linux) Debian Linux LunarVim Install</title>
+    <url>/2025/08/06/Debian-Linux-LunarVim-Install/</url>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div style="TEXT-ALIGN: center">
+        <div id="google_translate_element"></div>
+            <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                <script type="text/javascript">
+                            function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: 'ko',autoDisplay: false}, 'google_translate_element');}
+                </script>
+                    </script>
+</div>
+
+
 <h1 id="Debian-Linux-LunarVim-Install"><a href="#Debian-Linux-LunarVim-Install" class="headerlink" title="[Debian Linux] LunarVim Install"></a>[Debian Linux] LunarVim Install</h1><p style="text-align:center">
-<img border="0" width="60%" height="70%" src="https://kurailuna.github.io/images/posts/LunarVim.png"><br></p>
+<img border="0" width="60%" height="70%" src="https://luna0x03.github.io/PostImages/LunarVim.png"><br></p>
 
 <p>🎼Songs I listened to whilst writing🎼</p>
 <ul>
@@ -439,81 +517,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Front End Project</title>
-    <url>/2018/09/09/Front-End-Project/</url>
-    <content><![CDATA[<div style="TEXT-ALIGN: center">
-        <div id="google_translate_element"></div>
-            <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-                <script type="text/javascript">
-                            function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: 'ko',autoDisplay: false}, 'google_translate_element');}
-                </script>
-                    </script>
-</div>
-
-
-<p style="text-align:center">
-<img border="0" width="70%" height="80%" src="https://KuraiLuna.github.io/PostImages/JSP 프로젝트 완성 2019년 7월 28일
-/02 사진.0 미리보기 방지.jpg"><br></p>
-
- 
-<!-- center -->
-<p><a style="text-align:left"><img border="0" width="20%" height="80%" src="https://kurailuna.github.io/PostImages/Front%20End%20Project/original_73.png"></a> <br></p>
-<p>드리어 완성했지요…. ㅎㅎ<br><br>포트폴리오 말이지요. 문서화도 끝났습니다.<br><br>끝에 낙은 오더군요. 기분만큼 좋습니다.<br></p>
-<p>이젠 진짜 들어가게 만들어야 하는데<br><br><a style="text-align:left"><img border="0" width="20%" height="80%" src="https://kurailuna.github.io/PostImages/Front%20End%20Project/original_36.png"></a> <br><br>웹호스팅 등 이 부분에서 애를 먹었습니다.<br></p>
-<p><a style="text-align:left"><img border="0" width="20%" height="80%" src="https://kurailuna.github.io/PostImages/Front%20End%20Project/original_22.png"></a> <br></p>
-<p>다행이 깃허브 에서 호스팅을 지원해줘<br><br>우여곡절 끝에 끝났지만, 말이죠 ㅎㅁㅎ<br></p>
-<p>이젠 정말 없체 공채 등등에사<br><br>이력서와 만들어둔 포트폴리오<br><br>집어넣고 해야겠습니다.<br></p>
-<p>아래 완성된 포트폴리오 웹사이트입니다. : )<br></p>
-<p>&lt;소스코드&gt;<br><br><a href="https://kurailuna.github.io/PP/index.html">https://kurailuna.github.io/PP/index.html</a></p>
-<p>이 게시글 읽어주신 분들께 감사드립니다.<br><br>오늘 하루 잘 보내시고 접하시는 일마다 <br><br>다 잘 되시길 빕니다. : &gt;<br></p>
-<p align="center"><img  width="60%" height="60%" src="https://github.com/KuraiLuna/KuraiLuna.github.io/blob/master/PostImages/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%98%A4%EB%8A%98%EB%8F%84_%EC%A2%8B%EC%9D%80_%ED%95%98%EB%A3%A8.png?raw=true" ></p><br>
-
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://kurailuna.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://kurailuna.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>]]></content>
-      <categories>
-        <category>Portfolio</category>
-        <category>Front-End</category>
-      </categories>
-      <tags>
-        <tag>Front End</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JSP Project 7_28_2019</title>
     <url>/2019/07/28/JSP-Project-7-28-2019/</url>
     <content><![CDATA[<p><img border="0" width="80%" height="80%" src="https://KuraiLuna.github.io/PostImages/JSP 프로젝트 완성 2019년 7월 28일
@@ -535,31 +538,31 @@
 동영상1.시연영상</p>
 <br>
 
-<p><img border="0" width="80%" height="80%" src="https://kurailuna.github.io/PostImages/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.1%20%EC%82%AC%EC%9D%B4%ED%8A%B8%20%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4%20%ED%99%88_%EC%82%AC%EC%9D%B4%ED%8A%B8_%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4.png"> <br><br>사진.1 사이트 메인화면<br><br><br><br>사이트 메인화면입니다. 원래 계획상 좀 더 많은 기능을<br><br>넣으려고 했다만은 개인적인 사정으로 커뮤니티 기능만 하기로 했습니다.<br> 아래 사진6-7 말이죠^ㅅ^; <br></p>
-<p><img width="80%" height="80%" src="https://kurailuna.github.io/PostImages/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.6%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png"> <br><br>사진.6 일러스트<br></p>
+<p><img border="0" width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.1%20%EC%82%AC%EC%9D%B4%ED%8A%B8%20%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4%20%ED%99%88_%EC%82%AC%EC%9D%B4%ED%8A%B8_%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4.png"> <br><br>사진.1 사이트 메인화면<br><br><br><br>사이트 메인화면입니다. 원래 계획상 좀 더 많은 기능을<br><br>넣으려고 했다만은 개인적인 사정으로 커뮤니티 기능만 하기로 했습니다.<br> 아래 사진6-7 말이죠^ㅅ^; <br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.6%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png"> <br><br>사진.6 일러스트<br></p>
 <p><img width="80%" height="80%" src="https://kurailuna.github.io/PostImages/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.7%20%EB%A7%8C%ED%99%94.png"> <br><br>사진.7 만화<br></p>
-<p><img width="80%" height="80%" src="https://kurailuna.github.io/PostImages/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.2%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85.png"> <br><br>사진.2 회원가입<br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.2%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85.png"> <br><br>사진.2 회원가입<br></p>
 <p>커뮤니티는 회원가입…<br><br>예전부터 그래왔고 지금도<br><br>본격적으로 사이트를 이용하려면<br><br>누구든지 예외없이 회원가입을 해야 했죠<br></p>
-<p><img width="80%" height="80%" src="https://kurailuna.github.io/PostImages/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.3%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%20%EC%99%84%EB%A3%8C%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85_%EC%99%84%EB%A3%8C.png"> <br><br>사진.3 회원가입 완료<br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.3%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%20%EC%99%84%EB%A3%8C%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85_%EC%99%84%EB%A3%8C.png"> <br><br>사진.3 회원가입 완료<br></p>
 <p>가입완료 창입니다,<br><br>본인은 심플한게 좋음으로<br><br>나름 심플하게 했습니다. ㅋㅅㅋ;;<br></p>
-<p><img width="80%" height="80%" src="https://kurailuna.github.io/PostImages/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.4%20%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EB%A1%9C%EA%B7%B8%EC%9D%B8.png"><br><br>사진.4 로그인<br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.4%20%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EB%A1%9C%EA%B7%B8%EC%9D%B8.png"><br><br>사진.4 로그인<br></p>
 <p>이제 로그인 해보겠습니다.<br><br>방금만든 유저 아이디로<br><br>한번 접속해 보겠습니다. : )<br></p>
-<p><img width="80%" height="80%" src="https://kurailuna.github.io/PostImages/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.5%20%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EC%99%84%EB%A3%8C%20%EB%A1%9C%EA%B7%B8%EC%9D%B8_%EC%99%84%EB%A3%8C.png"><br><br>사진.5 로그인 완료<br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.5%20%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EC%99%84%EB%A3%8C%20%EB%A1%9C%EA%B7%B8%EC%9D%B8_%EC%99%84%EB%A3%8C.png"><br><br>사진.5 로그인 완료<br></p>
 <p>로그인이 완료되면 푸른색 동그라미가<br><br>있는 부분보면 처음과 뭔가 다르다는 걸 알 수 있습니다.<br><br><br><br>아래의 그림.논외 처럼 말이죠….<br></p>
-<p><img width="50%" height="50%" src="https://kurailuna.github.io/PostImages/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EA%B7%B8%EB%A6%BC.%EB%85%BC%EC%99%B8%20%EB%AD%94%EA%B0%80%20%EB%8B%A4%EB%A5%B4%EB%8B%A4%20%EB%AD%94%EA%B0%80_%EB%8B%A4%EB%A5%B4%EB%8B%A4.png"><br><br>그림.논외 뭔가 다르다<br><br><br><br><br><img width="80%" height="80%" src="https://kurailuna.github.io/PostImages/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.8%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%20%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0%20%EA%B2%8C%EC%8B%9C%ED%8C%90%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8_%ED%8E%98%EC%9D%B4%EC%A7%80.png"><br><br>사진.8 일러스트 커뮤니티 게시판<br></p>
+<p><img width="50%" height="50%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EA%B7%B8%EB%A6%BC.%EB%85%BC%EC%99%B8%20%EB%AD%94%EA%B0%80%20%EB%8B%A4%EB%A5%B4%EB%8B%A4%20%EB%AD%94%EA%B0%80_%EB%8B%A4%EB%A5%B4%EB%8B%A4.png"><br><br>그림.논외 뭔가 다르다<br><br><br><br><br><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.8%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%20%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0%20%EA%B2%8C%EC%8B%9C%ED%8C%90%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8_%ED%8E%98%EC%9D%B4%EC%A7%80.png"><br><br>사진.8 일러스트 커뮤니티 게시판<br></p>
 <p><br><br></p>
-<p><img width="80%" height="80%" src="https://kurailuna.github.io/PostImages/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.9%20%EB%A7%8C%ED%99%94%20%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0%20%EA%B2%8C%EC%8B%9C%ED%8C%90%20%EB%A7%8C%ED%99%94_%ED%8E%98%EC%9D%B4%EC%A7%80.png"><br><br>사진.9 만화 커뮤니티 게시판<br><br><br><br>사진.8과 사진.9의 각각 일러스트와 만화<br><br>커뮤니티 게시판입니다.<br><br>나름대로 페이스북이나 트위터<br><br>유사(?) 하겠끔 해봤습니다.<br><br><br></p>
-<p><img width="80%" height="80%" src="https://kurailuna.github.io/PostImages/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.10%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%20%EC%98%AC%EB%A6%AC%EA%B8%B0%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8_%EC%98%AC%EB%A6%AC%EA%B8%B0.png"><br><br>사진.10 일러스트 올리기<br><br></p>
-<p><img width="80%" height="80%" src="https://kurailuna.github.io/PostImages/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.11%20%EB%A7%8C%ED%99%94%20%EC%98%AC%EB%A6%AC%EA%B8%B0%20%EB%A7%8C%ED%99%94_%EC%98%AC%EB%A6%AC%EA%B8%B0.png"><br><br>사진.11 만화 올리기<br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.9%20%EB%A7%8C%ED%99%94%20%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0%20%EA%B2%8C%EC%8B%9C%ED%8C%90%20%EB%A7%8C%ED%99%94_%ED%8E%98%EC%9D%B4%EC%A7%80.png"><br><br>사진.9 만화 커뮤니티 게시판<br><br><br><br>사진.8과 사진.9의 각각 일러스트와 만화<br><br>커뮤니티 게시판입니다.<br><br>나름대로 페이스북이나 트위터<br><br>유사(?) 하겠끔 해봤습니다.<br><br><br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.10%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%20%EC%98%AC%EB%A6%AC%EA%B8%B0%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8_%EC%98%AC%EB%A6%AC%EA%B8%B0.png"><br><br>사진.10 일러스트 올리기<br><br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.11%20%EB%A7%8C%ED%99%94%20%EC%98%AC%EB%A6%AC%EA%B8%B0%20%EB%A7%8C%ED%99%94_%EC%98%AC%EB%A6%AC%EA%B8%B0.png"><br><br>사진.11 만화 올리기<br></p>
 <p>사진.10, 사진.11은 각각 일러스트와 만화를<br><br>게시하고 그로인한 게시글이 올려진 모습입니다.<br><br>나름 페이스북이나 트위터 유사해 보입니다(???)<br></p>
-<p><img width="80%" height="80%" src="https://kurailuna.github.io/PostImages/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.12%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%20%EC%A2%8B%EC%95%84%EC%9A%94%20%EC%99%80%20%EB%8D%A7%EA%B8%80%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8_%EC%A2%8B%EC%95%84%EC%9A%94%EC%99%80_%EB%8D%A7%EA%B8%80.png"><br><br>사진.12 일러스트 좋아요 와 덧글<br><br><br></p>
-<p><img width="80%" height="80%" src="https://kurailuna.github.io/PostImages/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.13%20%EB%A7%8C%ED%99%94%20%EC%A2%8B%EC%95%84%EC%9A%94%20%EC%99%80%20%EB%8D%A7%EA%B8%80%20%EB%A7%8C%ED%99%94_%EC%A2%8B%EC%95%84%EC%9A%94%EC%99%80_%EB%8D%A7%EA%B8%80.png"><br><br>사진.13 만화 좋아요 와 덧글<br><br><br><br>사직.12와 사진.13입니다.<br><br>각각 좋아요 와 댓글을 달아봤습니다,<br><br>댓글 과 좋아요 는 일러스트와 만화 파일처럼<br><br><br><br>사진처럼 되었다면 DB에 정상적으로 올라왔음을<br>알 수가 있었지요.<br></p>
-<p><img width="80%" height="80%" src="https://kurailuna.github.io/PostImages/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.14%20%ED%9A%8C%EC%9B%90%EC%A0%95%EB%B3%B4%20%EC%88%98%EC%A0%95%20%EC%9C%A0%EC%A0%80%EC%A0%95%EB%B3%B4_%EC%88%98%EC%A0%95.png"><br><br>사진.14 회원정보 수정<br><br><br><br>이제 화원정보 수정 창입니다.<br><br>커뮤니티 특성상 익명이 글을 게시하는지라<br><br>때에 따라 주소, 전화번호등 언제든지 바뀝니다,<br><br><br><br>그렇게 해서 회원정보 수정은 꼭 들어간다고 하지요…<br><br>(비밀번호 같은 경우 알다시피 보안상 자주 바꿔야 한다더군요)<br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.12%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%20%EC%A2%8B%EC%95%84%EC%9A%94%20%EC%99%80%20%EB%8D%A7%EA%B8%80%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8_%EC%A2%8B%EC%95%84%EC%9A%94%EC%99%80_%EB%8D%A7%EA%B8%80.png"><br><br>사진.12 일러스트 좋아요 와 덧글<br><br><br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.13%20%EB%A7%8C%ED%99%94%20%EC%A2%8B%EC%95%84%EC%9A%94%20%EC%99%80%20%EB%8D%A7%EA%B8%80%20%EB%A7%8C%ED%99%94_%EC%A2%8B%EC%95%84%EC%9A%94%EC%99%80_%EB%8D%A7%EA%B8%80.png"><br><br>사진.13 만화 좋아요 와 덧글<br><br><br><br>사직.12와 사진.13입니다.<br><br>각각 좋아요 와 댓글을 달아봤습니다,<br><br>댓글 과 좋아요 는 일러스트와 만화 파일처럼<br><br><br><br>사진처럼 되었다면 DB에 정상적으로 올라왔음을<br>알 수가 있었지요.<br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.14%20%ED%9A%8C%EC%9B%90%EC%A0%95%EB%B3%B4%20%EC%88%98%EC%A0%95%20%EC%9C%A0%EC%A0%80%EC%A0%95%EB%B3%B4_%EC%88%98%EC%A0%95.png"><br><br>사진.14 회원정보 수정<br><br><br><br>이제 화원정보 수정 창입니다.<br><br>커뮤니티 특성상 익명이 글을 게시하는지라<br><br>때에 따라 주소, 전화번호등 언제든지 바뀝니다,<br><br><br><br>그렇게 해서 회원정보 수정은 꼭 들어간다고 하지요…<br><br>(비밀번호 같은 경우 알다시피 보안상 자주 바꿔야 한다더군요)<br></p>
 <hr>
 <p><br><br><br>긴시간(?)을 꼬박 한 보람은 있기는 합니다ㅎㅎ(ㅎㅁㅎ)<br><br>이제는 조금 쉬어야겠습니다.<br><br>조금 쉬었다가 이제 본격적으로 해야겠지요….<br></p>
 <p><br><br><br>마지막으로 소스코드 링크하고<br><br>이제 포스팅은 여기까지 하겠습니다.<br><br>긴 글을 읽어 주셔서 감사하고<br><br>엔제나 오늘하루 잘 보내시길 바랍니다. ㅎㅁㅎ&#x2F;<br><br><br></p>
 <p>&lt;소스코드&gt;<br><br><a href="https://github.com/KuraiLuna/KuraiLunaJSP.github.io/tree/master/Medi">https://github.com/KuraiLuna/KuraiLunaJSP.github.io/tree/master/Medi</a></p>
-<p align="center"><img  width="60%" height="60%" src="https://github.com/KuraiLuna/KuraiLuna.github.io/blob/master/PostImages/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%98%A4%EB%8A%98%EB%8F%84_%EC%A2%8B%EC%9D%80_%ED%95%98%EB%A3%A8.png?raw=true" ></p><br>
+<p align="center"><img  width="60%" height="60%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%98%A4%EB%8A%98%EB%8F%84_%EC%A2%8B%EC%9D%80_%ED%95%98%EB%A3%A8.png" ></p><br>
 
 <div id="disqus_thread"></div>
 <script>
@@ -628,7 +631,7 @@
     <url>/2020/08/02/pwnable-kr-Memcpy-Problem-Solving/</url>
     <content><![CDATA[<h1 id="pwnable-kr-Memcpy-Problem-solving"><a href="#pwnable-kr-Memcpy-Problem-solving" class="headerlink" title="[pwnable.kr]_Memcpy Problem solving"></a>[pwnable.kr]_Memcpy Problem solving</h1><hr>
 <div style="text-align: center;">
-<img src="https://kurailuna.github.io/images/posts/[CTF]pwnable.kr/Memcpy%20Problem%20solving/1_Rina.gif" alt="미리보기 방지" width="300">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/1_Rina.gif" alt="미리보기 방지" width="300">
 </div>
 
 <style>
@@ -641,7 +644,7 @@
 <p>Right then, haha. Every problem I pick,<br>the difficulty just goes utterly mental,<br>doesn’t it? </p>
 <p>It’s been quite lunatic so far, ōxō.<br><del>It’s been quite lunatic so far, ōxō.</del></p>
 <div style="text-align: center;">
-<img src="https://kurailuna.github.io/images/posts/[CTF]pwnable.kr/Memcpy%20Problem%20solving/2.png" alt="미리보기 방지" width="300">
+<img src="https://Luna0x03.github.io/PostImages/White Hacking/CTF/pwnable.kr/Memcpy Problem solving/2.png" alt="미리보기 방지" width="300">
 </div>
 
 <br>
@@ -654,7 +657,7 @@
 </ul>
 <br>
 
-<img class="left-img" src="https://kurailuna.github.io/images/posts/[CTF]pwnable.kr/Memcpy%20Problem%20solving/3.png"  width="500">
+<img class="left-img" src="https://Luna0x03.github.io/PostImages/White Hacking/CTF/pwnable.kr/Memcpy Problem solving/3.png"  width="500">
  <br>
 
 <p>Screenshot.1</p>
@@ -671,25 +674,25 @@
 <p>(그럼 키값은 니꺼랑꼐?)</p>
 <p>​</p>
 <p>Right then. Apparently,<br>it’s not a hack this time around.<br>Still, best to have a look, wouldn’t you say?</p>
-<img class="left-img" src="https://kurailuna.github.io/images/posts/[CTF]pwnable.kr/Memcpy%20Problem%20solving/4.png"  width="500">
+<img class="left-img" src="https://luna0x03.github.io/PostImages/White Hacking/CTF/pwnable.kr/Memcpy Problem solving/4.png"  width="500">
 Screenshot.2 <br><br>
 
 <p>Right then. As before, just fire up your terminal, get yourself connected, </p>
 <p>and then, naturally, you’ll employ the trusty</p>
 <p>command to have a gander at the files.<br>Is <code>ls</code><br>​</p>
 <p>Right. So,it’s just <code>memcpy</code> and <code>readme</code>,is it?<br>That’s your lot.<br>Doubt we’ll be snagging any keys from this account,then.</p>
-<img class="left-img" src="https://kurailuna.github.io/images/posts/[CTF]pwnable.kr/Memcpy%20Problem%20solving/003.png"  width="500">
+<img class="left-img" src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/003.png"  width="500">
 Screenshot.3<br><br>
 
 <p>Right, then. Looks like we’ll<br>probably need a temporary bit of privilege escalation,<br>likely via an <code>nc</code>listener, to get our hands on that key.</p>
-<img class="left-img" src="https://kurailuna.github.io/images/posts/[CTF]pwnable.kr/Memcpy%20Problem%20solving/5.png"  width="500">
+<img class="left-img" src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/5.png"  width="500">
 
 <p>Screenshot.4</p>
 <p>Right then. Let’s just hop onto that listener.<br>And as soon as we’re in,</p>
 <p>you’ll see <code>memcpy</code> is running.<br>Turns out, this file…</p>
 <p>​</p>
 <p>It appears to be operating as a C function,<br>then, designed for copying memory.</p>
-<img class="left-img" src="https://kurailuna.github.io/images/posts/[CTF]pwnable.kr/Memcpy%20Problem%20solving/6.png"  width="500">
+<img class="left-img" src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/6.png"  width="500">
 Screenshot. 5
 
 <p>The <code>memcpy</code> file apparently takes<br>numbers within a given range.</p>
@@ -737,27 +740,27 @@ Screenshot. 5
 <p>Right then.<br>That instruction, it’ll throw an exception if it’s not aligned to<br>a 16-byte boundary.So, if you just ensure</p>
 <p>the destination operand’s address is 16-byte aligned,<br>that’ll sort the issue right out.</p>
 <p>​<br>Right then. We’ll just fire up GDB,debug it,<br>and then go about snagging that key, won’t we?<br>ㅋㅅㅋ</p>
-<img class="left-img" src="https://kurailuna.github.io/images/posts/[CTF]pwnable.kr/Memcpy%20Problem%20solving/7.png"  width="500">
+<img class="left-img" src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/7.png"  width="500">
 
 <p>Screenshot. 6</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /tmp</span><br><span class="line"><span class="built_in">mkdir</span> tm</span><br><span class="line"><span class="built_in">cd</span> tm</span><br><span class="line"><span class="built_in">ln</span> -s /home/memcpy/memcpy.c</span><br><span class="line">gcc -o memcpy memcpy.c -m32 -lm</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;8 16 32 64 128 256 512 1024 2048 4096&quot;</span> &gt; exploit</span><br></pre></td></tr></table></figure>
 
 <p>Right then. Once we’ve executed that through GDB,<br>we’ll then step into the <code>fast\_memcpy</code> function and have a proper look, shall we?</p>
-<img class="left-img" src="https://kurailuna.github.io/images/posts/[CTF]pwnable.kr/Memcpy%20Problem%20solving/8.png"  width="500">
+<img class="left-img" src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/8.png"  width="500">
 
 <p>Screenshot. 7</p>
 <p>Right then. It’s sat at that location,<br>and the EDX value is <code>0x080487cc</code>.</p>
 <p>Up to the fourth instance,<br>the alignment was perfectly fine,</p>
 <p>so no errors popped up.<br>But the fifth one? It wasn’t aligned at all.</p>
-<img class="left-img" src="https://kurailuna.github.io/images/posts/[CTF]pwnable.kr/Memcpy%20Problem%20solving/9.png"  width="500">
+<img class="left-img" src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/9.png"  width="500">
 
-<img class="left-img" src="https://kurailuna.github.io/images/posts/[CTF]pwnable.kr/Memcpy%20Problem%20solving/10.png"  width="500">
+<img class="left-img" src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/10.png"  width="500">
 
-<img class="left-img" src="https://kurailuna.github.io/images/posts/[CTF]pwnable.kr/Memcpy%20Problem%20solving/11.png"  width="500">
+<img class="left-img" src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/11.png"  width="500">
 
-<img class="left-img" src="https://kurailuna.github.io/images/posts/[CTF]pwnable.kr/Memcpy%20Problem%20solving/12.png"  width="500">
+<img class="left-img" src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/12.png"  width="500">
 
-<img class="left-img" src="https://kurailuna.github.io/images/posts/[CTF]pwnable.kr/Memcpy%20Problem%20solving/13.png"  width="500">
+<img class="left-img" src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/13.png"  width="500">
 Screenshot. 8
 
 <p>Right then. Just set a breakpoint at<br>the <code>fast\_memcpy</code> function,<br>specifically at +71. Check the register value,<br>and you’ll find EDX is indeed aligned at <code>804d060</code></p>
@@ -773,20 +776,20 @@ Screenshot. 8
 <p>​<br>…feed each of those in, and then you’ll finally manage to snag the key.</p>
 <p>​<br>Right. One could,naturally,dabble with other approaches,<br>I suppose.But for my money,using GDB is probably<br>the most sensible way to go about it.</p>
 <p>​<br>So, if you run the program,<br>you’ll find the key value displayed, much as below.</p>
-<img class="left-img" src="https://kurailuna.github.io/images/posts/[CTF]pwnable.kr/Memcpy%20Problem%20solving/14.png"  width="500">
+<img class="left-img" src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/14.png"  width="500">
 
 <p>Screenshot. 9</p>
 <p>With the key value we’ve just, ah,’snagged’,<br>you simply head back to the start,pop it into<br>the blank,and then,naturally,hit that’auth’ button.</p>
-<img class="left-img" src="https://kurailuna.github.io/images/posts/[CTF]pwnable.kr/Memcpy%20Problem%20solving/15.png"  width="500">
+<img class="left-img" src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/15.png"  width="500">
 
 <p>Screenshot.10</p>
 <p>Right.<br>And then you’re presented<br>with a message about securing 10 points</p>
-<img class="left-img" src="https://kurailuna.github.io/images/posts/[CTF]pwnable.kr/Memcpy%20Problem%20solving/16.png"  width="500">
+<img class="left-img" src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/16.png"  width="500">
 <br>
 <br>
 <br>
 <br>
-<img class="left-img" src="https://kurailuna.github.io/images/posts/[CTF]pwnable.kr/Memcpy%20Problem%20solving/17.png"  width="500">
+<img class="left-img" src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/17.png"  width="500">
 
 <p>Screenshot.11</p>
 <p>then. And upon returning,<br>you’ll find it’s indicated<br>with a green dotted line.<br>Signifying it’s, well, resolved.</p>
@@ -794,13 +797,13 @@ Screenshot. 8
 <p>And thanks for actually<br>bothering to read through all that.</p>
 <p>Right then.That’s done, then. :)</p>
 <div style="text-align: center;">
-<img src="https://kurailuna.github.io/images/posts/[CTF]pwnable.kr/Memcpy%20Problem%20solving/2.png" alt="미리보기 방지" width="300">
+<img src="https://Luna0x03.github.io/PostImages/White Hacking/CTF/pwnable.kr/Memcpy Problem solving/2.png" alt="미리보기 방지" width="300">
 </div>
 
 <p>Right then.<br>Hope your day isn’t completely rubbish,<br>and whatever you’re cracking on with goes smoothly.</p>
 <p>It’s a bit of a scorcher today,mind you,<br>so try not to go getting heatstroke.<br>And, naturally,<br>do be careful of that Wuhan pneumonia.</p>
 <div  style="text-align: center;">
-<img  src="https://kurailuna.github.io/images/posts/[CTF]pwnable.kr/Memcpy%20Problem%20solving/18.png" width= 300></div>  <br>  <br>
+<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/18.png" width= 300></div>  <br>  <br>
 
 <div id="disqus_thread"></div>
 <script>
@@ -832,7 +835,9 @@ Screenshot. 8
   <entry>
     <title>『pwnable.kr』 Collision Problem solving</title>
     <url>/2020/08/01/pwnable_kr_Collision_%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/</url>
-    <content><![CDATA[<link  href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap"  rel="stylesheet">
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link  href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap"  rel="stylesheet">
 
 <style>
 .left-img {
@@ -842,7 +847,7 @@ Screenshot. 8
 </style>
 
 <div  style="text-align: center;">
-<img  src="https://kurailuna.github.io/images/[CTF]pwnable.kr/Collision%20Problem%20solving/1%20Rina.gif"  alt="미리보기 방지"  width="300">
+<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/1%20Rina.gif"  alt="미리보기 방지"  width="300">
 </div> <br>
 
 
@@ -859,17 +864,17 @@ Screenshot. 8
 <p>I’ll place it in a text file so it can simply be copy-pasted.</p>
 <p>Anyway, let’s get started right away.</p>
 <div  style="text-align: center;">
-<img  src="https://kurailuna.github.io/images/[CTF]pwnable.kr/Collision%20Problem%20solving/2.png"  width="300">
+<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/2.png"  width="300">
 </div> <br>
 
 <br>
-<img class="left-img" src="https://kurailuna.github.io/images/[CTF]pwnable.kr/Collision%20Problem%20solving/3.png"  width="500">
+<img class="left-img" src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/3.png"  width="500">
  <br>
 
 <p>Right, if I’m having a punt at roughly translating<br>the gist of this in my own way,<br>it’s something like this:<br>So, you’re on about MD5 hash collisions then,<br>are we? (···) Right,anyway.</p>
 <br>
 <div class="left-img">
-<img  src="https://kurailuna.github.io/images/[CTF]pwnable.kr/Collision%20Problem%20solving/4.png"  width="500">
+<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/4.png"  width="500">
 </div>  <br>
 
 <p>Right then, first things first,<br>open up yer Linux terminal.<br>Then you just wanna connect using</p>
@@ -878,7 +883,7 @@ Screenshot. 8
 <p>Now,the password right?<br>It won’t actually show up as you’re typing it<br>– don’t mind that,just bash it in,hit Enter,<br>and bam, you’re logged in. Easy peasy!</p>
  <br>
 <div class="left-img">
-<img  src="https://kurailuna.github.io/images/[CTF]pwnable.kr/Collision%20Problem%20solving/5.png"  width="500">
+<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/5.png"  width="500">
 </div>  <br>
 Right then next up,you just wanna whack in
 
@@ -888,7 +893,7 @@ Right then next up,you just wanna whack in
 <p>the crucial bit, is <code>col.c</code></p>
  <br>
 <div class="left-img">
-<img  src="https://kurailuna.github.io/images/[CTF]pwnable.kr/Collision%20Problem%20solving/6.png"  width="500px">
+<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/6.png"  width="500px">
 </div>  <br>  <br>
 so if you have a proper gander at the main bit,
 
@@ -900,7 +905,7 @@ so if you have a proper gander at the main bit,
 <p>So, the thinking is,<br>if you just add the exact same value five times over you should,</p>
 <p>I reckon, get that hash code it’s after. Simple as that, really.</p>
 <h3 id="Derivation-of-results"><a href="#Derivation-of-results" class="headerlink" title="Derivation of results"></a>Derivation of results</h3><div class="left-img">
-<img  src="https://kurailuna.github.io/images/[CTF]pwnable.kr/Collision%20Problem%20solving/7.png"  width="500">
+<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/7.png"  width="500">
 </div>
 Figure.1) For and res data expressed by cutting int type 4 bytes each
 
@@ -909,28 +914,28 @@ Figure.1) For and res data expressed by cutting int type 4 bytes each
 <p>so if you then like,multiply this lot by five again<br>you’ll find you’re short by 0x4.So,<br>the assumption we’re making here is </p>
 <p>that the data is essentially four lots of<br><code>0x6C5CEC8</code> and then one bit of <code>0x6C5CECC</code> added in.</p>
 <div class="left-img">
-<img  src="https://kurailuna.github.io/images/[CTF]pwnable.kr/Collision%20Problem%20solving/8.png"  width="500">
+<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/8.png"  width="500">
 </div>
 Figure. 2> Data expressed in little endian<br><br>
 
 
 <p>then,since it’s all about little endian,yeah?<br>All you need to do is just feed the program that data<br>in hexadecimal,in the exact sequence.<br>That’s the one.<br><br></p>
 <div class="left-img">
-<img  src="https://kurailuna.github.io/images/[CTF]pwnable.kr/Collision%20Problem%20solving/9.png"  width="500">
+<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/9.png"  width="500">
 </div>  
 then, so you've gone and chucked the value in hexadecimal
 
 <p>using Python for that, yeah?</p>
 <p>Now, here’s the kicker, mind you:<br>when the program picks that up as an input<br>it’ll jolly well recognise it as a char.<br>So, you just gotta watch out for that. Proper careful,like.</p>
 <h3 id="Flag"><a href="#Flag" class="headerlink" title="Flag"></a>Flag</h3><div class="left-img">
-<img  src="https://kurailuna.github.io/images/[CTF]pwnable.kr/Collision%20Problem%20solving/10.png"  width="500">
+<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/10.png"  width="500">
 </div>
 Right then, so we've finally bagged the key value.
 
 <p>And with this rather handy key we’ve just nabbed<br>it’s back to the very beginning, isn’t it?</p>
  <br>
 <div class="left-img">
-<img  src="https://kurailuna.github.io/images/[CTF]pwnable.kr/Collision%20Problem%20solving/11.png"  width="500">
+<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/11.png"  width="500">
 </div>
 Right then, for that 'Flag?' bit down below,
 
@@ -938,20 +943,20 @@ Right then, for that 'Flag?' bit down below,
 <p>sorted, hit the’auth’button Simples.</p>
  <br>
 <div class="left-img">
-<img  src="https://kurailuna.github.io/images/[CTF]pwnable.kr/Collision%20Problem%20solving/12.png"  width="500">
+<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/12.png"  width="500">
 </div>
 Right, and just like that,
 three points were had, apparently.
 
 <p><br><br></p>
 <div class="left-img">
-<img  src="https://kurailuna.github.io/images/[CTF]pwnable.kr/Collision%20Problem%20solving/13.png"  width="500">
+<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/13.png"  width="500">
 </div>  <br>  <br>
 
 <p>Right,and then you swing back round,<br>and there it is: marked up with a green dotted line.<br>Means you’ve bloody well sorted it, doesn’t it?</p>
 <p>Right, well that’s the whole bloody spiel done.<br>Cheers for wading through all that, yeah : )<br> <br></p>
 <div  style="text-align: center;">
-<img  src="https://kurailuna.github.io/images/[CTF]pwnable.kr/Collision%20Problem%20solving/2.png"  width="300">
+<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/2.png"  width="300">
 </div> <br>
 Alright then,
 
@@ -960,7 +965,7 @@ Alright then,
 <p>And, uh, watch out for that bloody Wuhan pneumonia. Stay safe, mate. : )</p>
 <br>
 <div  style="text-align: center;">
-<img  src="https://kurailuna.github.io/images/[CTF]pwnable.kr/Collision%20Problem%20solving/14.png" width= 300></div>  <br>  <br>
+<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/14.png" width= 300></div>  <br>  <br>
 
 <div id="disqus_thread"></div>
 <script>
@@ -1013,7 +1018,7 @@ Alright then,
 
 <h1 id="미국-배당주-심플계산기"><a href="#미국-배당주-심플계산기" class="headerlink" title="미국 배당주 심플계산기"></a>미국 배당주 심플계산기</h1><h2 id="서론"><a href="#서론" class="headerlink" title="서론"></a>서론</h2><p>저번 일주일 동안에는 실수 로 날려먹은<br><br>GitHub 레파지토리 데이터를 살리고<br><br>이제 Hexo 블로그 가 어느정도 완성해서<br></p>
 <p>이제서야 첫 게시글을 작성해본다.<br></p>
-<h2 id="본론"><a href="#본론" class="headerlink" title="본론"></a>본론</h2><p> <A href = "https://KuraiLuna.github.io/made/Stock/stock.html"> 심플계산기 </A><br>  <A href = "https://kurailuna.github.io/made/Stock/stock_JP.html" > 심플계산기(JP) </A><br><br>나는 가까운 미래 미국 배당주 주식을<br>계획 하고 있다.<br><br>그래서 예상금액 등등 계산을 할려고<br>계산기를 찾고 있었는데 <br><br>대부분 너무 복잡하고 내가 원하는 계산기가<br></p>
+<h2 id="본론"><a href="#본론" class="headerlink" title="본론"></a>본론</h2><p> <A href = "https://luna0x03.github.io/made/Stock/stock.html"> 심플계산기 </A><br>  <A href = "https://luna0x03.github.io/made/Stock/stock_JP.html" > 심플계산기(JP) </A><br><br>나는 가까운 미래 미국 배당주 주식을<br>계획 하고 있다.<br><br>그래서 예상금액 등등 계산을 할려고<br>계산기를 찾고 있었는데 <br><br>대부분 너무 복잡하고 내가 원하는 계산기가<br></p>
 <p>없어서 그냥 내가 코딩으로 만들어 보기로 했다.<br><br>(나의 원래 정체성은 코딩 이랑 화이트해커이다.)<br><br>(여테까지 나는 취미로 그림을 그린다.)<br><br><br><br>일딴 단순히 계산식은 이렇다.<br></p>
 <p>-모아볼 주 × 예상 배당금 <br><br>-1주 가격 × 구입한주 <br><br><br><br>이런 형식의 계산기가 나에게 필요했다 <br><br>자 이제 바로 아래 자바스크립트 코드를 보자<br></p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">calculate</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="keyword">const</span> num = <span class="built_in">parseFloat</span>(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;num&#x27;</span>).<span class="property">value</span>);</span><br><span class="line">      <span class="keyword">const</span> num1 = <span class="built_in">parseFloat</span>(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;num1&#x27;</span>).<span class="property">value</span>);</span><br><span class="line">      <span class="keyword">const</span> num2 = <span class="built_in">parseFloat</span>(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;num2&#x27;</span>).<span class="property">value</span>);</span><br><span class="line">      <span class="keyword">const</span> num3 = <span class="built_in">parseFloat</span>(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;num3&#x27;</span>).<span class="property">value</span>);</span><br><span class="line"> </span><br><span class="line">      <span class="keyword">if</span> (<span class="built_in">isNaN</span>(num) || <span class="built_in">isNaN</span>(num1) || <span class="built_in">isNaN</span>(num2) || <span class="built_in">isNaN</span>(num3)) &#123;</span><br><span class="line">        <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;output&#x27;</span>).<span class="property">innerHTML</span> = <span class="string">&quot;⚠️ 모든 입력란을 채워주세요!&quot;</span>;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">      &#125;</span><br><span class="line"> </span><br><span class="line">      <span class="keyword">const</span> <span class="variable constant_">YB</span> = num * num1;</span><br><span class="line">      <span class="keyword">const</span> afterTax = <span class="variable constant_">YB</span> * (<span class="number">1</span> - <span class="number">0.154</span>);</span><br><span class="line">      <span class="keyword">const</span> <span class="variable constant_">ZG</span> = num2 * num3;</span><br><span class="line"> </span><br><span class="line">      <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;output&#x27;</span>).<span class="property">innerHTML</span> =</span><br><span class="line">        <span class="string">`총 예상 배당금: &lt;strong&gt;<span class="subst">$&#123;YB.toLocaleString()&#125;</span>원&lt;/strong&gt;&lt;br&gt;`</span> +</span><br><span class="line">        <span class="string">`세후 예상 배당금 (15.4% 공제): &lt;strong&gt;<span class="subst">$&#123;afterTax.toLocaleString()&#125;</span>원&lt;/strong&gt;&lt;br&gt;`</span> +</span><br><span class="line">        <span class="string">`총 예상 구입가격: &lt;strong&gt;<span class="subst">$&#123;ZG.toLocaleString()&#125;</span>원&lt;/strong&gt;`</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &lt;/script&gt;</span><br></pre></td></tr></table></figure>
@@ -1023,7 +1028,7 @@ Alright then,
 순수 자바스크립트 코드로 코딩을 해봤다.<br>
 
 <p>아주 오래전에 직업훈련학교 때 배워둔 자바스크립트가<br><br>빛을 발하는 듯하다. 아무튼 결과물은 아래 사진.1 <br></p>
-<p><img src="https://kurailuna.github.io/images/Calculator.png" alt="사진.1"><br></p>
+<p><img src="https://luna0x03.github.io/PostImages/DevDiary/etc/Finance/Stock/Simple/Calculator.png" alt="사진.1"><br></p>
 <p>생각보다 결과물은 매우 만족한다 .<br><br>이제 가까운 미래 에 미국 배당주 주식 시작할 때 <br><br><br><br>큰 도움이 되지 싶다.<br></p>
 <p>마지막 아래 코드는 전체 코드이다.<br></p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;ko&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>심플 배당주 계산기(원화)<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="selector-tag">body</span> &#123;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">font-family</span>: <span class="string">&#x27;Segoe UI&#x27;</span>, sans-serif;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">background-color</span>: <span class="number">#f4f4f4</span>;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">padding</span>: <span class="number">2em</span>;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">max-width</span>: <span class="number">600px</span>;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">margin</span>: auto;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css">    <span class="selector-tag">h1</span> &#123;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">color</span>: <span class="number">#2c3e50</span>;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">font-size</span>: <span class="number">1.8em</span>;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css">    <span class="selector-tag">label</span>, <span class="selector-tag">input</span> &#123;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">display</span>: block;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">margin-bottom</span>: <span class="number">1em</span>;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">font-size</span>: <span class="number">1rem</span>;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">width</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css">    <span class="selector-tag">input</span> &#123;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">padding</span>: <span class="number">0.5em</span>;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">box-sizing</span>: border-box;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ccc</span>;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css">    <span class="selector-tag">button</span> &#123;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">width</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">padding</span>: <span class="number">0.8em</span>;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">font-size</span>: <span class="number">1rem</span>;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">border</span>: none;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">background-color</span>: <span class="number">#3498db</span>;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">color</span>: white;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">border-radius</span>: <span class="number">6px</span>;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">cursor</span>: pointer;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">margin-top</span>: <span class="number">1em</span>;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css">    <span class="selector-tag">button</span><span class="selector-pseudo">:hover</span> &#123;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">background-color</span>: <span class="number">#2980b9</span>;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css">    <span class="selector-class">.result</span> &#123;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">margin-top</span>: <span class="number">2em</span>;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">font-weight</span>: bold;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">word-break</span>: keep-all;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css"> </span></span><br><span class="line"><span class="language-css">    <span class="selector-class">.wrap-container</span> &#123;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">margin-top</span>: <span class="number">2em</span>;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">text-align</span>: center;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css">    <span class="selector-class">.home-image</span> &#123;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">width</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">max-width</span>: <span class="number">300px</span>;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">height</span>: auto;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css"> </span></span><br><span class="line"><span class="language-css">    <span class="selector-tag">footer</span> &#123;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">text-align</span>: center;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">margin-top</span>: <span class="number">3em</span>;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">font-size</span>: <span class="number">0.9em</span>;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">color</span>: <span class="number">#777</span>;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css"> </span></span><br><span class="line"><span class="language-css">    <span class="keyword">@media</span> (<span class="attribute">max-width</span>: <span class="number">480px</span>) &#123;</span></span><br><span class="line"><span class="language-css">      <span class="selector-tag">body</span> &#123;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">padding</span>: <span class="number">1em</span>;</span></span><br><span class="line"><span class="language-css">      &#125;</span></span><br><span class="line"><span class="language-css">      <span class="selector-tag">h1</span> &#123;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">font-size</span>: <span class="number">1.4em</span>;</span></span><br><span class="line"><span class="language-css">      &#125;</span></span><br><span class="line"><span class="language-css">      <span class="selector-tag">button</span> &#123;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">font-size</span>: <span class="number">0.9em</span>;</span></span><br><span class="line"><span class="language-css">      &#125;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css">  </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"> </span><br><span class="line">  <span class="comment">&lt;!--&lt;h1&gt; &lt;/h1&gt;--&gt;</span> </span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;<span class="name">font</span> <span class="attr">size</span>=<span class="string">6</span> <span class="attr">style</span>=<span class="string">&quot;font-weight:900;&quot;</span>&gt;</span>💹 심플 배당주 계산기(원화)<span class="tag">&lt;/<span class="name">font</span>&gt;</span> <span class="tag">&lt;<span class="name">a</span> <span class="attr">style</span>=<span class="string">&quot;color: #33d45b&quot;</span>&gt;</span>ver 0.0.5<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"> </span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">style</span>=<span class="string">&quot;color: #37b7fe&quot;</span>&gt;</span>모아볼 주:<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;number&quot;</span> <span class="attr">id</span>=<span class="string">&quot;num&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;예: 22691&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"> </span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">style</span>=<span class="string">&quot;color: #37b7fe&quot;</span>&gt;</span>예상 배당락:<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;number&quot;</span> <span class="attr">id</span>=<span class="string">&quot;num1&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;예: 1158&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"> </span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">style</span>=<span class="string">&quot;color: #37b7fe&quot;</span>&gt;</span>1주당 가격:<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;number&quot;</span> <span class="attr">id</span>=<span class="string">&quot;num2&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;현재 1주당 가격&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"> </span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">style</span>=<span class="string">&quot;color: #37b7fe&quot;</span>&gt;</span>구입한 주:<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;number&quot;</span> <span class="attr">id</span>=<span class="string">&quot;num3&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;구입할 주식 수&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"> </span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">&quot;calculate()&quot;</span>&gt;</span>계산하기<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"> </span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;result&quot;</span> <span class="attr">id</span>=<span class="string">&quot;output&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"> </span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">function</span> <span class="title function_">calculate</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">const</span> num = <span class="built_in">parseFloat</span>(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;num&#x27;</span>).<span class="property">value</span>);</span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">const</span> num1 = <span class="built_in">parseFloat</span>(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;num1&#x27;</span>).<span class="property">value</span>);</span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">const</span> num2 = <span class="built_in">parseFloat</span>(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;num2&#x27;</span>).<span class="property">value</span>);</span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">const</span> num3 = <span class="built_in">parseFloat</span>(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;num3&#x27;</span>).<span class="property">value</span>);</span></span><br><span class="line"><span class="language-javascript"> </span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">if</span> (<span class="built_in">isNaN</span>(num) || <span class="built_in">isNaN</span>(num1) || <span class="built_in">isNaN</span>(num2) || <span class="built_in">isNaN</span>(num3)) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;output&#x27;</span>).<span class="property">innerHTML</span> = <span class="string">&quot;⚠️ 모든 입력란을 채워주세요!&quot;</span>;</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">return</span>;</span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript"> </span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">const</span> <span class="variable constant_">YB</span> = num * num1;</span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">const</span> afterTax = <span class="variable constant_">YB</span> * (<span class="number">1</span> - <span class="number">0.154</span>);</span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">const</span> <span class="variable constant_">ZG</span> = num2 * num3;</span></span><br><span class="line"><span class="language-javascript"> </span></span><br><span class="line"><span class="language-javascript">      <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;output&#x27;</span>).<span class="property">innerHTML</span> =</span></span><br><span class="line"><span class="language-javascript">        <span class="string">`총 예상 배당금: &lt;strong&gt;<span class="subst">$&#123;YB.toLocaleString()&#125;</span>원&lt;/strong&gt;&lt;br&gt;`</span> +</span></span><br><span class="line"><span class="language-javascript">        <span class="string">`세후 예상 배당금 (15.4% 공제): &lt;strong&gt;<span class="subst">$&#123;afterTax.toLocaleString()&#125;</span>원&lt;/strong&gt;&lt;br&gt;`</span> +</span></span><br><span class="line"><span class="language-javascript">        <span class="string">`총 예상 구입가격: &lt;strong&gt;<span class="subst">$&#123;ZG.toLocaleString()&#125;</span>원&lt;/strong&gt;`</span>;</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"> </span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;wrap-container&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;home-container&quot;</span>&gt;</span></span><br><span class="line"> </span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">width</span>=<span class="string">&quot;5px&quot;</span> <span class="attr">height</span>=<span class="string">&quot;5px&quot;</span>  <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js&quot;</span> <span class="attr">data-name</span>=<span class="string">&quot;bmc-button&quot;</span> <span class="attr">data-slug</span>=<span class="string">&quot;Luna0x03&quot;</span> <span class="attr">data-color</span>=<span class="string">&quot;#BD5FFF&quot;</span> <span class="attr">data-emoji</span>=<span class="string">&quot;&quot;</span> <span class="attr">data-font</span>=<span class="string">&quot;Cookie&quot;</span> <span class="attr">data-text</span>=<span class="string">&quot;Buy me a coffee&quot;</span> <span class="attr">data-outline-color</span>=<span class="string">&quot;#000000&quot;</span> <span class="attr">data-font-color</span>=<span class="string">&quot;#ffffff&quot;</span> <span class="attr">data-coffee-color</span>=<span class="string">&quot;#FFDD00&quot;</span> &gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"> </span><br><span class="line">by. <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://github.com/Luna0x03&quot;</span>&gt;</span>Luna0x03<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"> </span><br><span class="line"><span class="tag">&lt;<span class="name">footer</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">small</span>&gt;</span>Copyright <span class="symbol">&amp;copy;</span> Kurai Luna(Luna0x03)<span class="tag">&lt;/<span class="name">small</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -1032,7 +1037,7 @@ Alright then,
 휴, 많은 뻘짓이였다ㅡㅠ;;<br>
 아무튼 아래 사진.2 처럼 일본 버전도 보여주고 이만 끝마친다.<br>
 
-<p><img src="https://kurailuna.github.io/images/Calculator2.png" alt="사진.2"><br></p>
+<p><img src="https://luna0x03.github.io/PostImages/DevDiary/etc/Finance/Stock/Simple/Calculator2.png" alt="사진.2"><br></p>
 <p>P.s.<br>일본버전도 만들어보니까<br><br>일본에서 총 배당금 세금이 28.28% 사실에<br><br>놀라웠다, 개인적으로 일본의 금융에 있어서는<br><br>많이 아쉬운 부분이다.<br></p>
 <div id="disqus_thread"></div>
 <script>
@@ -1067,7 +1072,10 @@ Alright then,
   <entry>
     <title>미국 배당주 주식 SCHD ETF 계산기</title>
     <url>/2025/04/26/%EB%AF%B8%EA%B5%AD-%EB%B0%B0%EB%8B%B9%EC%A3%BC-%EC%A3%BC%EC%8B%9D-SCHD-ETF-%EA%B3%84%EC%82%B0%EA%B8%B0/</url>
-    <content><![CDATA[<!-- 폰트 -->
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- 폰트 -->
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&display=swap');
@@ -1104,26 +1112,26 @@ Alright then,
 아무튼 이렇게 구성을 했다.<br>
 <br>
 
-<img src="https://kurailuna.github.io/PostImages/SCHD/SCHD1.png" border="0" width="70%" height="70%">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/etc/Finance/SCHD/SCHD1.png" border="0" width="70%" height="70%">
 
 <br>
 
 <p>내가 어떻게 했는지는 모르겠지만<br><br>UI도 그럴싸 하게 했다….ㄱ-;; <br></p>
 <br>
-<img src="https://i.namu.wiki/i/OZZPsepmm5TgM9nVBKMMArWcUWrOQfFHPOZBbwGiE72Xse2OIani7Bq9uMAjsA4t6Lt6CC9xzLdqKtkpHzQGs-DRShfhoVwT01JEk5QJpQcSRuBdKFEfOhI0kvNNX8miPm2jUdQvoHVT3HoFkh5hOQ.webp" border="0" width="30%" height="30%">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/etc/Finance/SCHD/Cat.webp" border="0" width="30%" height="30%">
 
 <br>
 아무튼; 애초에 SCHD ETF 계산기라서 숫자 디폴트 값은 SCHD<br>
 기준으로 잡아뒀다 이렇게 숫자를 입력하고 "계산하기" <br>
 버튼을 누르면 아레 이미지 처럼 값이 출력이 된다.<br>
 
-<img src="https://kurailuna.github.io/PostImages/SCHD/SCHD2.png" border="0" width="70%" height="70%">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/etc/Finance/SCHD/SCHD2.png" border="0" width="70%" height="70%">
 
 <br>
 표 아래 우측 버튼은 엑셀 파일로 출력하는 기능인데<br>
 엑셀파일로 출력하는 부분은 아레 그림 의 표가 엑셀파일로 저장된다,<br>
 <br>
-<img src="https://kurailuna.github.io/PostImages/SCHD/SCHD3.png" border="0" width="70%" height="70%">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/etc/Finance/SCHD/SCHD3.png" border="0" width="70%" height="70%">
 
 <p>일딴 디폴트로 10년 값으로 출력 된 표이다.<br><br>20년 혹은 30년 또는 그이상 값을 입력하면 그에 맞게 출력될것이다.<br></p>
 <br>
@@ -1172,8 +1180,7 @@ Alright then,
 
 
 <div style="text-align: center;">
-<img src="https://kurailuna.github.io/images/posts/[CTF]Baekjoon/10171
-/Baekjoon.png" alt="미리보기 방지" width="450">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/10171/Baekjoon.png" alt="미리보기 방지" width="450">
 </div>
 
 <style>
@@ -1192,7 +1199,7 @@ Alright then,
 <br>
 
 <div class="left-img">
-<img src="https://kurailuna.github.io/images/posts/[CTF]Baekjoon/10171/001.jpg" alt="미리보기 방지" width="250%">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/10171/001.jpg" alt="미리보기 방지" width="250%">
 </div> <br> <br><br><br><br><br><br><br><br><br><br>
 
 <br>
@@ -1206,7 +1213,7 @@ Alright then,
 
 <h3 id="結果『けっか』"><a href="#結果『けっか』" class="headerlink" title="結果『けっか』"></a>結果『けっか』</h3><br>
 <div class="left-img">
-<img src="https://kurailuna.github.io/images/posts/[CTF]Baekjoon/10171/002.png" alt="미리보기 방지" width="580">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/10171/002.png" alt="미리보기 방지" width="580">
 </div> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
 
 
