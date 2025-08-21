@@ -445,8 +445,9 @@
   <entry>
     <title>JSP Project 7_28_2019</title>
     <url>/2019/07/28/JSP-Project-7-28-2019/</url>
-    <content><![CDATA[<p><img border="0" width="80%" height="80%" src="https://KuraiLuna.github.io/PostImages/JSP 프로젝트 완성 2019년 7월 28일
-/02 사진.0 미리보기 방지.jpg"> <br><br>사진.0 미리보기 방지* <br><br><br><br>드리어 완성 군요..;;<br><br>이제야 게시글 작업합니다,<br><br>작성하기에 앞서 아래 시연 영상부터<br><br>가겠습니다.<br></p>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<p><img border="0" width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/02%20%EC%82%AC%EC%A7%84.0%20%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0%20%EB%B0%A9%EC%A7%80.jpg"> <br><br>사진.0 미리보기 방지* <br><br><br><br>드리어 완성 군요..;;<br><br>이제야 게시글 작업합니다,<br><br>작성하기에 앞서 아래 시연 영상부터<br><br>가겠습니다.<br></p>
 <br>
 <div class="widget-wrap">
   <div class="widget-title"><시연영상></div>
@@ -466,7 +467,7 @@
 
 <p><img border="0" width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.1%20%EC%82%AC%EC%9D%B4%ED%8A%B8%20%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4%20%ED%99%88_%EC%82%AC%EC%9D%B4%ED%8A%B8_%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4.png"> <br><br>사진.1 사이트 메인화면<br><br><br><br>사이트 메인화면입니다. 원래 계획상 좀 더 많은 기능을<br><br>넣으려고 했다만은 개인적인 사정으로 커뮤니티 기능만 하기로 했습니다.<br> 아래 사진6-7 말이죠^ㅅ^; <br></p>
 <p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.6%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png"> <br><br>사진.6 일러스트<br></p>
-<p><img width="80%" height="80%" src="https://kurailuna.github.io/PostImages/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.7%20%EB%A7%8C%ED%99%94.png"> <br><br>사진.7 만화<br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.7%20%EB%A7%8C%ED%99%94.png"> <br><br>사진.7 만화<br></p>
 <p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.2%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85.png"> <br><br>사진.2 회원가입<br></p>
 <p>커뮤니티는 회원가입…<br><br>예전부터 그래왔고 지금도<br><br>본격적으로 사이트를 이용하려면<br><br>누구든지 예외없이 회원가입을 해야 했죠<br></p>
 <p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.3%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%20%EC%99%84%EB%A3%8C%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85_%EC%99%84%EB%A3%8C.png"> <br><br>사진.3 회원가입 완료<br></p>
@@ -519,7 +520,9 @@
   <entry>
     <title>Front End Project</title>
     <url>/2018/09/09/Front-End-Project/</url>
-    <content><![CDATA[<div style="TEXT-ALIGN: center">
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div style="TEXT-ALIGN: center">
         <div id="google_translate_element"></div>
             <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
                 <script type="text/javascript">
@@ -629,7 +632,9 @@
   <entry>
     <title>『pwnable.kr』 Memcpy Problem solving</title>
     <url>/2020/08/02/pwnable-kr-Memcpy-Problem-Solving/</url>
-    <content><![CDATA[<h1 id="pwnable-kr-Memcpy-Problem-solving"><a href="#pwnable-kr-Memcpy-Problem-solving" class="headerlink" title="[pwnable.kr]_Memcpy Problem solving"></a>[pwnable.kr]_Memcpy Problem solving</h1><hr>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<h1 id="pwnable-kr-Memcpy-Problem-solving"><a href="#pwnable-kr-Memcpy-Problem-solving" class="headerlink" title="[pwnable.kr]_Memcpy Problem solving"></a>[pwnable.kr]_Memcpy Problem solving</h1><hr>
 <div style="text-align: center;">
 <img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/1_Rina.gif" alt="미리보기 방지" width="300">
 </div>
@@ -997,7 +1002,9 @@ Alright then,
   <entry>
     <title>미국 배당주 심플계산기</title>
     <url>/2025/04/14/%EB%AF%B8%EA%B5%AD-%EB%B0%B0%EB%8B%B9%EC%A3%BC-%EC%8B%AC%ED%94%8C%EA%B3%84%EC%82%B0%EA%B8%B0/</url>
-    <content><![CDATA[<style>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
