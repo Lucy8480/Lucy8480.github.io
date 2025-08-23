@@ -17,7 +17,11 @@
 </ul>
 <br>
 
-<h2 id="C-Programming-Random-Draw"><a href="#C-Programming-Random-Draw" class="headerlink" title="[C Programming]Random Draw"></a>[C Programming]Random Draw</h2><h3 id="💻Code"><a href="#💻Code" class="headerlink" title="💻Code"></a>💻Code</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span> &#123;</span><br><span class="line">    <span class="type">char</span> names[<span class="number">4</span>][<span class="number">50</span>];  <span class="comment">// Store names (up to 49 characters each)</span></span><br><span class="line">    <span class="type">int</span> n = <span class="number">4</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// User input</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Please enter 4 names:\n&quot;</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Name %d:\n&quot;</span>, i + <span class="number">1</span>);</span><br><span class="line">        fgets(names[i], <span class="keyword">sizeof</span>(names[i]), <span class="built_in">stdin</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Remove trailing newline from fgets</span></span><br><span class="line">        <span class="type">size_t</span> len = <span class="built_in">strlen</span>(names[i]);</span><br><span class="line">        <span class="keyword">if</span> (len &gt; <span class="number">0</span> &amp;&amp; names[i][len - <span class="number">1</span>] == <span class="string">&#x27;\n&#x27;</span>) &#123;</span><br><span class="line">            names[i][len - <span class="number">1</span>] = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Set random seed</span></span><br><span class="line">    srand((<span class="type">unsigned</span> <span class="type">int</span>)time(<span class="literal">NULL</span>));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Select a random index</span></span><br><span class="line">    <span class="type">int</span> winner = rand() % n;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Output result</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n🎉 Result of the draw! The winner is: %s 🎉\n&quot;</span>, names[winner]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="C-Programming-Random-Draw"><a href="#C-Programming-Random-Draw" class="headerlink" title="[C Programming]Random Draw"></a>[C Programming]Random Draw</h2><p>Right, so this past Friday,<br>before the weekend proper,<br>I’d put up a poll on Twitter (X) to choose which</p>
+<p>Genshin Impact character to draw this time.</p>
+<p>But, as it often goes with these things,<br>I didn’t quite get a conclusive result.</p>
+<p>So, in the end, I ended up having to just knock up a<br>C program myself to make the final decision.</p>
+<h3 id="💻Code"><a href="#💻Code" class="headerlink" title="💻Code"></a>💻Code</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span> &#123;</span><br><span class="line">    <span class="type">char</span> names[<span class="number">4</span>][<span class="number">50</span>];  <span class="comment">// Store names (up to 49 characters each)</span></span><br><span class="line">    <span class="type">int</span> n = <span class="number">4</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// User input</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Please enter 4 names:\n&quot;</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Name %d:\n&quot;</span>, i + <span class="number">1</span>);</span><br><span class="line">        fgets(names[i], <span class="keyword">sizeof</span>(names[i]), <span class="built_in">stdin</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Remove trailing newline from fgets</span></span><br><span class="line">        <span class="type">size_t</span> len = <span class="built_in">strlen</span>(names[i]);</span><br><span class="line">        <span class="keyword">if</span> (len &gt; <span class="number">0</span> &amp;&amp; names[i][len - <span class="number">1</span>] == <span class="string">&#x27;\n&#x27;</span>) &#123;</span><br><span class="line">            names[i][len - <span class="number">1</span>] = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Set random seed</span></span><br><span class="line">    srand((<span class="type">unsigned</span> <span class="type">int</span>)time(<span class="literal">NULL</span>));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Select a random index</span></span><br><span class="line">    <span class="type">int</span> winner = rand() % n;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Output result</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n🎉 Result of the draw! The winner is: %s 🎉\n&quot;</span>, names[winner]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="🪔Result"><a href="#🪔Result" class="headerlink" title="🪔Result"></a>🪔Result</h3><div style="text-alingn: right;">
 <p style="text-align:center">
@@ -495,81 +499,6 @@
       </tags>
   </entry>
   <entry>
-    <title>JSP Project 7_28_2019</title>
-    <url>/2019/07/28/JSP-Project-7-28-2019/</url>
-    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<p><img border="0" width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/02%20%EC%82%AC%EC%A7%84.0%20%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0%20%EB%B0%A9%EC%A7%80.jpg"> <br><br>사진.0 미리보기 방지* <br><br><br><br>드리어 완성 군요..;;<br><br>이제야 게시글 작업합니다,<br><br>작성하기에 앞서 아래 시연 영상부터<br><br>가겠습니다.<br></p>
-<br>
-<div class="widget-wrap">
-  <div class="widget-title"><시연영상></div>
-  <div class="widget-body">
-    <iframe
-      width="200"
-      height="180"
-      src="https://www.youtube.com/embed/9Y_ed7URWjE?si=njd40Zs0gsx_CbfP"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
-</div>
-동영상1.시연영상</p>
-<br>
-
-<p><img border="0" width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.1%20%EC%82%AC%EC%9D%B4%ED%8A%B8%20%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4%20%ED%99%88_%EC%82%AC%EC%9D%B4%ED%8A%B8_%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4.png"> <br><br>사진.1 사이트 메인화면<br><br><br><br>사이트 메인화면입니다. 원래 계획상 좀 더 많은 기능을<br><br>넣으려고 했다만은 개인적인 사정으로 커뮤니티 기능만 하기로 했습니다.<br> 아래 사진6-7 말이죠^ㅅ^; <br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.6%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png"> <br><br>사진.6 일러스트<br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.7%20%EB%A7%8C%ED%99%94.png"> <br><br>사진.7 만화<br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.2%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85.png"> <br><br>사진.2 회원가입<br></p>
-<p>커뮤니티는 회원가입…<br><br>예전부터 그래왔고 지금도<br><br>본격적으로 사이트를 이용하려면<br><br>누구든지 예외없이 회원가입을 해야 했죠<br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.3%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%20%EC%99%84%EB%A3%8C%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85_%EC%99%84%EB%A3%8C.png"> <br><br>사진.3 회원가입 완료<br></p>
-<p>가입완료 창입니다,<br><br>본인은 심플한게 좋음으로<br><br>나름 심플하게 했습니다. ㅋㅅㅋ;;<br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.4%20%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EB%A1%9C%EA%B7%B8%EC%9D%B8.png"><br><br>사진.4 로그인<br></p>
-<p>이제 로그인 해보겠습니다.<br><br>방금만든 유저 아이디로<br><br>한번 접속해 보겠습니다. : )<br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.5%20%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EC%99%84%EB%A3%8C%20%EB%A1%9C%EA%B7%B8%EC%9D%B8_%EC%99%84%EB%A3%8C.png"><br><br>사진.5 로그인 완료<br></p>
-<p>로그인이 완료되면 푸른색 동그라미가<br><br>있는 부분보면 처음과 뭔가 다르다는 걸 알 수 있습니다.<br><br><br><br>아래의 그림.논외 처럼 말이죠….<br></p>
-<p><img width="50%" height="50%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EA%B7%B8%EB%A6%BC.%EB%85%BC%EC%99%B8%20%EB%AD%94%EA%B0%80%20%EB%8B%A4%EB%A5%B4%EB%8B%A4%20%EB%AD%94%EA%B0%80_%EB%8B%A4%EB%A5%B4%EB%8B%A4.png"><br><br>그림.논외 뭔가 다르다<br><br><br><br><br><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.8%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%20%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0%20%EA%B2%8C%EC%8B%9C%ED%8C%90%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8_%ED%8E%98%EC%9D%B4%EC%A7%80.png"><br><br>사진.8 일러스트 커뮤니티 게시판<br></p>
-<p><br><br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.9%20%EB%A7%8C%ED%99%94%20%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0%20%EA%B2%8C%EC%8B%9C%ED%8C%90%20%EB%A7%8C%ED%99%94_%ED%8E%98%EC%9D%B4%EC%A7%80.png"><br><br>사진.9 만화 커뮤니티 게시판<br><br><br><br>사진.8과 사진.9의 각각 일러스트와 만화<br><br>커뮤니티 게시판입니다.<br><br>나름대로 페이스북이나 트위터<br><br>유사(?) 하겠끔 해봤습니다.<br><br><br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.10%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%20%EC%98%AC%EB%A6%AC%EA%B8%B0%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8_%EC%98%AC%EB%A6%AC%EA%B8%B0.png"><br><br>사진.10 일러스트 올리기<br><br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.11%20%EB%A7%8C%ED%99%94%20%EC%98%AC%EB%A6%AC%EA%B8%B0%20%EB%A7%8C%ED%99%94_%EC%98%AC%EB%A6%AC%EA%B8%B0.png"><br><br>사진.11 만화 올리기<br></p>
-<p>사진.10, 사진.11은 각각 일러스트와 만화를<br><br>게시하고 그로인한 게시글이 올려진 모습입니다.<br><br>나름 페이스북이나 트위터 유사해 보입니다(???)<br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.12%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%20%EC%A2%8B%EC%95%84%EC%9A%94%20%EC%99%80%20%EB%8D%A7%EA%B8%80%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8_%EC%A2%8B%EC%95%84%EC%9A%94%EC%99%80_%EB%8D%A7%EA%B8%80.png"><br><br>사진.12 일러스트 좋아요 와 덧글<br><br><br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.13%20%EB%A7%8C%ED%99%94%20%EC%A2%8B%EC%95%84%EC%9A%94%20%EC%99%80%20%EB%8D%A7%EA%B8%80%20%EB%A7%8C%ED%99%94_%EC%A2%8B%EC%95%84%EC%9A%94%EC%99%80_%EB%8D%A7%EA%B8%80.png"><br><br>사진.13 만화 좋아요 와 덧글<br><br><br><br>사직.12와 사진.13입니다.<br><br>각각 좋아요 와 댓글을 달아봤습니다,<br><br>댓글 과 좋아요 는 일러스트와 만화 파일처럼<br><br><br><br>사진처럼 되었다면 DB에 정상적으로 올라왔음을<br>알 수가 있었지요.<br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.14%20%ED%9A%8C%EC%9B%90%EC%A0%95%EB%B3%B4%20%EC%88%98%EC%A0%95%20%EC%9C%A0%EC%A0%80%EC%A0%95%EB%B3%B4_%EC%88%98%EC%A0%95.png"><br><br>사진.14 회원정보 수정<br><br><br><br>이제 화원정보 수정 창입니다.<br><br>커뮤니티 특성상 익명이 글을 게시하는지라<br><br>때에 따라 주소, 전화번호등 언제든지 바뀝니다,<br><br><br><br>그렇게 해서 회원정보 수정은 꼭 들어간다고 하지요…<br><br>(비밀번호 같은 경우 알다시피 보안상 자주 바꿔야 한다더군요)<br></p>
-<hr>
-<p><br><br><br>긴시간(?)을 꼬박 한 보람은 있기는 합니다ㅎㅎ(ㅎㅁㅎ)<br><br>이제는 조금 쉬어야겠습니다.<br><br>조금 쉬었다가 이제 본격적으로 해야겠지요….<br></p>
-<p><br><br><br>마지막으로 소스코드 링크하고<br><br>이제 포스팅은 여기까지 하겠습니다.<br><br>긴 글을 읽어 주셔서 감사하고<br><br>엔제나 오늘하루 잘 보내시길 바랍니다. ㅎㅁㅎ&#x2F;<br><br><br></p>
-<p>&lt;소스코드&gt;<br><br><a href="https://github.com/KuraiLuna/KuraiLunaJSP.github.io/tree/master/Medi">https://github.com/KuraiLuna/KuraiLunaJSP.github.io/tree/master/Medi</a></p>
-<p align="center"><img  width="60%" height="60%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%98%A4%EB%8A%98%EB%8F%84_%EC%A2%8B%EC%9D%80_%ED%95%98%EB%A3%A8.png" ></p><br>
-
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://kurailuna.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>]]></content>
-      <categories>
-        <category>Portfolio</category>
-        <category>Back-End</category>
-      </categories>
-      <tags>
-        <tag>Back End</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Front End Project</title>
     <url>/2018/09/09/Front-End-Project/</url>
     <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -643,6 +572,81 @@
       </categories>
       <tags>
         <tag>Front End</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JSP Project 7_28_2019</title>
+    <url>/2019/07/28/JSP-Project-7-28-2019/</url>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<p><img border="0" width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/02%20%EC%82%AC%EC%A7%84.0%20%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0%20%EB%B0%A9%EC%A7%80.jpg"> <br><br>사진.0 미리보기 방지* <br><br><br><br>드리어 완성 군요..;;<br><br>이제야 게시글 작업합니다,<br><br>작성하기에 앞서 아래 시연 영상부터<br><br>가겠습니다.<br></p>
+<br>
+<div class="widget-wrap">
+  <div class="widget-title"><시연영상></div>
+  <div class="widget-body">
+    <iframe
+      width="200"
+      height="180"
+      src="https://www.youtube.com/embed/9Y_ed7URWjE?si=njd40Zs0gsx_CbfP"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+동영상1.시연영상</p>
+<br>
+
+<p><img border="0" width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.1%20%EC%82%AC%EC%9D%B4%ED%8A%B8%20%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4%20%ED%99%88_%EC%82%AC%EC%9D%B4%ED%8A%B8_%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4.png"> <br><br>사진.1 사이트 메인화면<br><br><br><br>사이트 메인화면입니다. 원래 계획상 좀 더 많은 기능을<br><br>넣으려고 했다만은 개인적인 사정으로 커뮤니티 기능만 하기로 했습니다.<br> 아래 사진6-7 말이죠^ㅅ^; <br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.6%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png"> <br><br>사진.6 일러스트<br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.7%20%EB%A7%8C%ED%99%94.png"> <br><br>사진.7 만화<br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.2%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85.png"> <br><br>사진.2 회원가입<br></p>
+<p>커뮤니티는 회원가입…<br><br>예전부터 그래왔고 지금도<br><br>본격적으로 사이트를 이용하려면<br><br>누구든지 예외없이 회원가입을 해야 했죠<br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.3%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%20%EC%99%84%EB%A3%8C%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85_%EC%99%84%EB%A3%8C.png"> <br><br>사진.3 회원가입 완료<br></p>
+<p>가입완료 창입니다,<br><br>본인은 심플한게 좋음으로<br><br>나름 심플하게 했습니다. ㅋㅅㅋ;;<br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.4%20%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EB%A1%9C%EA%B7%B8%EC%9D%B8.png"><br><br>사진.4 로그인<br></p>
+<p>이제 로그인 해보겠습니다.<br><br>방금만든 유저 아이디로<br><br>한번 접속해 보겠습니다. : )<br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.5%20%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EC%99%84%EB%A3%8C%20%EB%A1%9C%EA%B7%B8%EC%9D%B8_%EC%99%84%EB%A3%8C.png"><br><br>사진.5 로그인 완료<br></p>
+<p>로그인이 완료되면 푸른색 동그라미가<br><br>있는 부분보면 처음과 뭔가 다르다는 걸 알 수 있습니다.<br><br><br><br>아래의 그림.논외 처럼 말이죠….<br></p>
+<p><img width="50%" height="50%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EA%B7%B8%EB%A6%BC.%EB%85%BC%EC%99%B8%20%EB%AD%94%EA%B0%80%20%EB%8B%A4%EB%A5%B4%EB%8B%A4%20%EB%AD%94%EA%B0%80_%EB%8B%A4%EB%A5%B4%EB%8B%A4.png"><br><br>그림.논외 뭔가 다르다<br><br><br><br><br><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.8%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%20%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0%20%EA%B2%8C%EC%8B%9C%ED%8C%90%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8_%ED%8E%98%EC%9D%B4%EC%A7%80.png"><br><br>사진.8 일러스트 커뮤니티 게시판<br></p>
+<p><br><br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.9%20%EB%A7%8C%ED%99%94%20%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0%20%EA%B2%8C%EC%8B%9C%ED%8C%90%20%EB%A7%8C%ED%99%94_%ED%8E%98%EC%9D%B4%EC%A7%80.png"><br><br>사진.9 만화 커뮤니티 게시판<br><br><br><br>사진.8과 사진.9의 각각 일러스트와 만화<br><br>커뮤니티 게시판입니다.<br><br>나름대로 페이스북이나 트위터<br><br>유사(?) 하겠끔 해봤습니다.<br><br><br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.10%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%20%EC%98%AC%EB%A6%AC%EA%B8%B0%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8_%EC%98%AC%EB%A6%AC%EA%B8%B0.png"><br><br>사진.10 일러스트 올리기<br><br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.11%20%EB%A7%8C%ED%99%94%20%EC%98%AC%EB%A6%AC%EA%B8%B0%20%EB%A7%8C%ED%99%94_%EC%98%AC%EB%A6%AC%EA%B8%B0.png"><br><br>사진.11 만화 올리기<br></p>
+<p>사진.10, 사진.11은 각각 일러스트와 만화를<br><br>게시하고 그로인한 게시글이 올려진 모습입니다.<br><br>나름 페이스북이나 트위터 유사해 보입니다(???)<br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.12%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%20%EC%A2%8B%EC%95%84%EC%9A%94%20%EC%99%80%20%EB%8D%A7%EA%B8%80%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8_%EC%A2%8B%EC%95%84%EC%9A%94%EC%99%80_%EB%8D%A7%EA%B8%80.png"><br><br>사진.12 일러스트 좋아요 와 덧글<br><br><br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.13%20%EB%A7%8C%ED%99%94%20%EC%A2%8B%EC%95%84%EC%9A%94%20%EC%99%80%20%EB%8D%A7%EA%B8%80%20%EB%A7%8C%ED%99%94_%EC%A2%8B%EC%95%84%EC%9A%94%EC%99%80_%EB%8D%A7%EA%B8%80.png"><br><br>사진.13 만화 좋아요 와 덧글<br><br><br><br>사직.12와 사진.13입니다.<br><br>각각 좋아요 와 댓글을 달아봤습니다,<br><br>댓글 과 좋아요 는 일러스트와 만화 파일처럼<br><br><br><br>사진처럼 되었다면 DB에 정상적으로 올라왔음을<br>알 수가 있었지요.<br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.14%20%ED%9A%8C%EC%9B%90%EC%A0%95%EB%B3%B4%20%EC%88%98%EC%A0%95%20%EC%9C%A0%EC%A0%80%EC%A0%95%EB%B3%B4_%EC%88%98%EC%A0%95.png"><br><br>사진.14 회원정보 수정<br><br><br><br>이제 화원정보 수정 창입니다.<br><br>커뮤니티 특성상 익명이 글을 게시하는지라<br><br>때에 따라 주소, 전화번호등 언제든지 바뀝니다,<br><br><br><br>그렇게 해서 회원정보 수정은 꼭 들어간다고 하지요…<br><br>(비밀번호 같은 경우 알다시피 보안상 자주 바꿔야 한다더군요)<br></p>
+<hr>
+<p><br><br><br>긴시간(?)을 꼬박 한 보람은 있기는 합니다ㅎㅎ(ㅎㅁㅎ)<br><br>이제는 조금 쉬어야겠습니다.<br><br>조금 쉬었다가 이제 본격적으로 해야겠지요….<br></p>
+<p><br><br><br>마지막으로 소스코드 링크하고<br><br>이제 포스팅은 여기까지 하겠습니다.<br><br>긴 글을 읽어 주셔서 감사하고<br><br>엔제나 오늘하루 잘 보내시길 바랍니다. ㅎㅁㅎ&#x2F;<br><br><br></p>
+<p>&lt;소스코드&gt;<br><br><a href="https://github.com/KuraiLuna/KuraiLunaJSP.github.io/tree/master/Medi">https://github.com/KuraiLuna/KuraiLunaJSP.github.io/tree/master/Medi</a></p>
+<p align="center"><img  width="60%" height="60%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%98%A4%EB%8A%98%EB%8F%84_%EC%A2%8B%EC%9D%80_%ED%95%98%EB%A3%A8.png" ></p><br>
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://kurailuna.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>]]></content>
+      <categories>
+        <category>Portfolio</category>
+        <category>Back-End</category>
+      </categories>
+      <tags>
+        <tag>Back End</tag>
       </tags>
   </entry>
   <entry>
@@ -1979,6 +1983,31 @@ Alright then,
       </tags>
   </entry>
   <entry>
+    <title>【漫画】スクロースの研究日誌</title>
+    <url>/2025/08/24/%E6%BC%AB%E7%94%BB-%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E3%81%AE%E7%A0%94%E7%A9%B6%E6%97%A5%E8%AA%8C/</url>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/1.%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E3%81%AE%E7%A0%94%E7%A9%B6%E6%97%A5%E8%AA%8C/1.jpg" alt="" >
+</div><br><br>
+
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/1.%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E3%81%AE%E7%A0%94%E7%A9%B6%E6%97%A5%E8%AA%8C/2.jpg" alt="" >
+</div><br><br>
+
+<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">推しの誕生日…言葉は要らない…<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/GenshinImpact?src=hash&amp;ref_src=twsrc%5Etfw">#GenshinImpact</a> <a href="https://twitter.com/hashtag/%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9?src=hash&amp;ref_src=twsrc%5Etfw">#スクロース</a> <a href="https://twitter.com/hashtag/Sucrose?src=hash&amp;ref_src=twsrc%5Etfw">#Sucrose</a> <a href="https://twitter.com/hashtag/%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E7%94%9F%E8%AA%95%E7%A5%AD2021?src=hash&amp;ref_src=twsrc%5Etfw">#スクロース生誕祭2021</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E_%E3%82%AD%E3%83%A3%E3%83%A9%E7%94%9F%E8%AA%95%E7%A5%AD?src=hash&amp;ref_src=twsrc%5Etfw">#原神_キャラ生誕祭</a> <a href="https://t.co/8lJS6ERZCV">pic.twitter.com/8lJS6ERZCV</a></p>&mdash; アリクイのイカク (@arikuigames1105) <a href="https://twitter.com/arikuigames1105/status/1463885185875808261?ref_src=twsrc%5Etfw">November 25, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+]]></content>
+      <categories>
+        <category>(ETC) Taking a Break</category>
+        <category>【Genshin】Cartoons</category>
+      </categories>
+      <tags>
+        <tag>ETC</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>미국 배당주 심플계산기</title>
     <url>/2025/04/14/%EB%AF%B8%EA%B5%AD-%EB%B0%B0%EB%8B%B9%EC%A3%BC-%EC%8B%AC%ED%94%8C%EA%B3%84%EC%82%B0%EA%B8%B0/</url>
     <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -2053,31 +2082,6 @@ Alright then,
       </categories>
       <tags>
         <tag>etc</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【漫画】スクロースの研究日誌</title>
-    <url>/2025/08/24/%E6%BC%AB%E7%94%BB-%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E3%81%AE%E7%A0%94%E7%A9%B6%E6%97%A5%E8%AA%8C/</url>
-    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-<div style="text-align: center;">
-<img src="https://luna0x03.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/1.%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E3%81%AE%E7%A0%94%E7%A9%B6%E6%97%A5%E8%AA%8C/1.jpg" alt="" >
-</div><br><br>
-
-
-<div style="text-align: center;">
-<img src="https://luna0x03.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/1.%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E3%81%AE%E7%A0%94%E7%A9%B6%E6%97%A5%E8%AA%8C/2.jpg" alt="" >
-</div><br><br>
-
-<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">推しの誕生日…言葉は要らない…<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/GenshinImpact?src=hash&amp;ref_src=twsrc%5Etfw">#GenshinImpact</a> <a href="https://twitter.com/hashtag/%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9?src=hash&amp;ref_src=twsrc%5Etfw">#スクロース</a> <a href="https://twitter.com/hashtag/Sucrose?src=hash&amp;ref_src=twsrc%5Etfw">#Sucrose</a> <a href="https://twitter.com/hashtag/%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E7%94%9F%E8%AA%95%E7%A5%AD2021?src=hash&amp;ref_src=twsrc%5Etfw">#スクロース生誕祭2021</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E_%E3%82%AD%E3%83%A3%E3%83%A9%E7%94%9F%E8%AA%95%E7%A5%AD?src=hash&amp;ref_src=twsrc%5Etfw">#原神_キャラ生誕祭</a> <a href="https://t.co/8lJS6ERZCV">pic.twitter.com/8lJS6ERZCV</a></p>&mdash; アリクイのイカク (@arikuigames1105) <a href="https://twitter.com/arikuigames1105/status/1463885185875808261?ref_src=twsrc%5Etfw">November 25, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-]]></content>
-      <categories>
-        <category>(ETC) Taking a Break</category>
-        <category>【Genshin】Cartoons</category>
-      </categories>
-      <tags>
-        <tag>ETC</tag>
       </tags>
   </entry>
   <entry>
