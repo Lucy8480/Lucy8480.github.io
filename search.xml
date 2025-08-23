@@ -1,6 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>(Linux) Debian Linux LunarVim Install</title>
+    <url>/2025/08/06/Debian-Linux-LunarVim-Install/</url>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div style="TEXT-ALIGN: center">
+        <div id="google_translate_element"></div>
+            <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                <script type="text/javascript">
+                            function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: 'ko',autoDisplay: false}, 'google_translate_element');}
+                </script>
+                    </script>
+</div>
+
+
+<h1 id="Debian-Linux-LunarVim-Install"><a href="#Debian-Linux-LunarVim-Install" class="headerlink" title="[Debian Linux] LunarVim Install"></a>[Debian Linux] LunarVim Install</h1><p style="text-align:center">
+<img border="0" width="60%" height="70%" src="https://luna0x03.github.io/PostImages/LunarVim.png"><br></p>
+
+<p>🎼Songs I listened to whilst writing🎼</p>
+<ul>
+<li>Mermaid Melody Pichi Pichi Pitch OST</li>
+<li>Genshin Impact OST For Mondstadt</li>
+<li>Bullet Heaven 2 OST : Powerful and Bright</li>
+</ul>
+<br>
+
+<h2 id="Debian-LunarVim-Install"><a href="#Debian-LunarVim-Install" class="headerlink" title="[Debian]LunarVim Install"></a>[Debian]LunarVim Install</h2><p>Kali Linux is used for ethical hacking activities,<br><br>but this Debian Linux is for <code>Baekjoon</code> <br><br><a href="https://www.acmicpc.net/">Baekjoon</a> algorithms and various programming activities<br><br><br><br>I’ve added another virtual OS for this purpose.<br><br>Of course, the most critical drawback is that it consumes quite a bit of memory ;ㅅ; <br><br><br></p>
+<p>Among <code>NeoVim</code> editors, one that could be installed instantly<br><br>existed, but its support has ended,<br><br>so I ended up using <code>LunarVim</code>.<br></p>
+<h3 id="Step-1-Upgrade-and-Refresh"><a href="#Step-1-Upgrade-and-Refresh" class="headerlink" title="Step 1. Upgrade and Refresh"></a>Step 1. Upgrade and Refresh</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Upgrade and Refresh</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt update &amp;&amp; <span class="built_in">sudo</span> apt upgrade</span><br><span class="line"></span><br><span class="line"><span class="comment"># This updates all packages on the system</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt upgrade -y</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<br>
+
+<h3 id="Step-2-Debian-Linux-Nerd-Font-Install"><a href="#Step-2-Debian-Linux-Nerd-Font-Install" class="headerlink" title="Step 2. Debian Linux Nerd Font Install"></a>Step 2. Debian Linux Nerd Font Install</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Nerd Font Install</span></span><br><span class="line">$ <span class="built_in">mkdir</span> -p ~/.local/share/fonts</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cd</span> ~/.local/share/fonts &amp;&amp; curl -fLO https://raw.githubusercontent.com/choikangjae/.dotfiles/main/font/JetBrainsMonoNerdFont-Regular.ttf</span><br><span class="line"></span><br><span class="line">$ ~/.local/share/fonts </span><br><span class="line"></span><br><span class="line"><span class="comment"># Font Setting</span></span><br><span class="line"></span><br><span class="line">$ fc-cache -f -v</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="Step-3-NeoVim-0-9-5-Install"><a href="#Step-3-NeoVim-0-9-5-Install" class="headerlink" title="Step 3. NeoVim 0.9.5 Install"></a>Step 3. NeoVim 0.9.5 Install</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># NeoVim 0.9.5 Install</span></span><br><span class="line"></span><br><span class="line">$ wget https://github.com/neovim/neovim/releases/download/v0.9.5/nvim-linux64.tar.gz</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">chmod</span> u+x nvim-linux64.tar.gz</span><br><span class="line"></span><br><span class="line">$ tar -zxvf nvim-linux64.tar.gz</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">sudo</span> <span class="built_in">cp</span> -r nvim-linux64/* /usr/local/</span><br><span class="line"></span><br><span class="line">$ make CMAKE_BUILD_TYPE=Release</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">sudo</span> make install</span><br><span class="line"></span><br><span class="line">$ nvim --version</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="Step-4-Ruby-Install"><a href="#Step-4-Ruby-Install" class="headerlink" title="Step 4. Ruby Install"></a>Step 4. Ruby Install</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Ruby Install</span></span><br><span class="line"></span><br><span class="line">   $ <span class="built_in">sudo</span> apt upgrade -y</span><br><span class="line"></span><br><span class="line">   $ <span class="built_in">sudo</span> apt install ruby-full</span><br><span class="line"></span><br><span class="line">   $ ruby --version</span><br><span class="line"></span><br><span class="line">   $ gem --version</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="Step-5-LunarVim-Install"><a href="#Step-5-LunarVim-Install" class="headerlink" title="Step 5. LunarVim Install"></a>Step 5. LunarVim Install</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># LunarVim Install</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt install make git python3 python3-pip npm nodejs <span class="comment"># Install necessary dependencies</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Install rustup</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt update <span class="comment"># Initialise and refresh</span></span><br><span class="line">  </span><br><span class="line">$ <span class="built_in">sudo</span> apt install curl build-essential</span><br><span class="line"></span><br><span class="line">$ curl --proto <span class="string">&#x27;=https&#x27;</span> --tlsv1.2 -sSf https://sh.rustup.rs | sh</span><br><span class="line"></span><br><span class="line">$ rustup --version</span><br><span class="line"></span><br><span class="line"><span class="comment"># Install necessary dependencies 2</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt install cargo </span><br><span class="line"></span><br><span class="line">$ LV_BRANCH=<span class="string">&#x27;release-1.4/neovim-0.9&#x27;</span> bash &lt;(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.4/neovim-0.9/utils/installer/install.sh)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Semi-permanent usage</span></span><br><span class="line">$ <span class="built_in">alias</span> lvim=<span class="string">&#x27;~/.local/bin/lvim&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Permanent usage</span></span><br><span class="line">$ <span class="built_in">sudo</span> ~/.bashrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># Add to the very bottom, then save</span></span><br><span class="line">$ <span class="built_in">alias</span> lvim=<span class="string">&#x27;~/.local/bin/lvim&#x27;</span> </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://kurailuna.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>]]></content>
+      <categories>
+        <category>DevDiary</category>
+        <category>Debian Linux</category>
+      </categories>
+      <tags>
+        <tag>Debian Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>(CTF) Hack The Box:pilgrimage</title>
     <url>/2023/07/11/CTF-Hack-The-Box-pilgrimage-md/</url>
     <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -371,78 +443,6 @@
       </tags>
   </entry>
   <entry>
-    <title>(Linux) Debian Linux LunarVim Install</title>
-    <url>/2025/08/06/Debian-Linux-LunarVim-Install/</url>
-    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<div style="TEXT-ALIGN: center">
-        <div id="google_translate_element"></div>
-            <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-                <script type="text/javascript">
-                            function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: 'ko',autoDisplay: false}, 'google_translate_element');}
-                </script>
-                    </script>
-</div>
-
-
-<h1 id="Debian-Linux-LunarVim-Install"><a href="#Debian-Linux-LunarVim-Install" class="headerlink" title="[Debian Linux] LunarVim Install"></a>[Debian Linux] LunarVim Install</h1><p style="text-align:center">
-<img border="0" width="60%" height="70%" src="https://luna0x03.github.io/PostImages/LunarVim.png"><br></p>
-
-<p>🎼Songs I listened to whilst writing🎼</p>
-<ul>
-<li>Mermaid Melody Pichi Pichi Pitch OST</li>
-<li>Genshin Impact OST For Mondstadt</li>
-<li>Bullet Heaven 2 OST : Powerful and Bright</li>
-</ul>
-<br>
-
-<h2 id="Debian-LunarVim-Install"><a href="#Debian-LunarVim-Install" class="headerlink" title="[Debian]LunarVim Install"></a>[Debian]LunarVim Install</h2><p>Kali Linux is used for ethical hacking activities,<br><br>but this Debian Linux is for <code>Baekjoon</code> <br><br><a href="https://www.acmicpc.net/">Baekjoon</a> algorithms and various programming activities<br><br><br><br>I’ve added another virtual OS for this purpose.<br><br>Of course, the most critical drawback is that it consumes quite a bit of memory ;ㅅ; <br><br><br></p>
-<p>Among <code>NeoVim</code> editors, one that could be installed instantly<br><br>existed, but its support has ended,<br><br>so I ended up using <code>LunarVim</code>.<br></p>
-<h3 id="Step-1-Upgrade-and-Refresh"><a href="#Step-1-Upgrade-and-Refresh" class="headerlink" title="Step 1. Upgrade and Refresh"></a>Step 1. Upgrade and Refresh</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Upgrade and Refresh</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt update &amp;&amp; <span class="built_in">sudo</span> apt upgrade</span><br><span class="line"></span><br><span class="line"><span class="comment"># This updates all packages on the system</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt upgrade -y</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<br>
-
-<h3 id="Step-2-Debian-Linux-Nerd-Font-Install"><a href="#Step-2-Debian-Linux-Nerd-Font-Install" class="headerlink" title="Step 2. Debian Linux Nerd Font Install"></a>Step 2. Debian Linux Nerd Font Install</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Nerd Font Install</span></span><br><span class="line">$ <span class="built_in">mkdir</span> -p ~/.local/share/fonts</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cd</span> ~/.local/share/fonts &amp;&amp; curl -fLO https://raw.githubusercontent.com/choikangjae/.dotfiles/main/font/JetBrainsMonoNerdFont-Regular.ttf</span><br><span class="line"></span><br><span class="line">$ ~/.local/share/fonts </span><br><span class="line"></span><br><span class="line"><span class="comment"># Font Setting</span></span><br><span class="line"></span><br><span class="line">$ fc-cache -f -v</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h3 id="Step-3-NeoVim-0-9-5-Install"><a href="#Step-3-NeoVim-0-9-5-Install" class="headerlink" title="Step 3. NeoVim 0.9.5 Install"></a>Step 3. NeoVim 0.9.5 Install</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># NeoVim 0.9.5 Install</span></span><br><span class="line"></span><br><span class="line">$ wget https://github.com/neovim/neovim/releases/download/v0.9.5/nvim-linux64.tar.gz</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">chmod</span> u+x nvim-linux64.tar.gz</span><br><span class="line"></span><br><span class="line">$ tar -zxvf nvim-linux64.tar.gz</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">sudo</span> <span class="built_in">cp</span> -r nvim-linux64/* /usr/local/</span><br><span class="line"></span><br><span class="line">$ make CMAKE_BUILD_TYPE=Release</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">sudo</span> make install</span><br><span class="line"></span><br><span class="line">$ nvim --version</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h3 id="Step-4-Ruby-Install"><a href="#Step-4-Ruby-Install" class="headerlink" title="Step 4. Ruby Install"></a>Step 4. Ruby Install</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Ruby Install</span></span><br><span class="line"></span><br><span class="line">   $ <span class="built_in">sudo</span> apt upgrade -y</span><br><span class="line"></span><br><span class="line">   $ <span class="built_in">sudo</span> apt install ruby-full</span><br><span class="line"></span><br><span class="line">   $ ruby --version</span><br><span class="line"></span><br><span class="line">   $ gem --version</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h3 id="Step-5-LunarVim-Install"><a href="#Step-5-LunarVim-Install" class="headerlink" title="Step 5. LunarVim Install"></a>Step 5. LunarVim Install</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># LunarVim Install</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt install make git python3 python3-pip npm nodejs <span class="comment"># Install necessary dependencies</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Install rustup</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt update <span class="comment"># Initialise and refresh</span></span><br><span class="line">  </span><br><span class="line">$ <span class="built_in">sudo</span> apt install curl build-essential</span><br><span class="line"></span><br><span class="line">$ curl --proto <span class="string">&#x27;=https&#x27;</span> --tlsv1.2 -sSf https://sh.rustup.rs | sh</span><br><span class="line"></span><br><span class="line">$ rustup --version</span><br><span class="line"></span><br><span class="line"><span class="comment"># Install necessary dependencies 2</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt install cargo </span><br><span class="line"></span><br><span class="line">$ LV_BRANCH=<span class="string">&#x27;release-1.4/neovim-0.9&#x27;</span> bash &lt;(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.4/neovim-0.9/utils/installer/install.sh)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Semi-permanent usage</span></span><br><span class="line">$ <span class="built_in">alias</span> lvim=<span class="string">&#x27;~/.local/bin/lvim&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Permanent usage</span></span><br><span class="line">$ <span class="built_in">sudo</span> ~/.bashrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># Add to the very bottom, then save</span></span><br><span class="line">$ <span class="built_in">alias</span> lvim=<span class="string">&#x27;~/.local/bin/lvim&#x27;</span> </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://kurailuna.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>]]></content>
-      <categories>
-        <category>DevDiary</category>
-        <category>Debian Linux</category>
-      </categories>
-      <tags>
-        <tag>Debian Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Front End Project</title>
     <url>/2018/09/09/Front-End-Project/</url>
     <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -591,6 +591,409 @@
       </categories>
       <tags>
         <tag>Back End</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2025/04/12/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://kurailuna.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
+  </entry>
+  <entry>
+    <title>『pwnable.kr』Fla Problem Solving</title>
+    <url>/2022/04/10/pwnable-kr-Fla-Problem-Solving/</url>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style6" />
+<p style="text-align: center;" data-ke-size="size18"><b><span style="color: #8a3db6;">back on the 10th of April, 2022</span></b></p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18"><b><span style="color: #8a3db6;">Right, so this post was penned on a Naver blog.</span></b></p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18"><b><span style="color: #8a3db6;"><a href="https://blog.naver.com/bnm0170/222696804662" target="_blank" rel="noopener">https://blog.naver.com/bnm0170/222696804662</a></span></b><b><span style="color: #8a3db6;"></span></b></p>
+<p data-ke-size="size16">&nbsp;</p>
+<hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style6" />
+<div style="text-align: center;" align="center">&nbsp;</div>
+
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/01_Rina.gif" alt="미리보기 방지" width="300">
+</div><br>
+Right, well this is perhaps one of
+
+<p>the easier problems I’ve tackled so far.</p>
+<p>Having a go at a CTF for ethical hacking<br>after a bit of a break, then.</p>
+<br> 
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/02.png" alt="" width="300">
+</div><br><br>
+
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/03.png" alt="" width="300">
+</div>
+
+<p>First off,let’s have a look at the question itself.</p>
+<p>Papa brought me a packed present! let’s open it,</p>
+<p>This problem, you see,<br>isn’t about SSH access.<br>Rather, it’s about downloading a<br>standalone program,</p>
+<p>reversing it to get a key,<br>and then collecting points with that key.<br>Quite straightforward.</p>
+<p>Right, anyway using<br>the download address written<br>in the question above,</p>
+<p>you download it with the command below.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> wget http://pwnable.kr/bin/flag</span><br></pre></td></tr></table></figure>
+
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/04.png" alt="" width="300">
+</div>
+
+<p>Once it’s all downloaded,<br>you then use the command below</p>
+<p>to grant permission for the program to be used.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">chmod</span> 755 flag</span><br></pre></td></tr></table></figure>
+
+<p>However,this program happens to be UPX-packed,</p>
+<p>so you’ll need to unpack it as well.</p>
+<p>Right, let’s go unpack it with the command below.</p>
+<p>unpack it : )</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> upx -d flag</span><br></pre></td></tr></table></figure>
+
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/05.png" alt="" width="300">
+</div>
+
+<p>Now that the unpacking is complete, this time,</p>
+<p>let’s try debugging it with the command below.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> gdb -q flag</span><br></pre></td></tr></table></figure>
+
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/06.png" alt="" width="300">
+</div>
+
+<p>(And in the meantime,<br>I completely wasted over<br>30 minutes trying to install gdb-peda,<br>you see.)</p>
+<p>So, when you debug it in this manner,<br>after main+32,<br>there’s a rather suspicious part,</p>
+<p>where it seems the flag value was copied to #</p>
+<p>where there’s a rather suspicious part.</p>
+<p>It’s presumed to be 64-bit, and</p>
+<p>“if you disassemble 0x6c2070 with x&#x2F;xg,</p>
+<p>it comes out as <flag>:0x496628.</p>
+<p>So, 0x496628 is probably where the real flag value</p>
+<p>is copied to, I’d imagine.</p>
+<p>Oh, and if you write 496628,<br>an error will be displayed,</p>
+<p>so you absolutely must attach 0x,</p>
+<p>and then write it. Otherwise,<br>it won’t be output correctly without an error.</p>
+<p>it will be output.</p>
+<p>Anyway, if you input it as per<br>the command below with x&#x2F;s</p>
+<p>if you input it.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gdb-peda$ x/s 0x496628</span><br></pre></td></tr></table></figure>
+
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/07.png" alt="" width="300">
+</div>
+
+<p>the real flag value will come out.</p>
+<p>And with the flag value obtained,</p>
+<p>you input the value as shown<br>in the captured image below.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/08.png" alt="" width="300">
+</div>
+
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/09.png" alt="" width="300">
+</div>
+
+<p>And that’s how 7 points were collected. : )</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/10.png" alt="" width="300">
+</div>
+
+<p>Having a go at pwnable.kr<br>CTF after a bit of a break, then.</p>
+<p>“I’m not sure if it’ll<br>be possible since it’s<br>the weekend, honestly.</p>
+<p>Right, well I suppose it’s about time<br>I started preparing for<br>some rather pointless part-time work.</p>
+<p>My chances of finding employment in S.Korea(?)<br>are effectively long gone, you see.</p>
+<p>So, while I’m doing short-term part-time work,</p>
+<p>I’ll try to save up around ten million won,<br>move out of my family home,</p>
+<p>and then find some temporary<br>accommodation near<br>the Japanese Cultural Centre,</p>
+<p>in a well-soundproofed goshiwon.</p>
+<p>and then find some temporary accommodation.</p>
+<p>Ethical hacking, Japanese study,</p>
+<p>preparing for JLPT N series or EJU,</p>
+<p><a href="https://www.bugbountyclub.com/beginning">bug bounty</a> programmes related to ethical hacking,</p>
+<p>preparing for and attempting that,<br>and then writing bug hunting reports<br>in English and Japanese,</p>
+<p>writing bug hunting reports.</p>
+<p>or preparing for OSCP,<br>an international ethical hacking<br>certification.</p>
+<p>It’ll be like doing a penitent task,<br>just like the nuns in a Catholic convent.</p>
+<p>I’ll have to do that.</p>
+<p>And then, simultaneously with<br>preparing to move to Japan,</p>
+<p>I’ll have to prepare for<br>financial income investment as well</p>
+<p>2022.04.10</p>
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://kurailuna.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>]]></content>
+      <categories>
+        <category>White Hacking</category>
+        <category>CTF</category>
+        <category>pwnable.kr</category>
+      </categories>
+      <tags>
+        <tag>White Hacking</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>『pwnable.kr』Ieg Problem Solving</title>
+    <url>/2020/08/04/pwnable-kr-Ieg-Problem-Solving/</url>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/01_Rina.gif" alt="미리보기 방지" width="300">
+</div>
+
+<p>This one, it’s slightly lower</p>
+<p>on the Hard Level scale than the last,</p>
+<p>so perhaps that’s why</p>
+<p>it feels like it’s coming together</p>
+<p>a bit more quickly.（　´∀｀）</p>
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/02.png" alt="미리보기 방지" width="300">
+</div>
+
+<br>
+<br>
+
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White Hacking/CTF/pwnable.kr/Ieg Problem Solving/03.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>Screenshot 1.</p>
+<p>Right, so my own rather<br>literal translation of<br>the question is as follows:</p>
+<p>is as follows.</p>
+<p>Daddy told me I should study arm.  </p>
+<p>But I prefer to study my leg!  </p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/04.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 2.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh leg@pwnable.kr -p2222</span><br></pre></td></tr></table></figure>
+
+<p>You just connect straight away.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/05.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 3.</p>
+<p>First, you verify the files with <code>ls -l</code></p>
+<p>But there doesn’t seem to be a way to do it,</p>
+<p>the access attempt just isn’t working…? ōxō</p>
+<p><del>the access attempt just isn’t working…? ōxō</del>​​  </p>
+<p>Right, then let’s look at<br>the download section that was in<br>the question earlier:</p>
+<p>that was in the question earlier.</p>
+<p>Download :</p>
+<p> <a href="http://pwnable.kr/bin/leg.c">http://pwnable.kr/bin/leg.c</a><br><a href="http://pwnable.kr/bin/leg.asm">http://pwnable.kr/bin/leg.asm</a></p>
+<p>You download them both.</p>
+<p>Once downloaded, let’s immediately</p>
+<p>check <code>leg.c</code>.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/06.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 4.</p>
+<p>The functions for key1 through 3</p>
+<p>are written in ARM assembly.</p>
+<p>are written.</p>
+<p>First, if you look at the main function,<br>it seems that if you match the value<br>that’s the sum of all three of those<br>function values,<br>you can snag the key value.</p>
+<p>if you match the value that’s<br>the sum of all three of those function values,</p>
+<p>you can snag the key value.</p>
+<p>Let’s have a look at the main function’s<br>assembly code as well.</p>
+<p>as well.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/07.png" alt="미리보기 방지" width="300"></div>
+Screenshot 5.
+
+<p>It’s evident that the r0 values obtained<br>through the functions are all summed up,<br>and the final result goes into r2.</p>
+<p>are all summed up,<br>and the final result goes into r2</p>
+<p>it’s evident</p>
+<p>then, let’s look at each function.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/08.png" alt="미리보기 방지" width="300"></div>
+
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/09.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 6.</p>
+<p>This is the C and assembly code for the key1 function.</p>
+<p>It puts the pc value into r3</p>
+<p>and then puts r3 into r0 again.</p>
+<p>So, the pc value will then be the value for key1</p>
+<p>will then be the value</p>
+<p>If we just take a quick look at what pc is:</p>
+<hr>
+<ol>
+<li><p>Right, so when a CPU executes a<br>single instruction,<br>it’s said to go through<br>the fetch, decode, and execute stages.</p>
+</li>
+<li><p>To execute two opcodes,<br>you’d then need a total of six operations:<br>fetch, decode, execute, fetch, decode, execute.</p>
+</li>
+<li><p>By performing these stages in<br>parallel, however, you can reduce those<br>six operations needed for two opcodes<br>down to just four.</p>
+</li>
+<li><p>It’s simply more efficient than doing it<br>sequentially, you see.<br>The Program Counter,or PC,<br>holds the address for the fetch operation.</p>
+</li>
+<li><p>If the current instruction is at<br>the execute stage,<br>the next one will be at the decode stage,<br>and the one after that will<br>then be at the fetch stage.</p>
+</li>
+<li><p>Consequently,<br>the PC will then hold the address of<br>the instruction that’s<br>due for the next fetch operation.</p>
+</li>
+</ol>
+<hr>
+<p>Right, back to the main point now.</p>
+<p>The pc value in the key1 function is</p>
+<p><strong>0x00008ce4</strong></p>
+<p>is.</p>
+<p>Now, let’s move on to key2.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/10.png" alt="미리보기 방지" width="300"></div>
+
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/11.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 7.</p>
+<p>You assign the pc value(<strong>0x00008d08</strong>)</p>
+<p>to r3, and then add 4,assigning that to r0</p>
+<p>assigning that to r0</p>
+<p>The value of key2 is</p>
+<p><strong>0x8d08 + 4 &#x3D; 0x8d0c</strong></p>
+<p>Let’s look at key3.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/12.png" alt="미리보기 방지" width="300"></div>
+
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/13.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 8.</p>
+<p>You assign the lr value to r3</p>
+<p>and then assign the r3 value to r0</p>
+<p>So, I suppose one just needs to find the lr value.</p>
+<p>one just needs to find it.</p>
+<p>If you look at the main function:</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/14.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 9.</p>
+<p>The lr value is</p>
+<p><strong>0x00008d80</strong></p>
+<p>All three values have now been obtained</p>
+<p> <strong>key1 | 0x8ce4</strong></p>
+<p> <strong>key2 | 0x8d0c</strong></p>
+<p> <strong>key3 | 0x8d80</strong></p>
+<p>If you sum them all up,</p>
+<p><strong>0x1a770</strong></p>
+<p>Right, then let’s go snag that key value<br>immediately, eh?</p>
+<p>let’s go snag it ㅋㅅㅋ</p>
+<p>So, into the input window here</p>
+<p> I’ll input <code>108400</code>.</p>
+<p>And due to the program’s nature</p>
+<p>it absolutely must be entered</p>
+<p>as an integer.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/15.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 10.</p>
+<p>And so the key value comes out</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/16.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 11.</p>
+<p>With the value that’s been snagged,</p>
+<p>you go back to the first screen,</p>
+<p>input it into the blank space,</p>
+<p>and then just press the ‘auth’ button.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/17.png" alt="미리보기 방지" width="300"></div>
+
+<p>As soon as the mission is completed,</p>
+<p>2 points have been snagged.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/18.png" alt="미리보기 방지" width="300"></div>
+
+<p>then, if you go back to the initial screen again,</p>
+<p>you’ll see that</p>
+<p>it’s marked as completed with a green</p>
+<p>dotted line</p>
+<p>Thanks for reading through this long post.</p>
+<p>Well done. (ㆁᴗㆁ✿)</p>
+<p>Have a good day, and<br>I hope everything works out well for you,</p>
+<p>It’s quite warm out,<br>so do try and avoid getting heatstroke</p>
+<p>And do take care with the,erm,<br>Wuhan pneumonia situation.</p>
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/19.png" alt="미리보기 방지" width="300">
+</div>
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/20.png" alt="미리보기 방지" width="300">
+</div>
+
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://kurailuna.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>]]></content>
+      <categories>
+        <category>White Hacking</category>
+        <category>CTF</category>
+        <category>pwnable.kr</category>
+      </categories>
+      <tags>
+        <tag>White Hacking</tag>
       </tags>
   </entry>
   <entry>
@@ -809,42 +1212,6 @@ Screenshot 1.
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2025/04/12/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://kurailuna.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
-  </entry>
-  <entry>
     <title>『pwnable.kr』 Memcpy Problem solving</title>
     <url>/2020/08/02/pwnable-kr-Memcpy-Problem-Solving/</url>
     <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1024,6 +1391,184 @@ Screenshot. 8
 <p>It’s a bit of a scorcher today,mind you,<br>so try not to go getting heatstroke.<br>And, naturally,<br>do be careful of that Wuhan pneumonia.</p>
 <div  style="text-align: center;">
 <img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/18.png" width= 300></div>  <br>  <br>
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://kurailuna.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>]]></content>
+      <categories>
+        <category>White Hacking</category>
+        <category>CTF</category>
+        <category>pwnable.kr</category>
+      </categories>
+      <tags>
+        <tag>White Hacking</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>『pwnable.kr』Random Problem Solving</title>
+    <url>/2020/08/04/pwnable-kr-Random-Problem-Solving/</url>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/01_Rina.gif" alt="미리보기 방지" width="300">
+</div>
+
+<p>Right, this one’s comparatively not too bad</p>
+<p>difficulty-wise, you see</p>
+<p>Right, anyway<br>due to my own circumstances,<br>I suppose</p>
+<p>this study-related post</p>
+<p>will have to be the last of its kind for now</p>
+<p>I should really try a<br>bug bounty this year,<br>at the very latest.</p>
+<p>The situation shows no sign of<br>improving, honestly.</p>
+<p>ε-(´・｀)</p>
+<p>Honestly, rather than wasting all<br>my time and health with some<br>unwanted weekday part-time work,</p>
+<p>with some unwanted weekday part-time work,</p>
+<p>it’d be far less galling to do<br>bug bounties on weekdays</p>
+<p>and just part-time work on weekends.</p>
+<p>it’d be far less galling.</p>
+<p>-`д´-</p>
+<p>Right, anyway I’ll just carry on writing.</p>
+<p>(ㆁᴗㆁ✿)</p>
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/02.png" width="300">
+</div>
+
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/03.png" alt="" width="300">
+</div>
+Screenshot 1.
+
+<p>Right, first let’s have a gander at the question,</p>
+<p>with my own rather straightforward,<br>literal translation</p>
+<p>Daddy, teach me how to use random value in programming!</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/04.png" alt="" width="300">
+</div>
+Screenshot 2.
+
+<p>Right, and then</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh random@pwnable.kr -p2222</span><br></pre></td></tr></table></figure>
+
+<p>you connect straight away.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/05.png" alt="" width="300">
+</div>
+Screenshot 3.
+
+<p>First,you work out whether<br>the file exists,and then</p>
+<p>you check the <code>random.c</code> file</p>
+<p>I check it</p>
+<p>Right, so it’s a program that receives a<br>key value if you XOR a 4-byte<br>random value with an input value</p>
+<p>if you XOR a 4-byte random value with an input value</p>
+<p>and <code>0xdeadbeef</code> comes out.</p>
+<p>So, ANG? If it’s a random value,<br>does one have to try all possible cases?</p>
+<p>Does one have to try all possible cases? ōxō</p>
+<p><del>Does one have to try all possible cases? ōxō</del></p>
+<p>one might think, but</p>
+<p>the rand() function, unless<br>you provide it with a<br>seed value that changes every time</p>
+<p>will always convert to a constant value</p>
+<p>This constant value, if you work it out,</p>
+<p>will give you the answer.</p>
+<p>Right, then, let’s trace the value using gdb.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/06.png" alt="" width="300">
+</div>
+Screenshot 4.
+
+<p>Right, so you do the XOR operation,</p>
+<p>and it seems you just need to check<br>the value of eax <code>0xdeadbeef</code></p>
+<p>you just need to check.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/07.png" alt="" width="300">
+</div>
+
+<p>Screenshot 5.</p>
+<p>If you set a breakpoint and run it, putting in 0</p>
+<p>you can see that 0x6b8b4567 is in eax.</p>
+<p>0x6b8b4567 is in eax</p>
+<p>you can see that it’s in there.</p>
+<p>As XORing with 0 produces the same value,</p>
+<p>you can deduce that the value of rand() is 0x6b8b4567</p>
+<p>you can deduce that it is.</p>
+<p>So, the value we need to input can be found through</p>
+<p><strong>0xdeadbeef ^ 0x6b8b4567</strong></p>
+<p>can be found</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/08.png" alt="" width="300">
+</div>
+
+<p>Screenshot 6: Hexadecimal operation in Java</p>
+<p>If you operate these two using Java programming</p>
+<p>if you operate these two</p>
+<p>the result is</p>
+<p><strong>0xB526FB88</strong></p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/09.png" alt="" width="300">
+</div>
+
+<p>Screenshot 7.</p>
+<p>And if you go to a conversion website and convert it,</p>
+<p><strong>3039230856</strong></p>
+<p>a value like the above is output</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/10.png" alt="" width="300">
+</div>
+Screenshot 8
+
+<p>If you input the outputted value,</p>
+<p>you acquire the key value like this.</p>
+<p>Right, and then with the key value that’s<br>been snagged,</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/11.png" alt="" width="300">
+</div>
+
+<p>Screenshot 9.</p>
+<p>you go back to the first screen,</p>
+<p>input it into the blank space</p>
+<p>and then just press the ‘auth’ button.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/12.png" alt="" width="300">
+</div>
+
+<p>As soon as the mission’s completed,</p>
+<p>1 point has been snagged.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/13.png" alt="" width="300">
+</div>
+
+
+<p>then, if you go back to the initial screen again,</p>
+<p>you’ll see that</p>
+<p>it’s marked as completed with a green</p>
+<p>dotted line.</p>
+<p>Thanks for reading through this long post.</p>
+<p>Well done. (ㆁᴗㆁ✿)</p>
+<p>Have a good day, and<br>I hope everything works out well for you</p>
+<p>It’s quite warm out,<br>so do try and avoid getting heatstroke,</p>
+<p>And do take care with the,erm,<br>Wuhan pneumonia situation.</p>
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/14.png" alt="" width="300">
+</div>
+<br>
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/15.png" alt="" width="300">
+</div>
+
 
 <div id="disqus_thread"></div>
 <script>
@@ -1456,6 +2001,31 @@ Alright then,
       </categories>
       <tags>
         <tag>etc</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【漫画】スクロースの研究日誌</title>
+    <url>/2022/04/10/%E6%BC%AB%E7%94%BB-%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E3%81%AE%E7%A0%94%E7%A9%B6%E6%97%A5%E8%AA%8C/</url>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/1.%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E3%81%AE%E7%A0%94%E7%A9%B6%E6%97%A5%E8%AA%8C/1.jpg" alt="" >
+</div><br><br>
+
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/1.%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E3%81%AE%E7%A0%94%E7%A9%B6%E6%97%A5%E8%AA%8C/2.jpg" alt="" >
+</div><br><br>
+
+<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">推しの誕生日…言葉は要らない…<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/GenshinImpact?src=hash&amp;ref_src=twsrc%5Etfw">#GenshinImpact</a> <a href="https://twitter.com/hashtag/%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9?src=hash&amp;ref_src=twsrc%5Etfw">#スクロース</a> <a href="https://twitter.com/hashtag/Sucrose?src=hash&amp;ref_src=twsrc%5Etfw">#Sucrose</a> <a href="https://twitter.com/hashtag/%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E7%94%9F%E8%AA%95%E7%A5%AD2021?src=hash&amp;ref_src=twsrc%5Etfw">#スクロース生誕祭2021</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E_%E3%82%AD%E3%83%A3%E3%83%A9%E7%94%9F%E8%AA%95%E7%A5%AD?src=hash&amp;ref_src=twsrc%5Etfw">#原神_キャラ生誕祭</a> <a href="https://t.co/8lJS6ERZCV">pic.twitter.com/8lJS6ERZCV</a></p>&mdash; アリクイのイカク (@arikuigames1105) <a href="https://twitter.com/arikuigames1105/status/1463885185875808261?ref_src=twsrc%5Etfw">November 25, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+]]></content>
+      <categories>
+        <category>(ETC) Taking a Break</category>
+        <category>【Genshin】Cartoons</category>
+      </categories>
+      <tags>
+        <tag>ETC</tag>
       </tags>
   </entry>
   <entry>

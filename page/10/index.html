@@ -195,7 +195,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://kurailuna.github.io/2020/08/01/pwnable_kr_Collision_%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/">
+    <link itemprop="mainEntityOfPage" href="https://kurailuna.github.io/2020/08/04/pwnable-kr-Ieg-Problem-Solving/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://kurailuna.github.io/images/lumine.png">
@@ -209,7 +209,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/08/01/pwnable_kr_Collision_%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/" class="post-title-link" itemprop="url">『pwnable.kr』 Collision Problem solving</a>
+            <a href="/2020/08/04/pwnable-kr-Ieg-Problem-Solving/" class="post-title-link" itemprop="url">『pwnable.kr』Ieg Problem Solving</a>
         </h2>
 
         <div class="post-meta">
@@ -219,14 +219,14 @@
               </span>
               <span class="post-meta-item-text">작성일</span>
 
-              <time title="Post created: 2020-08-01 18:38:11" itemprop="dateCreated datePublished" datetime="2020-08-01T18:38:11+09:00">2020-08-01</time>
+              <time title="Post created: 2020-08-04 14:03:11" itemprop="dateCreated datePublished" datetime="2020-08-04T14:03:11+09:00">2020-08-04</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Updated at: 2025-08-22 06:17:41" itemprop="dateModified" datetime="2025-08-22T06:17:41+09:00">2025-08-22</time>
+                <time title="Updated at: 2025-08-24 05:49:01" itemprop="dateModified" datetime="2025-08-24T05:49:01+09:00">2025-08-24</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -259,135 +259,189 @@
       
           <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link  href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap"  rel="stylesheet">
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/01_Rina.gif" alt="미리보기 방지" width="300">
+</div>
 
-<style>
-.left-img {
-  float: left;
-  margin-right: 320px; /* 텍스트와 간격 */
-}
-</style>
-
-<div  style="text-align: center;">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/1%20Rina.gif"  alt="미리보기 방지"  width="300">
-</div> <br>
-
-
-<p>Wow… I had a feeling, but the difficulty’s on another level.<br></p>
-<p>Thats absolutely lunatic, ōxō;;<br><s>That’s absolutely lunatic, ōxō;;</s></p>
-<p>ε-(´・｀)</p>
-<p>Perhaps because it involves a system hack,</p>
-<p>it’s a whole level above the usual web-based</p>
-<p>war games on Wargame.kr in terms of difficulty.</p>
-<p>I ended up referring to someone else’s</p>
-<p>solution while working through it.</p>
-<p>And since posting the actual</p>
-<p>source code would make the thread messy,</p>
-<p>I’ll place it in a text file so it can simply be copy-pasted.</p>
-<p>Anyway, let’s get started right away.</p>
-<div  style="text-align: center;">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/2.png"  width="300">
-</div> <br>
+<p>This one, it’s slightly lower</p>
+<p>on the Hard Level scale than the last,</p>
+<p>so perhaps that’s why</p>
+<p>it feels like it’s coming together</p>
+<p>a bit more quickly.（　´∀｀）</p>
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/02.png" alt="미리보기 방지" width="300">
+</div>
 
 <br>
-<img class="left-img" src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/3.png"  width="500">
- <br>
-
-<p>Right, if I’m having a punt at roughly translating<br>the gist of this in my own way,<br>it’s something like this:<br>So, you’re on about MD5 hash collisions then,<br>are we? (···) Right,anyway.</p>
 <br>
-<div class="left-img">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/4.png"  width="500">
-</div>  <br>
 
-<p>Right then, first things first,<br>open up yer Linux terminal.<br>Then you just wanna connect using</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh col@pwnable.kr -p2222</span><br></pre></td></tr></table></figure>
-
-<p>Now,the password right?<br>It won’t actually show up as you’re typing it<br>– don’t mind that,just bash it in,hit Enter,<br>and bam, you’re logged in. Easy peasy!</p>
- <br>
-<div class="left-img">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/5.png"  width="500">
-</div>  <br>
-Right then next up,you just wanna whack in
-
-<p>the ls command to see what files you’ve got lurking around.</p>
-<p>Now col you’d probably reckon that’s<br>some sort of executable or maybe even a Python file, right?</p>
-<p>But the actual one we really need to be bothered with,</p>
-<p>the crucial bit, is <code>col.c</code></p>
- <br>
-<div class="left-img">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/6.png"  width="500px">
-</div>  <br>  <br>
-so if you have a proper gander at the main bit,
-
-<p>the password, right, that needs to be 20</p>
-<p>characters long. And here’s the crucial part:<br>the hash code <code>(0x21DD09EC)</code> and</p>
-<p>the password return value,<br>they’ve both gotta be</p>
-<p>absolutely spot on, exactly the same.<br>No messing about with that, understood</p>
-<p>That<br><code> bash check_password(const char* p)</code><br>Bit, Yeah?<br>What it’s doing is, it’s taking chunks of the data<br>like, 4 bytes at a time – that’s the size of an int, innit?<br>– and it’s then accumulating those into ‘res’ five times.</p>
-<p>So, the thinking is,<br>if you just add the exact same value five times over you should,</p>
-<p>I reckon, get that hash code it’s after. Simple as that, really.</p>
-<h3 id="Derivation-of-results"><a href="#Derivation-of-results" class="headerlink" title="Derivation of results"></a>Derivation of results</h3><div class="left-img">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/7.png"  width="500">
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White Hacking/CTF/pwnable.kr/Ieg Problem Solving/03.png" alt="미리보기 방지" width="300">
 </div>
-Figure.1) For and res data expressed by cutting int type 4 bytes each
 
-<p>Right, so that’res’value,yeah?</p>
-<p>That’s just the result of piling up<br>whatever came out of the ‘for’loop,<br>five times over.<br>And if you then,like,divvy that’res’value by five,<br>it turns out that the data</p>
-<p>so if you then like,multiply this lot by five again<br>you’ll find you’re short by 0x4.So,<br>the assumption we’re making here is </p>
-<p>that the data is essentially four lots of<br><code>0x6C5CEC8</code> and then one bit of <code>0x6C5CECC</code> added in.</p>
-<div class="left-img">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/8.png"  width="500">
+<p>Screenshot 1.</p>
+<p>Right, so my own rather<br>literal translation of<br>the question is as follows:</p>
+<p>is as follows.</p>
+<p>Daddy told me I should study arm.  </p>
+<p>But I prefer to study my leg!  </p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/04.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 2.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh leg@pwnable.kr -p2222</span><br></pre></td></tr></table></figure>
+
+<p>You just connect straight away.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/05.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 3.</p>
+<p>First, you verify the files with <code>ls -l</code></p>
+<p>But there doesn’t seem to be a way to do it,</p>
+<p>the access attempt just isn’t working…? ōxō</p>
+<p><del>the access attempt just isn’t working…? ōxō</del>​​  </p>
+<p>Right, then let’s look at<br>the download section that was in<br>the question earlier:</p>
+<p>that was in the question earlier.</p>
+<p>Download :</p>
+<p> <a target="_blank" rel="noopener" href="http://pwnable.kr/bin/leg.c">http://pwnable.kr/bin/leg.c</a><br><a target="_blank" rel="noopener" href="http://pwnable.kr/bin/leg.asm">http://pwnable.kr/bin/leg.asm</a></p>
+<p>You download them both.</p>
+<p>Once downloaded, let’s immediately</p>
+<p>check <code>leg.c</code>.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/06.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 4.</p>
+<p>The functions for key1 through 3</p>
+<p>are written in ARM assembly.</p>
+<p>are written.</p>
+<p>First, if you look at the main function,<br>it seems that if you match the value<br>that’s the sum of all three of those<br>function values,<br>you can snag the key value.</p>
+<p>if you match the value that’s<br>the sum of all three of those function values,</p>
+<p>you can snag the key value.</p>
+<p>Let’s have a look at the main function’s<br>assembly code as well.</p>
+<p>as well.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/07.png" alt="미리보기 방지" width="300"></div>
+Screenshot 5.
+
+<p>It’s evident that the r0 values obtained<br>through the functions are all summed up,<br>and the final result goes into r2.</p>
+<p>are all summed up,<br>and the final result goes into r2</p>
+<p>it’s evident</p>
+<p>then, let’s look at each function.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/08.png" alt="미리보기 방지" width="300"></div>
+
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/09.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 6.</p>
+<p>This is the C and assembly code for the key1 function.</p>
+<p>It puts the pc value into r3</p>
+<p>and then puts r3 into r0 again.</p>
+<p>So, the pc value will then be the value for key1</p>
+<p>will then be the value</p>
+<p>If we just take a quick look at what pc is:</p>
+<hr>
+<ol>
+<li><p>Right, so when a CPU executes a<br>single instruction,<br>it’s said to go through<br>the fetch, decode, and execute stages.</p>
+</li>
+<li><p>To execute two opcodes,<br>you’d then need a total of six operations:<br>fetch, decode, execute, fetch, decode, execute.</p>
+</li>
+<li><p>By performing these stages in<br>parallel, however, you can reduce those<br>six operations needed for two opcodes<br>down to just four.</p>
+</li>
+<li><p>It’s simply more efficient than doing it<br>sequentially, you see.<br>The Program Counter,or PC,<br>holds the address for the fetch operation.</p>
+</li>
+<li><p>If the current instruction is at<br>the execute stage,<br>the next one will be at the decode stage,<br>and the one after that will<br>then be at the fetch stage.</p>
+</li>
+<li><p>Consequently,<br>the PC will then hold the address of<br>the instruction that’s<br>due for the next fetch operation.</p>
+</li>
+</ol>
+<hr>
+<p>Right, back to the main point now.</p>
+<p>The pc value in the key1 function is</p>
+<p><strong>0x00008ce4</strong></p>
+<p>is.</p>
+<p>Now, let’s move on to key2.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/10.png" alt="미리보기 방지" width="300"></div>
+
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/11.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 7.</p>
+<p>You assign the pc value(<strong>0x00008d08</strong>)</p>
+<p>to r3, and then add 4,assigning that to r0</p>
+<p>assigning that to r0</p>
+<p>The value of key2 is</p>
+<p><strong>0x8d08 + 4 &#x3D; 0x8d0c</strong></p>
+<p>Let’s look at key3.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/12.png" alt="미리보기 방지" width="300"></div>
+
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/13.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 8.</p>
+<p>You assign the lr value to r3</p>
+<p>and then assign the r3 value to r0</p>
+<p>So, I suppose one just needs to find the lr value.</p>
+<p>one just needs to find it.</p>
+<p>If you look at the main function:</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/14.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 9.</p>
+<p>The lr value is</p>
+<p><strong>0x00008d80</strong></p>
+<p>All three values have now been obtained</p>
+<p> <strong>key1 | 0x8ce4</strong></p>
+<p> <strong>key2 | 0x8d0c</strong></p>
+<p> <strong>key3 | 0x8d80</strong></p>
+<p>If you sum them all up,</p>
+<p><strong>0x1a770</strong></p>
+<p>Right, then let’s go snag that key value<br>immediately, eh?</p>
+<p>let’s go snag it ㅋㅅㅋ</p>
+<p>So, into the input window here</p>
+<p> I’ll input <code>108400</code>.</p>
+<p>And due to the program’s nature</p>
+<p>it absolutely must be entered</p>
+<p>as an integer.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/15.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 10.</p>
+<p>And so the key value comes out</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/16.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 11.</p>
+<p>With the value that’s been snagged,</p>
+<p>you go back to the first screen,</p>
+<p>input it into the blank space,</p>
+<p>and then just press the ‘auth’ button.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/17.png" alt="미리보기 방지" width="300"></div>
+
+<p>As soon as the mission is completed,</p>
+<p>2 points have been snagged.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/18.png" alt="미리보기 방지" width="300"></div>
+
+<p>then, if you go back to the initial screen again,</p>
+<p>you’ll see that</p>
+<p>it’s marked as completed with a green</p>
+<p>dotted line</p>
+<p>Thanks for reading through this long post.</p>
+<p>Well done. (ㆁᴗㆁ✿)</p>
+<p>Have a good day, and<br>I hope everything works out well for you,</p>
+<p>It’s quite warm out,<br>so do try and avoid getting heatstroke</p>
+<p>And do take care with the,erm,<br>Wuhan pneumonia situation.</p>
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/19.png" alt="미리보기 방지" width="300">
 </div>
-Figure. 2> Data expressed in little endian<br><br>
 
-
-<p>then,since it’s all about little endian,yeah?<br>All you need to do is just feed the program that data<br>in hexadecimal,in the exact sequence.<br>That’s the one.<br><br></p>
-<div class="left-img">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/9.png"  width="500">
-</div>  
-then, so you've gone and chucked the value in hexadecimal
-
-<p>using Python for that, yeah?</p>
-<p>Now, here’s the kicker, mind you:<br>when the program picks that up as an input<br>it’ll jolly well recognise it as a char.<br>So, you just gotta watch out for that. Proper careful,like.</p>
-<h3 id="Flag"><a href="#Flag" class="headerlink" title="Flag"></a>Flag</h3><div class="left-img">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/10.png"  width="500">
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/20.png" alt="미리보기 방지" width="300">
 </div>
-Right then, so we've finally bagged the key value.
 
-<p>And with this rather handy key we’ve just nabbed<br>it’s back to the very beginning, isn’t it?</p>
- <br>
-<div class="left-img">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/11.png"  width="500">
-</div>
-Right then, for that 'Flag?' bit down below,
-
-<p>you just gotta punch in your key value.<br>And once that’s</p>
-<p>sorted, hit the’auth’button Simples.</p>
- <br>
-<div class="left-img">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/12.png"  width="500">
-</div>
-Right, and just like that,
-three points were had, apparently.
-
-<p><br><br></p>
-<div class="left-img">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/13.png"  width="500">
-</div>  <br>  <br>
-
-<p>Right,and then you swing back round,<br>and there it is: marked up with a green dotted line.<br>Means you’ve bloody well sorted it, doesn’t it?</p>
-<p>Right, well that’s the whole bloody spiel done.<br>Cheers for wading through all that, yeah : )<br> <br></p>
-<div  style="text-align: center;">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/2.png"  width="300">
-</div> <br>
-Alright then,
-
-<p>hope you have a decent day and<br>all your bits and bobs go swimmingly. </p>
-<p>It’s a proper scorcher out there,<br>mind you, so try not to go getting heatstroke, yeah?</p>
-<p>And, uh, watch out for that bloody Wuhan pneumonia. Stay safe, mate. : )</p>
-<br>
-<div  style="text-align: center;">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/14.png" width= 300></div>  <br>  <br>
 
 <div id="disqus_thread"></div>
 <script>
@@ -425,7 +479,7 @@ Alright then,
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/9/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/11/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
+    <a class="extend prev" rel="prev" href="/page/9/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/11/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
   </nav>
 
 
@@ -493,20 +547,20 @@ Alright then,
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">카테고리</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">태그</span></a>
       </div>
   </nav>
