@@ -22,7 +22,28 @@
 <h3 id="🪔Result"><a href="#🪔Result" class="headerlink" title="🪔Result"></a>🪔Result</h3><div style="text-alingn: right;">
 <p style="text-align:center">
 <img border="0" width="60%" height="70%" src="https://luna0x03.github.io/PostImages/DevDiary/etc/C_Programming/2.png">
-</div><br></p>]]></content>
+</div><br></p>
+
+<br>
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://kurailuna.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>]]></content>
       <categories>
         <category>DevDiary</category>
         <category>C Programming</category>
@@ -474,6 +495,81 @@
       </tags>
   </entry>
   <entry>
+    <title>JSP Project 7_28_2019</title>
+    <url>/2019/07/28/JSP-Project-7-28-2019/</url>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<p><img border="0" width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/02%20%EC%82%AC%EC%A7%84.0%20%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0%20%EB%B0%A9%EC%A7%80.jpg"> <br><br>사진.0 미리보기 방지* <br><br><br><br>드리어 완성 군요..;;<br><br>이제야 게시글 작업합니다,<br><br>작성하기에 앞서 아래 시연 영상부터<br><br>가겠습니다.<br></p>
+<br>
+<div class="widget-wrap">
+  <div class="widget-title"><시연영상></div>
+  <div class="widget-body">
+    <iframe
+      width="200"
+      height="180"
+      src="https://www.youtube.com/embed/9Y_ed7URWjE?si=njd40Zs0gsx_CbfP"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+동영상1.시연영상</p>
+<br>
+
+<p><img border="0" width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.1%20%EC%82%AC%EC%9D%B4%ED%8A%B8%20%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4%20%ED%99%88_%EC%82%AC%EC%9D%B4%ED%8A%B8_%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4.png"> <br><br>사진.1 사이트 메인화면<br><br><br><br>사이트 메인화면입니다. 원래 계획상 좀 더 많은 기능을<br><br>넣으려고 했다만은 개인적인 사정으로 커뮤니티 기능만 하기로 했습니다.<br> 아래 사진6-7 말이죠^ㅅ^; <br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.6%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png"> <br><br>사진.6 일러스트<br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.7%20%EB%A7%8C%ED%99%94.png"> <br><br>사진.7 만화<br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.2%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85.png"> <br><br>사진.2 회원가입<br></p>
+<p>커뮤니티는 회원가입…<br><br>예전부터 그래왔고 지금도<br><br>본격적으로 사이트를 이용하려면<br><br>누구든지 예외없이 회원가입을 해야 했죠<br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.3%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%20%EC%99%84%EB%A3%8C%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85_%EC%99%84%EB%A3%8C.png"> <br><br>사진.3 회원가입 완료<br></p>
+<p>가입완료 창입니다,<br><br>본인은 심플한게 좋음으로<br><br>나름 심플하게 했습니다. ㅋㅅㅋ;;<br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.4%20%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EB%A1%9C%EA%B7%B8%EC%9D%B8.png"><br><br>사진.4 로그인<br></p>
+<p>이제 로그인 해보겠습니다.<br><br>방금만든 유저 아이디로<br><br>한번 접속해 보겠습니다. : )<br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.5%20%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EC%99%84%EB%A3%8C%20%EB%A1%9C%EA%B7%B8%EC%9D%B8_%EC%99%84%EB%A3%8C.png"><br><br>사진.5 로그인 완료<br></p>
+<p>로그인이 완료되면 푸른색 동그라미가<br><br>있는 부분보면 처음과 뭔가 다르다는 걸 알 수 있습니다.<br><br><br><br>아래의 그림.논외 처럼 말이죠….<br></p>
+<p><img width="50%" height="50%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EA%B7%B8%EB%A6%BC.%EB%85%BC%EC%99%B8%20%EB%AD%94%EA%B0%80%20%EB%8B%A4%EB%A5%B4%EB%8B%A4%20%EB%AD%94%EA%B0%80_%EB%8B%A4%EB%A5%B4%EB%8B%A4.png"><br><br>그림.논외 뭔가 다르다<br><br><br><br><br><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.8%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%20%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0%20%EA%B2%8C%EC%8B%9C%ED%8C%90%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8_%ED%8E%98%EC%9D%B4%EC%A7%80.png"><br><br>사진.8 일러스트 커뮤니티 게시판<br></p>
+<p><br><br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.9%20%EB%A7%8C%ED%99%94%20%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0%20%EA%B2%8C%EC%8B%9C%ED%8C%90%20%EB%A7%8C%ED%99%94_%ED%8E%98%EC%9D%B4%EC%A7%80.png"><br><br>사진.9 만화 커뮤니티 게시판<br><br><br><br>사진.8과 사진.9의 각각 일러스트와 만화<br><br>커뮤니티 게시판입니다.<br><br>나름대로 페이스북이나 트위터<br><br>유사(?) 하겠끔 해봤습니다.<br><br><br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.10%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%20%EC%98%AC%EB%A6%AC%EA%B8%B0%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8_%EC%98%AC%EB%A6%AC%EA%B8%B0.png"><br><br>사진.10 일러스트 올리기<br><br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.11%20%EB%A7%8C%ED%99%94%20%EC%98%AC%EB%A6%AC%EA%B8%B0%20%EB%A7%8C%ED%99%94_%EC%98%AC%EB%A6%AC%EA%B8%B0.png"><br><br>사진.11 만화 올리기<br></p>
+<p>사진.10, 사진.11은 각각 일러스트와 만화를<br><br>게시하고 그로인한 게시글이 올려진 모습입니다.<br><br>나름 페이스북이나 트위터 유사해 보입니다(???)<br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.12%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%20%EC%A2%8B%EC%95%84%EC%9A%94%20%EC%99%80%20%EB%8D%A7%EA%B8%80%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8_%EC%A2%8B%EC%95%84%EC%9A%94%EC%99%80_%EB%8D%A7%EA%B8%80.png"><br><br>사진.12 일러스트 좋아요 와 덧글<br><br><br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.13%20%EB%A7%8C%ED%99%94%20%EC%A2%8B%EC%95%84%EC%9A%94%20%EC%99%80%20%EB%8D%A7%EA%B8%80%20%EB%A7%8C%ED%99%94_%EC%A2%8B%EC%95%84%EC%9A%94%EC%99%80_%EB%8D%A7%EA%B8%80.png"><br><br>사진.13 만화 좋아요 와 덧글<br><br><br><br>사직.12와 사진.13입니다.<br><br>각각 좋아요 와 댓글을 달아봤습니다,<br><br>댓글 과 좋아요 는 일러스트와 만화 파일처럼<br><br><br><br>사진처럼 되었다면 DB에 정상적으로 올라왔음을<br>알 수가 있었지요.<br></p>
+<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.14%20%ED%9A%8C%EC%9B%90%EC%A0%95%EB%B3%B4%20%EC%88%98%EC%A0%95%20%EC%9C%A0%EC%A0%80%EC%A0%95%EB%B3%B4_%EC%88%98%EC%A0%95.png"><br><br>사진.14 회원정보 수정<br><br><br><br>이제 화원정보 수정 창입니다.<br><br>커뮤니티 특성상 익명이 글을 게시하는지라<br><br>때에 따라 주소, 전화번호등 언제든지 바뀝니다,<br><br><br><br>그렇게 해서 회원정보 수정은 꼭 들어간다고 하지요…<br><br>(비밀번호 같은 경우 알다시피 보안상 자주 바꿔야 한다더군요)<br></p>
+<hr>
+<p><br><br><br>긴시간(?)을 꼬박 한 보람은 있기는 합니다ㅎㅎ(ㅎㅁㅎ)<br><br>이제는 조금 쉬어야겠습니다.<br><br>조금 쉬었다가 이제 본격적으로 해야겠지요….<br></p>
+<p><br><br><br>마지막으로 소스코드 링크하고<br><br>이제 포스팅은 여기까지 하겠습니다.<br><br>긴 글을 읽어 주셔서 감사하고<br><br>엔제나 오늘하루 잘 보내시길 바랍니다. ㅎㅁㅎ&#x2F;<br><br><br></p>
+<p>&lt;소스코드&gt;<br><br><a href="https://github.com/KuraiLuna/KuraiLunaJSP.github.io/tree/master/Medi">https://github.com/KuraiLuna/KuraiLunaJSP.github.io/tree/master/Medi</a></p>
+<p align="center"><img  width="60%" height="60%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%98%A4%EB%8A%98%EB%8F%84_%EC%A2%8B%EC%9D%80_%ED%95%98%EB%A3%A8.png" ></p><br>
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://kurailuna.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>]]></content>
+      <categories>
+        <category>Portfolio</category>
+        <category>Back-End</category>
+      </categories>
+      <tags>
+        <tag>Back End</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Front End Project</title>
     <url>/2018/09/09/Front-End-Project/</url>
     <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -547,81 +643,6 @@
       </categories>
       <tags>
         <tag>Front End</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JSP Project 7_28_2019</title>
-    <url>/2019/07/28/JSP-Project-7-28-2019/</url>
-    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<p><img border="0" width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/02%20%EC%82%AC%EC%A7%84.0%20%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0%20%EB%B0%A9%EC%A7%80.jpg"> <br><br>사진.0 미리보기 방지* <br><br><br><br>드리어 완성 군요..;;<br><br>이제야 게시글 작업합니다,<br><br>작성하기에 앞서 아래 시연 영상부터<br><br>가겠습니다.<br></p>
-<br>
-<div class="widget-wrap">
-  <div class="widget-title"><시연영상></div>
-  <div class="widget-body">
-    <iframe
-      width="200"
-      height="180"
-      src="https://www.youtube.com/embed/9Y_ed7URWjE?si=njd40Zs0gsx_CbfP"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
-</div>
-동영상1.시연영상</p>
-<br>
-
-<p><img border="0" width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.1%20%EC%82%AC%EC%9D%B4%ED%8A%B8%20%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4%20%ED%99%88_%EC%82%AC%EC%9D%B4%ED%8A%B8_%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4.png"> <br><br>사진.1 사이트 메인화면<br><br><br><br>사이트 메인화면입니다. 원래 계획상 좀 더 많은 기능을<br><br>넣으려고 했다만은 개인적인 사정으로 커뮤니티 기능만 하기로 했습니다.<br> 아래 사진6-7 말이죠^ㅅ^; <br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.6%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png"> <br><br>사진.6 일러스트<br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.7%20%EB%A7%8C%ED%99%94.png"> <br><br>사진.7 만화<br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.2%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85.png"> <br><br>사진.2 회원가입<br></p>
-<p>커뮤니티는 회원가입…<br><br>예전부터 그래왔고 지금도<br><br>본격적으로 사이트를 이용하려면<br><br>누구든지 예외없이 회원가입을 해야 했죠<br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.3%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%20%EC%99%84%EB%A3%8C%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85_%EC%99%84%EB%A3%8C.png"> <br><br>사진.3 회원가입 완료<br></p>
-<p>가입완료 창입니다,<br><br>본인은 심플한게 좋음으로<br><br>나름 심플하게 했습니다. ㅋㅅㅋ;;<br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.4%20%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EB%A1%9C%EA%B7%B8%EC%9D%B8.png"><br><br>사진.4 로그인<br></p>
-<p>이제 로그인 해보겠습니다.<br><br>방금만든 유저 아이디로<br><br>한번 접속해 보겠습니다. : )<br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.5%20%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EC%99%84%EB%A3%8C%20%EB%A1%9C%EA%B7%B8%EC%9D%B8_%EC%99%84%EB%A3%8C.png"><br><br>사진.5 로그인 완료<br></p>
-<p>로그인이 완료되면 푸른색 동그라미가<br><br>있는 부분보면 처음과 뭔가 다르다는 걸 알 수 있습니다.<br><br><br><br>아래의 그림.논외 처럼 말이죠….<br></p>
-<p><img width="50%" height="50%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EA%B7%B8%EB%A6%BC.%EB%85%BC%EC%99%B8%20%EB%AD%94%EA%B0%80%20%EB%8B%A4%EB%A5%B4%EB%8B%A4%20%EB%AD%94%EA%B0%80_%EB%8B%A4%EB%A5%B4%EB%8B%A4.png"><br><br>그림.논외 뭔가 다르다<br><br><br><br><br><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.8%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%20%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0%20%EA%B2%8C%EC%8B%9C%ED%8C%90%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8_%ED%8E%98%EC%9D%B4%EC%A7%80.png"><br><br>사진.8 일러스트 커뮤니티 게시판<br></p>
-<p><br><br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.9%20%EB%A7%8C%ED%99%94%20%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0%20%EA%B2%8C%EC%8B%9C%ED%8C%90%20%EB%A7%8C%ED%99%94_%ED%8E%98%EC%9D%B4%EC%A7%80.png"><br><br>사진.9 만화 커뮤니티 게시판<br><br><br><br>사진.8과 사진.9의 각각 일러스트와 만화<br><br>커뮤니티 게시판입니다.<br><br>나름대로 페이스북이나 트위터<br><br>유사(?) 하겠끔 해봤습니다.<br><br><br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.10%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%20%EC%98%AC%EB%A6%AC%EA%B8%B0%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8_%EC%98%AC%EB%A6%AC%EA%B8%B0.png"><br><br>사진.10 일러스트 올리기<br><br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.11%20%EB%A7%8C%ED%99%94%20%EC%98%AC%EB%A6%AC%EA%B8%B0%20%EB%A7%8C%ED%99%94_%EC%98%AC%EB%A6%AC%EA%B8%B0.png"><br><br>사진.11 만화 올리기<br></p>
-<p>사진.10, 사진.11은 각각 일러스트와 만화를<br><br>게시하고 그로인한 게시글이 올려진 모습입니다.<br><br>나름 페이스북이나 트위터 유사해 보입니다(???)<br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.12%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%20%EC%A2%8B%EC%95%84%EC%9A%94%20%EC%99%80%20%EB%8D%A7%EA%B8%80%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8_%EC%A2%8B%EC%95%84%EC%9A%94%EC%99%80_%EB%8D%A7%EA%B8%80.png"><br><br>사진.12 일러스트 좋아요 와 덧글<br><br><br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.13%20%EB%A7%8C%ED%99%94%20%EC%A2%8B%EC%95%84%EC%9A%94%20%EC%99%80%20%EB%8D%A7%EA%B8%80%20%EB%A7%8C%ED%99%94_%EC%A2%8B%EC%95%84%EC%9A%94%EC%99%80_%EB%8D%A7%EA%B8%80.png"><br><br>사진.13 만화 좋아요 와 덧글<br><br><br><br>사직.12와 사진.13입니다.<br><br>각각 좋아요 와 댓글을 달아봤습니다,<br><br>댓글 과 좋아요 는 일러스트와 만화 파일처럼<br><br><br><br>사진처럼 되었다면 DB에 정상적으로 올라왔음을<br>알 수가 있었지요.<br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.14%20%ED%9A%8C%EC%9B%90%EC%A0%95%EB%B3%B4%20%EC%88%98%EC%A0%95%20%EC%9C%A0%EC%A0%80%EC%A0%95%EB%B3%B4_%EC%88%98%EC%A0%95.png"><br><br>사진.14 회원정보 수정<br><br><br><br>이제 화원정보 수정 창입니다.<br><br>커뮤니티 특성상 익명이 글을 게시하는지라<br><br>때에 따라 주소, 전화번호등 언제든지 바뀝니다,<br><br><br><br>그렇게 해서 회원정보 수정은 꼭 들어간다고 하지요…<br><br>(비밀번호 같은 경우 알다시피 보안상 자주 바꿔야 한다더군요)<br></p>
-<hr>
-<p><br><br><br>긴시간(?)을 꼬박 한 보람은 있기는 합니다ㅎㅎ(ㅎㅁㅎ)<br><br>이제는 조금 쉬어야겠습니다.<br><br>조금 쉬었다가 이제 본격적으로 해야겠지요….<br></p>
-<p><br><br><br>마지막으로 소스코드 링크하고<br><br>이제 포스팅은 여기까지 하겠습니다.<br><br>긴 글을 읽어 주셔서 감사하고<br><br>엔제나 오늘하루 잘 보내시길 바랍니다. ㅎㅁㅎ&#x2F;<br><br><br></p>
-<p>&lt;소스코드&gt;<br><br><a href="https://github.com/KuraiLuna/KuraiLunaJSP.github.io/tree/master/Medi">https://github.com/KuraiLuna/KuraiLunaJSP.github.io/tree/master/Medi</a></p>
-<p align="center"><img  width="60%" height="60%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%98%A4%EB%8A%98%EB%8F%84_%EC%A2%8B%EC%9D%80_%ED%95%98%EB%A3%A8.png" ></p><br>
-
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://kurailuna.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>]]></content>
-      <categories>
-        <category>Portfolio</category>
-        <category>Back-End</category>
-      </categories>
-      <tags>
-        <tag>Back End</tag>
       </tags>
   </entry>
   <entry>
@@ -1243,173 +1264,6 @@ Screenshot 1.
       </tags>
   </entry>
   <entry>
-    <title>『pwnable.kr』 passcode Problem solving</title>
-    <url>/2020/08/03/pwnable-kr-Passcode-Problem-Solving/</url>
-    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<div style="text-align: center;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/1_Rina.gif" alt="미리보기 방지" width="300">
-</div>
-
-<p><br><br><br>Right So,<br>I suppose I’ll just crack on with this,then.</p>
-<br>
-
-<div style="text-align: center;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/02.png" alt="미리보기 방지" width="300">
-</div><br><br>
-
-
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/03.png" alt="미리보기 방지" width="300" style="text-align: left;">
-
-
-<p>Screenshot. 1</p>
-<p><strong>Mommy told me to make a passcode based login system.</strong></p>
-<p><strong>My initial C code was compiled without any error!</strong></p>
-<p><strong>Well, there was some compiler warning, but who cares about that?</strong><br>​</p>
-<p>Then,Let’s Just Connect Straight Away As Above.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh passcode@pwnable.kr -p2222 (pw:guest)</span><br></pre></td></tr></table></figure>
-
-
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/04.png" alt="미리보기 방지" width="300" style="text-align: left;">
-
-
-<p>Screenshot. 2</p>
-<p>Once Connected,You’d Then Use <code>ls -l</code> to<br>Check For Files.<br>And Upon Checking,You’ll Find:</p>
-<p>​</p>
-<p>flag</p>
-<p>passecode</p>
-<p>passecode.c</p>
-<p>​</p>
-<p>There Are Three Files In Total, You See.</p>
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/05.png" alt="미리보기 방지" width="300" style="text-align: left;">
-
-
-<p>Screenshot. 3</p>
-<p>First off, if you run <code>passcode</code></p>
-<p>You Can See It Behaves As Shown Above.</p>
-<p>​</p>
-<p>Right,And Then With The <code>cat</code> Command</p>
-<p>Let’s Have A Look At The <code>passcode.c</code> File.</p>
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/06.png" alt="미리보기 방지" width="300" style="text-align: left;">
-
-
-<p>Screenshot. 4</p>
-<p>I know, rummaging through some decades-old</p>
-<p>C language books at home,<br>and having a look at the code</p>
-<p>it appears</p>
-<p>​</p>
-<p>there’s a function that takes input</p>
-<p>I suppose it’s likely the <code>login()</code> function.</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, passcode1);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, passcode2);</span><br></pre></td></tr></table></figure>
-
-<p>So, these two, I’d imagine</p>
-<p>The input value isn’t being stored in <code>passcode1</code></p>
-<p>it’s not.</p>
-<p>​</p>
-<p>Rather, it’s being stored at an address that’s meant for <code>passcode1</code>.</p>
-<p>it’s being stored.</p>
-<p>​</p>
-<p>So, for example, if <code>passcode1=0x123死5678</code>,</p>
-<p>it seems the value we input would then be stored at the <code>0x123死5678</code> address.</p>
-<p>it seems the value we input would then be stored.</p>
-<p>​<br>Both variables likely contain dummy values as they haven’t been initialised</p>
-<p>and given that the input value is then being stored at an address derived from that dummy value</p>
-<p>well, that’s where the error crops up, isn’t it?</p>
-<p>​</p>
-<p>Right, then let’s have a look with gdb.</p>
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/07.png" alt="미리보기 방지" width="300" style="text-align: left;">
-
-
-
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/08.png" alt="미리보기 방지" width="300" style="text-align: left;">
-
-
-
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/09.png" alt="미리보기 방지" width="300" style="text-align: left;">
-
-
-<p>Screenshot. 4</p>
-<p>First off, if you have a look at the ‘welcome’ function, it stores the input value at <code>ebp-0x70</code></p>
-<p>it stores the input value at <code>ebp-0x70</code>.<br>​</p>
-<p>And then, with the <code>login</code> function, you’ll see:</p>
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/10.png" alt="미리보기 방지" width="300" style="text-align: left;">
-
-
-<p>Screenshot. 5</p>
-<p>You can tell that <code>ebp-0x10</code> is where <code>passcode1</code> is located.</p>
-<p>is located.</p>
-<p>​</p>
-<p>Now, <code>welcome()</code> receives 100 bytes of input, but</p>
-<figure class="highlight plaintext"><figcaption><span>– \[ebp-0x10\] </span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">So,one can in fact manipulate the ```passcode``` value</span><br><span class="line"></span><br><span class="line">​</span><br><span class="line"></span><br><span class="line">Right, then as we can insert the desired value at the address that is the value of &#x27;passcode1&#x27;</span><br><span class="line"></span><br><span class="line">we can therefore insert the desired value at the desired address</span><br><span class="line"></span><br><span class="line">we can therefore insert the desired value</span><br><span class="line"></span><br><span class="line">​</span><br><span class="line"></span><br><span class="line">Following that, we simply change the GOT address of ```fflush()``` to the ```system()``` portion of ```login()```.</span><br><span class="line"></span><br><span class="line">we simply change the ```system()``` address</span><br><span class="line"></span><br><span class="line">​</span><br><span class="line"></span><br><span class="line">So, then let&#x27;s find the GOT address of ```fflush()``` and</span><br><span class="line">the address of the ```system()``` portion of ```login()```</span><br><span class="line"></span><br><span class="line">let&#x27;s find the address of the ```system()```portion of ```login()```</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;img src=&quot;https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/11.png&quot; alt=&quot;미리보기 방지&quot; width=&quot;300&quot; style=&quot;text-align: left;&quot;&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Screenshot. 6</span><br><span class="line"></span><br><span class="line">The GOT address for ```fflush``` is ```0x0804a004```.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;img src=&quot;https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/12.png&quot; alt=&quot;미리보기 방지&quot; width=&quot;300&quot; style=&quot;text-align: left;&quot;&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Screenshot. 7</span><br><span class="line"></span><br><span class="line">If you look at the beginning of </span><br><span class="line">the &#x27;system&#x27; function</span><br><span class="line"></span><br><span class="line">you can see it&#x27;s ```0x080485e3```</span><br><span class="line"></span><br><span class="line">then, if we construct the payload</span><br><span class="line"></span><br><span class="line">​</span><br><span class="line"></span><br><span class="line">It becomes ```dummy\[96\]+fflush()```s ```got\[4\]```</span><br><span class="line"></span><br><span class="line">and ```system()``` ```\[4\]```</span><br><span class="line"></span><br><span class="line">​</span><br><span class="line"></span><br><span class="line">Now, ```system()\[4\]``` as ```scanf()``` receives integers here Is</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">we need to convert ```system()\[4\]``` to an integer and send it</span><br><span class="line"></span><br><span class="line">we need to convert it to an integer and send it</span><br><span class="line"></span><br><span class="line">​</span><br><span class="line"></span><br><span class="line">```0x80485e3 = 134514147```</span><br><span class="line"></span><br><span class="line">``` bash</span><br><span class="line">(python -c &#x27;print &quot;D&quot;*96 + &quot;\x04\xa0\x04\x08&quot;&#x27;; cat) | ./passcode</span><br></pre></td></tr></table></figure>
-
-
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/13.png" alt="미리보기 방지" width="300px" style="text-align: left;">
-
-
-<p>Screenshot. 8</p>
-<p>And that’s how we snagged the key, you see.</p>
-<p>And then, heading back to the initial page</p>
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/14.png" alt="미리보기 방지" width="300px" style="text-align: left;">
-
-
-<p>Screenshot. 9</p>
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/15.png" alt="미리보기 방지" width="300px" style="text-align: left;">
-
-
-<p>Screenshot. 10</p>
-<p>You can confirm that 10 points were in fact, received upon mission completion</p>
-<p>You can confirm that 10 points were received</p>
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/16.png" alt="미리보기 방지" width="300px" style="text-align: left;">
-
-
-<p>Screenshot. 11</p>
-<p>And then, a green dotted line indicates completion</p>
-<p>it indicates completion.</p>
-<p>​</p>
-<p>Oh, and even upon completion, it seems one can repeatedly practice the same problem</p>
-<p>it seems one can repeatedly practice it</p>
-<p>​</p>
-<p>Looks like it’s solvable, then, eh? ōxō</p>
-<p><del>Looks like it’s solvable, then, eh? ōxō</del></p>
-<div style="text-align: center;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/02.png" alt="미리보기 방지" width="300px">
-</div>
-
-<p>Have a good day,<br>and I hope everything works out well for you</p>
-<p>It’s quite warm out,<br>so do try and avoid getting heatstroke</p>
-<p>And do take care with the erm,<br>Wuhan pneumonia situation</p>
-<div style="text-align: center;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/17.png" alt="미리보기 방지" width="300px">
-</div>
-
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://kurailuna.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>]]></content>
-      <categories>
-        <category>White Hacking</category>
-        <category>CTF</category>
-        <category>pwnable.kr</category>
-      </categories>
-      <tags>
-        <tag>White Hacking</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>『pwnable.kr』 Memcpy Problem solving</title>
     <url>/2020/08/02/pwnable-kr-Memcpy-Problem-Solving/</url>
     <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1589,6 +1443,173 @@ Screenshot. 8
 <p>It’s a bit of a scorcher today,mind you,<br>so try not to go getting heatstroke.<br>And, naturally,<br>do be careful of that Wuhan pneumonia.</p>
 <div  style="text-align: center;">
 <img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/18.png" width= 300></div>  <br>  <br>
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://kurailuna.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>]]></content>
+      <categories>
+        <category>White Hacking</category>
+        <category>CTF</category>
+        <category>pwnable.kr</category>
+      </categories>
+      <tags>
+        <tag>White Hacking</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>『pwnable.kr』 passcode Problem solving</title>
+    <url>/2020/08/03/pwnable-kr-Passcode-Problem-Solving/</url>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/1_Rina.gif" alt="미리보기 방지" width="300">
+</div>
+
+<p><br><br><br>Right So,<br>I suppose I’ll just crack on with this,then.</p>
+<br>
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/02.png" alt="미리보기 방지" width="300">
+</div><br><br>
+
+
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/03.png" alt="미리보기 방지" width="300" style="text-align: left;">
+
+
+<p>Screenshot. 1</p>
+<p><strong>Mommy told me to make a passcode based login system.</strong></p>
+<p><strong>My initial C code was compiled without any error!</strong></p>
+<p><strong>Well, there was some compiler warning, but who cares about that?</strong><br>​</p>
+<p>Then,Let’s Just Connect Straight Away As Above.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh passcode@pwnable.kr -p2222 (pw:guest)</span><br></pre></td></tr></table></figure>
+
+
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/04.png" alt="미리보기 방지" width="300" style="text-align: left;">
+
+
+<p>Screenshot. 2</p>
+<p>Once Connected,You’d Then Use <code>ls -l</code> to<br>Check For Files.<br>And Upon Checking,You’ll Find:</p>
+<p>​</p>
+<p>flag</p>
+<p>passecode</p>
+<p>passecode.c</p>
+<p>​</p>
+<p>There Are Three Files In Total, You See.</p>
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/05.png" alt="미리보기 방지" width="300" style="text-align: left;">
+
+
+<p>Screenshot. 3</p>
+<p>First off, if you run <code>passcode</code></p>
+<p>You Can See It Behaves As Shown Above.</p>
+<p>​</p>
+<p>Right,And Then With The <code>cat</code> Command</p>
+<p>Let’s Have A Look At The <code>passcode.c</code> File.</p>
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/06.png" alt="미리보기 방지" width="300" style="text-align: left;">
+
+
+<p>Screenshot. 4</p>
+<p>I know, rummaging through some decades-old</p>
+<p>C language books at home,<br>and having a look at the code</p>
+<p>it appears</p>
+<p>​</p>
+<p>there’s a function that takes input</p>
+<p>I suppose it’s likely the <code>login()</code> function.</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, passcode1);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, passcode2);</span><br></pre></td></tr></table></figure>
+
+<p>So, these two, I’d imagine</p>
+<p>The input value isn’t being stored in <code>passcode1</code></p>
+<p>it’s not.</p>
+<p>​</p>
+<p>Rather, it’s being stored at an address that’s meant for <code>passcode1</code>.</p>
+<p>it’s being stored.</p>
+<p>​</p>
+<p>So, for example, if <code>passcode1=0x123死5678</code>,</p>
+<p>it seems the value we input would then be stored at the <code>0x123死5678</code> address.</p>
+<p>it seems the value we input would then be stored.</p>
+<p>​<br>Both variables likely contain dummy values as they haven’t been initialised</p>
+<p>and given that the input value is then being stored at an address derived from that dummy value</p>
+<p>well, that’s where the error crops up, isn’t it?</p>
+<p>​</p>
+<p>Right, then let’s have a look with gdb.</p>
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/07.png" alt="미리보기 방지" width="300" style="text-align: left;">
+
+
+
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/08.png" alt="미리보기 방지" width="300" style="text-align: left;">
+
+
+
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/09.png" alt="미리보기 방지" width="300" style="text-align: left;">
+
+
+<p>Screenshot. 4</p>
+<p>First off, if you have a look at the ‘welcome’ function, it stores the input value at <code>ebp-0x70</code></p>
+<p>it stores the input value at <code>ebp-0x70</code>.<br>​</p>
+<p>And then, with the <code>login</code> function, you’ll see:</p>
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/10.png" alt="미리보기 방지" width="300" style="text-align: left;">
+
+
+<p>Screenshot. 5</p>
+<p>You can tell that <code>ebp-0x10</code> is where <code>passcode1</code> is located.</p>
+<p>is located.</p>
+<p>​</p>
+<p>Now, <code>welcome()</code> receives 100 bytes of input, but</p>
+<figure class="highlight plaintext"><figcaption><span>– \[ebp-0x10\] </span></figcaption><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">So,one can in fact manipulate the ```passcode``` value</span><br><span class="line"></span><br><span class="line">​</span><br><span class="line"></span><br><span class="line">Right, then as we can insert the desired value at the address that is the value of &#x27;passcode1&#x27;</span><br><span class="line"></span><br><span class="line">we can therefore insert the desired value at the desired address</span><br><span class="line"></span><br><span class="line">we can therefore insert the desired value</span><br><span class="line"></span><br><span class="line">​</span><br><span class="line"></span><br><span class="line">Following that, we simply change the GOT address of ```fflush()``` to the ```system()``` portion of ```login()```.</span><br><span class="line"></span><br><span class="line">we simply change the ```system()``` address</span><br><span class="line"></span><br><span class="line">​</span><br><span class="line"></span><br><span class="line">So, then let&#x27;s find the GOT address of ```fflush()``` and</span><br><span class="line">the address of the ```system()``` portion of ```login()```</span><br><span class="line"></span><br><span class="line">let&#x27;s find the address of the ```system()```portion of ```login()```</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;img src=&quot;https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/11.png&quot; alt=&quot;미리보기 방지&quot; width=&quot;300&quot; style=&quot;text-align: left;&quot;&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Screenshot. 6</span><br><span class="line"></span><br><span class="line">The GOT address for ```fflush``` is ```0x0804a004```.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;img src=&quot;https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/12.png&quot; alt=&quot;미리보기 방지&quot; width=&quot;300&quot; style=&quot;text-align: left;&quot;&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Screenshot. 7</span><br><span class="line"></span><br><span class="line">If you look at the beginning of </span><br><span class="line">the &#x27;system&#x27; function</span><br><span class="line"></span><br><span class="line">you can see it&#x27;s ```0x080485e3```</span><br><span class="line"></span><br><span class="line">then, if we construct the payload</span><br><span class="line"></span><br><span class="line">​</span><br><span class="line"></span><br><span class="line">It becomes ```dummy\[96\]+fflush()```s ```got\[4\]```</span><br><span class="line"></span><br><span class="line">and ```system()``` ```\[4\]```</span><br><span class="line"></span><br><span class="line">​</span><br><span class="line"></span><br><span class="line">Now, ```system()\[4\]``` as ```scanf()``` receives integers here Is</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">we need to convert ```system()\[4\]``` to an integer and send it</span><br><span class="line"></span><br><span class="line">we need to convert it to an integer and send it</span><br><span class="line"></span><br><span class="line">​</span><br><span class="line"></span><br><span class="line">```0x80485e3 = 134514147```</span><br><span class="line"></span><br><span class="line">``` bash</span><br><span class="line">(python -c &#x27;print &quot;D&quot;*96 + &quot;\x04\xa0\x04\x08&quot;&#x27;; cat) | ./passcode</span><br></pre></td></tr></table></figure>
+
+
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/13.png" alt="미리보기 방지" width="300px" style="text-align: left;">
+
+
+<p>Screenshot. 8</p>
+<p>And that’s how we snagged the key, you see.</p>
+<p>And then, heading back to the initial page</p>
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/14.png" alt="미리보기 방지" width="300px" style="text-align: left;">
+
+
+<p>Screenshot. 9</p>
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/15.png" alt="미리보기 방지" width="300px" style="text-align: left;">
+
+
+<p>Screenshot. 10</p>
+<p>You can confirm that 10 points were in fact, received upon mission completion</p>
+<p>You can confirm that 10 points were received</p>
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/16.png" alt="미리보기 방지" width="300px" style="text-align: left;">
+
+
+<p>Screenshot. 11</p>
+<p>And then, a green dotted line indicates completion</p>
+<p>it indicates completion.</p>
+<p>​</p>
+<p>Oh, and even upon completion, it seems one can repeatedly practice the same problem</p>
+<p>it seems one can repeatedly practice it</p>
+<p>​</p>
+<p>Looks like it’s solvable, then, eh? ōxō</p>
+<p><del>Looks like it’s solvable, then, eh? ōxō</del></p>
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/02.png" alt="미리보기 방지" width="300px">
+</div>
+
+<p>Have a good day,<br>and I hope everything works out well for you</p>
+<p>It’s quite warm out,<br>so do try and avoid getting heatstroke</p>
+<p>And do take care with the erm,<br>Wuhan pneumonia situation</p>
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/17.png" alt="미리보기 방지" width="300px">
+</div>
 
 <div id="disqus_thread"></div>
 <script>
@@ -1958,31 +1979,6 @@ Alright then,
       </tags>
   </entry>
   <entry>
-    <title>【漫画】スクロースの研究日誌</title>
-    <url>/2025/08/24/%E6%BC%AB%E7%94%BB-%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E3%81%AE%E7%A0%94%E7%A9%B6%E6%97%A5%E8%AA%8C/</url>
-    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-<div style="text-align: center;">
-<img src="https://luna0x03.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/1.%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E3%81%AE%E7%A0%94%E7%A9%B6%E6%97%A5%E8%AA%8C/1.jpg" alt="" >
-</div><br><br>
-
-
-<div style="text-align: center;">
-<img src="https://luna0x03.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/1.%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E3%81%AE%E7%A0%94%E7%A9%B6%E6%97%A5%E8%AA%8C/2.jpg" alt="" >
-</div><br><br>
-
-<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">推しの誕生日…言葉は要らない…<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/GenshinImpact?src=hash&amp;ref_src=twsrc%5Etfw">#GenshinImpact</a> <a href="https://twitter.com/hashtag/%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9?src=hash&amp;ref_src=twsrc%5Etfw">#スクロース</a> <a href="https://twitter.com/hashtag/Sucrose?src=hash&amp;ref_src=twsrc%5Etfw">#Sucrose</a> <a href="https://twitter.com/hashtag/%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E7%94%9F%E8%AA%95%E7%A5%AD2021?src=hash&amp;ref_src=twsrc%5Etfw">#スクロース生誕祭2021</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E_%E3%82%AD%E3%83%A3%E3%83%A9%E7%94%9F%E8%AA%95%E7%A5%AD?src=hash&amp;ref_src=twsrc%5Etfw">#原神_キャラ生誕祭</a> <a href="https://t.co/8lJS6ERZCV">pic.twitter.com/8lJS6ERZCV</a></p>&mdash; アリクイのイカク (@arikuigames1105) <a href="https://twitter.com/arikuigames1105/status/1463885185875808261?ref_src=twsrc%5Etfw">November 25, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-]]></content>
-      <categories>
-        <category>(ETC) Taking a Break</category>
-        <category>【Genshin】Cartoons</category>
-      </categories>
-      <tags>
-        <tag>ETC</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>미국 배당주 심플계산기</title>
     <url>/2025/04/14/%EB%AF%B8%EA%B5%AD-%EB%B0%B0%EB%8B%B9%EC%A3%BC-%EC%8B%AC%ED%94%8C%EA%B3%84%EC%82%B0%EA%B8%B0/</url>
     <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -2057,6 +2053,31 @@ Alright then,
       </categories>
       <tags>
         <tag>etc</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【漫画】スクロースの研究日誌</title>
+    <url>/2025/08/24/%E6%BC%AB%E7%94%BB-%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E3%81%AE%E7%A0%94%E7%A9%B6%E6%97%A5%E8%AA%8C/</url>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/1.%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E3%81%AE%E7%A0%94%E7%A9%B6%E6%97%A5%E8%AA%8C/1.jpg" alt="" >
+</div><br><br>
+
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/1.%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E3%81%AE%E7%A0%94%E7%A9%B6%E6%97%A5%E8%AA%8C/2.jpg" alt="" >
+</div><br><br>
+
+<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">推しの誕生日…言葉は要らない…<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/GenshinImpact?src=hash&amp;ref_src=twsrc%5Etfw">#GenshinImpact</a> <a href="https://twitter.com/hashtag/%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9?src=hash&amp;ref_src=twsrc%5Etfw">#スクロース</a> <a href="https://twitter.com/hashtag/Sucrose?src=hash&amp;ref_src=twsrc%5Etfw">#Sucrose</a> <a href="https://twitter.com/hashtag/%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E7%94%9F%E8%AA%95%E7%A5%AD2021?src=hash&amp;ref_src=twsrc%5Etfw">#スクロース生誕祭2021</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E_%E3%82%AD%E3%83%A3%E3%83%A9%E7%94%9F%E8%AA%95%E7%A5%AD?src=hash&amp;ref_src=twsrc%5Etfw">#原神_キャラ生誕祭</a> <a href="https://t.co/8lJS6ERZCV">pic.twitter.com/8lJS6ERZCV</a></p>&mdash; アリクイのイカク (@arikuigames1105) <a href="https://twitter.com/arikuigames1105/status/1463885185875808261?ref_src=twsrc%5Etfw">November 25, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+]]></content>
+      <categories>
+        <category>(ETC) Taking a Break</category>
+        <category>【Genshin】Cartoons</category>
+      </categories>
+      <tags>
+        <tag>ETC</tag>
       </tags>
   </entry>
   <entry>
