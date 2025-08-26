@@ -195,7 +195,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://kurailuna.github.io/2020/08/03/pwnable-kr-Passcode-Problem-Solving/">
+    <link itemprop="mainEntityOfPage" href="https://kurailuna.github.io/2020/08/04/pwnable-kr-Ieg-Problem-Solving/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://kurailuna.github.io/images/lumine.png">
@@ -209,7 +209,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/08/03/pwnable-kr-Passcode-Problem-Solving/" class="post-title-link" itemprop="url">『pwnable.kr』 passcode Problem solving</a>
+            <a href="/2020/08/04/pwnable-kr-Ieg-Problem-Solving/" class="post-title-link" itemprop="url">『pwnable.kr』Ieg Problem Solving</a>
         </h2>
 
         <div class="post-meta">
@@ -219,14 +219,14 @@
               </span>
               <span class="post-meta-item-text">작성일</span>
 
-              <time title="Post created: 2020-08-03 20:51:11" itemprop="dateCreated datePublished" datetime="2020-08-03T20:51:11+09:00">2020-08-03</time>
+              <time title="Post created: 2020-08-04 14:03:11" itemprop="dateCreated datePublished" datetime="2020-08-04T14:03:11+09:00">2020-08-04</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Updated at: 2025-08-23 05:25:43" itemprop="dateModified" datetime="2025-08-23T05:25:43+09:00">2025-08-23</time>
+                <time title="Updated at: 2025-08-24 05:49:01" itemprop="dateModified" datetime="2025-08-24T05:49:01+09:00">2025-08-24</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -260,139 +260,188 @@
           <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <div style="text-align: center;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/1_Rina.gif" alt="미리보기 방지" width="300">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/01_Rina.gif" alt="미리보기 방지" width="300">
 </div>
 
-<p><br><br><br>Right So,<br>I suppose I’ll just crack on with this,then.</p>
+<p>This one, it’s slightly lower</p>
+<p>on the Hard Level scale than the last,</p>
+<p>so perhaps that’s why</p>
+<p>it feels like it’s coming together</p>
+<p>a bit more quickly.（　´∀｀）</p>
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/02.png" alt="미리보기 방지" width="300">
+</div>
+
+<br>
 <br>
 
-<div style="text-align: center;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/02.png" alt="미리보기 방지" width="300">
-</div><br><br>
-
-
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/03.png" alt="미리보기 방지" width="300" style="text-align: left;">
-
-
-<p>Screenshot. 1</p>
-<p><strong>Mommy told me to make a passcode based login system.</strong></p>
-<p><strong>My initial C code was compiled without any error!</strong></p>
-<p><strong>Well, there was some compiler warning, but who cares about that?</strong><br>​</p>
-<p>Then,Let’s Just Connect Straight Away As Above.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh passcode@pwnable.kr -p2222 (pw:guest)</span><br></pre></td></tr></table></figure>
-
-
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/04.png" alt="미리보기 방지" width="300" style="text-align: left;">
-
-
-<p>Screenshot. 2</p>
-<p>Once Connected,You’d Then Use <code>ls -l</code> to<br>Check For Files.<br>And Upon Checking,You’ll Find:</p>
-<p>​</p>
-<p>flag</p>
-<p>passecode</p>
-<p>passecode.c</p>
-<p>​</p>
-<p>There Are Three Files In Total, You See.</p>
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/05.png" alt="미리보기 방지" width="300" style="text-align: left;">
-
-
-<p>Screenshot. 3</p>
-<p>First off, if you run <code>passcode</code></p>
-<p>You Can See It Behaves As Shown Above.</p>
-<p>​</p>
-<p>Right,And Then With The <code>cat</code> Command</p>
-<p>Let’s Have A Look At The <code>passcode.c</code> File.</p>
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/06.png" alt="미리보기 방지" width="300" style="text-align: left;">
-
-
-<p>Screenshot. 4</p>
-<p>I know, rummaging through some decades-old</p>
-<p>C language books at home,<br>and having a look at the code</p>
-<p>it appears</p>
-<p>​</p>
-<p>there’s a function that takes input</p>
-<p>I suppose it’s likely the <code>login()</code> function.</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, passcode1);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, passcode2);</span><br></pre></td></tr></table></figure>
-
-<p>So, these two, I’d imagine</p>
-<p>The input value isn’t being stored in <code>passcode1</code></p>
-<p>it’s not.</p>
-<p>​</p>
-<p>Rather, it’s being stored at an address that’s meant for <code>passcode1</code>.</p>
-<p>it’s being stored.</p>
-<p>​</p>
-<p>So, for example, if <code>passcode1=0x123死5678</code>,</p>
-<p>it seems the value we input would then be stored at the <code>0x123死5678</code> address.</p>
-<p>it seems the value we input would then be stored.</p>
-<p>​<br>Both variables likely contain dummy values as they haven’t been initialised</p>
-<p>and given that the input value is then being stored at an address derived from that dummy value</p>
-<p>well, that’s where the error crops up, isn’t it?</p>
-<p>​</p>
-<p>Right, then let’s have a look with gdb.</p>
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/07.png" alt="미리보기 방지" width="300" style="text-align: left;">
-
-
-
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/08.png" alt="미리보기 방지" width="300" style="text-align: left;">
-
-
-
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/09.png" alt="미리보기 방지" width="300" style="text-align: left;">
-
-
-<p>Screenshot. 4</p>
-<p>First off, if you have a look at the ‘welcome’ function, it stores the input value at <code>ebp-0x70</code></p>
-<p>it stores the input value at <code>ebp-0x70</code>.<br>​</p>
-<p>And then, with the <code>login</code> function, you’ll see:</p>
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/10.png" alt="미리보기 방지" width="300" style="text-align: left;">
-
-
-<p>Screenshot. 5</p>
-<p>You can tell that <code>ebp-0x10</code> is where <code>passcode1</code> is located.</p>
-<p>is located.</p>
-<p>​</p>
-<p>Now, <code>welcome()</code> receives 100 bytes of input, but</p>
-<figure class="highlight plaintext"><figcaption><span>– \[ebp-0x10\] </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">So,one can in fact manipulate the ```passcode``` value</span><br><span class="line"></span><br><span class="line">​</span><br><span class="line"></span><br><span class="line">Right, then as we can insert the desired value at the address that is the value of &#x27;passcode1&#x27;</span><br><span class="line"></span><br><span class="line">we can therefore insert the desired value at the desired address</span><br><span class="line"></span><br><span class="line">we can therefore insert the desired value</span><br><span class="line"></span><br><span class="line">​</span><br><span class="line"></span><br><span class="line">Following that, we simply change the GOT address of ```fflush()``` to the ```system()``` portion of ```login()```.</span><br><span class="line"></span><br><span class="line">we simply change the ```system()``` address</span><br><span class="line"></span><br><span class="line">​</span><br><span class="line"></span><br><span class="line">So, then let&#x27;s find the GOT address of ```fflush()``` and</span><br><span class="line">the address of the ```system()``` portion of ```login()```</span><br><span class="line"></span><br><span class="line">let&#x27;s find the address of the ```system()```portion of ```login()```</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;img src=&quot;https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/11.png&quot; alt=&quot;미리보기 방지&quot; width=&quot;300&quot; style=&quot;text-align: left;&quot;&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Screenshot. 6</span><br><span class="line"></span><br><span class="line">The GOT address for ```fflush``` is ```0x0804a004```.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;img src=&quot;https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/12.png&quot; alt=&quot;미리보기 방지&quot; width=&quot;300&quot; style=&quot;text-align: left;&quot;&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Screenshot. 7</span><br><span class="line"></span><br><span class="line">If you look at the beginning of </span><br><span class="line">the &#x27;system&#x27; function</span><br><span class="line"></span><br><span class="line">you can see it&#x27;s ```0x080485e3```</span><br><span class="line"></span><br><span class="line">then, if we construct the payload</span><br><span class="line"></span><br><span class="line">​</span><br><span class="line"></span><br><span class="line">It becomes ```dummy\[96\]+fflush()```s ```got\[4\]```</span><br><span class="line"></span><br><span class="line">and ```system()``` ```\[4\]```</span><br><span class="line"></span><br><span class="line">​</span><br><span class="line"></span><br><span class="line">Now, ```system()\[4\]``` as ```scanf()``` receives integers here Is</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">we need to convert ```system()\[4\]``` to an integer and send it</span><br><span class="line"></span><br><span class="line">we need to convert it to an integer and send it</span><br><span class="line"></span><br><span class="line">​</span><br><span class="line"></span><br><span class="line">```0x80485e3 = 134514147```</span><br><span class="line"></span><br><span class="line">``` bash</span><br><span class="line">(python -c &#x27;print &quot;D&quot;*96 + &quot;\x04\xa0\x04\x08&quot;&#x27;; cat) | ./passcode</span><br></pre></td></tr></table></figure>
-
-
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/13.png" alt="미리보기 방지" width="300px" style="text-align: left;">
-
-
-<p>Screenshot. 8</p>
-<p>And that’s how we snagged the key, you see.</p>
-<p>And then, heading back to the initial page</p>
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/14.png" alt="미리보기 방지" width="300px" style="text-align: left;">
-
-
-<p>Screenshot. 9</p>
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/15.png" alt="미리보기 방지" width="300px" style="text-align: left;">
-
-
-<p>Screenshot. 10</p>
-<p>You can confirm that 10 points were in fact, received upon mission completion</p>
-<p>You can confirm that 10 points were received</p>
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/16.png" alt="미리보기 방지" width="300px" style="text-align: left;">
-
-
-<p>Screenshot. 11</p>
-<p>And then, a green dotted line indicates completion</p>
-<p>it indicates completion.</p>
-<p>​</p>
-<p>Oh, and even upon completion, it seems one can repeatedly practice the same problem</p>
-<p>it seems one can repeatedly practice it</p>
-<p>​</p>
-<p>Looks like it’s solvable, then, eh? ōxō</p>
-<p><del>Looks like it’s solvable, then, eh? ōxō</del></p>
-<div style="text-align: center;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/02.png" alt="미리보기 방지" width="300px">
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White Hacking/CTF/pwnable.kr/Ieg Problem Solving/03.png" alt="미리보기 방지" width="300">
 </div>
 
-<p>Have a good day,<br>and I hope everything works out well for you</p>
+<p>Screenshot 1.</p>
+<p>Right, so my own rather<br>literal translation of<br>the question is as follows:</p>
+<p>is as follows.</p>
+<p>Daddy told me I should study arm.  </p>
+<p>But I prefer to study my leg!  </p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/04.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 2.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh leg@pwnable.kr -p2222</span><br></pre></td></tr></table></figure>
+
+<p>You just connect straight away.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/05.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 3.</p>
+<p>First, you verify the files with <code>ls -l</code></p>
+<p>But there doesn’t seem to be a way to do it,</p>
+<p>the access attempt just isn’t working…? ōxō</p>
+<p><del>the access attempt just isn’t working…? ōxō</del>​​  </p>
+<p>Right, then let’s look at<br>the download section that was in<br>the question earlier:</p>
+<p>that was in the question earlier.</p>
+<p>Download :</p>
+<p> <a target="_blank" rel="noopener" href="http://pwnable.kr/bin/leg.c">http://pwnable.kr/bin/leg.c</a><br><a target="_blank" rel="noopener" href="http://pwnable.kr/bin/leg.asm">http://pwnable.kr/bin/leg.asm</a></p>
+<p>You download them both.</p>
+<p>Once downloaded, let’s immediately</p>
+<p>check <code>leg.c</code>.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/06.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 4.</p>
+<p>The functions for key1 through 3</p>
+<p>are written in ARM assembly.</p>
+<p>are written.</p>
+<p>First, if you look at the main function,<br>it seems that if you match the value<br>that’s the sum of all three of those<br>function values,<br>you can snag the key value.</p>
+<p>if you match the value that’s<br>the sum of all three of those function values,</p>
+<p>you can snag the key value.</p>
+<p>Let’s have a look at the main function’s<br>assembly code as well.</p>
+<p>as well.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/07.png" alt="미리보기 방지" width="300"></div>
+Screenshot 5.
+
+<p>It’s evident that the r0 values obtained<br>through the functions are all summed up,<br>and the final result goes into r2.</p>
+<p>are all summed up,<br>and the final result goes into r2</p>
+<p>it’s evident</p>
+<p>then, let’s look at each function.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/08.png" alt="미리보기 방지" width="300"></div>
+
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/09.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 6.</p>
+<p>This is the C and assembly code for the key1 function.</p>
+<p>It puts the pc value into r3</p>
+<p>and then puts r3 into r0 again.</p>
+<p>So, the pc value will then be the value for key1</p>
+<p>will then be the value</p>
+<p>If we just take a quick look at what pc is:</p>
+<hr>
+<ol>
+<li><p>Right, so when a CPU executes a<br>single instruction,<br>it’s said to go through<br>the fetch, decode, and execute stages.</p>
+</li>
+<li><p>To execute two opcodes,<br>you’d then need a total of six operations:<br>fetch, decode, execute, fetch, decode, execute.</p>
+</li>
+<li><p>By performing these stages in<br>parallel, however, you can reduce those<br>six operations needed for two opcodes<br>down to just four.</p>
+</li>
+<li><p>It’s simply more efficient than doing it<br>sequentially, you see.<br>The Program Counter,or PC,<br>holds the address for the fetch operation.</p>
+</li>
+<li><p>If the current instruction is at<br>the execute stage,<br>the next one will be at the decode stage,<br>and the one after that will<br>then be at the fetch stage.</p>
+</li>
+<li><p>Consequently,<br>the PC will then hold the address of<br>the instruction that’s<br>due for the next fetch operation.</p>
+</li>
+</ol>
+<hr>
+<p>Right, back to the main point now.</p>
+<p>The pc value in the key1 function is</p>
+<p><strong>0x00008ce4</strong></p>
+<p>is.</p>
+<p>Now, let’s move on to key2.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/10.png" alt="미리보기 방지" width="300"></div>
+
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/11.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 7.</p>
+<p>You assign the pc value(<strong>0x00008d08</strong>)</p>
+<p>to r3, and then add 4,assigning that to r0</p>
+<p>assigning that to r0</p>
+<p>The value of key2 is</p>
+<p><strong>0x8d08 + 4 &#x3D; 0x8d0c</strong></p>
+<p>Let’s look at key3.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/12.png" alt="미리보기 방지" width="300"></div>
+
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/13.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 8.</p>
+<p>You assign the lr value to r3</p>
+<p>and then assign the r3 value to r0</p>
+<p>So, I suppose one just needs to find the lr value.</p>
+<p>one just needs to find it.</p>
+<p>If you look at the main function:</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/14.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 9.</p>
+<p>The lr value is</p>
+<p><strong>0x00008d80</strong></p>
+<p>All three values have now been obtained</p>
+<p> <strong>key1 | 0x8ce4</strong></p>
+<p> <strong>key2 | 0x8d0c</strong></p>
+<p> <strong>key3 | 0x8d80</strong></p>
+<p>If you sum them all up,</p>
+<p><strong>0x1a770</strong></p>
+<p>Right, then let’s go snag that key value<br>immediately, eh?</p>
+<p>let’s go snag it ㅋㅅㅋ</p>
+<p>So, into the input window here</p>
+<p> I’ll input <code>108400</code>.</p>
+<p>And due to the program’s nature</p>
+<p>it absolutely must be entered</p>
+<p>as an integer.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/15.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 10.</p>
+<p>And so the key value comes out</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/16.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 11.</p>
+<p>With the value that’s been snagged,</p>
+<p>you go back to the first screen,</p>
+<p>input it into the blank space,</p>
+<p>and then just press the ‘auth’ button.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/17.png" alt="미리보기 방지" width="300"></div>
+
+<p>As soon as the mission is completed,</p>
+<p>2 points have been snagged.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/18.png" alt="미리보기 방지" width="300"></div>
+
+<p>then, if you go back to the initial screen again,</p>
+<p>you’ll see that</p>
+<p>it’s marked as completed with a green</p>
+<p>dotted line</p>
+<p>Thanks for reading through this long post.</p>
+<p>Well done. (ㆁᴗㆁ✿)</p>
+<p>Have a good day, and<br>I hope everything works out well for you,</p>
 <p>It’s quite warm out,<br>so do try and avoid getting heatstroke</p>
-<p>And do take care with the erm,<br>Wuhan pneumonia situation</p>
+<p>And do take care with the,erm,<br>Wuhan pneumonia situation.</p>
 <div style="text-align: center;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/17.png" alt="미리보기 방지" width="300px">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/19.png" alt="미리보기 방지" width="300">
 </div>
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/20.png" alt="미리보기 방지" width="300">
+</div>
+
 
 <div id="disqus_thread"></div>
 <script>
@@ -430,7 +479,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/12/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/14/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
+    <a class="extend prev" rel="prev" href="/page/12/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/14/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
   </nav>
 
 
@@ -498,7 +547,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>

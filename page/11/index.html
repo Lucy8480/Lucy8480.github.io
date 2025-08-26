@@ -195,7 +195,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://kurailuna.github.io/2020/08/04/pwnable-kr-Ieg-Problem-Solving/">
+    <link itemprop="mainEntityOfPage" href="https://kurailuna.github.io/2022/04/10/pwnable-kr-Fla-Problem-Solving/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://kurailuna.github.io/images/lumine.png">
@@ -209,7 +209,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/08/04/pwnable-kr-Ieg-Problem-Solving/" class="post-title-link" itemprop="url">『pwnable.kr』Ieg Problem Solving</a>
+            <a href="/2022/04/10/pwnable-kr-Fla-Problem-Solving/" class="post-title-link" itemprop="url">『pwnable.kr』Fla Problem Solving</a>
         </h2>
 
         <div class="post-meta">
@@ -219,14 +219,14 @@
               </span>
               <span class="post-meta-item-text">작성일</span>
 
-              <time title="Post created: 2020-08-04 14:03:11" itemprop="dateCreated datePublished" datetime="2020-08-04T14:03:11+09:00">2020-08-04</time>
+              <time title="Post created: 2022-04-10 17:51:11" itemprop="dateCreated datePublished" datetime="2022-04-10T17:51:11+09:00">2022-04-10</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Updated at: 2025-08-24 05:49:01" itemprop="dateModified" datetime="2025-08-24T05:49:01+09:00">2025-08-24</time>
+                <time title="Updated at: 2025-08-24 06:59:22" itemprop="dateModified" datetime="2025-08-24T06:59:22+09:00">2025-08-24</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -259,190 +259,125 @@
       
           <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<div style="text-align: center;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/01_Rina.gif" alt="미리보기 방지" width="300">
-</div>
+<hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style6" />
+<p style="text-align: center;" data-ke-size="size18"><b><span style="color: #8a3db6;">back on the 10th of April, 2022</span></b></p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18"><b><span style="color: #8a3db6;">Right, so this post was penned on a Naver blog.</span></b></p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18"><b><span style="color: #8a3db6;"><a href="https://blog.naver.com/bnm0170/222696804662" target="_blank" rel="noopener">https://blog.naver.com/bnm0170/222696804662</a></span></b><b><span style="color: #8a3db6;"></span></b></p>
+<p data-ke-size="size16">&nbsp;</p>
+<hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style6" />
+<div style="text-align: center;" align="center">&nbsp;</div>
 
-<p>This one, it’s slightly lower</p>
-<p>on the Hard Level scale than the last,</p>
-<p>so perhaps that’s why</p>
-<p>it feels like it’s coming together</p>
-<p>a bit more quickly.（　´∀｀）</p>
-<div style="text-align: center;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/02.png" alt="미리보기 방지" width="300">
-</div>
-
-<br>
-<br>
-
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White Hacking/CTF/pwnable.kr/Ieg Problem Solving/03.png" alt="미리보기 방지" width="300">
-</div>
-
-<p>Screenshot 1.</p>
-<p>Right, so my own rather<br>literal translation of<br>the question is as follows:</p>
-<p>is as follows.</p>
-<p>Daddy told me I should study arm.  </p>
-<p>But I prefer to study my leg!  </p>
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/04.png" alt="미리보기 방지" width="300"></div>
-
-<p>Screenshot 2.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh leg@pwnable.kr -p2222</span><br></pre></td></tr></table></figure>
-
-<p>You just connect straight away.</p>
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/05.png" alt="미리보기 방지" width="300"></div>
-
-<p>Screenshot 3.</p>
-<p>First, you verify the files with <code>ls -l</code></p>
-<p>But there doesn’t seem to be a way to do it,</p>
-<p>the access attempt just isn’t working…? ōxō</p>
-<p><del>the access attempt just isn’t working…? ōxō</del>​​  </p>
-<p>Right, then let’s look at<br>the download section that was in<br>the question earlier:</p>
-<p>that was in the question earlier.</p>
-<p>Download :</p>
-<p> <a target="_blank" rel="noopener" href="http://pwnable.kr/bin/leg.c">http://pwnable.kr/bin/leg.c</a><br><a target="_blank" rel="noopener" href="http://pwnable.kr/bin/leg.asm">http://pwnable.kr/bin/leg.asm</a></p>
-<p>You download them both.</p>
-<p>Once downloaded, let’s immediately</p>
-<p>check <code>leg.c</code>.</p>
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/06.png" alt="미리보기 방지" width="300"></div>
-
-<p>Screenshot 4.</p>
-<p>The functions for key1 through 3</p>
-<p>are written in ARM assembly.</p>
-<p>are written.</p>
-<p>First, if you look at the main function,<br>it seems that if you match the value<br>that’s the sum of all three of those<br>function values,<br>you can snag the key value.</p>
-<p>if you match the value that’s<br>the sum of all three of those function values,</p>
-<p>you can snag the key value.</p>
-<p>Let’s have a look at the main function’s<br>assembly code as well.</p>
-<p>as well.</p>
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/07.png" alt="미리보기 방지" width="300"></div>
-Screenshot 5.
-
-<p>It’s evident that the r0 values obtained<br>through the functions are all summed up,<br>and the final result goes into r2.</p>
-<p>are all summed up,<br>and the final result goes into r2</p>
-<p>it’s evident</p>
-<p>then, let’s look at each function.</p>
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/08.png" alt="미리보기 방지" width="300"></div>
-
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/09.png" alt="미리보기 방지" width="300"></div>
-
-<p>Screenshot 6.</p>
-<p>This is the C and assembly code for the key1 function.</p>
-<p>It puts the pc value into r3</p>
-<p>and then puts r3 into r0 again.</p>
-<p>So, the pc value will then be the value for key1</p>
-<p>will then be the value</p>
-<p>If we just take a quick look at what pc is:</p>
-<hr>
-<ol>
-<li><p>Right, so when a CPU executes a<br>single instruction,<br>it’s said to go through<br>the fetch, decode, and execute stages.</p>
-</li>
-<li><p>To execute two opcodes,<br>you’d then need a total of six operations:<br>fetch, decode, execute, fetch, decode, execute.</p>
-</li>
-<li><p>By performing these stages in<br>parallel, however, you can reduce those<br>six operations needed for two opcodes<br>down to just four.</p>
-</li>
-<li><p>It’s simply more efficient than doing it<br>sequentially, you see.<br>The Program Counter,or PC,<br>holds the address for the fetch operation.</p>
-</li>
-<li><p>If the current instruction is at<br>the execute stage,<br>the next one will be at the decode stage,<br>and the one after that will<br>then be at the fetch stage.</p>
-</li>
-<li><p>Consequently,<br>the PC will then hold the address of<br>the instruction that’s<br>due for the next fetch operation.</p>
-</li>
-</ol>
-<hr>
-<p>Right, back to the main point now.</p>
-<p>The pc value in the key1 function is</p>
-<p><strong>0x00008ce4</strong></p>
-<p>is.</p>
-<p>Now, let’s move on to key2.</p>
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/10.png" alt="미리보기 방지" width="300"></div>
-
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/11.png" alt="미리보기 방지" width="300"></div>
-
-<p>Screenshot 7.</p>
-<p>You assign the pc value(<strong>0x00008d08</strong>)</p>
-<p>to r3, and then add 4,assigning that to r0</p>
-<p>assigning that to r0</p>
-<p>The value of key2 is</p>
-<p><strong>0x8d08 + 4 &#x3D; 0x8d0c</strong></p>
-<p>Let’s look at key3.</p>
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/12.png" alt="미리보기 방지" width="300"></div>
-
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/13.png" alt="미리보기 방지" width="300"></div>
-
-<p>Screenshot 8.</p>
-<p>You assign the lr value to r3</p>
-<p>and then assign the r3 value to r0</p>
-<p>So, I suppose one just needs to find the lr value.</p>
-<p>one just needs to find it.</p>
-<p>If you look at the main function:</p>
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/14.png" alt="미리보기 방지" width="300"></div>
-
-<p>Screenshot 9.</p>
-<p>The lr value is</p>
-<p><strong>0x00008d80</strong></p>
-<p>All three values have now been obtained</p>
-<p> <strong>key1 | 0x8ce4</strong></p>
-<p> <strong>key2 | 0x8d0c</strong></p>
-<p> <strong>key3 | 0x8d80</strong></p>
-<p>If you sum them all up,</p>
-<p><strong>0x1a770</strong></p>
-<p>Right, then let’s go snag that key value<br>immediately, eh?</p>
-<p>let’s go snag it ㅋㅅㅋ</p>
-<p>So, into the input window here</p>
-<p> I’ll input <code>108400</code>.</p>
-<p>And due to the program’s nature</p>
-<p>it absolutely must be entered</p>
-<p>as an integer.</p>
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/15.png" alt="미리보기 방지" width="300"></div>
-
-<p>Screenshot 10.</p>
-<p>And so the key value comes out</p>
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/16.png" alt="미리보기 방지" width="300"></div>
-
-<p>Screenshot 11.</p>
-<p>With the value that’s been snagged,</p>
-<p>you go back to the first screen,</p>
-<p>input it into the blank space,</p>
-<p>and then just press the ‘auth’ button.</p>
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/17.png" alt="미리보기 방지" width="300"></div>
-
-<p>As soon as the mission is completed,</p>
-<p>2 points have been snagged.</p>
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/18.png" alt="미리보기 방지" width="300"></div>
-
-<p>then, if you go back to the initial screen again,</p>
-<p>you’ll see that</p>
-<p>it’s marked as completed with a green</p>
-<p>dotted line</p>
-<p>Thanks for reading through this long post.</p>
-<p>Well done. (ㆁᴗㆁ✿)</p>
-<p>Have a good day, and<br>I hope everything works out well for you,</p>
-<p>It’s quite warm out,<br>so do try and avoid getting heatstroke</p>
-<p>And do take care with the,erm,<br>Wuhan pneumonia situation.</p>
-<div style="text-align: center;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/19.png" alt="미리보기 방지" width="300">
-</div>
 
 <div style="text-align: center;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/20.png" alt="미리보기 방지" width="300">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/01_Rina.gif" alt="미리보기 방지" width="300">
+</div><br>
+Right, well this is perhaps one of
+
+<p>the easier problems I’ve tackled so far.</p>
+<p>Having a go at a CTF for ethical hacking<br>after a bit of a break, then.</p>
+<br> 
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/02.png" alt="" width="300">
+</div><br><br>
+
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/03.png" alt="" width="300">
 </div>
 
+<p>First off,let’s have a look at the question itself.</p>
+<p>Papa brought me a packed present! let’s open it,</p>
+<p>This problem, you see,<br>isn’t about SSH access.<br>Rather, it’s about downloading a<br>standalone program,</p>
+<p>reversing it to get a key,<br>and then collecting points with that key.<br>Quite straightforward.</p>
+<p>Right, anyway using<br>the download address written<br>in the question above,</p>
+<p>you download it with the command below.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> wget http://pwnable.kr/bin/flag</span><br></pre></td></tr></table></figure>
 
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/04.png" alt="" width="300">
+</div>
+
+<p>Once it’s all downloaded,<br>you then use the command below</p>
+<p>to grant permission for the program to be used.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">chmod</span> 755 flag</span><br></pre></td></tr></table></figure>
+
+<p>However,this program happens to be UPX-packed,</p>
+<p>so you’ll need to unpack it as well.</p>
+<p>Right, let’s go unpack it with the command below.</p>
+<p>unpack it : )</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> upx -d flag</span><br></pre></td></tr></table></figure>
+
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/05.png" alt="" width="300">
+</div>
+
+<p>Now that the unpacking is complete, this time,</p>
+<p>let’s try debugging it with the command below.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> gdb -q flag</span><br></pre></td></tr></table></figure>
+
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/06.png" alt="" width="300">
+</div>
+
+<p>(And in the meantime,<br>I completely wasted over<br>30 minutes trying to install gdb-peda,<br>you see.)</p>
+<p>So, when you debug it in this manner,<br>after main+32,<br>there’s a rather suspicious part,</p>
+<p>where it seems the flag value was copied to #</p>
+<p>where there’s a rather suspicious part.</p>
+<p>It’s presumed to be 64-bit, and</p>
+<p>“if you disassemble 0x6c2070 with x&#x2F;xg,</p>
+<p>it comes out as <flag>:0x496628.</p>
+<p>So, 0x496628 is probably where the real flag value</p>
+<p>is copied to, I’d imagine.</p>
+<p>Oh, and if you write 496628,<br>an error will be displayed,</p>
+<p>so you absolutely must attach 0x,</p>
+<p>and then write it. Otherwise,<br>it won’t be output correctly without an error.</p>
+<p>it will be output.</p>
+<p>Anyway, if you input it as per<br>the command below with x&#x2F;s</p>
+<p>if you input it.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gdb-peda$ x/s 0x496628</span><br></pre></td></tr></table></figure>
+
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/07.png" alt="" width="300">
+</div>
+
+<p>the real flag value will come out.</p>
+<p>And with the flag value obtained,</p>
+<p>you input the value as shown<br>in the captured image below.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/08.png" alt="" width="300">
+</div>
+
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/09.png" alt="" width="300">
+</div>
+
+<p>And that’s how 7 points were collected. : )</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/10.png" alt="" width="300">
+</div>
+
+<p>Having a go at pwnable.kr<br>CTF after a bit of a break, then.</p>
+<p>“I’m not sure if it’ll<br>be possible since it’s<br>the weekend, honestly.</p>
+<p>Right, well I suppose it’s about time<br>I started preparing for<br>some rather pointless part-time work.</p>
+<p>My chances of finding employment in S.Korea(?)<br>are effectively long gone, you see.</p>
+<p>So, while I’m doing short-term part-time work,</p>
+<p>I’ll try to save up around ten million won,<br>move out of my family home,</p>
+<p>and then find some temporary<br>accommodation near<br>the Japanese Cultural Centre,</p>
+<p>in a well-soundproofed goshiwon.</p>
+<p>and then find some temporary accommodation.</p>
+<p>Ethical hacking, Japanese study,</p>
+<p>preparing for JLPT N series or EJU,</p>
+<p><a target="_blank" rel="noopener" href="https://www.bugbountyclub.com/beginning">bug bounty</a> programmes related to ethical hacking,</p>
+<p>preparing for and attempting that,<br>and then writing bug hunting reports<br>in English and Japanese,</p>
+<p>writing bug hunting reports.</p>
+<p>or preparing for OSCP,<br>an international ethical hacking<br>certification.</p>
+<p>It’ll be like doing a penitent task,<br>just like the nuns in a Catholic convent.</p>
+<p>I’ll have to do that.</p>
+<p>And then, simultaneously with<br>preparing to move to Japan,</p>
+<p>I’ll have to prepare for<br>financial income investment as well</p>
+<p>2022.04.10</p>
 <div id="disqus_thread"></div>
 <script>
     /**
@@ -479,7 +414,7 @@ Screenshot 5.
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/10/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/12/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
+    <a class="extend prev" rel="prev" href="/page/10/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/12/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
   </nav>
 
 
@@ -547,7 +482,7 @@ Screenshot 5.
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
