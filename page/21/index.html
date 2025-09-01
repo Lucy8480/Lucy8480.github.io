@@ -195,7 +195,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://kurailuna.github.io/2018/09/09/Front-End-Project/">
+    <link itemprop="mainEntityOfPage" href="https://kurailuna.github.io/2020/08/04/pwnable-kr-Random-Problem-Solving/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://kurailuna.github.io/images/lumine.png">
@@ -209,7 +209,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2018/09/09/Front-End-Project/" class="post-title-link" itemprop="url">Front End Project</a>
+            <a href="/2020/08/04/pwnable-kr-Random-Problem-Solving/" class="post-title-link" itemprop="url">『pwnable.kr』Random Problem Solving</a>
         </h2>
 
         <div class="post-meta">
@@ -219,14 +219,14 @@
               </span>
               <span class="post-meta-item-text">작성일</span>
 
-              <time title="Post created: 2018-09-09 21:00:12" itemprop="dateCreated datePublished" datetime="2018-09-09T21:00:12+09:00">2018-09-09</time>
+              <time title="Post created: 2020-08-04 19:35:11" itemprop="dateCreated datePublished" datetime="2020-08-04T19:35:11+09:00">2020-08-04</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Updated at: 2025-08-22 06:50:46" itemprop="dateModified" datetime="2025-08-22T06:50:46+09:00">2025-08-22</time>
+                <time title="Updated at: 2025-08-24 06:20:21" itemprop="dateModified" datetime="2025-08-24T06:20:21+09:00">2025-08-24</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -234,11 +234,15 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Portfolio/" itemprop="url" rel="index"><span itemprop="name">Portfolio</span></a>
+                  <a href="/categories/White-Hacking/" itemprop="url" rel="index"><span itemprop="name">White Hacking</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Portfolio/Front-End/" itemprop="url" rel="index"><span itemprop="name">Front-End</span></a>
+                  <a href="/categories/White-Hacking/CTF/" itemprop="url" rel="index"><span itemprop="name">CTF</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/White-Hacking/CTF/pwnable-kr/" itemprop="url" rel="index"><span itemprop="name">pwnable.kr</span></a>
                 </span>
             </span>
 
@@ -255,50 +259,151 @@
       
           <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<div style="TEXT-ALIGN: center">
-        <div id="google_translate_element"></div>
-            <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-                <script type="text/javascript">
-                            function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: 'ko',autoDisplay: false}, 'google_translate_element');}
-                </script>
-                    </script>
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/01_Rina.gif" alt="미리보기 방지" width="300">
+</div>
+
+<p>Right, this one’s comparatively not too bad</p>
+<p>difficulty-wise, you see</p>
+<p>Right, anyway<br>due to my own circumstances,<br>I suppose</p>
+<p>this study-related post</p>
+<p>will have to be the last of its kind for now</p>
+<p>I should really try a<br>bug bounty this year,<br>at the very latest.</p>
+<p>The situation shows no sign of<br>improving, honestly.</p>
+<p>ε-(´・｀)</p>
+<p>Honestly, rather than wasting all<br>my time and health with some<br>unwanted weekday part-time work,</p>
+<p>with some unwanted weekday part-time work,</p>
+<p>it’d be far less galling to do<br>bug bounties on weekdays</p>
+<p>and just part-time work on weekends.</p>
+<p>it’d be far less galling.</p>
+<p>-`д´-</p>
+<p>Right, anyway I’ll just carry on writing.</p>
+<p>(ㆁᴗㆁ✿)</p>
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/02.png" width="300">
+</div>
+
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/03.png" alt="" width="300">
+</div>
+Screenshot 1.
+
+<p>Right, first let’s have a gander at the question,</p>
+<p>with my own rather straightforward,<br>literal translation</p>
+<p>Daddy, teach me how to use random value in programming!</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/04.png" alt="" width="300">
+</div>
+Screenshot 2.
+
+<p>Right, and then</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh random@pwnable.kr -p2222</span><br></pre></td></tr></table></figure>
+
+<p>you connect straight away.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/05.png" alt="" width="300">
+</div>
+Screenshot 3.
+
+<p>First,you work out whether<br>the file exists,and then</p>
+<p>you check the <code>random.c</code> file</p>
+<p>I check it</p>
+<p>Right, so it’s a program that receives a<br>key value if you XOR a 4-byte<br>random value with an input value</p>
+<p>if you XOR a 4-byte random value with an input value</p>
+<p>and <code>0xdeadbeef</code> comes out.</p>
+<p>So, ANG? If it’s a random value,<br>does one have to try all possible cases?</p>
+<p>Does one have to try all possible cases? ōxō</p>
+<p><del>Does one have to try all possible cases? ōxō</del></p>
+<p>one might think, but</p>
+<p>the rand() function, unless<br>you provide it with a<br>seed value that changes every time</p>
+<p>will always convert to a constant value</p>
+<p>This constant value, if you work it out,</p>
+<p>will give you the answer.</p>
+<p>Right, then, let’s trace the value using gdb.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/06.png" alt="" width="300">
+</div>
+Screenshot 4.
+
+<p>Right, so you do the XOR operation,</p>
+<p>and it seems you just need to check<br>the value of eax <code>0xdeadbeef</code></p>
+<p>you just need to check.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/07.png" alt="" width="300">
+</div>
+
+<p>Screenshot 5.</p>
+<p>If you set a breakpoint and run it, putting in 0</p>
+<p>you can see that 0x6b8b4567 is in eax.</p>
+<p>0x6b8b4567 is in eax</p>
+<p>you can see that it’s in there.</p>
+<p>As XORing with 0 produces the same value,</p>
+<p>you can deduce that the value of rand() is 0x6b8b4567</p>
+<p>you can deduce that it is.</p>
+<p>So, the value we need to input can be found through</p>
+<p><strong>0xdeadbeef ^ 0x6b8b4567</strong></p>
+<p>can be found</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/08.png" alt="" width="300">
+</div>
+
+<p>Screenshot 6: Hexadecimal operation in Java</p>
+<p>If you operate these two using Java programming</p>
+<p>if you operate these two</p>
+<p>the result is</p>
+<p><strong>0xB526FB88</strong></p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/09.png" alt="" width="300">
+</div>
+
+<p>Screenshot 7.</p>
+<p>And if you go to a conversion website and convert it,</p>
+<p><strong>3039230856</strong></p>
+<p>a value like the above is output</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/10.png" alt="" width="300">
+</div>
+Screenshot 8
+
+<p>If you input the outputted value,</p>
+<p>you acquire the key value like this.</p>
+<p>Right, and then with the key value that’s<br>been snagged,</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/11.png" alt="" width="300">
+</div>
+
+<p>Screenshot 9.</p>
+<p>you go back to the first screen,</p>
+<p>input it into the blank space</p>
+<p>and then just press the ‘auth’ button.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/12.png" alt="" width="300">
+</div>
+
+<p>As soon as the mission’s completed,</p>
+<p>1 point has been snagged.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/13.png" alt="" width="300">
 </div>
 
 
-<p style="text-align:center">
-<img border="0" width="70%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/02%20%EC%82%AC%EC%A7%84.0%20%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0%20%EB%B0%A9%EC%A7%80.jpg"><br></p>
+<p>then, if you go back to the initial screen again,</p>
+<p>you’ll see that</p>
+<p>it’s marked as completed with a green</p>
+<p>dotted line.</p>
+<p>Thanks for reading through this long post.</p>
+<p>Well done. (ㆁᴗㆁ✿)</p>
+<p>Have a good day, and<br>I hope everything works out well for you</p>
+<p>It’s quite warm out,<br>so do try and avoid getting heatstroke,</p>
+<p>And do take care with the,erm,<br>Wuhan pneumonia situation.</p>
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/14.png" alt="" width="300">
+</div>
+<br>
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/15.png" alt="" width="300">
+</div>
 
- 
-<!-- center -->
-<p><a style="text-align:left"><img border="0" width="20%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Front-End/Front%20End%20Project/original_73.png"></a> <br></p>
-<p>드리어 완성했지요…. ㅎㅎ<br><br>포트폴리오 말이지요. 문서화도 끝났습니다.<br><br>끝에 낙은 오더군요. 기분만큼 좋습니다.<br></p>
-<p>이젠 진짜 들어가게 만들어야 하는데<br><br><a style="text-align:left"><img border="0" width="20%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Front-End/Front%20End%20Project/original_36.png"></a> <br><br>웹호스팅 등 이 부분에서 애를 먹었습니다.<br></p>
-<p><a style="text-align:left"><img border="0" width="20%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Front-End/Front%20End%20Project/original_22.png"></a> <br></p>
-<p>다행이 깃허브 에서 호스팅을 지원해줘<br><br>우여곡절 끝에 끝났지만, 말이죠 ㅎㅁㅎ<br></p>
-<p>이젠 정말 없체 공채 등등에사<br><br>이력서와 만들어둔 포트폴리오<br><br>집어넣고 해야겠습니다.<br></p>
-<p>아래 완성된 포트폴리오 웹사이트입니다. : )<br></p>
-<p>&lt;소스코드&gt;<br><br><a href="https://kurailuna.github.io/PP/index.html">https://kurailuna.github.io/PP/index.html</a></p>
-<p>이 게시글 읽어주신 분들께 감사드립니다.<br><br>오늘 하루 잘 보내시고 접하시는 일마다 <br><br>다 잘 되시길 빕니다. : &gt;<br></p>
-<p align="center"><img  width="60%" height="60%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%98%A4%EB%8A%98%EB%8F%84_%EC%A2%8B%EC%9D%80_%ED%95%98%EB%A3%A8.png" ></p><br>
-
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://kurailuna.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
 
 <div id="disqus_thread"></div>
 <script>
@@ -336,7 +441,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/20/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><span class="page-number current">21</span>
+    <a class="extend prev" rel="prev" href="/page/20/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><span class="page-number current">21</span><a class="page-number" href="/page/22/">22</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/">28</a><a class="extend next" rel="next" href="/page/22/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
   </nav>
 
 
@@ -404,7 +509,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-count">28</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>

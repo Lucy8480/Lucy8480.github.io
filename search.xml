@@ -2163,6 +2163,562 @@ Alright then,
       </tags>
   </entry>
   <entry>
+    <title>『ベクジュン·アルゴリズム』A-B</title>
+    <url>/2023/07/02/Baekjoon/Baekjoon_1001/</url>
+    <content><![CDATA[<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/1001/Baekjoon.png" alt="미리보기 방지" width="450">
+</div>
+
+<style>
+.left-img {
+  float: left;
+  margin-right: 320; /* 텍스트와 간격 */
+}
+</style>
+
+
+<h2 id="ベクジュン·アルゴリズム-A-B"><a href="#ベクジュン·アルゴリズム-A-B" class="headerlink" title="[ベクジュン·アルゴリズム]  A-B"></a>[ベクジュン·アルゴリズム]  A-B</h2><br>
+
+<h2 id="1001"><a href="#1001" class="headerlink" title="1001"></a>1001</h2><br>
+
+<h3 id="指紋表示"><a href="#指紋表示" class="headerlink" title="指紋表示"></a>指紋表示</h3><p>📎Link : <br><br><a href="https://www.acmicpc.net/problem/1001">https://www.acmicpc.net/problem/1001</a></p>
+<br>
+使用言語:C#（.NET）<br>
+アルゴリズム:実装、四則演算
+
+<div class="left-img">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/1001/1001.jpg" alt="미리보기 방지" width="250%">
+</div> <br> <br><br><br><br><br><br><br><br><br><br>
+
+<br>
+
+
+<h3 id="解答『かいとう』"><a href="#解答『かいとう』" class="headerlink" title="解答『かいとう』"></a>解答『かいとう』</h3><br>
+
+<h3 id="コード"><a href="#コード" class="headerlink" title="コード"></a>コード</h3><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">boj</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// 入力された文字列を空白基準で切って配列に保存する。</span></span><br><span class="line">            <span class="built_in">string</span>[] s = Console.ReadLine().Split();</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 1番目の数字s[0]と2番目の数字s[1]をintに変換して適当に掛けて出力する。</span></span><br><span class="line"></span><br><span class="line">            Console.WriteLine(<span class="built_in">int</span>.Parse(s[<span class="number">0</span>]) * <span class="built_in">int</span>.Parse(s[<span class="number">1</span>]));</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="結果『けっか』"><a href="#結果『けっか』" class="headerlink" title="結果『けっか』"></a>結果『けっか』</h3><br>
+<div class="left-img">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/10998/10998_2.png" alt="미리보기 방지" width="580">
+</div>  
+<br><br><br>
+<br><br><br>
+<div class="left-img">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/10998/10998_3.png" alt="미리보기 방지" width="580">
+</div>  
+
+<p><br> <br> <br> <br> <br> <br> <br> <br> <br></p>
+<div style="text-align: center;">
+<p style="font-size: 30px; color: #2844e2ff;"> 終わり</p>
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://kurailuna.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>]]></content>
+      <categories>
+        <category>DevDiary</category>
+        <category>Baekjoon(JP)</category>
+      </categories>
+      <tags>
+        <tag>Baekjoon</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>『ベクジュン·アルゴリズム』A/B</title>
+    <url>/2023/07/04/Baekjoon/Baekjoon_1008/</url>
+    <content><![CDATA[<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/1008/Baekjoon.png" alt="미리보기 방지" width="450">
+</div>
+
+<style>
+.left-img {
+  float: left;
+  margin-right: 320; /* 텍스트와 간격 */
+}
+</style>
+
+
+<h2 id="ベクジュン·アルゴリズム-A-B"><a href="#ベクジュン·アルゴリズム-A-B" class="headerlink" title="[ベクジュン·アルゴリズム]  A&#x2F;B"></a>[ベクジュン·アルゴリズム]  A&#x2F;B</h2><br>
+
+<h2 id="1008"><a href="#1008" class="headerlink" title="1008"></a>1008</h2><br>
+
+<h3 id="指紋表示"><a href="#指紋表示" class="headerlink" title="指紋表示"></a>指紋表示</h3><p>📎Link : <br><br><a href="https://www.acmicpc.net/problem/1008">https://www.acmicpc.net/problem/1008</a></p>
+<p>使用言語:C#(.NET)</p>
+<p>アルゴリズム:実装、四則演算</p>
+<div class="left-img">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/1008/1008.jpg" alt="미리보기 방지" width="250%">
+</div> <br> <br><br><br><br><br><br><br><br><br><br>
+
+<br>
+
+
+<h3 id="解答『かいとう』"><a href="#解答『かいとう』" class="headerlink" title="解答『かいとう』"></a>解答『かいとう』</h3><br>
+
+<h3 id="コード"><a href="#コード" class="headerlink" title="コード"></a>コード</h3><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">boj</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">string</span>[] s = Console.ReadLine().Split();</span><br><span class="line"></span><br><span class="line">            Console.WriteLine(<span class="built_in">double</span>.Parse(s[<span class="number">0</span>]) / <span class="built_in">double</span>.Parse(s[<span class="number">1</span>]));</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="結果『けっか』"><a href="#結果『けっか』" class="headerlink" title="結果『けっか』"></a>結果『けっか』</h3><br>
+<div class="left-img">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/1008/1008_2.png" alt="미리보기 방지" width="580">
+</div>  
+<br><br><br>
+<br><br><br>
+<div class="left-img">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/1008/1008_3.png" alt="미리보기 방지" width="580">
+</div>  
+
+<p><br> <br> <br> <br> <br> <br> <br> <br> <br></p>
+<div style="text-align: center;">
+<p style="font-size: 30px; color: #2844e2ff;"> 終わり</p>
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://kurailuna.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>]]></content>
+      <categories>
+        <category>DevDiary</category>
+        <category>Baekjoon(JP)</category>
+      </categories>
+      <tags>
+        <tag>Baekjoon</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>『ベクジュン·アルゴリズム』余り</title>
+    <url>/2023/07/05/Baekjoon/Baekjoon_10430/</url>
+    <content><![CDATA[<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/10430/Baekjoon.png" alt="미리보기 방지" width="450">
+</div>
+
+<style>
+.left-img {
+  float: left;
+  margin-right: 320; /* 텍스트와 간격 */
+}
+</style>
+
+
+<h2 id="ベクジュン·アルゴリズム-余り"><a href="#ベクジュン·アルゴリズム-余り" class="headerlink" title="[ベクジュン·アルゴリズム] 余り"></a>[ベクジュン·アルゴリズム] 余り</h2><br>
+
+<h2 id="10430"><a href="#10430" class="headerlink" title="10430"></a>10430</h2><br>
+
+<h3 id="指紋表示"><a href="#指紋表示" class="headerlink" title="指紋表示"></a>指紋表示</h3><p>📎Link : <br><br><a href="https://www.acmicpc.net/problem/10430">https://www.acmicpc.net/problem/10430</a></p>
+<p>使用言語:C#（.NET）</p>
+<p>アルゴリズム: 実装</p>
+<ul>
+<li>数学</li>
+<li>具現</li>
+<li>四則演算</li>
+</ul>
+<div class="left-img">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/10430/10430.jpg" alt="미리보기 방지" width="250%">
+</div> <br> <br><br><br><br><br><br><br><br><br><br>
+
+<br>
+
+
+<h3 id="解答『かいとう』"><a href="#解答『かいとう』" class="headerlink" title="解答『かいとう』"></a>解答『かいとう』</h3><br>
+
+<h3 id="コード"><a href="#コード" class="headerlink" title="コード"></a>コード</h3><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">boj</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// 入力された数字を配列に分けて一度にint形式に変換</span></span><br><span class="line">            <span class="built_in">int</span>[] in_data = Array.ConvertAll(Console.ReadLine().Split(), <span class="built_in">int</span>.Parse);</span><br><span class="line"></span><br><span class="line">            Console.WriteLine((in_data[<span class="number">0</span>] + in_data[<span class="number">1</span>]) % in_data[<span class="number">2</span>]);</span><br><span class="line">            Console.WriteLine(((in_data[<span class="number">0</span>] % in_data[<span class="number">2</span>]) + (in_data[<span class="number">1</span>] % in_data[<span class="number">2</span>])) % in_data[<span class="number">2</span>]);</span><br><span class="line">            Console.WriteLine((in_data[<span class="number">0</span>] * in_data[<span class="number">1</span>]) % in_data[<span class="number">2</span>]);</span><br><span class="line">            Console.WriteLine(((in_data[<span class="number">0</span>] % in_data[<span class="number">2</span>]) * (in_data[<span class="number">1</span>] % in_data[<span class="number">2</span>])) % in_data[<span class="number">2</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="結果『けっか』"><a href="#結果『けっか』" class="headerlink" title="結果『けっか』"></a>結果『けっか』</h3><br>
+<div class="left-img">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/10430/10430_2.png" alt="미리보기 방지" width="580">
+</div> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+
+
+
+<div style="text-align: center;">
+<p style="font-size: 30px; color: #2844e2ff;"> 終わり</p>
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://kurailuna.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>]]></content>
+      <categories>
+        <category>DevDiary</category>
+        <category>Baekjoon(JP)</category>
+      </categories>
+      <tags>
+        <tag>Baekjoon</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>『ベクジュン·アルゴリズム』四則計算(しそくけいさん)</title>
+    <url>/2023/07/05/Baekjoon/Baekjoon_10869/</url>
+    <content><![CDATA[<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/10869/Baekjoon.png" alt="미리보기 방지" width="450">
+</div>
+
+<style>
+.left-img {
+  float: left;
+  margin-right: 320; /* 텍스트와 간격 */
+}
+</style>
+
+
+<h2 id="ベクジュン·アルゴリズム-四則計算-しそくけいさん"><a href="#ベクジュン·アルゴリズム-四則計算-しそくけいさん" class="headerlink" title="[ベクジュン·アルゴリズム] 四則計算(しそくけいさん)"></a>[ベクジュン·アルゴリズム] 四則計算(しそくけいさん)</h2><br>
+
+<h2 id="10869"><a href="#10869" class="headerlink" title="10869"></a>10869</h2><br>
+
+<h3 id="指紋表示"><a href="#指紋表示" class="headerlink" title="指紋表示"></a>指紋表示</h3><p>📎Link : <br><br><a href="https://www.acmicpc.net/problem/10869">https://www.acmicpc.net/problem/10869</a></p>
+<p>使用言語:C#（.NET）</p>
+<p>アルゴリズム:実装、四則演算</p>
+<div class="left-img">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/10869/10869.jpg" alt="미리보기 방지" width="250%">
+</div> <br> <br><br><br><br><br><br><br><br><br><br>
+
+<br>
+
+
+<h3 id="解答『かいとう』"><a href="#解答『かいとう』" class="headerlink" title="解答『かいとう』"></a>解答『かいとう』</h3><br>
+
+<h3 id="コード"><a href="#コード" class="headerlink" title="コード"></a>コード</h3><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">boj</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">string</span>[] s = Console.ReadLine().Split();</span><br><span class="line">            Console.WriteLine(<span class="built_in">int</span>.Parse(s[<span class="number">0</span>]) + <span class="built_in">int</span>.Parse(s[<span class="number">1</span>]));</span><br><span class="line">            Console.WriteLine(<span class="built_in">int</span>.Parse(s[<span class="number">0</span>]) - <span class="built_in">int</span>.Parse(s[<span class="number">1</span>]));</span><br><span class="line">            Console.WriteLine(<span class="built_in">int</span>.Parse(s[<span class="number">0</span>]) * <span class="built_in">int</span>.Parse(s[<span class="number">1</span>]));</span><br><span class="line">            Console.WriteLine(<span class="built_in">int</span>.Parse(s[<span class="number">0</span>]) / <span class="built_in">int</span>.Parse(s[<span class="number">1</span>]));</span><br><span class="line">            Console.WriteLine(<span class="built_in">int</span>.Parse(s[<span class="number">0</span>]) % <span class="built_in">int</span>.Parse(s[<span class="number">1</span>]));</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="結果『けっか』"><a href="#結果『けっか』" class="headerlink" title="結果『けっか』"></a>結果『けっか』</h3><br>
+<div class="left-img">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/10869/10869_2.png" alt="미리보기 방지" width="580">
+</div>  
+
+
+<p><br> <br> <br> <br> <br> <br> <br> <br> <br></p>
+<div style="text-align: center;">
+<p style="font-size: 30px; color: #2844e2ff;"> 終わり</p>
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://kurailuna.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>]]></content>
+      <categories>
+        <category>DevDiary</category>
+        <category>Baekjoon(JP)</category>
+      </categories>
+      <tags>
+        <tag>Baekjoon</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>『ベクジュン·アルゴリズム』??!</title>
+    <url>/2023/07/05/Baekjoon/Baekjoon_10926/</url>
+    <content><![CDATA[<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/10926/Baekjoon.png" alt="미리보기 방지" width="450">
+</div>
+
+<style>
+.left-img {
+  float: left;
+  margin-right: 320; /* 텍스트와 간격 */
+}
+</style>
+
+
+<h2 id="ベクジュン·アルゴリズム"><a href="#ベクジュン·アルゴリズム" class="headerlink" title="[ベクジュン·アルゴリズム] ??!"></a>[ベクジュン·アルゴリズム] ??!</h2><br>
+
+<h2 id="10926"><a href="#10926" class="headerlink" title="10926"></a>10926</h2><br>
+
+<h3 id="指紋表示"><a href="#指紋表示" class="headerlink" title="指紋表示"></a>指紋表示</h3><p>📎Link : <br><br><a href="https://www.acmicpc.net/problem/10926">https://www.acmicpc.net/problem/10926</a></p>
+<p>使用言語:C#（.NET）</p>
+<p>アルゴリズム: 実装</p>
+<div class="left-img">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/10926/10926.jpg" alt="미리보기 방지" width="250%">
+</div> <br> <br><br><br><br><br><br><br><br><br><br>
+
+<br>
+
+
+<h3 id="解答『かいとう』"><a href="#解答『かいとう』" class="headerlink" title="解答『かいとう』"></a>解答『かいとう』</h3><br>
+
+<h3 id="コード"><a href="#コード" class="headerlink" title="コード"></a>コード</h3><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">boj</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//入力された出力テキストに?!貼り付けて出力</span></span><br><span class="line">            Console.WriteLine(Console.ReadLine() + <span class="string">&quot;??!&quot;</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="結果『けっか』"><a href="#結果『けっか』" class="headerlink" title="結果『けっか』"></a>結果『けっか』</h3><br>
+<div class="left-img">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/10926/10926_2.png" alt="미리보기 방지" width="580">
+</div> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+
+
+
+<div style="text-align: center;">
+<p style="font-size: 30px; color: #2844e2ff;"> 終わり</p>
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://kurailuna.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>]]></content>
+      <categories>
+        <category>DevDiary</category>
+        <category>Baekjoon(JP)</category>
+      </categories>
+      <tags>
+        <tag>Baekjoon</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>『ベクジュン·アルゴリズム』A×B</title>
+    <url>/2023/07/02/Baekjoon/Baekjoon_10998/</url>
+    <content><![CDATA[<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/10998/Baekjoon.png" alt="미리보기 방지" width="450">
+</div>
+
+<style>
+.left-img {
+  float: left;
+  margin-right: 320; /* 텍스트와 간격 */
+}
+</style>
+
+
+<h2 id="ベクジュン·アルゴリズム-A×B"><a href="#ベクジュン·アルゴリズム-A×B" class="headerlink" title="[ベクジュン·アルゴリズム]  A×B"></a>[ベクジュン·アルゴリズム]  A×B</h2><br>
+
+<h2 id="10998"><a href="#10998" class="headerlink" title="10998"></a>10998</h2><br>
+
+<h3 id="指紋表示"><a href="#指紋表示" class="headerlink" title="指紋表示"></a>指紋表示</h3><p>📎Link : <br><br><a href="https://www.acmicpc.net/problem/10998">https://www.acmicpc.net/problem/10998</a></p>
+<p>使用言語:C#（.NET）</p>
+<p>アルゴリズム:実装、四則演算</p>
+<div class="left-img">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/10998/10998.jpg" alt="미리보기 방지" width="250%">
+</div> <br> <br><br><br><br><br><br><br><br><br><br>
+
+<br>
+
+
+<h3 id="解答『かいとう』"><a href="#解答『かいとう』" class="headerlink" title="解答『かいとう』"></a>解答『かいとう』</h3><br>
+
+<h3 id="コード"><a href="#コード" class="headerlink" title="コード"></a>コード</h3><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">boj</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">                <span class="comment">// 入力された文字列を空白基準で切って配列に保存する。</span></span><br><span class="line">            <span class="built_in">string</span>[] s = Console.ReadLine().Split();</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 1番目の数字s[0]と2番目の数字s[1]をintに変換して適当に掛けて出力する。</span></span><br><span class="line"></span><br><span class="line">            Console.WriteLine(<span class="built_in">int</span>.Parse(s[<span class="number">0</span>]) * <span class="built_in">int</span>.Parse(s[<span class="number">1</span>]));</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="結果『けっか』"><a href="#結果『けっか』" class="headerlink" title="結果『けっか』"></a>結果『けっか』</h3><br>
+<div class="left-img">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/10998/10998_2.png" alt="미리보기 방지" width="580">
+</div>  
+<br><br><br>
+<br><br><br>
+<div class="left-img">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/10998/10998_3.png" alt="미리보기 방지" width="580">
+</div>  
+
+<p><br> <br> <br> <br> <br> <br> <br> <br> <br></p>
+<div style="text-align: center;">
+<p style="font-size: 30px; color: #2844e2ff;"> 終わり</p>
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://kurailuna.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>]]></content>
+      <categories>
+        <category>DevDiary</category>
+        <category>Baekjoon(JP)</category>
+      </categories>
+      <tags>
+        <tag>Baekjoon</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>『ベクジュン·アルゴリズム』1998年生まれの私がタイでは2541年</title>
+    <url>/2023/07/05/Baekjoon/Baekjoon_18108/</url>
+    <content><![CDATA[<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/18108/Baekjoon.png" alt="미리보기 방지" width="450">
+</div>
+
+<style>
+.left-img {
+  float: left;
+  margin-right: 320; /* 텍스트와 간격 */
+}
+</style>
+
+
+<h2 id="ベクジュン·アルゴリズム-1998年生まれの私がタイでは2541年"><a href="#ベクジュン·アルゴリズム-1998年生まれの私がタイでは2541年" class="headerlink" title="[ベクジュン·アルゴリズム] 1998年生まれの私がタイでは2541年"></a>[ベクジュン·アルゴリズム] 1998年生まれの私がタイでは2541年</h2><br>
+
+<h2 id="18108"><a href="#18108" class="headerlink" title="18108"></a>18108</h2><br>
+
+<h3 id="指紋表示"><a href="#指紋表示" class="headerlink" title="指紋表示"></a>指紋表示</h3><p>📎Link : <br><br><a href="https://www.acmicpc.net/problem/18108">https://www.acmicpc.net/problem/18108</a></p>
+<p>使用言語:C#（.NET）</p>
+<p>アルゴリズム:</p>
+<ul>
+<li>数学</li>
+<li>四則演算</li>
+</ul>
+<div class="left-img">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/18108/18108.jpg" alt="미리보기 방지" width="250%">
+</div> <br> <br><br><br><br><br><br><br><br><br><br>
+
+<br>
+
+
+<h3 id="解答『かいとう』"><a href="#解答『かいとう』" class="headerlink" title="解答『かいとう』"></a>解答『かいとう』</h3><br>
+
+<h3 id="コード"><a href="#コード" class="headerlink" title="コード"></a>コード</h3><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">boj</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">int</span> y = <span class="built_in">int</span>.Parse(Console.ReadLine());</span><br><span class="line">            <span class="comment">// 入力された年度に543を除いて出力</span></span><br><span class="line">            Console.WriteLine(y<span class="number">-543</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="結果『けっか』"><a href="#結果『けっか』" class="headerlink" title="結果『けっか』"></a>結果『けっか』</h3><br>
+
+<h4 id="テスト入力"><a href="#テスト入力" class="headerlink" title="テスト入力:"></a>テスト入力:</h4><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">D:\■■■■_■■■\■■■■\Luna-■FFF&gt;</span> <span class="string">csc.exe</span> <span class="number">18108.</span><span class="string">cs</span></span><br><span class="line"><span class="number">2541</span></span><br></pre></td></tr></table></figure>
+<br>
+
+<h4 id="テスト入力-1"><a href="#テスト入力-1" class="headerlink" title="テスト入力:"></a>テスト入力:</h4><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">D:\■■■■_■■■\■■■■\Luna-■FFF&gt;</span> <span class="string">csc.exe</span> <span class="number">18108.</span><span class="string">cs</span></span><br><span class="line"><span class="number">1998</span></span><br></pre></td></tr></table></figure>
+
+<p> <br> <br> <br> <br> <br> <br> <br> <br> <br> </p>
+<div style="text-align: center;">
+<p style="font-size: 30px; color: #2844e2ff;"> 終わり</p>
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://kurailuna.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>]]></content>
+      <categories>
+        <category>DevDiary</category>
+        <category>Baekjoon(JP)</category>
+      </categories>
+      <tags>
+        <tag>Baekjoon</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>『ベクジュン·アルゴリズム』 ネコのアスキー·アート</title>
     <url>/2022/04/13/Baekjoon/Baekjoon_Cat_ASCII_Art_10171/</url>
     <content><![CDATA[<meta charset="UTF-8">
@@ -2186,8 +2742,10 @@ Alright then,
 <h2 id="10171"><a href="#10171" class="headerlink" title="10171"></a>10171</h2><br>
 
 <h3 id="指紋表示"><a href="#指紋表示" class="headerlink" title="指紋表示"></a>指紋表示</h3><p>📎Link : <br><br><a href="https://www.acmicpc.net/problem/10171">https://www.acmicpc.net/problem/10171</a></p>
-<br>
-
+<p>使用言語: Java<br><br>アルゴリズム: </p>
+<ul>
+<li>具現</li>
+</ul>
 <div class="left-img">
 <img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/10171/001.jpg" alt="미리보기 방지" width="250%">
 </div> <br> <br><br><br><br><br><br><br><br><br><br>
@@ -2260,8 +2818,13 @@ Alright then,
 <h2 id="ベクジュン·オンライン·ジャージー-ちび·ジョンミン"><a href="#ベクジュン·オンライン·ジャージー-ちび·ジョンミン" class="headerlink" title="ベクジュン·オンライン·ジャージー &#x2F; ちび·ジョンミン"></a>ベクジュン·オンライン·ジャージー &#x2F; ちび·ジョンミン</h2><br>
 
 <h2 id="11382"><a href="#11382" class="headerlink" title="11382"></a>11382</h2><p>📎Link : <br><br><a href="https://www.acmicpc.net/problem/11382">https://www.acmicpc.net/problem/11382</a></p>
-<br>
-
+<p>使用言語:C#（.NET）</p>
+<p>アルゴリズム:</p>
+<ul>
+<li>数学</li>
+<li>具現</li>
+<li>四則演算</li>
+</ul>
 <h3 id="指紋表示"><a href="#指紋表示" class="headerlink" title="指紋表示"></a>指紋表示</h3><br>
 <div class="left-img">
 <img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/11382/01.jpg" alt="미리보기 방지" width="250%">
@@ -2276,77 +2839,6 @@ Alright then,
 <h3 id="結果『けっか』"><a href="#結果『けっか』" class="headerlink" title="結果『けっか』"></a>結果『けっか』</h3><br>
 <div class="left-img">
 <img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/11382/002.png" alt="미리보기 방지" width="580">
-</div> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
-
-
-<div style="text-align: center;">
-<p style="font-size: 30px; color: #2844e2ff;"> 終わり</p>
-</div>
-
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://kurailuna.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>]]></content>
-      <categories>
-        <category>DevDiary</category>
-        <category>Baekjoon(JP)</category>
-      </categories>
-      <tags>
-        <tag>Baekjoon</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>『ベクジュン·アルゴリズム』掛け算</title>
-    <url>/2023/07/05/Baekjoon/Baekjoon_multiply_2588/</url>
-    <content><![CDATA[<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-<div style="text-align: center;">
-<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/2588/Baekjoon.png" alt="미리보기 방지" width="450">
-</div>
-
-<style>
-.left-img {
-  float: left;
-  margin-right: 320; /* 텍스트와 간격 */
-}
-</style>
-
-
-<h2 id="ベクジュン·オンライン·ジャージー-掛け算"><a href="#ベクジュン·オンライン·ジャージー-掛け算" class="headerlink" title="ベクジュン·オンライン·ジャージー &#x2F; 掛け算"></a>ベクジュン·オンライン·ジャージー &#x2F; 掛け算</h2><br>
-
-<h2 id="2588"><a href="#2588" class="headerlink" title="2588"></a>2588</h2><p>📎Link : <br><br><a href="https://www.acmicpc.net/problem/2588">https://www.acmicpc.net/problem/2588</a></p>
-<br>
-
-<h3 id="指紋表示"><a href="#指紋表示" class="headerlink" title="指紋表示"></a>指紋表示</h3><br>
-<div class="left-img">
-<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/2588/01.jpg" alt="미리보기 방지" width="250%">
-</div> <br> <br><br><br><br><br><br><br><br><br><br>
-
-<br>
-
-<h3 id="解答『かいとう』"><a href="#解答『かいとう』" class="headerlink" title="解答『かいとう』"></a>解答『かいとう』</h3><h3 id="コード"><a href="#コード" class="headerlink" title="コード"></a>コード</h3><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">static</span> System.Console;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">boj</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">string</span> a = ReadLine();</span><br><span class="line">            <span class="built_in">string</span> b = ReadLine();</span><br><span class="line"></span><br><span class="line">            WriteLine(<span class="built_in">int</span>.Parse(a) * (<span class="built_in">int</span>)Char.GetNumericValue(b[<span class="number">2</span>]));</span><br><span class="line">            WriteLine(<span class="built_in">int</span>.Parse(a) * (<span class="built_in">int</span>)Char.GetNumericValue(b[<span class="number">1</span>]));</span><br><span class="line">            WriteLine(<span class="built_in">int</span>.Parse(a) * (<span class="built_in">int</span>)Char.GetNumericValue(b[<span class="number">0</span>]));</span><br><span class="line">            WriteLine(<span class="built_in">int</span>.Parse(a) * <span class="built_in">int</span>.Parse(b));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h3 id="結果『けっか』"><a href="#結果『けっか』" class="headerlink" title="結果『けっか』"></a>結果『けっか』</h3><br>
-<div class="left-img">
-<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/2588/002.png" alt="미리보기 방지" width="580">
 </div> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
 
 
@@ -2448,6 +2940,81 @@ https://mentha2.tistory.com/211 [행궁동 데이터 엔지니어:티스토리]
       </categories>
       <tags>
         <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>『ベクジュン·アルゴリズム』掛け算</title>
+    <url>/2023/07/05/Baekjoon/Baekjoon_multiply_2588/</url>
+    <content><![CDATA[<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/2588/Baekjoon.png" alt="미리보기 방지" width="450">
+</div>
+
+<style>
+.left-img {
+  float: left;
+  margin-right: 320; /* 텍스트와 간격 */
+}
+</style>
+
+
+<h2 id="ベクジュン·オンライン·ジャージー-掛け算"><a href="#ベクジュン·オンライン·ジャージー-掛け算" class="headerlink" title="ベクジュン·オンライン·ジャージー &#x2F; 掛け算"></a>ベクジュン·オンライン·ジャージー &#x2F; 掛け算</h2><br>
+
+<h2 id="2588"><a href="#2588" class="headerlink" title="2588"></a>2588</h2><p>📎Link : <br><br><a href="https://www.acmicpc.net/problem/2588">https://www.acmicpc.net/problem/2588</a></p>
+<p>使用言語:C#（.NET）</p>
+<p>アルゴリズム:</p>
+<ul>
+<li>数学</li>
+<li>四則演算</li>
+</ul>
+<h3 id="指紋表示"><a href="#指紋表示" class="headerlink" title="指紋表示"></a>指紋表示</h3><br>
+<div class="left-img">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/2588/01.jpg" alt="미리보기 방지" width="250%">
+</div> <br> <br><br><br><br><br><br><br><br><br><br>
+
+<br>
+
+<h3 id="解答『かいとう』"><a href="#解答『かいとう』" class="headerlink" title="解答『かいとう』"></a>解答『かいとう』</h3><h3 id="コード"><a href="#コード" class="headerlink" title="コード"></a>コード</h3><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">static</span> System.Console;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">boj</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">string</span> a = ReadLine();</span><br><span class="line">            <span class="built_in">string</span> b = ReadLine();</span><br><span class="line"></span><br><span class="line">            WriteLine(<span class="built_in">int</span>.Parse(a) * (<span class="built_in">int</span>)Char.GetNumericValue(b[<span class="number">2</span>]));</span><br><span class="line">            WriteLine(<span class="built_in">int</span>.Parse(a) * (<span class="built_in">int</span>)Char.GetNumericValue(b[<span class="number">1</span>]));</span><br><span class="line">            WriteLine(<span class="built_in">int</span>.Parse(a) * (<span class="built_in">int</span>)Char.GetNumericValue(b[<span class="number">0</span>]));</span><br><span class="line">            WriteLine(<span class="built_in">int</span>.Parse(a) * <span class="built_in">int</span>.Parse(b));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="結果『けっか』"><a href="#結果『けっか』" class="headerlink" title="結果『けっか』"></a>結果『けっか』</h3><br>
+<div class="left-img">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/2588/002.png" alt="미리보기 방지" width="580">
+</div> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+
+
+<div style="text-align: center;">
+<p style="font-size: 30px; color: #2844e2ff;"> 終わり</p>
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://kurailuna.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>]]></content>
+      <categories>
+        <category>DevDiary</category>
+        <category>Baekjoon(JP)</category>
+      </categories>
+      <tags>
+        <tag>Baekjoon</tag>
       </tags>
   </entry>
   <entry>

@@ -195,7 +195,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://kurailuna.github.io/2020/08/01/pwnable_kr_Collision_%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/">
+    <link itemprop="mainEntityOfPage" href="https://kurailuna.github.io/2022/04/13/Baekjoon/Baekjoon_Cat_ASCII_Art_10171/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://kurailuna.github.io/images/lumine.png">
@@ -209,7 +209,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/08/01/pwnable_kr_Collision_%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/" class="post-title-link" itemprop="url">『pwnable.kr』 Collision Problem solving</a>
+            <a href="/2022/04/13/Baekjoon/Baekjoon_Cat_ASCII_Art_10171/" class="post-title-link" itemprop="url">『ベクジュン·アルゴリズム』 ネコのアスキー·アート</a>
         </h2>
 
         <div class="post-meta">
@@ -219,14 +219,14 @@
               </span>
               <span class="post-meta-item-text">작성일</span>
 
-              <time title="Post created: 2020-08-01 18:38:11" itemprop="dateCreated datePublished" datetime="2020-08-01T18:38:11+09:00">2020-08-01</time>
+              <time title="Post created: 2022-04-13 04:08:11" itemprop="dateCreated datePublished" datetime="2022-04-13T04:08:11+09:00">2022-04-13</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Updated at: 2025-08-22 06:17:41" itemprop="dateModified" datetime="2025-08-22T06:17:41+09:00">2025-08-22</time>
+                <time title="Updated at: 2025-09-02 08:43:50" itemprop="dateModified" datetime="2025-09-02T08:43:50+09:00">2025-09-02</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -234,15 +234,11 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/White-Hacking/" itemprop="url" rel="index"><span itemprop="name">White Hacking</span></a>
+                  <a href="/categories/DevDiary/" itemprop="url" rel="index"><span itemprop="name">DevDiary</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/White-Hacking/CTF/" itemprop="url" rel="index"><span itemprop="name">CTF</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/White-Hacking/CTF/pwnable-kr/" itemprop="url" rel="index"><span itemprop="name">pwnable.kr</span></a>
+                  <a href="/categories/DevDiary/Baekjoon-JP/" itemprop="url" rel="index"><span itemprop="name">Baekjoon(JP)</span></a>
                 </span>
             </span>
 
@@ -257,137 +253,54 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link  href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap"  rel="stylesheet">
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/10171/Baekjoon.png" alt="미리보기 방지" width="450">
+</div>
 
 <style>
 .left-img {
   float: left;
-  margin-right: 320px; /* 텍스트와 간격 */
+  margin-right: 320; /* 텍스트와 간격 */
 }
 </style>
 
-<div  style="text-align: center;">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/1%20Rina.gif"  alt="미리보기 방지"  width="300">
-</div> <br>
 
+<h2 id="ベクジュン·アルゴリズム-ネコのアスキー·アート"><a href="#ベクジュン·アルゴリズム-ネコのアスキー·アート" class="headerlink" title="[ベクジュン·アルゴリズム] ネコのアスキー·アート"></a>[ベクジュン·アルゴリズム] ネコのアスキー·アート</h2><br>
 
-<p>Wow… I had a feeling, but the difficulty’s on another level.<br></p>
-<p>Thats absolutely lunatic, ōxō;;<br><s>That’s absolutely lunatic, ōxō;;</s></p>
-<p>ε-(´・｀)</p>
-<p>Perhaps because it involves a system hack,</p>
-<p>it’s a whole level above the usual web-based</p>
-<p>war games on Wargame.kr in terms of difficulty.</p>
-<p>I ended up referring to someone else’s</p>
-<p>solution while working through it.</p>
-<p>And since posting the actual</p>
-<p>source code would make the thread messy,</p>
-<p>I’ll place it in a text file so it can simply be copy-pasted.</p>
-<p>Anyway, let’s get started right away.</p>
-<div  style="text-align: center;">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/2.png"  width="300">
-</div> <br>
+<h2 id="10171"><a href="#10171" class="headerlink" title="10171"></a>10171</h2><br>
+
+<h3 id="指紋表示"><a href="#指紋表示" class="headerlink" title="指紋表示"></a>指紋表示</h3><p>📎Link : <br><br><a target="_blank" rel="noopener" href="https://www.acmicpc.net/problem/10171">https://www.acmicpc.net/problem/10171</a></p>
+<p>使用言語: Java<br><br>アルゴリズム: </p>
+<ul>
+<li>具現</li>
+</ul>
+<div class="left-img">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/10171/001.jpg" alt="미리보기 방지" width="250%">
+</div> <br> <br><br><br><br><br><br><br><br><br><br>
 
 <br>
-<img class="left-img" src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/3.png"  width="500">
- <br>
 
-<p>Right, if I’m having a punt at roughly translating<br>the gist of this in my own way,<br>it’s something like this:<br>So, you’re on about MD5 hash collisions then,<br>are we? (···) Right,anyway.</p>
+
+<h3 id="解答『かいとう』"><a href="#解答『かいとう』" class="headerlink" title="解答『かいとう』"></a>解答『かいとう』</h3><br>
+
+<h3 id="コード"><a href="#コード" class="headerlink" title="コード"></a>コード</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> baekjoon.ex_io;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 問題</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 以下の例のように</span></span><br><span class="line"><span class="comment"> * 猫の形のアスキーアート</span></span><br><span class="line"><span class="comment"> * を出力してみましょう。</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 入力</span></span><br><span class="line"><span class="comment"> * Nope.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 出力</span></span><br><span class="line"><span class="comment"> * 猫のアスキーアートを出力</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 入力例 1</span></span><br><span class="line"><span class="comment"> * 出力例 1</span></span><br><span class="line"><span class="comment"> * \ /\</span></span><br><span class="line"><span class="comment"> * ) ( &#x27;)</span></span><br><span class="line"><span class="comment"> * ( / )</span></span><br><span class="line"><span class="comment"> * \(__)|</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line">    System.out.println(<span class="string">&quot;\\    /\\&quot;</span>);</span><br><span class="line">    System.out.println(<span class="string">&quot; )  ( &#x27;)&quot;</span>);</span><br><span class="line">    System.out.println(<span class="string">&quot;(  /  )&quot;</span>);</span><br><span class="line">    System.out.println(<span class="string">&quot; \\(__)|&quot;</span>);</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <br>
+
+<h3 id="結果『けっか』"><a href="#結果『けっか』" class="headerlink" title="結果『けっか』"></a>結果『けっか』</h3><br>
 <div class="left-img">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/4.png"  width="500">
-</div>  <br>
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/10171/002.png" alt="미리보기 방지" width="580">
+</div> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
 
-<p>Right then, first things first,<br>open up yer Linux terminal.<br>Then you just wanna connect using</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh col@pwnable.kr -p2222</span><br></pre></td></tr></table></figure>
 
-<p>Now,the password right?<br>It won’t actually show up as you’re typing it<br>– don’t mind that,just bash it in,hit Enter,<br>and bam, you’re logged in. Easy peasy!</p>
- <br>
-<div class="left-img">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/5.png"  width="500">
-</div>  <br>
-Right then next up,you just wanna whack in
 
-<p>the ls command to see what files you’ve got lurking around.</p>
-<p>Now col you’d probably reckon that’s<br>some sort of executable or maybe even a Python file, right?</p>
-<p>But the actual one we really need to be bothered with,</p>
-<p>the crucial bit, is <code>col.c</code></p>
- <br>
-<div class="left-img">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/6.png"  width="500px">
-</div>  <br>  <br>
-so if you have a proper gander at the main bit,
-
-<p>the password, right, that needs to be 20</p>
-<p>characters long. And here’s the crucial part:<br>the hash code <code>(0x21DD09EC)</code> and</p>
-<p>the password return value,<br>they’ve both gotta be</p>
-<p>absolutely spot on, exactly the same.<br>No messing about with that, understood</p>
-<p>That<br><code> bash check_password(const char* p)</code><br>Bit, Yeah?<br>What it’s doing is, it’s taking chunks of the data<br>like, 4 bytes at a time – that’s the size of an int, innit?<br>– and it’s then accumulating those into ‘res’ five times.</p>
-<p>So, the thinking is,<br>if you just add the exact same value five times over you should,</p>
-<p>I reckon, get that hash code it’s after. Simple as that, really.</p>
-<h3 id="Derivation-of-results"><a href="#Derivation-of-results" class="headerlink" title="Derivation of results"></a>Derivation of results</h3><div class="left-img">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/7.png"  width="500">
+<div style="text-align: center;">
+<p style="font-size: 30px; color: #2844e2ff;"> 終わり</p>
 </div>
-Figure.1) For and res data expressed by cutting int type 4 bytes each
-
-<p>Right, so that’res’value,yeah?</p>
-<p>That’s just the result of piling up<br>whatever came out of the ‘for’loop,<br>five times over.<br>And if you then,like,divvy that’res’value by five,<br>it turns out that the data</p>
-<p>so if you then like,multiply this lot by five again<br>you’ll find you’re short by 0x4.So,<br>the assumption we’re making here is </p>
-<p>that the data is essentially four lots of<br><code>0x6C5CEC8</code> and then one bit of <code>0x6C5CECC</code> added in.</p>
-<div class="left-img">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/8.png"  width="500">
-</div>
-Figure. 2> Data expressed in little endian<br><br>
-
-
-<p>then,since it’s all about little endian,yeah?<br>All you need to do is just feed the program that data<br>in hexadecimal,in the exact sequence.<br>That’s the one.<br><br></p>
-<div class="left-img">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/9.png"  width="500">
-</div>  
-then, so you've gone and chucked the value in hexadecimal
-
-<p>using Python for that, yeah?</p>
-<p>Now, here’s the kicker, mind you:<br>when the program picks that up as an input<br>it’ll jolly well recognise it as a char.<br>So, you just gotta watch out for that. Proper careful,like.</p>
-<h3 id="Flag"><a href="#Flag" class="headerlink" title="Flag"></a>Flag</h3><div class="left-img">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/10.png"  width="500">
-</div>
-Right then, so we've finally bagged the key value.
-
-<p>And with this rather handy key we’ve just nabbed<br>it’s back to the very beginning, isn’t it?</p>
- <br>
-<div class="left-img">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/11.png"  width="500">
-</div>
-Right then, for that 'Flag?' bit down below,
-
-<p>you just gotta punch in your key value.<br>And once that’s</p>
-<p>sorted, hit the’auth’button Simples.</p>
- <br>
-<div class="left-img">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/12.png"  width="500">
-</div>
-Right, and just like that,
-three points were had, apparently.
-
-<p><br><br></p>
-<div class="left-img">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/13.png"  width="500">
-</div>  <br>  <br>
-
-<p>Right,and then you swing back round,<br>and there it is: marked up with a green dotted line.<br>Means you’ve bloody well sorted it, doesn’t it?</p>
-<p>Right, well that’s the whole bloody spiel done.<br>Cheers for wading through all that, yeah : )<br> <br></p>
-<div  style="text-align: center;">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/2.png"  width="300">
-</div> <br>
-Alright then,
-
-<p>hope you have a decent day and<br>all your bits and bobs go swimmingly. </p>
-<p>It’s a proper scorcher out there,<br>mind you, so try not to go getting heatstroke, yeah?</p>
-<p>And, uh, watch out for that bloody Wuhan pneumonia. Stay safe, mate. : )</p>
-<br>
-<div  style="text-align: center;">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/14.png" width= 300></div>  <br>  <br>
 
 <div id="disqus_thread"></div>
 <script>
@@ -425,7 +338,7 @@ Alright then,
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/18/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><span class="page-number current">19</span><a class="page-number" href="/page/20/">20</a><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/20/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
+    <a class="extend prev" rel="prev" href="/page/18/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><span class="page-number current">19</span><a class="page-number" href="/page/20/">20</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/">28</a><a class="extend next" rel="next" href="/page/20/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
   </nav>
 
 
@@ -493,7 +406,7 @@ Alright then,
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-count">28</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>

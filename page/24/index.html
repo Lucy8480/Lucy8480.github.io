@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-bounce.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"kurailuna.github.io","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","width":240,"display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Luna&#39;s Developer Diary">
+<meta property="og:url" content="https://kurailuna.github.io/page/24/index.html">
+<meta property="og:site_name" content="Luna&#39;s Developer Diary">
+<meta property="og:locale" content="ko_KR">
+<meta property="article:author" content="Luna">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://kurailuna.github.io/page/24/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false
+  };
+</script>
+
+  <title>Luna's Developer Diary</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Luna's Developer Diary" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Luna's Developer Diary</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <h1 class="site-subtitle" itemprop="description">printf("Hello World!");</h1>
+      
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>홈</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>태그</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>카테고리</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>아카이브</a>
+
+  </li>
+        <li class="menu-item menu-item-finance💴">
+
+    <a href="https://luna0x03.github.io/Finance.html" rel="noopener" target="_blank"><i class="fa fa-fw fa-Finance"></i>Finance💴</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>검색
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/KuraiLuna" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://kurailuna.github.io/2020/08/03/pwnable-kr-Passcode-Problem-Solving/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://kurailuna.github.io/images/lumine.png">
+      <meta itemprop="name" content="Luna">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Luna's Developer Diary">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/08/03/pwnable-kr-Passcode-Problem-Solving/" class="post-title-link" itemprop="url">『pwnable.kr』 passcode Problem solving</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+
+              <time title="Post created: 2020-08-03 20:51:11" itemprop="dateCreated datePublished" datetime="2020-08-03T20:51:11+09:00">2020-08-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Updated at: 2025-08-23 05:25:43" itemprop="dateModified" datetime="2025-08-23T05:25:43+09:00">2025-08-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/White-Hacking/" itemprop="url" rel="index"><span itemprop="name">White Hacking</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/White-Hacking/CTF/" itemprop="url" rel="index"><span itemprop="name">CTF</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/White-Hacking/CTF/pwnable-kr/" itemprop="url" rel="index"><span itemprop="name">pwnable.kr</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/1_Rina.gif" alt="미리보기 방지" width="300">
+</div>
+
+<p><br><br><br>Right So,<br>I suppose I’ll just crack on with this,then.</p>
+<br>
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/02.png" alt="미리보기 방지" width="300">
+</div><br><br>
+
+
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/03.png" alt="미리보기 방지" width="300" style="text-align: left;">
+
+
+<p>Screenshot. 1</p>
+<p><strong>Mommy told me to make a passcode based login system.</strong></p>
+<p><strong>My initial C code was compiled without any error!</strong></p>
+<p><strong>Well, there was some compiler warning, but who cares about that?</strong><br>​</p>
+<p>Then,Let’s Just Connect Straight Away As Above.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh passcode@pwnable.kr -p2222 (pw:guest)</span><br></pre></td></tr></table></figure>
+
+
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/04.png" alt="미리보기 방지" width="300" style="text-align: left;">
+
+
+<p>Screenshot. 2</p>
+<p>Once Connected,You’d Then Use <code>ls -l</code> to<br>Check For Files.<br>And Upon Checking,You’ll Find:</p>
+<p>​</p>
+<p>flag</p>
+<p>passecode</p>
+<p>passecode.c</p>
+<p>​</p>
+<p>There Are Three Files In Total, You See.</p>
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/05.png" alt="미리보기 방지" width="300" style="text-align: left;">
+
+
+<p>Screenshot. 3</p>
+<p>First off, if you run <code>passcode</code></p>
+<p>You Can See It Behaves As Shown Above.</p>
+<p>​</p>
+<p>Right,And Then With The <code>cat</code> Command</p>
+<p>Let’s Have A Look At The <code>passcode.c</code> File.</p>
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/06.png" alt="미리보기 방지" width="300" style="text-align: left;">
+
+
+<p>Screenshot. 4</p>
+<p>I know, rummaging through some decades-old</p>
+<p>C language books at home,<br>and having a look at the code</p>
+<p>it appears</p>
+<p>​</p>
+<p>there’s a function that takes input</p>
+<p>I suppose it’s likely the <code>login()</code> function.</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, passcode1);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, passcode2);</span><br></pre></td></tr></table></figure>
+
+<p>So, these two, I’d imagine</p>
+<p>The input value isn’t being stored in <code>passcode1</code></p>
+<p>it’s not.</p>
+<p>​</p>
+<p>Rather, it’s being stored at an address that’s meant for <code>passcode1</code>.</p>
+<p>it’s being stored.</p>
+<p>​</p>
+<p>So, for example, if <code>passcode1=0x123死5678</code>,</p>
+<p>it seems the value we input would then be stored at the <code>0x123死5678</code> address.</p>
+<p>it seems the value we input would then be stored.</p>
+<p>​<br>Both variables likely contain dummy values as they haven’t been initialised</p>
+<p>and given that the input value is then being stored at an address derived from that dummy value</p>
+<p>well, that’s where the error crops up, isn’t it?</p>
+<p>​</p>
+<p>Right, then let’s have a look with gdb.</p>
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/07.png" alt="미리보기 방지" width="300" style="text-align: left;">
+
+
+
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/08.png" alt="미리보기 방지" width="300" style="text-align: left;">
+
+
+
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/09.png" alt="미리보기 방지" width="300" style="text-align: left;">
+
+
+<p>Screenshot. 4</p>
+<p>First off, if you have a look at the ‘welcome’ function, it stores the input value at <code>ebp-0x70</code></p>
+<p>it stores the input value at <code>ebp-0x70</code>.<br>​</p>
+<p>And then, with the <code>login</code> function, you’ll see:</p>
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/10.png" alt="미리보기 방지" width="300" style="text-align: left;">
+
+
+<p>Screenshot. 5</p>
+<p>You can tell that <code>ebp-0x10</code> is where <code>passcode1</code> is located.</p>
+<p>is located.</p>
+<p>​</p>
+<p>Now, <code>welcome()</code> receives 100 bytes of input, but</p>
+<figure class="highlight plaintext"><figcaption><span>– \[ebp-0x10\] </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">So,one can in fact manipulate the ```passcode``` value</span><br><span class="line"></span><br><span class="line">​</span><br><span class="line"></span><br><span class="line">Right, then as we can insert the desired value at the address that is the value of &#x27;passcode1&#x27;</span><br><span class="line"></span><br><span class="line">we can therefore insert the desired value at the desired address</span><br><span class="line"></span><br><span class="line">we can therefore insert the desired value</span><br><span class="line"></span><br><span class="line">​</span><br><span class="line"></span><br><span class="line">Following that, we simply change the GOT address of ```fflush()``` to the ```system()``` portion of ```login()```.</span><br><span class="line"></span><br><span class="line">we simply change the ```system()``` address</span><br><span class="line"></span><br><span class="line">​</span><br><span class="line"></span><br><span class="line">So, then let&#x27;s find the GOT address of ```fflush()``` and</span><br><span class="line">the address of the ```system()``` portion of ```login()```</span><br><span class="line"></span><br><span class="line">let&#x27;s find the address of the ```system()```portion of ```login()```</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;img src=&quot;https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/11.png&quot; alt=&quot;미리보기 방지&quot; width=&quot;300&quot; style=&quot;text-align: left;&quot;&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Screenshot. 6</span><br><span class="line"></span><br><span class="line">The GOT address for ```fflush``` is ```0x0804a004```.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;img src=&quot;https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/12.png&quot; alt=&quot;미리보기 방지&quot; width=&quot;300&quot; style=&quot;text-align: left;&quot;&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Screenshot. 7</span><br><span class="line"></span><br><span class="line">If you look at the beginning of </span><br><span class="line">the &#x27;system&#x27; function</span><br><span class="line"></span><br><span class="line">you can see it&#x27;s ```0x080485e3```</span><br><span class="line"></span><br><span class="line">then, if we construct the payload</span><br><span class="line"></span><br><span class="line">​</span><br><span class="line"></span><br><span class="line">It becomes ```dummy\[96\]+fflush()```s ```got\[4\]```</span><br><span class="line"></span><br><span class="line">and ```system()``` ```\[4\]```</span><br><span class="line"></span><br><span class="line">​</span><br><span class="line"></span><br><span class="line">Now, ```system()\[4\]``` as ```scanf()``` receives integers here Is</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">we need to convert ```system()\[4\]``` to an integer and send it</span><br><span class="line"></span><br><span class="line">we need to convert it to an integer and send it</span><br><span class="line"></span><br><span class="line">​</span><br><span class="line"></span><br><span class="line">```0x80485e3 = 134514147```</span><br><span class="line"></span><br><span class="line">``` bash</span><br><span class="line">(python -c &#x27;print &quot;D&quot;*96 + &quot;\x04\xa0\x04\x08&quot;&#x27;; cat) | ./passcode</span><br></pre></td></tr></table></figure>
+
+
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/13.png" alt="미리보기 방지" width="300px" style="text-align: left;">
+
+
+<p>Screenshot. 8</p>
+<p>And that’s how we snagged the key, you see.</p>
+<p>And then, heading back to the initial page</p>
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/14.png" alt="미리보기 방지" width="300px" style="text-align: left;">
+
+
+<p>Screenshot. 9</p>
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/15.png" alt="미리보기 방지" width="300px" style="text-align: left;">
+
+
+<p>Screenshot. 10</p>
+<p>You can confirm that 10 points were in fact, received upon mission completion</p>
+<p>You can confirm that 10 points were received</p>
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/16.png" alt="미리보기 방지" width="300px" style="text-align: left;">
+
+
+<p>Screenshot. 11</p>
+<p>And then, a green dotted line indicates completion</p>
+<p>it indicates completion.</p>
+<p>​</p>
+<p>Oh, and even upon completion, it seems one can repeatedly practice the same problem</p>
+<p>it seems one can repeatedly practice it</p>
+<p>​</p>
+<p>Looks like it’s solvable, then, eh? ōxō</p>
+<p><del>Looks like it’s solvable, then, eh? ōxō</del></p>
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/02.png" alt="미리보기 방지" width="300px">
+</div>
+
+<p>Have a good day,<br>and I hope everything works out well for you</p>
+<p>It’s quite warm out,<br>so do try and avoid getting heatstroke</p>
+<p>And do take care with the erm,<br>Wuhan pneumonia situation</p>
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/17.png" alt="미리보기 방지" width="300px">
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://kurailuna.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+  </div>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/23/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><span class="page-number current">24</span><a class="page-number" href="/page/25/">25</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/">28</a><a class="extend next" rel="next" href="/page/25/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          목차
+        </li>
+        <li class="sidebar-nav-overview">
+          흝어보기
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Luna"
+      src="https://kurailuna.github.io/images/lumine.png">
+  <p class="site-author-name" itemprop="name">Luna</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-name">포스트</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">카테고리</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">태그</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://x.com/Luna0x03" title="Twitter → https:&#x2F;&#x2F;x.com&#x2F;Luna0x03" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.pixiv.net/users/1112945" title="Instagram → https:&#x2F;&#x2F;www.pixiv.net&#x2F;users&#x2F;1112945" rel="noopener" target="_blank"><i class="fa fa-fw fa-instagram"></i></a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2016 – 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-Luna0x03"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Luna</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v7.3.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.7.2
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'default',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+
+</body>
+</html>

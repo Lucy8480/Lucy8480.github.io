@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-bounce.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"kurailuna.github.io","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","width":240,"display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Luna&#39;s Developer Diary">
+<meta property="og:url" content="https://kurailuna.github.io/page/22/index.html">
+<meta property="og:site_name" content="Luna&#39;s Developer Diary">
+<meta property="og:locale" content="ko_KR">
+<meta property="article:author" content="Luna">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://kurailuna.github.io/page/22/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false
+  };
+</script>
+
+  <title>Luna's Developer Diary</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Luna's Developer Diary" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Luna's Developer Diary</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <h1 class="site-subtitle" itemprop="description">printf("Hello World!");</h1>
+      
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>홈</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>태그</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>카테고리</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>아카이브</a>
+
+  </li>
+        <li class="menu-item menu-item-finance💴">
+
+    <a href="https://luna0x03.github.io/Finance.html" rel="noopener" target="_blank"><i class="fa fa-fw fa-Finance"></i>Finance💴</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>검색
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/KuraiLuna" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://kurailuna.github.io/2020/08/04/pwnable-kr-Ieg-Problem-Solving/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://kurailuna.github.io/images/lumine.png">
+      <meta itemprop="name" content="Luna">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Luna's Developer Diary">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/08/04/pwnable-kr-Ieg-Problem-Solving/" class="post-title-link" itemprop="url">『pwnable.kr』Ieg Problem Solving</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+
+              <time title="Post created: 2020-08-04 14:03:11" itemprop="dateCreated datePublished" datetime="2020-08-04T14:03:11+09:00">2020-08-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Updated at: 2025-08-24 05:49:01" itemprop="dateModified" datetime="2025-08-24T05:49:01+09:00">2025-08-24</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/White-Hacking/" itemprop="url" rel="index"><span itemprop="name">White Hacking</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/White-Hacking/CTF/" itemprop="url" rel="index"><span itemprop="name">CTF</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/White-Hacking/CTF/pwnable-kr/" itemprop="url" rel="index"><span itemprop="name">pwnable.kr</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/01_Rina.gif" alt="미리보기 방지" width="300">
+</div>
+
+<p>This one, it’s slightly lower</p>
+<p>on the Hard Level scale than the last,</p>
+<p>so perhaps that’s why</p>
+<p>it feels like it’s coming together</p>
+<p>a bit more quickly.（　´∀｀）</p>
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/02.png" alt="미리보기 방지" width="300">
+</div>
+
+<br>
+<br>
+
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White Hacking/CTF/pwnable.kr/Ieg Problem Solving/03.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>Screenshot 1.</p>
+<p>Right, so my own rather<br>literal translation of<br>the question is as follows:</p>
+<p>is as follows.</p>
+<p>Daddy told me I should study arm.  </p>
+<p>But I prefer to study my leg!  </p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/04.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 2.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh leg@pwnable.kr -p2222</span><br></pre></td></tr></table></figure>
+
+<p>You just connect straight away.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/05.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 3.</p>
+<p>First, you verify the files with <code>ls -l</code></p>
+<p>But there doesn’t seem to be a way to do it,</p>
+<p>the access attempt just isn’t working…? ōxō</p>
+<p><del>the access attempt just isn’t working…? ōxō</del>​​  </p>
+<p>Right, then let’s look at<br>the download section that was in<br>the question earlier:</p>
+<p>that was in the question earlier.</p>
+<p>Download :</p>
+<p> <a target="_blank" rel="noopener" href="http://pwnable.kr/bin/leg.c">http://pwnable.kr/bin/leg.c</a><br><a target="_blank" rel="noopener" href="http://pwnable.kr/bin/leg.asm">http://pwnable.kr/bin/leg.asm</a></p>
+<p>You download them both.</p>
+<p>Once downloaded, let’s immediately</p>
+<p>check <code>leg.c</code>.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/06.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 4.</p>
+<p>The functions for key1 through 3</p>
+<p>are written in ARM assembly.</p>
+<p>are written.</p>
+<p>First, if you look at the main function,<br>it seems that if you match the value<br>that’s the sum of all three of those<br>function values,<br>you can snag the key value.</p>
+<p>if you match the value that’s<br>the sum of all three of those function values,</p>
+<p>you can snag the key value.</p>
+<p>Let’s have a look at the main function’s<br>assembly code as well.</p>
+<p>as well.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/07.png" alt="미리보기 방지" width="300"></div>
+Screenshot 5.
+
+<p>It’s evident that the r0 values obtained<br>through the functions are all summed up,<br>and the final result goes into r2.</p>
+<p>are all summed up,<br>and the final result goes into r2</p>
+<p>it’s evident</p>
+<p>then, let’s look at each function.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/08.png" alt="미리보기 방지" width="300"></div>
+
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/09.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 6.</p>
+<p>This is the C and assembly code for the key1 function.</p>
+<p>It puts the pc value into r3</p>
+<p>and then puts r3 into r0 again.</p>
+<p>So, the pc value will then be the value for key1</p>
+<p>will then be the value</p>
+<p>If we just take a quick look at what pc is:</p>
+<hr>
+<ol>
+<li><p>Right, so when a CPU executes a<br>single instruction,<br>it’s said to go through<br>the fetch, decode, and execute stages.</p>
+</li>
+<li><p>To execute two opcodes,<br>you’d then need a total of six operations:<br>fetch, decode, execute, fetch, decode, execute.</p>
+</li>
+<li><p>By performing these stages in<br>parallel, however, you can reduce those<br>six operations needed for two opcodes<br>down to just four.</p>
+</li>
+<li><p>It’s simply more efficient than doing it<br>sequentially, you see.<br>The Program Counter,or PC,<br>holds the address for the fetch operation.</p>
+</li>
+<li><p>If the current instruction is at<br>the execute stage,<br>the next one will be at the decode stage,<br>and the one after that will<br>then be at the fetch stage.</p>
+</li>
+<li><p>Consequently,<br>the PC will then hold the address of<br>the instruction that’s<br>due for the next fetch operation.</p>
+</li>
+</ol>
+<hr>
+<p>Right, back to the main point now.</p>
+<p>The pc value in the key1 function is</p>
+<p><strong>0x00008ce4</strong></p>
+<p>is.</p>
+<p>Now, let’s move on to key2.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/10.png" alt="미리보기 방지" width="300"></div>
+
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/11.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 7.</p>
+<p>You assign the pc value(<strong>0x00008d08</strong>)</p>
+<p>to r3, and then add 4,assigning that to r0</p>
+<p>assigning that to r0</p>
+<p>The value of key2 is</p>
+<p><strong>0x8d08 + 4 &#x3D; 0x8d0c</strong></p>
+<p>Let’s look at key3.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/12.png" alt="미리보기 방지" width="300"></div>
+
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/13.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 8.</p>
+<p>You assign the lr value to r3</p>
+<p>and then assign the r3 value to r0</p>
+<p>So, I suppose one just needs to find the lr value.</p>
+<p>one just needs to find it.</p>
+<p>If you look at the main function:</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/14.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 9.</p>
+<p>The lr value is</p>
+<p><strong>0x00008d80</strong></p>
+<p>All three values have now been obtained</p>
+<p> <strong>key1 | 0x8ce4</strong></p>
+<p> <strong>key2 | 0x8d0c</strong></p>
+<p> <strong>key3 | 0x8d80</strong></p>
+<p>If you sum them all up,</p>
+<p><strong>0x1a770</strong></p>
+<p>Right, then let’s go snag that key value<br>immediately, eh?</p>
+<p>let’s go snag it ㅋㅅㅋ</p>
+<p>So, into the input window here</p>
+<p> I’ll input <code>108400</code>.</p>
+<p>And due to the program’s nature</p>
+<p>it absolutely must be entered</p>
+<p>as an integer.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/15.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 10.</p>
+<p>And so the key value comes out</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/16.png" alt="미리보기 방지" width="300"></div>
+
+<p>Screenshot 11.</p>
+<p>With the value that’s been snagged,</p>
+<p>you go back to the first screen,</p>
+<p>input it into the blank space,</p>
+<p>and then just press the ‘auth’ button.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/17.png" alt="미리보기 방지" width="300"></div>
+
+<p>As soon as the mission is completed,</p>
+<p>2 points have been snagged.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/18.png" alt="미리보기 방지" width="300"></div>
+
+<p>then, if you go back to the initial screen again,</p>
+<p>you’ll see that</p>
+<p>it’s marked as completed with a green</p>
+<p>dotted line</p>
+<p>Thanks for reading through this long post.</p>
+<p>Well done. (ㆁᴗㆁ✿)</p>
+<p>Have a good day, and<br>I hope everything works out well for you,</p>
+<p>It’s quite warm out,<br>so do try and avoid getting heatstroke</p>
+<p>And do take care with the,erm,<br>Wuhan pneumonia situation.</p>
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/19.png" alt="미리보기 방지" width="300">
+</div>
+
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/20.png" alt="미리보기 방지" width="300">
+</div>
+
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://kurailuna.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+  </div>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/21/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><span class="page-number current">22</span><a class="page-number" href="/page/23/">23</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/">28</a><a class="extend next" rel="next" href="/page/23/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          목차
+        </li>
+        <li class="sidebar-nav-overview">
+          흝어보기
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Luna"
+      src="https://kurailuna.github.io/images/lumine.png">
+  <p class="site-author-name" itemprop="name">Luna</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-name">포스트</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">카테고리</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">태그</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://x.com/Luna0x03" title="Twitter → https:&#x2F;&#x2F;x.com&#x2F;Luna0x03" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.pixiv.net/users/1112945" title="Instagram → https:&#x2F;&#x2F;www.pixiv.net&#x2F;users&#x2F;1112945" rel="noopener" target="_blank"><i class="fa fa-fw fa-instagram"></i></a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2016 – 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-Luna0x03"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Luna</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v7.3.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.7.2
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'default',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+
+</body>
+</html>
