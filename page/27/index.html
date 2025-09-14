@@ -195,7 +195,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://kurailuna.github.io/2019/07/28/JSP-Project-7-28-2019/">
+    <link itemprop="mainEntityOfPage" href="https://kurailuna.github.io/2020/08/01/White%20Hacking/pwnable.kr/pwnable_kr_Collision_%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://kurailuna.github.io/images/lumine.png">
@@ -209,7 +209,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2019/07/28/JSP-Project-7-28-2019/" class="post-title-link" itemprop="url">JSP Project 7_28_2019</a>
+            <a href="/2020/08/01/White%20Hacking/pwnable.kr/pwnable_kr_Collision_%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/" class="post-title-link" itemprop="url">『pwnable.kr』 Collision Problem solving</a>
         </h2>
 
         <div class="post-meta">
@@ -219,14 +219,14 @@
               </span>
               <span class="post-meta-item-text">작성일</span>
 
-              <time title="Post created: 2019-07-28 06:58:11" itemprop="dateCreated datePublished" datetime="2019-07-28T06:58:11+09:00">2019-07-28</time>
+              <time title="Post created: 2020-08-01 18:38:11" itemprop="dateCreated datePublished" datetime="2020-08-01T18:38:11+09:00">2020-08-01</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Updated at: 2025-08-22 06:50:26" itemprop="dateModified" datetime="2025-08-22T06:50:26+09:00">2025-08-22</time>
+                <time title="Updated at: 2025-08-22 06:17:41" itemprop="dateModified" datetime="2025-08-22T06:17:41+09:00">2025-08-22</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -234,11 +234,15 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Portfolio/" itemprop="url" rel="index"><span itemprop="name">Portfolio</span></a>
+                  <a href="/categories/White-Hacking/" itemprop="url" rel="index"><span itemprop="name">White Hacking</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Portfolio/Back-End/" itemprop="url" rel="index"><span itemprop="name">Back-End</span></a>
+                  <a href="/categories/White-Hacking/CTF/" itemprop="url" rel="index"><span itemprop="name">CTF</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/White-Hacking/CTF/pwnable-kr/" itemprop="url" rel="index"><span itemprop="name">pwnable.kr</span></a>
                 </span>
             </span>
 
@@ -255,49 +259,135 @@
       
           <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<p><img border="0" width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/02%20%EC%82%AC%EC%A7%84.0%20%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0%20%EB%B0%A9%EC%A7%80.jpg"> <br><br>사진.0 미리보기 방지* <br><br><br><br>드리어 완성 군요..;;<br><br>이제야 게시글 작업합니다,<br><br>작성하기에 앞서 아래 시연 영상부터<br><br>가겠습니다.<br></p>
-<br>
-<div class="widget-wrap">
-  <div class="widget-title"><시연영상></div>
-  <div class="widget-body">
-    <iframe
-      width="200"
-      height="180"
-      src="https://www.youtube.com/embed/9Y_ed7URWjE?si=njd40Zs0gsx_CbfP"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
-</div>
-동영상1.시연영상</p>
-<br>
+<link  href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap"  rel="stylesheet">
 
-<p><img border="0" width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.1%20%EC%82%AC%EC%9D%B4%ED%8A%B8%20%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4%20%ED%99%88_%EC%82%AC%EC%9D%B4%ED%8A%B8_%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4.png"> <br><br>사진.1 사이트 메인화면<br><br><br><br>사이트 메인화면입니다. 원래 계획상 좀 더 많은 기능을<br><br>넣으려고 했다만은 개인적인 사정으로 커뮤니티 기능만 하기로 했습니다.<br> 아래 사진6-7 말이죠^ㅅ^; <br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.6%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8.png"> <br><br>사진.6 일러스트<br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.7%20%EB%A7%8C%ED%99%94.png"> <br><br>사진.7 만화<br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.2%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85.png"> <br><br>사진.2 회원가입<br></p>
-<p>커뮤니티는 회원가입…<br><br>예전부터 그래왔고 지금도<br><br>본격적으로 사이트를 이용하려면<br><br>누구든지 예외없이 회원가입을 해야 했죠<br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.3%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%20%EC%99%84%EB%A3%8C%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85_%EC%99%84%EB%A3%8C.png"> <br><br>사진.3 회원가입 완료<br></p>
-<p>가입완료 창입니다,<br><br>본인은 심플한게 좋음으로<br><br>나름 심플하게 했습니다. ㅋㅅㅋ;;<br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.4%20%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EB%A1%9C%EA%B7%B8%EC%9D%B8.png"><br><br>사진.4 로그인<br></p>
-<p>이제 로그인 해보겠습니다.<br><br>방금만든 유저 아이디로<br><br>한번 접속해 보겠습니다. : )<br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.5%20%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EC%99%84%EB%A3%8C%20%EB%A1%9C%EA%B7%B8%EC%9D%B8_%EC%99%84%EB%A3%8C.png"><br><br>사진.5 로그인 완료<br></p>
-<p>로그인이 완료되면 푸른색 동그라미가<br><br>있는 부분보면 처음과 뭔가 다르다는 걸 알 수 있습니다.<br><br><br><br>아래의 그림.논외 처럼 말이죠….<br></p>
-<p><img width="50%" height="50%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EA%B7%B8%EB%A6%BC.%EB%85%BC%EC%99%B8%20%EB%AD%94%EA%B0%80%20%EB%8B%A4%EB%A5%B4%EB%8B%A4%20%EB%AD%94%EA%B0%80_%EB%8B%A4%EB%A5%B4%EB%8B%A4.png"><br><br>그림.논외 뭔가 다르다<br><br><br><br><br><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.8%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%20%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0%20%EA%B2%8C%EC%8B%9C%ED%8C%90%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8_%ED%8E%98%EC%9D%B4%EC%A7%80.png"><br><br>사진.8 일러스트 커뮤니티 게시판<br></p>
+<style>
+.left-img {
+  float: left;
+  margin-right: 320px; /* 텍스트와 간격 */
+}
+</style>
+
+<div  style="text-align: center;">
+<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/1%20Rina.gif"  alt="미리보기 방지"  width="300">
+</div> <br>
+
+
+<p>Wow… I had a feeling, but the difficulty’s on another level.<br></p>
+<p>Thats absolutely lunatic, ōxō;;<br><s>That’s absolutely lunatic, ōxō;;</s></p>
+<p>ε-(´・｀)</p>
+<p>Perhaps because it involves a system hack,</p>
+<p>it’s a whole level above the usual web-based</p>
+<p>war games on Wargame.kr in terms of difficulty.</p>
+<p>I ended up referring to someone else’s</p>
+<p>solution while working through it.</p>
+<p>And since posting the actual</p>
+<p>source code would make the thread messy,</p>
+<p>I’ll place it in a text file so it can simply be copy-pasted.</p>
+<p>Anyway, let’s get started right away.</p>
+<div  style="text-align: center;">
+<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/2.png"  width="300">
+</div> <br>
+
+<br>
+<img class="left-img" src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/3.png"  width="500">
+ <br>
+
+<p>Right, if I’m having a punt at roughly translating<br>the gist of this in my own way,<br>it’s something like this:<br>So, you’re on about MD5 hash collisions then,<br>are we? (···) Right,anyway.</p>
+<br>
+<div class="left-img">
+<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/4.png"  width="500">
+</div>  <br>
+
+<p>Right then, first things first,<br>open up yer Linux terminal.<br>Then you just wanna connect using</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh col@pwnable.kr -p2222</span><br></pre></td></tr></table></figure>
+
+<p>Now,the password right?<br>It won’t actually show up as you’re typing it<br>– don’t mind that,just bash it in,hit Enter,<br>and bam, you’re logged in. Easy peasy!</p>
+ <br>
+<div class="left-img">
+<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/5.png"  width="500">
+</div>  <br>
+Right then next up,you just wanna whack in
+
+<p>the ls command to see what files you’ve got lurking around.</p>
+<p>Now col you’d probably reckon that’s<br>some sort of executable or maybe even a Python file, right?</p>
+<p>But the actual one we really need to be bothered with,</p>
+<p>the crucial bit, is <code>col.c</code></p>
+ <br>
+<div class="left-img">
+<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/6.png"  width="500px">
+</div>  <br>  <br>
+so if you have a proper gander at the main bit,
+
+<p>the password, right, that needs to be 20</p>
+<p>characters long. And here’s the crucial part:<br>the hash code <code>(0x21DD09EC)</code> and</p>
+<p>the password return value,<br>they’ve both gotta be</p>
+<p>absolutely spot on, exactly the same.<br>No messing about with that, understood</p>
+<p>That<br><code> bash check_password(const char* p)</code><br>Bit, Yeah?<br>What it’s doing is, it’s taking chunks of the data<br>like, 4 bytes at a time – that’s the size of an int, innit?<br>– and it’s then accumulating those into ‘res’ five times.</p>
+<p>So, the thinking is,<br>if you just add the exact same value five times over you should,</p>
+<p>I reckon, get that hash code it’s after. Simple as that, really.</p>
+<h3 id="Derivation-of-results"><a href="#Derivation-of-results" class="headerlink" title="Derivation of results"></a>Derivation of results</h3><div class="left-img">
+<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/7.png"  width="500">
+</div>
+Figure.1) For and res data expressed by cutting int type 4 bytes each
+
+<p>Right, so that’res’value,yeah?</p>
+<p>That’s just the result of piling up<br>whatever came out of the ‘for’loop,<br>five times over.<br>And if you then,like,divvy that’res’value by five,<br>it turns out that the data</p>
+<p>so if you then like,multiply this lot by five again<br>you’ll find you’re short by 0x4.So,<br>the assumption we’re making here is </p>
+<p>that the data is essentially four lots of<br><code>0x6C5CEC8</code> and then one bit of <code>0x6C5CECC</code> added in.</p>
+<div class="left-img">
+<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/8.png"  width="500">
+</div>
+Figure. 2> Data expressed in little endian<br><br>
+
+
+<p>then,since it’s all about little endian,yeah?<br>All you need to do is just feed the program that data<br>in hexadecimal,in the exact sequence.<br>That’s the one.<br><br></p>
+<div class="left-img">
+<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/9.png"  width="500">
+</div>  
+then, so you've gone and chucked the value in hexadecimal
+
+<p>using Python for that, yeah?</p>
+<p>Now, here’s the kicker, mind you:<br>when the program picks that up as an input<br>it’ll jolly well recognise it as a char.<br>So, you just gotta watch out for that. Proper careful,like.</p>
+<h3 id="Flag"><a href="#Flag" class="headerlink" title="Flag"></a>Flag</h3><div class="left-img">
+<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/10.png"  width="500">
+</div>
+Right then, so we've finally bagged the key value.
+
+<p>And with this rather handy key we’ve just nabbed<br>it’s back to the very beginning, isn’t it?</p>
+ <br>
+<div class="left-img">
+<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/11.png"  width="500">
+</div>
+Right then, for that 'Flag?' bit down below,
+
+<p>you just gotta punch in your key value.<br>And once that’s</p>
+<p>sorted, hit the’auth’button Simples.</p>
+ <br>
+<div class="left-img">
+<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/12.png"  width="500">
+</div>
+Right, and just like that,
+three points were had, apparently.
+
 <p><br><br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.9%20%EB%A7%8C%ED%99%94%20%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0%20%EA%B2%8C%EC%8B%9C%ED%8C%90%20%EB%A7%8C%ED%99%94_%ED%8E%98%EC%9D%B4%EC%A7%80.png"><br><br>사진.9 만화 커뮤니티 게시판<br><br><br><br>사진.8과 사진.9의 각각 일러스트와 만화<br><br>커뮤니티 게시판입니다.<br><br>나름대로 페이스북이나 트위터<br><br>유사(?) 하겠끔 해봤습니다.<br><br><br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.10%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%20%EC%98%AC%EB%A6%AC%EA%B8%B0%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8_%EC%98%AC%EB%A6%AC%EA%B8%B0.png"><br><br>사진.10 일러스트 올리기<br><br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.11%20%EB%A7%8C%ED%99%94%20%EC%98%AC%EB%A6%AC%EA%B8%B0%20%EB%A7%8C%ED%99%94_%EC%98%AC%EB%A6%AC%EA%B8%B0.png"><br><br>사진.11 만화 올리기<br></p>
-<p>사진.10, 사진.11은 각각 일러스트와 만화를<br><br>게시하고 그로인한 게시글이 올려진 모습입니다.<br><br>나름 페이스북이나 트위터 유사해 보입니다(???)<br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.12%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%20%EC%A2%8B%EC%95%84%EC%9A%94%20%EC%99%80%20%EB%8D%A7%EA%B8%80%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8_%EC%A2%8B%EC%95%84%EC%9A%94%EC%99%80_%EB%8D%A7%EA%B8%80.png"><br><br>사진.12 일러스트 좋아요 와 덧글<br><br><br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.13%20%EB%A7%8C%ED%99%94%20%EC%A2%8B%EC%95%84%EC%9A%94%20%EC%99%80%20%EB%8D%A7%EA%B8%80%20%EB%A7%8C%ED%99%94_%EC%A2%8B%EC%95%84%EC%9A%94%EC%99%80_%EB%8D%A7%EA%B8%80.png"><br><br>사진.13 만화 좋아요 와 덧글<br><br><br><br>사직.12와 사진.13입니다.<br><br>각각 좋아요 와 댓글을 달아봤습니다,<br><br>댓글 과 좋아요 는 일러스트와 만화 파일처럼<br><br><br><br>사진처럼 되었다면 DB에 정상적으로 올라왔음을<br>알 수가 있었지요.<br></p>
-<p><img width="80%" height="80%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%82%AC%EC%A7%84.14%20%ED%9A%8C%EC%9B%90%EC%A0%95%EB%B3%B4%20%EC%88%98%EC%A0%95%20%EC%9C%A0%EC%A0%80%EC%A0%95%EB%B3%B4_%EC%88%98%EC%A0%95.png"><br><br>사진.14 회원정보 수정<br><br><br><br>이제 화원정보 수정 창입니다.<br><br>커뮤니티 특성상 익명이 글을 게시하는지라<br><br>때에 따라 주소, 전화번호등 언제든지 바뀝니다,<br><br><br><br>그렇게 해서 회원정보 수정은 꼭 들어간다고 하지요…<br><br>(비밀번호 같은 경우 알다시피 보안상 자주 바꿔야 한다더군요)<br></p>
-<hr>
-<p><br><br><br>긴시간(?)을 꼬박 한 보람은 있기는 합니다ㅎㅎ(ㅎㅁㅎ)<br><br>이제는 조금 쉬어야겠습니다.<br><br>조금 쉬었다가 이제 본격적으로 해야겠지요….<br></p>
-<p><br><br><br>마지막으로 소스코드 링크하고<br><br>이제 포스팅은 여기까지 하겠습니다.<br><br>긴 글을 읽어 주셔서 감사하고<br><br>엔제나 오늘하루 잘 보내시길 바랍니다. ㅎㅁㅎ&#x2F;<br><br><br></p>
-<p>&lt;소스코드&gt;<br><br><a target="_blank" rel="noopener" href="https://github.com/KuraiLuna/KuraiLunaJSP.github.io/tree/master/Medi">https://github.com/KuraiLuna/KuraiLunaJSP.github.io/tree/master/Medi</a></p>
-<p align="center"><img  width="60%" height="60%" src="https://luna0x03.github.io/PostImages/Portfolio/Back-End/JSP%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%EC%99%84%EC%84%B1%202019%EB%85%84%207%EC%9B%94%2028%EC%9D%BC/%EC%98%A4%EB%8A%98%EB%8F%84_%EC%A2%8B%EC%9D%80_%ED%95%98%EB%A3%A8.png" ></p><br>
+<div class="left-img">
+<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/13.png"  width="500">
+</div>  <br>  <br>
+
+<p>Right,and then you swing back round,<br>and there it is: marked up with a green dotted line.<br>Means you’ve bloody well sorted it, doesn’t it?</p>
+<p>Right, well that’s the whole bloody spiel done.<br>Cheers for wading through all that, yeah : )<br> <br></p>
+<div  style="text-align: center;">
+<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/2.png"  width="300">
+</div> <br>
+Alright then,
+
+<p>hope you have a decent day and<br>all your bits and bobs go swimmingly. </p>
+<p>It’s a proper scorcher out there,<br>mind you, so try not to go getting heatstroke, yeah?</p>
+<p>And, uh, watch out for that bloody Wuhan pneumonia. Stay safe, mate. : )</p>
+<br>
+<div  style="text-align: center;">
+<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/14.png" width= 300></div>  <br>  <br>
 
 <div id="disqus_thread"></div>
 <script>
@@ -335,7 +425,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/26/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/26/">26</a><span class="page-number current">27</span><a class="page-number" href="/page/28/">28</a><a class="extend next" rel="next" href="/page/28/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
+    <a class="extend prev" rel="prev" href="/page/26/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/26/">26</a><span class="page-number current">27</span><a class="page-number" href="/page/28/">28</a><a class="page-number" href="/page/29/">29</a><a class="extend next" rel="next" href="/page/28/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
   </nav>
 
 
@@ -403,7 +493,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-count">29</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>

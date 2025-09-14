@@ -195,7 +195,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://kurailuna.github.io/2022/04/10/pwnable-kr-Fla-Problem-Solving/">
+    <link itemprop="mainEntityOfPage" href="https://kurailuna.github.io/2022/04/13/DevDiary/Baekjoon/Baekjoon_Cat_ASCII_Art_10171/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://kurailuna.github.io/images/lumine.png">
@@ -209,7 +209,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/04/10/pwnable-kr-Fla-Problem-Solving/" class="post-title-link" itemprop="url">『pwnable.kr』Fla Problem Solving</a>
+            <a href="/2022/04/13/DevDiary/Baekjoon/Baekjoon_Cat_ASCII_Art_10171/" class="post-title-link" itemprop="url">『ベクジュン·アルゴリズム』 ネコのアスキー·アート</a>
         </h2>
 
         <div class="post-meta">
@@ -219,14 +219,14 @@
               </span>
               <span class="post-meta-item-text">작성일</span>
 
-              <time title="Post created: 2022-04-10 17:51:11" itemprop="dateCreated datePublished" datetime="2022-04-10T17:51:11+09:00">2022-04-10</time>
+              <time title="Post created: 2022-04-13 04:08:11" itemprop="dateCreated datePublished" datetime="2022-04-13T04:08:11+09:00">2022-04-13</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Updated at: 2025-08-24 06:59:22" itemprop="dateModified" datetime="2025-08-24T06:59:22+09:00">2025-08-24</time>
+                <time title="Updated at: 2025-09-02 08:43:50" itemprop="dateModified" datetime="2025-09-02T08:43:50+09:00">2025-09-02</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -234,15 +234,11 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/White-Hacking/" itemprop="url" rel="index"><span itemprop="name">White Hacking</span></a>
+                  <a href="/categories/DevDiary/" itemprop="url" rel="index"><span itemprop="name">DevDiary</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/White-Hacking/CTF/" itemprop="url" rel="index"><span itemprop="name">CTF</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/White-Hacking/CTF/pwnable-kr/" itemprop="url" rel="index"><span itemprop="name">pwnable.kr</span></a>
+                  <a href="/categories/DevDiary/Baekjoon-JP/" itemprop="url" rel="index"><span itemprop="name">Baekjoon(JP)</span></a>
                 </span>
             </span>
 
@@ -257,127 +253,55 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style6" />
-<p style="text-align: center;" data-ke-size="size18"><b><span style="color: #8a3db6;">back on the 10th of April, 2022</span></b></p>
-<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
-<p style="text-align: center;" data-ke-size="size18"><b><span style="color: #8a3db6;">Right, so this post was penned on a Naver blog.</span></b></p>
-<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
-<p style="text-align: center;" data-ke-size="size18"><b><span style="color: #8a3db6;"><a href="https://blog.naver.com/bnm0170/222696804662" target="_blank" rel="noopener">https://blog.naver.com/bnm0170/222696804662</a></span></b><b><span style="color: #8a3db6;"></span></b></p>
-<p data-ke-size="size16">&nbsp;</p>
-<hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style6" />
-<div style="text-align: center;" align="center">&nbsp;</div>
+          <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 <div style="text-align: center;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/01_Rina.gif" alt="미리보기 방지" width="300">
-</div><br>
-Right, well this is perhaps one of
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/10171/Baekjoon.png" alt="미리보기 방지" width="450">
+</div>
 
-<p>the easier problems I’ve tackled so far.</p>
-<p>Having a go at a CTF for ethical hacking<br>after a bit of a break, then.</p>
-<br> 
+<style>
+.left-img {
+  float: left;
+  margin-right: 320; /* 텍스트와 간격 */
+}
+</style>
+
+
+<h2 id="ベクジュン·アルゴリズム-ネコのアスキー·アート"><a href="#ベクジュン·アルゴリズム-ネコのアスキー·アート" class="headerlink" title="[ベクジュン·アルゴリズム] ネコのアスキー·アート"></a>[ベクジュン·アルゴリズム] ネコのアスキー·アート</h2><br>
+
+<h2 id="10171"><a href="#10171" class="headerlink" title="10171"></a>10171</h2><br>
+
+<h3 id="指紋表示"><a href="#指紋表示" class="headerlink" title="指紋表示"></a>指紋表示</h3><p>📎Link : <br><br><a target="_blank" rel="noopener" href="https://www.acmicpc.net/problem/10171">https://www.acmicpc.net/problem/10171</a></p>
+<p>使用言語: Java<br><br>アルゴリズム: </p>
+<ul>
+<li>具現</li>
+</ul>
+<div class="left-img">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/10171/001.jpg" alt="미리보기 방지" width="250%">
+</div> <br> <br><br><br><br><br><br><br><br><br><br>
+
+<br>
+
+
+<h3 id="解答『かいとう』"><a href="#解答『かいとう』" class="headerlink" title="解答『かいとう』"></a>解答『かいとう』</h3><br>
+
+<h3 id="コード"><a href="#コード" class="headerlink" title="コード"></a>コード</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> baekjoon.ex_io;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 問題</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 以下の例のように</span></span><br><span class="line"><span class="comment"> * 猫の形のアスキーアート</span></span><br><span class="line"><span class="comment"> * を出力してみましょう。</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 入力</span></span><br><span class="line"><span class="comment"> * Nope.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 出力</span></span><br><span class="line"><span class="comment"> * 猫のアスキーアートを出力</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 入力例 1</span></span><br><span class="line"><span class="comment"> * 出力例 1</span></span><br><span class="line"><span class="comment"> * \ /\</span></span><br><span class="line"><span class="comment"> * ) ( &#x27;)</span></span><br><span class="line"><span class="comment"> * ( / )</span></span><br><span class="line"><span class="comment"> * \(__)|</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line">    System.out.println(<span class="string">&quot;\\    /\\&quot;</span>);</span><br><span class="line">    System.out.println(<span class="string">&quot; )  ( &#x27;)&quot;</span>);</span><br><span class="line">    System.out.println(<span class="string">&quot;(  /  )&quot;</span>);</span><br><span class="line">    System.out.println(<span class="string">&quot; \\(__)|&quot;</span>);</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="結果『けっか』"><a href="#結果『けっか』" class="headerlink" title="結果『けっか』"></a>結果『けっか』</h3><br>
+<div class="left-img">
+<img src="https://luna0x03.github.io/PostImages/DevDiary/Baekjoon(JP)/10171/002.png" alt="미리보기 방지" width="580">
+</div> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+
+
 
 <div style="text-align: center;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/02.png" alt="" width="300">
-</div><br><br>
-
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/03.png" alt="" width="300">
+<p style="font-size: 30px; color: #2844e2ff;"> 終わり</p>
 </div>
 
-<p>First off,let’s have a look at the question itself.</p>
-<p>Papa brought me a packed present! let’s open it,</p>
-<p>This problem, you see,<br>isn’t about SSH access.<br>Rather, it’s about downloading a<br>standalone program,</p>
-<p>reversing it to get a key,<br>and then collecting points with that key.<br>Quite straightforward.</p>
-<p>Right, anyway using<br>the download address written<br>in the question above,</p>
-<p>you download it with the command below.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> wget http://pwnable.kr/bin/flag</span><br></pre></td></tr></table></figure>
-
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/04.png" alt="" width="300">
-</div>
-
-<p>Once it’s all downloaded,<br>you then use the command below</p>
-<p>to grant permission for the program to be used.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">chmod</span> 755 flag</span><br></pre></td></tr></table></figure>
-
-<p>However,this program happens to be UPX-packed,</p>
-<p>so you’ll need to unpack it as well.</p>
-<p>Right, let’s go unpack it with the command below.</p>
-<p>unpack it : )</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> upx -d flag</span><br></pre></td></tr></table></figure>
-
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/05.png" alt="" width="300">
-</div>
-
-<p>Now that the unpacking is complete, this time,</p>
-<p>let’s try debugging it with the command below.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> gdb -q flag</span><br></pre></td></tr></table></figure>
-
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/06.png" alt="" width="300">
-</div>
-
-<p>(And in the meantime,<br>I completely wasted over<br>30 minutes trying to install gdb-peda,<br>you see.)</p>
-<p>So, when you debug it in this manner,<br>after main+32,<br>there’s a rather suspicious part,</p>
-<p>where it seems the flag value was copied to #</p>
-<p>where there’s a rather suspicious part.</p>
-<p>It’s presumed to be 64-bit, and</p>
-<p>“if you disassemble 0x6c2070 with x&#x2F;xg,</p>
-<p>it comes out as <flag>:0x496628.</p>
-<p>So, 0x496628 is probably where the real flag value</p>
-<p>is copied to, I’d imagine.</p>
-<p>Oh, and if you write 496628,<br>an error will be displayed,</p>
-<p>so you absolutely must attach 0x,</p>
-<p>and then write it. Otherwise,<br>it won’t be output correctly without an error.</p>
-<p>it will be output.</p>
-<p>Anyway, if you input it as per<br>the command below with x&#x2F;s</p>
-<p>if you input it.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gdb-peda$ x/s 0x496628</span><br></pre></td></tr></table></figure>
-
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/07.png" alt="" width="300">
-</div>
-
-<p>the real flag value will come out.</p>
-<p>And with the flag value obtained,</p>
-<p>you input the value as shown<br>in the captured image below.</p>
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/08.png" alt="" width="300">
-</div>
-
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/09.png" alt="" width="300">
-</div>
-
-<p>And that’s how 7 points were collected. : )</p>
-<div style="text-alingn: right;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/10.png" alt="" width="300">
-</div>
-
-<p>Having a go at pwnable.kr<br>CTF after a bit of a break, then.</p>
-<p>“I’m not sure if it’ll<br>be possible since it’s<br>the weekend, honestly.</p>
-<p>Right, well I suppose it’s about time<br>I started preparing for<br>some rather pointless part-time work.</p>
-<p>My chances of finding employment in S.Korea(?)<br>are effectively long gone, you see.</p>
-<p>So, while I’m doing short-term part-time work,</p>
-<p>I’ll try to save up around ten million won,<br>move out of my family home,</p>
-<p>and then find some temporary<br>accommodation near<br>the Japanese Cultural Centre,</p>
-<p>in a well-soundproofed goshiwon.</p>
-<p>and then find some temporary accommodation.</p>
-<p>Ethical hacking, Japanese study,</p>
-<p>preparing for JLPT N series or EJU,</p>
-<p><a target="_blank" rel="noopener" href="https://www.bugbountyclub.com/beginning">bug bounty</a> programmes related to ethical hacking,</p>
-<p>preparing for and attempting that,<br>and then writing bug hunting reports<br>in English and Japanese,</p>
-<p>writing bug hunting reports.</p>
-<p>or preparing for OSCP,<br>an international ethical hacking<br>certification.</p>
-<p>It’ll be like doing a penitent task,<br>just like the nuns in a Catholic convent.</p>
-<p>I’ll have to do that.</p>
-<p>And then, simultaneously with<br>preparing to move to Japan,</p>
-<p>I’ll have to prepare for<br>financial income investment as well</p>
-<p>2022.04.10</p>
 <div id="disqus_thread"></div>
 <script>
     /**
@@ -414,7 +338,7 @@ Right, well this is perhaps one of
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/19/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><span class="page-number current">20</span><a class="page-number" href="/page/21/">21</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/">28</a><a class="extend next" rel="next" href="/page/21/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
+    <a class="extend prev" rel="prev" href="/page/19/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><span class="page-number current">20</span><a class="page-number" href="/page/21/">21</a><span class="space">&hellip;</span><a class="page-number" href="/page/29/">29</a><a class="extend next" rel="next" href="/page/21/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
   </nav>
 
 
@@ -482,7 +406,7 @@ Right, well this is perhaps one of
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-count">29</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>

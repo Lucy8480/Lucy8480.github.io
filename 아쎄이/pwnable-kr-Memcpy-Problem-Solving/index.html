@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-bounce.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"kurailuna.github.io","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","width":240,"display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="[pwnable.kr]_Memcpy문제풀이[pwnable.kr]_Memcpy문제풀이 [##Image|kage@ckzgDK&#x2F;btrurTZhlKe&#x2F;AAAAAAAAAAAAAAAAAAAAAPKrL30niRtloT9dWS60hM9-7QUrEGyKtVz8Nj3oU39A&#x2F;img.gif?credential&#x3D;yqXZFxpELC7KVnFO">
+<meta property="og:type" content="website">
+<meta property="og:title" content="『pwnable.kr』 Memcpy Problem solving">
+<meta property="og:url" content="https://kurailuna.github.io/%EC%95%84%EC%8E%84%EC%9D%B4/pwnable-kr-Memcpy-Problem-Solving/index.html">
+<meta property="og:site_name" content="Luna&#39;s Developer Diary">
+<meta property="og:description" content="[pwnable.kr]_Memcpy문제풀이[pwnable.kr]_Memcpy문제풀이 [##Image|kage@ckzgDK&#x2F;btrurTZhlKe&#x2F;AAAAAAAAAAAAAAAAAAAAAPKrL30niRtloT9dWS60hM9-7QUrEGyKtVz8Nj3oU39A&#x2F;img.gif?credential&#x3D;yqXZFxpELC7KVnFO">
+<meta property="og:locale" content="ko_KR">
+<meta property="article:published_time" content="2020-08-01T21:07:11.000Z">
+<meta property="article:modified_time" content="2025-08-19T16:03:34.257Z">
+<meta property="article:author" content="Luna">
+<meta property="article:tag" content="White Hacking">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://kurailuna.github.io/%EC%95%84%EC%8E%84%EC%9D%B4/pwnable-kr-Memcpy-Problem-Solving/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : false
+  };
+</script>
+
+  <title>『pwnable.kr』 Memcpy Problem solving | Luna's Developer Diary
+  </title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Luna's Developer Diary" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Luna's Developer Diary</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <h1 class="site-subtitle" itemprop="description">printf("Hello World!");</h1>
+      
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>홈</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>태그</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>카테고리</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>아카이브</a>
+
+  </li>
+        <li class="menu-item menu-item-finance💴">
+
+    <a href="https://luna0x03.github.io/Finance.html" rel="noopener" target="_blank"><i class="fa fa-fw fa-Finance"></i>Finance💴</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>검색
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/KuraiLuna" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+  
+  
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+    
+    
+    
+    <div class="post-block" lang="ko">
+      <header class="post-header">
+
+<h2 class="post-title" itemprop="name headline">『pwnable.kr』 Memcpy Problem solving
+</h2>
+
+<div class="post-meta">
+  
+  <ul class="breadcrumb">
+          
+            <li><a href="/%EC%95%84%EC%8E%84%EC%9D%B4/">아쎄이</a></li>
+          <li>PWNABLE-KR-MEMCPY-PROBLEM-SOLVING</li>
+        
+  </ul>
+
+</div>
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+          <h1 id="pwnable-kr-Memcpy문제풀이"><a href="#pwnable-kr-Memcpy문제풀이" class="headerlink" title="[pwnable.kr]_Memcpy문제풀이"></a>[pwnable.kr]_Memcpy문제풀이</h1><h1 id="pwnable-kr-Memcpy문제풀이-1"><a href="#pwnable-kr-Memcpy문제풀이-1" class="headerlink" title="[pwnable.kr]_Memcpy문제풀이"></a>[pwnable.kr]_Memcpy문제풀이</h1><hr>
+<p>[##<em>Image|kage@ckzgDK&#x2F;btrurTZhlKe&#x2F;AAAAAAAAAAAAAAAAAAAAAPKrL30niRtloT9dWS60hM9-7QUrEGyKtVz8Nj3oU39A&#x2F;img.gif?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;3JidSdGgSNBM%2B6GwoI8kzOf2hJk%3D|CDM|1.3|{“originWidth”:371,”originHeight”:278,”style”:”alignCenter”}</em>##]</p>
+<p>Right then, haha. Every problem I pick,<br>the difficulty just goes utterly mental,<br>doesn’t it? </p>
+<p>It’s been quite lunatic so far, ōxō.<br><del>It’s been quite lunatic so far, ōxō.</del></p>
+<p>[##<em>Image|kage@lAz7z&#x2F;btruuheiHHV&#x2F;AAAAAAAAAAAAAAAAAAAAAP0OQKski3TnrIVqr78yhsxpiseF-edGB3l_KDkATCvH&#x2F;img.jpg?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;gOmWZbTYoL7aer5lXf0MJjnFEDo%3D|CDM|1.3|{“originWidth”:580,”originHeight”:25,”style”:”alignCenter”}</em>##]</p>
+<h3 id="참고-사항"><a href="#참고-사항" class="headerlink" title="| 참고 사항"></a><strong>| 참고 사항</strong></h3><p><a target="_blank" rel="noopener" href="http://www.jaist.ac.jp/iscenter-new/mpc/altix/altixdata/opt/intel/vtune/doc/users_guide/mergedProjects/analyzer_ec/mergedProjects/reference_olh/mergedProjects/instructions/instruct32_hh/vc183.htm">assembly movdqa command</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.felixcloutier.com/x86/movntps">assembly movntps command</a></p>
+<p>[##<em>Image|kage@caXGFy&#x2F;btruuhFp17a&#x2F;AAAAAAAAAAAAAAAAAAAAAJhQOWMVXMbvP4WX4MJtzAvQqMPr_h8HtrgEPi4gQKJo&#x2F;img.png?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;%2BKfDr5%2B28DLRAPEKYebHxq4xwEc%3D|CDM|1.3|{“originWidth”:580,”originHeight”:392,”style”:”alignCenter”}</em>##]</p>
+<p>Screenshot.1</p>
+<p>먼저 지문부터 대충 마이웨이 직역하면</p>
+<p>다음과 같습니다.</p>
+<p>​</p>
+<p>Are you tired of hacking?, take some rest here.</p>
+<p>(으따 해킹하는 거 지겨워졌고 마이 잠깐 좀 쉬랑께?)</p>
+<p>​</p>
+<p>Just help me out with my small</p>
+<p>experiment regarding memcpy performance.</p>
+<p>(memcpy 성능 실험 좀 도와달랑께)</p>
+<p>​</p>
+<p>after that, flag is yours.</p>
+<p>(그럼 키값은 니꺼랑꼐?)</p>
+<p>​</p>
+<p>음… 이번 은 해킹이 아니라고 하네요</p>
+<p>뭐 일단 한번 보지요</p>
+<p>[##<em>Image|kage@cz5BM8&#x2F;btruvukamAZ&#x2F;AAAAAAAAAAAAAAAAAAAAADkrMAOSUM8OkbHMnGlBC53uKp9IXDsQMzCtup7nu3y5&#x2F;img.png?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;8K3b1u8KNsktmpIWrUklBMzSwcI%3D|CDM|1.3|{“originWidth”:580,”originHeight”:431,”style”:”alignCenter”}</em>##]</p>
+<p>Screenshot.2</p>
+<p>저번과 같은 방법으로 터미널을 열고</p>
+<p>접속한 후 리눅스의 ls 명령어로</p>
+<p>파일을 확인해봅니다.</p>
+<p>​</p>
+<p>음 그러니까 memcpy랑</p>
+<p>readme 이 두 개 가 전부군요</p>
+<p>아마 이 계정으로는 키값을 받아</p>
+<p>챙길 수가 없겠습니다.</p>
+<p>[##<em>Image|kage@MII8X&#x2F;btruvtr2Euj&#x2F;AAAAAAAAAAAAAAAAAAAAALqAytOYNkFV4fq_pJIIvUkDCUdE0NSS98mqRhFREQYg&#x2F;img.png?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;5Cdg4tWg91DvIF%2Fcg9FZM%2FtQJ7g%3D|CDM|1.3|{“originWidth”:580,”originHeight”:431,”style”:”alignCenter”}</em>##]</p>
+<p>스샷.3</p>
+<p>대략적으로 아마도 nc 리스닝으로</p>
+<p>일시 적으로 권한 상승으로 해야지만이</p>
+<p>​키값을 받아챙길 수 있는 모양입니다.</p>
+<p>[##<em>Image|kage@NKHUg&#x2F;btruiPQPz7v&#x2F;AAAAAAAAAAAAAAAAAAAAACWfTU-hpfBaI7SUygVE5twWFAPblGdPkiFEssMXtS6z&#x2F;img.png?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;ofJeho5GZUD1YyUvk%2FuE%2BSY%2F70I%3D|CDM|1.3|{“originWidth”:580,”originHeight”:435,”style”:”alignCenter”}</em>##]</p>
+<p>스샷.4</p>
+<p>그럼 리스닝으로 접속해 봅시다</p>
+<p>접속해보니 memcpy이 동작하는 것을</p>
+<p>볼 수 있습니다. 찾아보니 이 파일은</p>
+<p>​</p>
+<p>C언어로 메모리를 복사하는 함수</p>
+<p>로 작동하는 걸로 추측이 됩니다.</p>
+<p>[##<em>Image|kage@bIImde&#x2F;btruwICgRN4&#x2F;AAAAAAAAAAAAAAAAAAAAAKfDSOZI7aI8wZXzcr0g2pOR-4tTuH0Cbndxo3eqBTdU&#x2F;img.png?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;XNYvvYB5EipK7WYoLXdJz7uIv1M%3D|CDM|1.3|{“originWidth”:580,”originHeight”:436,”style”:”alignCenter”}</em>##]</p>
+<p>스샷. 5</p>
+<p>memcpy 파일은 범위 내 수를 입력받습니다.</p>
+<p>범위 수가 아니면 바로 종료되고 범위 내 수를</p>
+<p>10번 입력받게 되면 메모리를 느린 복사와</p>
+<p>​</p>
+<p>빠른 복사 과정을 거친다고 합니다.</p>
+<p>근데 5까지만 과정을 거치다가 갑자기</p>
+<p>오류를 내뱉더니 죽었습니다¨。ōxō</p>
+<p><del>오류를 내뱉더니 죽었습니다¨。ōxō</del>  </p>
+<p>다시 말해 이 프로그램에는 중간 과정이 끊긴다는</p>
+<p>문제를 발견했고 실행 시 나오는 메시지처럼</p>
+<p>memcpy의 느리고 빠른 버전의 구현, 다양한</p>
+<p>​</p>
+<p>크기의 데이터 비교가 있는데 중간에 끊기게</p>
+<p>하지 않고 구간을 모두 가능하면 키값을</p>
+<p>준다고 합니다. 그럼 소스코드를 분석해 봅시다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br></pre></td><td class="code"><pre><span class="line">// compiled with : gcc -o memcpy memcpy.c -m32 -lm</span><br><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;string.h&gt;</span><br><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line">#include &lt;signal.h&gt;</span><br><span class="line">#include &lt;unistd.h&gt;</span><br><span class="line">#include &lt;sys/mman.h&gt;</span><br><span class="line">#include &lt;math.h&gt;</span><br><span class="line"></span><br><span class="line">unsigned long long rdtsc()&#123;</span><br><span class="line">        asm(&quot;rdtsc&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">char* slow_memcpy(char* dest, const char* src, size_t len)&#123;</span><br><span class="line">	int i;</span><br><span class="line">	for (i=0; i&lt;len; i++) &#123;</span><br><span class="line">		dest[i] = src[i];</span><br><span class="line">	&#125;</span><br><span class="line">	return dest;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">char* fast_memcpy(char* dest, const char* src, size_t len)&#123;</span><br><span class="line">	size_t i;</span><br><span class="line">	// 64-byte block fast copy</span><br><span class="line">	if(len &gt;= 64)&#123;</span><br><span class="line">		i = len / 64;</span><br><span class="line">		len &amp;= (64-1);</span><br><span class="line">		while(i-- &gt; 0)&#123;</span><br><span class="line">			__asm__ __volatile__ (</span><br><span class="line">			&quot;movdqa (%0), %%xmm0\n&quot;</span><br><span class="line">			&quot;movdqa 16(%0), %%xmm1\n&quot;</span><br><span class="line">			&quot;movdqa 32(%0), %%xmm2\n&quot;</span><br><span class="line">			&quot;movdqa 48(%0), %%xmm3\n&quot;</span><br><span class="line">			&quot;movntps %%xmm0, (%1)\n&quot;</span><br><span class="line">			&quot;movntps %%xmm1, 16(%1)\n&quot;</span><br><span class="line">			&quot;movntps %%xmm2, 32(%1)\n&quot;</span><br><span class="line">			&quot;movntps %%xmm3, 48(%1)\n&quot;</span><br><span class="line">			::&quot;r&quot;(src),&quot;r&quot;(dest):&quot;memory&quot;);</span><br><span class="line">			dest += 64;</span><br><span class="line">			src += 64;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	// byte-to-byte slow copy</span><br><span class="line">	if(len) slow_memcpy(dest, src, len);</span><br><span class="line">	return dest;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main(void)&#123;</span><br><span class="line"></span><br><span class="line">	setvbuf(stdout, 0, _IONBF, 0);</span><br><span class="line">	setvbuf(stdin, 0, _IOLBF, 0);</span><br><span class="line"></span><br><span class="line">	printf(&quot;Hey, I have a boring assignment for CS class.. :(\n&quot;);</span><br><span class="line">	printf(&quot;The assignment is simple.\n&quot;);</span><br><span class="line"></span><br><span class="line">	printf(&quot;-----------------------------------------------------\n&quot;);</span><br><span class="line">	printf(&quot;- What is the best implementation of memcpy?        -\n&quot;);</span><br><span class="line">	printf(&quot;- 1. implement your own slow/fast version of memcpy -\n&quot;);</span><br><span class="line">	printf(&quot;- 2. compare them with various size of data         -\n&quot;);</span><br><span class="line">	printf(&quot;- 3. conclude your experiment and submit report     -\n&quot;);</span><br><span class="line">	printf(&quot;-----------------------------------------------------\n&quot;);</span><br><span class="line"></span><br><span class="line">	printf(&quot;This time, just help me out with my experiment and get flag\n&quot;);</span><br><span class="line">	printf(&quot;No fancy hacking, I promise :D\n&quot;);</span><br><span class="line"></span><br><span class="line">	unsigned long long t1, t2;</span><br><span class="line">	int e;</span><br><span class="line">	char* src;</span><br><span class="line">	char* dest;</span><br><span class="line">	unsigned int low, high;</span><br><span class="line">	unsigned int size;</span><br><span class="line">	// allocate memory</span><br><span class="line">	char* cache1 = mmap(0, 0x4000, 7, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0);</span><br><span class="line">	char* cache2 = mmap(0, 0x4000, 7, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0);</span><br><span class="line">	src = mmap(0, 0x2000, 7, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0);</span><br><span class="line"></span><br><span class="line">	size_t sizes[10];</span><br><span class="line">	int i=0;</span><br><span class="line"></span><br><span class="line">	// setup experiment parameters</span><br><span class="line">	for(e=4; e&lt;14; e++)&#123;	// 2^13 = 8K</span><br><span class="line">		low = pow(2,e-1);</span><br><span class="line">		high = pow(2,e);</span><br><span class="line">		printf(&quot;specify the memcpy amount between %d ~ %d : &quot;, low, high);</span><br><span class="line">		scanf(&quot;%d&quot;, &amp;size);</span><br><span class="line">		if( size &lt; low || size &gt; high )&#123;</span><br><span class="line">			printf(&quot;don&#x27;t mess with the experiment.\n&quot;);</span><br><span class="line">			exit(0);</span><br><span class="line">		&#125;</span><br><span class="line">		sizes[i++] = size;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	sleep(1);</span><br><span class="line">	printf(&quot;ok, lets run the experiment with your configuration\n&quot;);</span><br><span class="line">	sleep(1);</span><br><span class="line"></span><br><span class="line">	// run experiment</span><br><span class="line">	for(i=0; i&lt;10; i++)&#123;</span><br><span class="line">		size = sizes[i];</span><br><span class="line">		printf(&quot;experiment %d : memcpy with buffer size %d\n&quot;, i+1, size);</span><br><span class="line">		dest = malloc( size );</span><br><span class="line"></span><br><span class="line">		memcpy(cache1, cache2, 0x4000);		// to eliminate cache effect</span><br><span class="line">		t1 = rdtsc();</span><br><span class="line">		slow_memcpy(dest, src, size);		// byte-to-byte memcpy</span><br><span class="line">		t2 = rdtsc();</span><br><span class="line">		printf(&quot;ellapsed CPU cycles for slow_memcpy : %llu\n&quot;, t2-t1);</span><br><span class="line"></span><br><span class="line">		memcpy(cache1, cache2, 0x4000);		// to eliminate cache effect</span><br><span class="line">		t1 = rdtsc();</span><br><span class="line">		fast_memcpy(dest, src, size);		// block-to-block memcpy</span><br><span class="line">		t2 = rdtsc();</span><br><span class="line">		printf(&quot;ellapsed CPU cycles for fast_memcpy : %llu\n&quot;, t2-t1);</span><br><span class="line">		printf(&quot;\n&quot;);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	printf(&quot;thanks for helping my experiment!\n&quot;);</span><br><span class="line">	printf(&quot;flag : ----- erased in this source code -----\n&quot;);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>앞에서 experiment5에서 fast_memcpy 구간에서</p>
+<p>오류가 생겨 그 뒷부분이 끊겨 아래 구간이 모두</p>
+<p>통과가 돼야 키값을 구할 수가 있습니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">// run experiment</span><br><span class="line">    for(i=0; i&lt;10; i++)&#123; //</span><br><span class="line">        size = sizes[i];</span><br><span class="line">        printf(&quot;experiment %d : memcpy with buffer size %d\n&quot;, i+1, size);</span><br><span class="line">        dest = malloc( size ); //</span><br><span class="line"></span><br><span class="line">        memcpy(cache1, cache2, 0x4000);		// </span><br><span class="line">        t1 = rdtsc(); //</span><br><span class="line">        slow_memcpy(dest, src, size);		// </span><br><span class="line">        t2 = rdtsc();</span><br><span class="line">        printf(&quot;ellapsed CPU cycles for slow_memcpy : %llu\n&quot;, t2-t1);</span><br><span class="line"></span><br><span class="line">        memcpy(cache1, cache2, 0x4000);		</span><br><span class="line">        t1 = rdtsc();</span><br><span class="line">        fast_memcpy(dest, src, size);		// </span><br><span class="line">        t2 = rdtsc();</span><br><span class="line">        printf(&quot;ellapsed CPU cycles for fast_memcpy : %llu\n&quot;, t2-t1);</span><br><span class="line">        printf(&quot;\n&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    printf(&quot;thanks for helping my experiment!\n&quot;);</span><br><span class="line">    printf(&quot;flag : ----- erased in this source code -----\n&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>1. 입력받은 횟수만큼 10번 진행</p>
+<p>2. 정해준 사이즈만큼 동적으로 메모리 할당하고 이는 dest 저장</p>
+<p>3. rdtsc()는 정확한 시간을 측정하는 함수로 느린 메모리 복사를 진행한 시간 구하고 t1에 저장</p>
+<p>4. t2 또한 빠른 메모리 복사를 진행한 시간이 들어간다.</p>
+<p>5. 느린 메모리 복사와 빠른 메모리 복사는 각각 바이트 단위, 블록 단위 복사를 진행.</p>
+<p>→ 해결책 : 우선 느린 메모리 복사 함수와 빠른 메모리 복사가 정의된 함수</p>
+<p>부분으로 이동해서 함수를 파악해야 할 것입니다.</p>
+<p>다음 slow_memcpy, fast_memcpy 함수입니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">char* slow_memcpy(char* dest, const char* src, size_t len)&#123;</span><br><span class="line">    int i;</span><br><span class="line">    for (i=0; i&lt;len; i++) &#123;</span><br><span class="line">        dest[i] = src[i];</span><br><span class="line">    &#125;</span><br><span class="line">    return dest;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">char* fast_memcpy(char* dest, const char* src, size_t len)&#123;</span><br><span class="line">    size_t i;</span><br><span class="line">    // 64-byte block fast copy</span><br><span class="line">    if(len &gt;= 64)&#123; //길이가 64이상만 아래 빠른 복사 이용</span><br><span class="line">        i = len / 64;</span><br><span class="line">        len &amp;= (64-1);</span><br><span class="line">        while(i-- &gt; 0)&#123;</span><br><span class="line">            __asm__ __volatile__ (</span><br><span class="line">            &quot;movdqa (%0), %%xmm0\n&quot;</span><br><span class="line">            &quot;movdqa 16(%0), %%xmm1\n&quot;</span><br><span class="line">            &quot;movdqa 32(%0), %%xmm2\n&quot;</span><br><span class="line">            &quot;movdqa 48(%0), %%xmm3\n&quot;</span><br><span class="line">            &quot;movntps %%xmm0, (%1)\n&quot;</span><br><span class="line">            &quot;movntps %%xmm1, 16(%1)\n&quot;</span><br><span class="line">            &quot;movntps %%xmm2, 32(%1)\n&quot;</span><br><span class="line">            &quot;movntps %%xmm3, 48(%1)\n&quot;</span><br><span class="line">            ::&quot;r&quot;(src),&quot;r&quot;(dest):&quot;memory&quot;);</span><br><span class="line">            dest += 64;</span><br><span class="line">            src += 64;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    // byte-to-byte slow copy</span><br><span class="line">    if(len) slow_memcpy(dest, src, len);</span><br><span class="line">    return dest;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>slow_memcpy는 src에서 dest로 바이트 단위</p>
+<p>하나하나 쉽지만 느린 방법으로 복사합니다.</p>
+<p>반면 fast_memcpy()는 사이즈가 64바이트</p>
+<p>​</p>
+<p>미만인 경우만 slow_memcpy를 실행</p>
+<p>64바이트 이상일 경우 어셈블리어로</p>
+<p>이루어진 코드를 실행합니다.</p>
+<p>fast_memcpy() 부분에서</p>
+<p>중간에 실행하다가 끊겼기 때문에</p>
+<p>이 어셈블리 코드가 멱여들지 않아 오류를 냈습니다.</p>
+<p>​</p>
+<p>이걸 분석하면 다음과 같습니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">__asm__ __volatile__ (</span><br><span class="line">&quot;movdqa (%0), %%xmm0\n&quot;</span><br><span class="line">&quot;movdqa 16(%0), %%xmm1\n&quot;</span><br><span class="line">&quot;movdqa 32(%0), %%xmm2\n&quot;</span><br><span class="line">&quot;movdqa 48(%0), %%xmm3\n&quot;</span><br><span class="line">&quot;movntps %%xmm0, (%1)\n&quot;</span><br><span class="line">&quot;movntps %%xmm1, 16(%1)\n&quot;</span><br><span class="line">&quot;movntps %%xmm2, 32(%1)\n&quot;</span><br><span class="line">&quot;movntps %%xmm3, 48(%1)\n&quot;</span><br><span class="line">::&quot;r&quot;(src),&quot;r&quot;(dest):&quot;memory&quot;);</span><br></pre></td></tr></table></figure>
+
+<p>movdqa : 정렬된 더블 쿼드 워드 이동</p>
+<p>소스 피어 연산자 (두 번째 피연산자)의</p>
+<p>이중 쿼드 워드를 대상 피연산자</p>
+<p>(첫 번째 피연산자)로 이동합니다.</p>
+<p>​</p>
+<p>이 명령어는 더블 쿼드 워드를</p>
+<p>XMM 레지스터와 128비트</p>
+<p>메모리 위치 간에 또는 두 개의</p>
+<p>​</p>
+<p>XMM 레지스터 간에 이동하는</p>
+<p>데 사용할 수 있습니다.</p>
+<p>소스 또는 대상 피연산자가</p>
+<p>​</p>
+<p>메모리 피연산자 인 경우</p>
+<p>피연산자는 16바이트 경계에 정렬되어야 하면</p>
+<p>그렇지 않으면 일반 보호 예외(#GP)가 생성.</p>
+<p>​</p>
+<p>movntps : 비 임시 힌트를 사용해 포장된 단일 정밀도 부동 소수점 값 저장</p>
+<p>비 휘발성 힌트를 사용해 소스 피연산자의 압축된 부동 소수점 값을 대상</p>
+<p>피연산자로 이동해 메모리에 쓰는 동안 데이터 캐싱을 방지합니다.</p>
+<p>​</p>
+<p>movdqa에서 mov가 값을 이동시키는 명령인데 dq가 더블</p>
+<p>쿼드인듯합니다. 이 명령어는 16바이트 경계에 정렬되지</p>
+<p>않으면 예외가 발생하고 피연산자인 dest의 주소가 16바이트</p>
+<p>단위로 만들어준다면 16바이트 경계에 정렬되어 해결될 것입니다.</p>
+<p>​</p>
+<p>자 그리고 gdb를 사용해서 디버깅으로 키값을 받아 챙겨봅시다 ㅋㅅㅋ</p>
+<p>[##<em>Image|kage@doOthE&#x2F;btruryAcRnX&#x2F;AAAAAAAAAAAAAAAAAAAAAEAZkDEMvaFkDzxloDanc0oLD0D64ypmIV7LawJB7WL1&#x2F;img.png?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;efKfRdVHWdg2bWhZZ%2Bq9jjsglg0%3D|CDM|1.3|{“originWidth”:580,”originHeight”:437,”style”:”alignCenter”}</em>##]</p>
+<p>스샷. 6</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd /tmp</span><br><span class="line">mkdir tm</span><br><span class="line">cd tm</span><br><span class="line">ln -s /home/memcpy/memcpy.c</span><br><span class="line">gcc -o memcpy memcpy.c -m32 -lm</span><br><span class="line">echo &quot;8 16 32 64 128 256 512 1024 2048 4096&quot; &gt; exploit</span><br></pre></td></tr></table></figure>
+
+<p>그리고 gdb를 통해 실행을 한 뒤 fast_memcpy 함수에 들어가서 살펴봅시다.</p>
+<p>[##<em>Image|kage@bxkLEC&#x2F;btrukfaAUV4&#x2F;AAAAAAAAAAAAAAAAAAAAAGC4sY158JEXd21Kv_90wtz1Y4eVWnJLgwO1Jyi4gc8u&#x2F;img.png?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;GMdXZfXdtD4tzlL%2BLAfBpNYEpy8%3D|CDM|1.3|{“originWidth”:580,”originHeight”:435,”style”:”alignCenter”}</em>##]</p>
+<p>스샷. 7</p>
+<p>저 위치에 머물러 있고 edx 값이 0x080487cc입니다.</p>
+<p>4번째까지는 정령이 되어있어서 오류가 안 생겼지만</p>
+<p>​5번째에서는 정렬이 되지 않았습니다.</p>
+<p>[##<em>Image|kage@3fEPw&#x2F;btrurTkKrNc&#x2F;AAAAAAAAAAAAAAAAAAAAAAcEeQdsxp2xYmofp65vFzlHSXaWk2wC06hhh-Zrid94&#x2F;img.png?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;hXBg4z7z5kIRjTRPSdsQnMh2ivs%3D|CDM|1.3|{“originWidth”:580,”originHeight”:435,”style”:”alignCenter”}</em>##]</p>
+<p>[##<em>Image|kage@dLP9jc&#x2F;btrupIRtGKQ&#x2F;AAAAAAAAAAAAAAAAAAAAAFzuAtVzbZYi5tViq8o5uuJh4aFbH_BsgmFRX2s0UEt-&#x2F;img.png?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;d95oDMYuZldW%2BIpBe0kBnbTTxMg%3D|CDM|1.3|{“originWidth”:580,”originHeight”:433,”style”:”alignCenter”}</em>##][##<em>Image|kage@GPRgc&#x2F;btrup8uZYvC&#x2F;AAAAAAAAAAAAAAAAAAAAAFwvjPlTlGwl3huX4FpLHY1O9YmWH4aDsgBXrre8acmH&#x2F;img.png?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;RBzdq2a9oDGD6byEFWbQfqsl3II%3D|CDM|1.3|{“originWidth”:580,”originHeight”:435,”style”:”alignCenter”}</em>##][##<em>Image|kage@uX3y8&#x2F;btruhuMTFUd&#x2F;AAAAAAAAAAAAAAAAAAAAAF07mAF658UjLS7kZKuBLmlFm016HBlbRYIAHQ73G0Ov&#x2F;img.png?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;WWyE75CIGeuoa9bOpVziNzAiBQQ%3D|CDM|1.3|{“originWidth”:580,”originHeight”:436,”style”:”alignCenter”}</em>##][##<em>Image|kage@c7QHlp&#x2F;btruuheiHIl&#x2F;AAAAAAAAAAAAAAAAAAAAABNB1GTw82PQoebasNBpJ0lzYfIoEoggl5n9IFeJvpqq&#x2F;img.png?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;tIrLlnwVl0FlQdPfnIdtgA1pEIc%3D|CDM|1.3|{“originWidth”:580,”originHeight”:433,”style”:”alignCenter”}</em>##]</p>
+<p>스샷. 8</p>
+<p>fast_memcpy 함수+71 위치에 브레이크 포인트를</p>
+<p>걸고 레지스터의 값을 확인하면 edx가 804d060으로</p>
+<p>정렬이 되어있음을 알 수 있겠습니다.</p>
+<p>​</p>
+<p>즉 다시 말해 64에서 8이 부족하기 때문에</p>
+<p>8씩 당겨져야 하고 나머지 값을 디버깅하게 됨</p>
+<p>그것들도 모두 8이 모자라다는 것을 추측됩니다.</p>
+<p>​</p>
+<p>그래서 5를 비롯한 그 뒤의 나머지 값이 8씩 다 더해주어서</p>
+<p>​</p>
+<p>8 16 32 64 128 256 512 1024 2048 4096</p>
+<p><strong>8 16 32 72 136 264 520 1032 2056 4096</strong></p>
+<p>​</p>
+<p>위의 형태를 갖추게 됩니다.</p>
+<p>자 이제 추측한 이걸 토대로</p>
+<p>nc 리스닝 서버를 열어제껴서</p>
+<p>​</p>
+<p>각각 넣어주게 되면은 키값을</p>
+<p>받아챙겨갈 수 있게 됩니다.</p>
+<p>​</p>
+<p>물론 이거 말고도 다른 방법이 있겠지만</p>
+<p>본인은 gdb를 이용하는 방법이 제일</p>
+<p>좋겠다고 생각됩니다.</p>
+<p>​</p>
+<p>이리하여 프로그램을 실행하다 보면</p>
+<p>아래와 같이 키값이 나옵니다</p>
+<p>[##<em>Image|kage@bjQsua&#x2F;btruvtFAhCC&#x2F;AAAAAAAAAAAAAAAAAAAAAAc0dbQx9cH3iLBj9enDlQGS-Zt3zY0x_KSlu-DBkzr7&#x2F;img.png?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;Sp11pKpb3Z%2B16VRlbcWKL%2FNONSI%3D|CDM|1.3|{“originWidth”:580,”originHeight”:433,”style”:”alignCenter”}</em>##]</p>
+<p>스샷. 9</p>
+<p>받아챙긴 키값으로 다시 처음으로 돌아와서</p>
+<p>빈칸에 채워 넣고 auth 버튼 누르면</p>
+<p>[##<em>Image|kage@bSTvHY&#x2F;btrurT57eqV&#x2F;AAAAAAAAAAAAAAAAAAAAAO7mOdZBa4tD0ugVqrgaotCBsctjlwfbdX1_1n5xuYW0&#x2F;img.png?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;0sJry3plY8Bpp%2BM0TuSKOWiernE%3D|CDM|1.3|{“originWidth”:580,”originHeight”:394,”style”:”alignCenter”}</em>##]</p>
+<p>스샷.10</p>
+<p>이렇게 10포인트를 받았다는 메시지와</p>
+<p>[##<em>Image|kage@bYXPvA&#x2F;btruwJOJsMq&#x2F;AAAAAAAAAAAAAAAAAAAAAImKAD6oNwVBSu5lE2rlrRKQLx3ryQv9NT8ksVF03289&#x2F;img.png?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;DJcMWg3wv3cf9cECJ%2BcNB12Tw0Y%3D|CDM|1.3|{“originWidth”:531,”originHeight”:401,”style”:”alignCenter”}</em>##]</p>
+<p>[##<em>Image|kage@dFuK3M&#x2F;btrutkn95G2&#x2F;AAAAAAAAAAAAAAAAAAAAAIQYiQshWMaxpIjEIjY7UOQGLdMY32EsD2Yn0LYwCGzJ&#x2F;img.png?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;697mmTMcjvOHyfpwL1y3xKl3Ts8%3D|CDM|1.3|{“originWidth”:580,”originHeight”:449,”style”:”alignCenter”}</em>##]</p>
+<p>스샷.11</p>
+<p>그리고 돌아와보면 이렇게</p>
+<p>풀었다는 뜻으로 녹색 점선으로</p>
+<p>표시가 되었습니다.</p>
+<p>​</p>
+<p>긴 글을 보시느라 감사합니다.</p>
+<p>수고하셨습니다:)</p>
+<p>[##<em>Image|kage@cMckJ6&#x2F;btruuij1nQB&#x2F;AAAAAAAAAAAAAAAAAAAAAK0FDh73CdHRykcY_7-TRaeviq64PKZYUaNpqr0gTrt5&#x2F;img.jpg?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;v4BN9x52ruJLrhyIPiWQtJlP%2BWM%3D|CDM|1.3|{“originWidth”:580,”originHeight”:25,”style”:”alignCenter”}</em>##]</p>
+<p>좋은 하루 되시고 하시는 일 잘 되시고</p>
+<p>날이 덥습니다 더위 먹지 않게 유의하시고</p>
+<p>우환폐렴 조심하세요</p>
+<p>[##<em>Image|kage@b5wcdO&#x2F;btruyObnOBW&#x2F;AAAAAAAAAAAAAAAAAAAAAKaB4B1X6qIrNkMkVBfGY6eLtaTHje8sFQaPaShMYs-D&#x2F;img.png?credential&#x3D;yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&amp;expires&#x3D;1756652399&amp;allow_ip&#x3D;&amp;allow_referer&#x3D;&amp;signature&#x3D;po1Hlcf89xMQdZnnOG2Q%2Foqku%2BE%3D|CDM|1.3|{“originWidth”:320,”originHeight”:320,”style”:”alignCenter”}</em>##]</p>
+<p>업로드 한 텍스트 파일 텍스트들 전부<br>vedal987 스타일 영국식 영어번역 요청<br><a target="_blank" rel="noopener" href="https://x.com/vedal987">https://x.com/vedal987</a></p>
+<p>단 파일 안에있는 우환폐렴 단어는<br>꼭 포함해서 번역 하고 안에 있는 마크다운<br>코드 형식은 유지하고 끝나면 텍스트 파일로 만들어서<br>다운로드 할 수있겠끔, 코드 블럭 부분은 텍스트 형식으로 유지한체 요청</p>
+
+      </div>
+      
+      
+      
+    </div>
+    
+  <ul class="breadcrumb">
+          
+            <li><a href="/%EC%95%84%EC%8E%84%EC%9D%B4/">아쎄이</a></li>
+          <li>PWNABLE-KR-MEMCPY-PROBLEM-SOLVING</li>
+        
+  </ul>
+
+    
+    
+    
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          목차
+        </li>
+        <li class="sidebar-nav-overview">
+          흝어보기
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#pwnable-kr-Memcpy%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4"><span class="nav-number">1.</span> <span class="nav-text">[pwnable.kr]_Memcpy문제풀이</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#pwnable-kr-Memcpy%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4-1"><span class="nav-number">2.</span> <span class="nav-text">[pwnable.kr]_Memcpy문제풀이</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EC%B0%B8%EA%B3%A0-%EC%82%AC%ED%95%AD"><span class="nav-number">2.0.1.</span> <span class="nav-text">| 참고 사항</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Luna"
+      src="https://kurailuna.github.io/images/lumine.png">
+  <p class="site-author-name" itemprop="name">Luna</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">29</span>
+          <span class="site-state-item-name">포스트</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">카테고리</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">태그</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://x.com/Luna0x03" title="Twitter → https:&#x2F;&#x2F;x.com&#x2F;Luna0x03" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.pixiv.net/users/1112945" title="Instagram → https:&#x2F;&#x2F;www.pixiv.net&#x2F;users&#x2F;1112945" rel="noopener" target="_blank"><i class="fa fa-fw fa-instagram"></i></a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2016 – 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-Luna0x03"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Luna</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v7.3.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.7.2
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'default',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+
+</body>
+</html>
