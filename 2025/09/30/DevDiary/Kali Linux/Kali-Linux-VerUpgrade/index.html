@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-bounce.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"kurailuna.github.io","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","width":240,"display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: &#39;ko&#39;,autoDisplay: false}, &#39;google_tran">
+<meta property="og:type" content="article">
+<meta property="og:title" content="(Kali Linux) VerUpgrade">
+<meta property="og:url" content="https://kurailuna.github.io/2025/09/30/DevDiary/Kali%20Linux/Kali-Linux-VerUpgrade/index.html">
+<meta property="og:site_name" content="Luna&#39;s Developer Diary">
+<meta property="og:description" content="function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: &#39;ko&#39;,autoDisplay: false}, &#39;google_tran">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://luna0x03.github.io/PostImages/DevDiary/etc/Kali%20Linux/[Kali-Linux]-VerUpgrade.png">
+<meta property="article:published_time" content="2025-09-30T03:18:36.000Z">
+<meta property="article:modified_time" content="2025-09-29T16:39:35.460Z">
+<meta property="article:author" content="Luna">
+<meta property="article:tag" content="Kali Linux">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://luna0x03.github.io/PostImages/DevDiary/etc/Kali%20Linux/[Kali-Linux]-VerUpgrade.png">
+
+<link rel="canonical" href="https://kurailuna.github.io/2025/09/30/DevDiary/Kali%20Linux/Kali-Linux-VerUpgrade/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true
+  };
+</script>
+
+  <title>(Kali Linux) VerUpgrade | Luna's Developer Diary</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Luna's Developer Diary" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Luna's Developer Diary</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <h1 class="site-subtitle" itemprop="description">printf("Hello World!");</h1>
+      
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>홈</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>태그</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>카테고리</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>아카이브</a>
+
+  </li>
+        <li class="menu-item menu-item-finance💴">
+
+    <a href="https://luna0x03.github.io/Finance.html" rel="noopener" target="_blank"><i class="fa fa-fw fa-Finance"></i>Finance💴</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>검색
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/KuraiLuna" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://kurailuna.github.io/2025/09/30/DevDiary/Kali%20Linux/Kali-Linux-VerUpgrade/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://kurailuna.github.io/images/lumine.png">
+      <meta itemprop="name" content="Luna">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Luna's Developer Diary">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          (Kali Linux) VerUpgrade
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">작성일</span>
+              
+
+              <time title="Post created: 2025-09-30 12:18:36 / Updated at: 01:39:35" itemprop="dateCreated datePublished" datetime="2025-09-30T12:18:36+09:00">2025-09-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/DevDiary/" itemprop="url" rel="index"><span itemprop="name">DevDiary</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/DevDiary/Kali-Linux/" itemprop="url" rel="index"><span itemprop="name">Kali Linux</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div style="TEXT-ALIGN: center">
+        <div id="google_translate_element"></div>
+            <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                <script type="text/javascript">
+                            function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: 'ko',autoDisplay: false}, 'google_translate_element');}
+                </script>
+                    </script>
+</div>
+
+
+<h1 id="Kali-Linux-VerUpgrade"><a href="#Kali-Linux-VerUpgrade" class="headerlink" title="[Kali Linux] VerUpgrade"></a>[Kali Linux] VerUpgrade</h1><p style="text-align:center">
+<img border="0" width="60%" height="70%" src="https://luna0x03.github.io/PostImages/DevDiary/etc/Kali%20Linux/[Kali-Linux]-VerUpgrade.png"><br></p>
+
+<p>🎼Songs I listened to whilst writing🎼</p>
+<ul>
+<li>Mermaid Melody Pichi Pichi Pitch OST</li>
+<li>Genshin Impact OST For Mondstadt</li>
+<li>Bullet Heaven 2 OST : Powerful and Bright</li>
+</ul>
+<br>
+
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Right,so it seems Kali Linux has finally seen fit to offer an upgrade to its version.<br>It’s been a fair old while mind you.<br>And,naturally,<br>before I even think about cracking on with a spot of bug hunting practice,<br> I suppose I’ll just have to get that upgrade sorted out immediately, won’t I?</p>
+<h3 id="📌-A-Quick-Summary"><a href="#📌-A-Quick-Summary" class="headerlink" title="📌 A Quick Summary"></a>📌 A Quick Summary</h3><p>So, the upgrade to version 2025.3,then.<br>It appears to bring back<strong>Nexmon support</strong>,<br>alongside a<strong>changed Vagrant build method</strong><br>and a smattering of <strong>new tools</strong> you see.</p>
+<p>The overall user experience is<br>actually rather decent,<br>quite usable, even. Though, one must be rather careful as<br>I did encounter some package conflicts and configuration<br>issues in a few instances, which frankly,<br>can be a bit of a nuisance.<br><br></p>
+<h3 id="1-Preparations-Before-Undertaking-the-Upgrade"><a href="#1-Preparations-Before-Undertaking-the-Upgrade" class="headerlink" title="1. Preparations Before Undertaking the Upgrade"></a>1. Preparations Before Undertaking the Upgrade</h3><ul>
+<li><strong>First, one ought to verify the currently installed version</strong>: <br> <code>lsb_release -a</code> OR <code>/etc/os-release</code>  </li>
+<li><strong>Backup</strong>: Important configuration files <br> (<code>/etc/apt/sources.list</code>, <code>/etc/hosts</code>, user home directory, and so on)  </li>
+<li><strong>Next, the system update</strong>:  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> apt update</span><br><span class="line">$ <span class="built_in">sudo</span> apt upgrade</span><br><span class="line">$ <span class="built_in">sudo</span> apt dist-upgrade</span><br></pre></td></tr></table></figure></li>
+<li>(Optional) Do check whether the kali-archive-keyring is up-to-date — <br> this helps in preventing any repository key conflicts, you see.</li>
+<li><strong>Finally, execute the upgrade command itself</strong>:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> apt full-upgrade</span><br></pre></td></tr></table></figure></li>
+</ul>
+<br>
+
+<h3 id="2025-3-Release-Key-Changes-Summarised"><a href="#2025-3-Release-Key-Changes-Summarised" class="headerlink" title="2025.3 Release: Key Changes Summarised"></a>2025.3 Release: Key Changes Summarised</h3><p>The following points highlight the main updates,<br>as referenced from the official blog<br>and release notes.</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Changes</th>
+<th>Expected Impact &#x2F; Points to Note</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Nexmon Support Restored</td>
+<td>Enables Monitor Mode &#x2F; Packet Injection <br> for Raspberry Pi’s built-in Wi-Fi</td>
+<td>Utilising the Pi for wireless <br> security assessments <br> becomes easier once again <br> (<a target="_blank" rel="noopener" href="https://www.kali.org/blog/kali-linux-2025-3-release/" title="Kali Linux 2025.3 Release (Vagrant &amp; Nexmon) | Kali Linux Blog">Kali Linux</a>)</td>
+</tr>
+<tr>
+<td>Vagrant Image Build Method Changed</td>
+<td>A new method has been adopted <br> no longer Packer-based  (<a target="_blank" rel="noopener" href="https://www.kali.org/blog/kali-linux-2025-3-release/" title="Kali Linux 2025.3 Release (Vagrant &amp; Nexmon) | Kali Linux Blog">Kali Linux</a>)</td>
+<td>If accustomed to the previous method,<br> one might notice differences during <br> the image regeneration process</td>
+</tr>
+<tr>
+<td>Theme &#x2F; Icon Update</td>
+<td><code>kali-themes 2025.3.0</code> <br> package has been merged into rolling <br> (<a target="_blank" rel="noopener" href="https://pkg.kali.org/news/641668/kali-themes-202530-migrated-to-kali-rolling/?utm_source=chatgpt.com" title="kali-themes 2025.3.0 migrated to kali-rolling">pkg.kali.org</a>)</td>
+<td>Icons have changed, <br> some theme elements altered</td>
+</tr>
+<tr>
+<td>New Tools &amp; Package Updates</td>
+<td>Various hacking &#x2F; pentesting tools <br> have been newly added or updated  (<a target="_blank" rel="noopener" href="https://www.kali.org/blog/kali-linux-2025-3-release/" title="Kali Linux 2025.3 Release (Vagrant &amp; Nexmon) | Kali Linux Blog">Kali Linux</a>)</td>
+<td>Plenty of new functionalities <br> to test out,see</td>
+</tr>
+<tr>
+<td>Other Stabilisation Revisions&amp;Bug Fixes</td>
+<td>Addresses existing package conflicts, <br> bolsters missing security patches, <br> etc.</td>
+<td>Some services may require a restart or settings re- <br> verification after the upgrade</td>
+</tr>
+</tbody></table>
+<h3 id="3-My-Impressions-from-Actual-Use-Observed-Changes"><a href="#3-My-Impressions-from-Actual-Use-Observed-Changes" class="headerlink" title="3. My Impressions from Actual Use &amp; Observed Changes"></a>3. My Impressions from Actual Use &amp; Observed Changes</h3><p>Here, <strong>one ought to note down their impressions,</strong><br><strong>naturally including the specifics of their own setup</strong><br><strong>(hardware specifications, intended usage, and such like)</strong> .</p>
+<p><strong>Below are a few examples of points one might consider</strong> :</p>
+<p>✅ The Rather Favourable Points, Then</p>
+<ul>
+<li>A discernibly snappier boot &#x2F; reboot time,<br>one might say.</li>
+<li>Wi-Fi related tasks <br> (particularly with Raspberry Pi and wireless penetration testing) <br> felt considerably smoother,all thanks to the return of Nexmon.</li>
+<li>A handful of the new tools proved themselves rather useful, <br> I found.</li>
+<li>A visually tidier experience overall, <br> due to the theme and icon adjustments.</li>
+</ul>
+<p>❌ What Didn’t Quite Work Out &#x2F; Issues Noticed</p>
+<ul>
+<li>Ran into a few conflicts with specific package versions <br> (dependency issues, for instance).</li>
+<li>The changes to themes and icons occasionally <br>resulted in a bit of a mismatch with pre-existing configurations.</li>
+<li>Following the upgrade, some services <Br> (such as network utilities or daemons) <br> didn’t quite auto-start as expected, or <br> their configurations got themselves in a bit of a tangle.</li>
+<li>The documentation and guides are still rather <br>lacking, one finds, requiring a bit more time than strictly necessary <Br> to get one’s head around the new changes.</li>
+</ul>
+<h3 id="⚙️-Performance-Comparison-Ex-before-vs-after"><a href="#⚙️-Performance-Comparison-Ex-before-vs-after" class="headerlink" title="⚙️ Performance Comparison (Ex.before vs after)"></a>⚙️ Performance Comparison (Ex.before vs after)</h3><table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Prior to Upgrade</th>
+<th>Post-Upgrade</th>
+<th>Change</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Kernel Version</td>
+<td>Ex: 6.x</td>
+<td>Ex: 6.x+</td>
+<td>± Change</td>
+</tr>
+<tr>
+<td>Memory Usage</td>
+<td>Ex: 500MB</td>
+<td>Ex: 520MB</td>
+<td>Slight Increase</td>
+</tr>
+<tr>
+<td>CPU Load</td>
+<td>Low &#x2F; Stable</td>
+<td>Same or More Stable</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Penetration Testing Tool Execution Speed</td>
+<td>Baseline</td>
+<td>Slightly Improved Against Baseline</td>
+<td>+</td>
+</tr>
+</tbody></table>
+<h3 id="4-Upgrade-Tips-Caveats"><a href="#4-Upgrade-Tips-Caveats" class="headerlink" title="4. Upgrade Tips &amp; Caveats"></a>4. Upgrade Tips &amp; Caveats</h3><ul>
+<li><strong>Check</strong> <code>/etc/apt/sources.list</code> : Do ensure the repositories are all correct, won’t you?</li>
+<li><strong>Beware of kali-archive-keyring conflicts</strong> : One might encounter key authentication errors, you see.</li>
+<li><strong>Backup is absolutely essential</strong>: Especially for any custom configuration files and, <br> of course, your user data.</li>
+<li><strong>Do account for new theme &#x2F; icon differences</strong>: The UI might well be rather different from what <Br>you’re accustomed to, so a period of adjustment will be required.</li>
+<li><strong>Method for resolving package conflicts</strong>:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> apt -f install</span><br><span class="line">$ <span class="built_in">sudo</span> dpkg --configure -a</span><br></pre></td></tr></table></figure></li>
+<li><strong>Check for any anomalies</strong> : after restarting services &#x2F; rebooting.</li>
+<li><strong>Consult the documentation &#x2F; manuals for changed tools</strong> : <br> One will need to learn the usage of any <br>new or altered tools, naturally.</li>
+</ul>
+<hr>
+<h3 id="5-Summary-Recommendation"><a href="#5-Summary-Recommendation" class="headerlink" title="5. Summary &amp; Recommendation"></a>5. Summary &amp; Recommendation</h3><p>Right, so, in summary, Kali Linux 2025.3 is, on the whole,<br>a rather significant upgrade,<br>bringing both feature enhancements and<br>a fair few new functionalities, you see.</p>
+<p>Those who frequently engage in Raspberry Pi <Br>wireless operations or indeed utilise Vagrant <br>environments are particularly likely to notice the improvements, one finds.</p>
+<p>However, it’s worth noting that during the upgrade process itself, <Br> one might well encounter a few inconveniences, <Br> such as package conflicts or configuration issues getting a bit muddled, unfortunately.</p>
+<p>As such, a thorough backup is absolutely essential, <br>and one would be well-advised to combine that with a careful, <br>step-by-step verification process.</p>
+<hr>
+<details style="font-size: 20px;">
+<summary>6. 👉 My Adopted Method </summary>
+<p style="font-size: 16px;">Step.1 Existing Installation: Should one already have an existing <br> Kali Linux installation in place, a swift update can be performed at any given juncture.</p> 
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ <span class="built_in">echo</span> <span class="string">&quot;deb http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware&quot;</span> | <span class="built_in">sudo</span> <span class="built_in">tee</span> /etc/apt/sources.list</span><br><span class="line">[...]</span><br><span class="line"></span><br><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ <span class="built_in">sudo</span> apt update &amp;&amp; <span class="built_in">sudo</span> apt -y full-upgrade</span><br><span class="line">[...]</span><br><span class="line"></span><br><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ <span class="built_in">cp</span> -vrbi /etc/skel/. ~/</span><br><span class="line">[...]</span><br><span class="line"></span><br><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ [ -f /var/run/reboot-required ] &amp;&amp; <span class="built_in">sudo</span> reboot -f</span><br></pre></td></tr></table></figure>
+
+<br>
+<p style="font-size: 16px;">Step.2 Verification After Reboot: <br></p> 
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ grep VERSION /etc/os-release</span><br><span class="line">VERSION=<span class="string">&quot;2025.3&quot;</span></span><br><span class="line">VERSION_ID=<span class="string">&quot;2025.3&quot;</span></span><br><span class="line">VERSION_CODENAME=<span class="string">&quot;kali-rolling&quot;</span></span><br><span class="line"></span><br><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ <span class="built_in">uname</span> -v</span><br><span class="line"><span class="comment">#1 SMP PREEMPT_DYNAMIC Kali 6.12.38-1kali1 (2025-08-12)</span></span><br><span class="line"></span><br><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ <span class="built_in">uname</span> -r</span><br><span class="line">6.12.38+kali-amd64</span><br></pre></td></tr></table></figure>
+
+</details>
+<!-- 접은 글 끝 -->
+
+
+<h3 id="7-📎Reference-Link"><a href="#7-📎Reference-Link" class="headerlink" title="7. 📎Reference Link"></a>7. 📎Reference Link</h3><p>Link 1 : Kali Linux 2025.3 Release (Vagrant &amp; Nexmon)<br><a target="_blank" rel="noopener" href="https://www.kali.org/blog/kali-linux-2025-3-release/">https://www.kali.org/blog/kali-linux-2025-3-release/</a></p>
+<br>
+Link 2 : My Adopted Method <br>
+https://www.kali.org/blog/kali-linux-2025-3-release/
+<br>
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://kurailuna.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Kali-Linux/" rel="tag"># Kali Linux</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2025/09/29/ETC/Genshin-Cartoons/Sweet-Flower-Collecting-Sucrose/" rel="prev" title="【Genshin Impact】Sucrose Sweet Flower Collecting">
+      <i class="fa fa-chevron-left"></i> 【Genshin Impact】Sucrose Sweet Flower Collecting
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          목차
+        </li>
+        <li class="sidebar-nav-overview">
+          흝어보기
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Kali-Linux-VerUpgrade"><span class="nav-number">1.</span> <span class="nav-text">[Kali Linux] VerUpgrade</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.1.</span> <span class="nav-text">Introduction</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%93%8C-A-Quick-Summary"><span class="nav-number">1.1.1.</span> <span class="nav-text">📌 A Quick Summary</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Preparations-Before-Undertaking-the-Upgrade"><span class="nav-number">1.1.2.</span> <span class="nav-text">1. Preparations Before Undertaking the Upgrade</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2025-3-Release-Key-Changes-Summarised"><span class="nav-number">1.1.3.</span> <span class="nav-text">2025.3 Release: Key Changes Summarised</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-My-Impressions-from-Actual-Use-Observed-Changes"><span class="nav-number">1.1.4.</span> <span class="nav-text">3. My Impressions from Actual Use &amp; Observed Changes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%9A%99%EF%B8%8F-Performance-Comparison-Ex-before-vs-after"><span class="nav-number">1.1.5.</span> <span class="nav-text">⚙️ Performance Comparison (Ex.before vs after)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-Upgrade-Tips-Caveats"><span class="nav-number">1.1.6.</span> <span class="nav-text">4. Upgrade Tips &amp; Caveats</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-Summary-Recommendation"><span class="nav-number">1.1.7.</span> <span class="nav-text">5. Summary &amp; Recommendation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%F0%9F%93%8EReference-Link"><span class="nav-number">1.1.8.</span> <span class="nav-text">7. 📎Reference Link</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Luna"
+      src="https://kurailuna.github.io/images/lumine.png">
+  <p class="site-author-name" itemprop="name">Luna</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-name">포스트</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">카테고리</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">태그</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://x.com/Luna0x03" title="Twitter → https:&#x2F;&#x2F;x.com&#x2F;Luna0x03" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.pixiv.net/users/1112945" title="Instagram → https:&#x2F;&#x2F;www.pixiv.net&#x2F;users&#x2F;1112945" rel="noopener" target="_blank"><i class="fa fa-fw fa-instagram"></i></a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2016 – 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-Luna0x03"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Luna</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v7.3.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.7.2
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'default',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+
+</body>
+</html>

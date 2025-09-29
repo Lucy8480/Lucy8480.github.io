@@ -195,7 +195,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://kurailuna.github.io/2020/08/01/White%20Hacking/pwnable.kr/pwnable_kr_Collision_%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/">
+    <link itemprop="mainEntityOfPage" href="https://kurailuna.github.io/2020/08/04/White%20Hacking/pwnable.kr/pwnable-kr-Input-Problem-Solving/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://kurailuna.github.io/images/lumine.png">
@@ -209,7 +209,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/08/01/White%20Hacking/pwnable.kr/pwnable_kr_Collision_%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4/" class="post-title-link" itemprop="url">『pwnable.kr』 Collision Problem solving</a>
+            <a href="/2020/08/04/White%20Hacking/pwnable.kr/pwnable-kr-Input-Problem-Solving/" class="post-title-link" itemprop="url">『pwnable.kr』Input Problem Solving</a>
         </h2>
 
         <div class="post-meta">
@@ -219,14 +219,14 @@
               </span>
               <span class="post-meta-item-text">작성일</span>
 
-              <time title="Post created: 2020-08-01 18:38:11" itemprop="dateCreated datePublished" datetime="2020-08-01T18:38:11+09:00">2020-08-01</time>
+              <time title="Post created: 2020-08-04 02:40:11" itemprop="dateCreated datePublished" datetime="2020-08-04T02:40:11+09:00">2020-08-04</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Updated at: 2025-08-22 06:17:41" itemprop="dateModified" datetime="2025-08-22T06:17:41+09:00">2025-08-22</time>
+                <time title="Updated at: 2025-08-24 05:48:56" itemprop="dateModified" datetime="2025-08-24T05:48:56+09:00">2025-08-24</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -259,136 +259,189 @@
       
           <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link  href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap"  rel="stylesheet">
-
-<style>
-.left-img {
-  float: left;
-  margin-right: 320px; /* 텍스트와 간격 */
-}
-</style>
-
-<div  style="text-align: center;">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/1%20Rina.gif"  alt="미리보기 방지"  width="300">
-</div> <br>
-
-
-<p>Wow… I had a feeling, but the difficulty’s on another level.<br></p>
-<p>Thats absolutely lunatic, ōxō;;<br><s>That’s absolutely lunatic, ōxō;;</s></p>
-<p>ε-(´・｀)</p>
-<p>Perhaps because it involves a system hack,</p>
-<p>it’s a whole level above the usual web-based</p>
-<p>war games on Wargame.kr in terms of difficulty.</p>
-<p>I ended up referring to someone else’s</p>
-<p>solution while working through it.</p>
-<p>And since posting the actual</p>
-<p>source code would make the thread messy,</p>
-<p>I’ll place it in a text file so it can simply be copy-pasted.</p>
-<p>Anyway, let’s get started right away.</p>
-<div  style="text-align: center;">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/2.png"  width="300">
-</div> <br>
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/01_Rina.gif" alt="미리보기 방지" width="300">
+</div>
 
 <br>
-<img class="left-img" src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/3.png"  width="500">
- <br>
-
-<p>Right, if I’m having a punt at roughly translating<br>the gist of this in my own way,<br>it’s something like this:<br>So, you’re on about MD5 hash collisions then,<br>are we? (···) Right,anyway.</p>
 <br>
-<div class="left-img">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/4.png"  width="500">
-</div>  <br>
 
-<p>Right then, first things first,<br>open up yer Linux terminal.<br>Then you just wanna connect using</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh col@pwnable.kr -p2222</span><br></pre></td></tr></table></figure>
 
-<p>Now,the password right?<br>It won’t actually show up as you’re typing it<br>– don’t mind that,just bash it in,hit Enter,<br>and bam, you’re logged in. Easy peasy!</p>
- <br>
-<div class="left-img">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/5.png"  width="500">
-</div>  <br>
-Right then next up,you just wanna whack in
 
-<p>the ls command to see what files you’ve got lurking around.</p>
-<p>Now col you’d probably reckon that’s<br>some sort of executable or maybe even a Python file, right?</p>
-<p>But the actual one we really need to be bothered with,</p>
-<p>the crucial bit, is <code>col.c</code></p>
- <br>
-<div class="left-img">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/6.png"  width="500px">
-</div>  <br>  <br>
-so if you have a proper gander at the main bit,
-
-<p>the password, right, that needs to be 20</p>
-<p>characters long. And here’s the crucial part:<br>the hash code <code>(0x21DD09EC)</code> and</p>
-<p>the password return value,<br>they’ve both gotta be</p>
-<p>absolutely spot on, exactly the same.<br>No messing about with that, understood</p>
-<p>That<br><code> bash check_password(const char* p)</code><br>Bit, Yeah?<br>What it’s doing is, it’s taking chunks of the data<br>like, 4 bytes at a time – that’s the size of an int, innit?<br>– and it’s then accumulating those into ‘res’ five times.</p>
-<p>So, the thinking is,<br>if you just add the exact same value five times over you should,</p>
-<p>I reckon, get that hash code it’s after. Simple as that, really.</p>
-<h3 id="Derivation-of-results"><a href="#Derivation-of-results" class="headerlink" title="Derivation of results"></a>Derivation of results</h3><div class="left-img">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/7.png"  width="500">
+<p>The difficulty is quite substantial,ōxō</p>
+<p><del>The difficulty is quite substantial,ōxō</del></p>
+<p>In the case of exploits</p>
+<p>I referred to someone else’s exploit code externally</p>
+<p>I referred to it.</p>
+<p>It seems to be socket programming</p>
+<p>and it’s as if I need<br>to refer to some old socket programming books</p>
+<p>lying around at home.</p>
+<p>old socket programming books.</p>
+<p>I need to refer to them.</p>
+<div style="text-align: center;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/02.png" alt="미리보기 방지" width="300">
 </div>
-Figure.1) For and res data expressed by cutting int type 4 bytes each
 
-<p>Right, so that’res’value,yeah?</p>
-<p>That’s just the result of piling up<br>whatever came out of the ‘for’loop,<br>five times over.<br>And if you then,like,divvy that’res’value by five,<br>it turns out that the data</p>
-<p>so if you then like,multiply this lot by five again<br>you’ll find you’re short by 0x4.So,<br>the assumption we’re making here is </p>
-<p>that the data is essentially four lots of<br><code>0x6C5CEC8</code> and then one bit of <code>0x6C5CECC</code> added in.</p>
-<div class="left-img">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/8.png"  width="500">
+<p><del>Kim Jong-sung</del></p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/03.png" alt="미리보기 방지" width="300">
 </div>
-Figure. 2> Data expressed in little endian<br><br>
 
-
-<p>then,since it’s all about little endian,yeah?<br>All you need to do is just feed the program that data<br>in hexadecimal,in the exact sequence.<br>That’s the one.<br><br></p>
-<div class="left-img">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/9.png"  width="500">
-</div>  
-then, so you've gone and chucked the value in hexadecimal
-
-<p>using Python for that, yeah?</p>
-<p>Now, here’s the kicker, mind you:<br>when the program picks that up as an input<br>it’ll jolly well recognise it as a char.<br>So, you just gotta watch out for that. Proper careful,like.</p>
-<h3 id="Flag"><a href="#Flag" class="headerlink" title="Flag"></a>Flag</h3><div class="left-img">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/10.png"  width="500">
-</div>
-Right then, so we've finally bagged the key value.
-
-<p>And with this rather handy key we’ve just nabbed<br>it’s back to the very beginning, isn’t it?</p>
- <br>
-<div class="left-img">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/11.png"  width="500">
-</div>
-Right then, for that 'Flag?' bit down below,
-
-<p>you just gotta punch in your key value.<br>And once that’s</p>
-<p>sorted, hit the’auth’button Simples.</p>
- <br>
-<div class="left-img">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/12.png"  width="500">
-</div>
-Right, and just like that,
-three points were had, apparently.
-
-<p><br><br></p>
-<div class="left-img">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/13.png"  width="500">
-</div>  <br>  <br>
-
-<p>Right,and then you swing back round,<br>and there it is: marked up with a green dotted line.<br>Means you’ve bloody well sorted it, doesn’t it?</p>
-<p>Right, well that’s the whole bloody spiel done.<br>Cheers for wading through all that, yeah : )<br> <br></p>
-<div  style="text-align: center;">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/2.png"  width="300">
-</div> <br>
-Alright then,
-
-<p>hope you have a decent day and<br>all your bits and bobs go swimmingly. </p>
-<p>It’s a proper scorcher out there,<br>mind you, so try not to go getting heatstroke, yeah?</p>
-<p>And, uh, watch out for that bloody Wuhan pneumonia. Stay safe, mate. : )</p>
 <br>
-<div  style="text-align: center;">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/14.png" width= 300></div>  <br>  <br>
+Screenshot 1.
 
+<p>Again, with my straightforward, literal translation, the question is as follows:</p>
+<p><strong>Mom? how can I pass my input to a computer program?</strong></p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/04.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>Screenshot.2</p>
+<p>Right, then I’ll try connecting straight away.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh input2@pwnable.kr -p2222 (pw:guest)</span><br></pre></td></tr></table></figure>
+
+<p>And if I type <code>ls</code> again, you’ll see</p>
+<p>a total of 3 files appear.</p>
+<p>And then,</p>
+<p>with the <code>cat</code> command,</p>
+<p><code>input.c</code></p>
+<p>I’ll check it.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/05.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>Screenshot.3</p>
+<p>Ba ha ha ha ha ha ha</p>
+<p>This source code, you see,</p>
+<p>is rather long, ōxō.</p>
+<p><del>is rather long, ōxō.</del></p>
+<p>Looking at it overall,<br>let’s consider the conditions<br>for passing Stage 1.</p>
+<p>let’s consider the conditions for passing.</p>
+<p>: )</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/06.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>Code.1</p>
+<p>1. Number of arguments &#x3D; 100</p>
+<p>2. argv[‘A’] &#x3D; \x00</p>
+<p>3. argv[‘B’] &#x3D; \x20\x0a\x0d</p>
+<p>If that’s the case, Stage 1 will be completed.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/07.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>Code.2</p>
+<p>It’s Stage 2</p>
+<p>You provide <code>\x00\x0a\x00\xff</code> as stdin input</p>
+<p>you provide input,</p>
+<p>sterr,</p>
+<p>you must give<code>\\x00\\x0a\\x02\\xff</code></p>
+<p>for it to be completed.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/08.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>Code.3</p>
+<p>stage 3.</p>
+<p>It’s an environment variable.</p>
+<p>You simply insert the value<code>\\xde\\xad\\xbe\\xef</code> be into the environment variable called</p>
+<p>into the environment variable.</p>
+<p><code>\\xca\\xfe\\xba\\xbe</code></p>
+<p>you simply insert the value.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/09.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>Code.4</p>
+<p>It’s Stage 4</p>
+<p>You open the file called <code>\\x0a</code></p>
+<p>and the first 4 bytes that are read</p>
+<p><code>\\x00\\x00\\x00\\x00</code></p>
+<p>for it to be completed.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/10.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>Code.5</p>
+<p>It’s Stage 5</p>
+<p><code>atoi(argv\[‘C’\]) = argv\[‘C’\]</code></p>
+<p>The value converted to an integer</p>
+<p>as the port number,</p>
+<p>you open a socket server,</p>
+<p><code>\\xde\\xad\\xbe\\xef</code></p>
+<p>and if you send it,</p>
+<p>Stage 5 will be completed.</p>
+<p>Right, then I’ll attempt the exploit.</p>
+<p>My skills aren’t quite up to<br>writing it myself just yet,</p>
+<p><a target="_blank" rel="noopener" href="https://xerxes-break.tistory.com/290">so I’ll be referring to</a> exploit code</p>
+<p>so I’ll be referring to it.</p>
+<p>It’s written in Python, you see.</p>
+<p>it’s written.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"> </span><br><span class="line">prog = []</span><br><span class="line">prog.append(“/home/input2/<span class="built_in">input</span>”)</span><br><span class="line"><span class="comment">#prog.append(“./test”)</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">99</span>):</span><br><span class="line">    prog.append(“A”)</span><br><span class="line">prog[<span class="built_in">ord</span>(“A”)]=“”</span><br><span class="line">prog[<span class="built_in">ord</span>(‘B’)]=“\x20\x0a\x0d”</span><br><span class="line">prog[<span class="built_in">ord</span>(‘C’)]=“<span class="number">35790</span>”</span><br><span class="line"> </span><br><span class="line">conn = process(prog, stderr=<span class="built_in">open</span>(“stderr”,‘r’), env=&#123;“\xde\xad\xbe\xef”:“\xca\xfe\xba\xbe”&#125;)</span><br><span class="line"><span class="built_in">print</span>(conn.recvuntil(“Stage <span class="number">1</span> clear!”))</span><br><span class="line"> </span><br><span class="line">f = <span class="built_in">open</span>(“\x0a”,‘w’)</span><br><span class="line">f.write(“\x00\x00\x00\x00”)</span><br><span class="line">f.close()</span><br><span class="line"> </span><br><span class="line">conn.sendline(“\x00\x0a\x00\xff”)</span><br><span class="line"><span class="built_in">print</span>(conn.recvuntil(“Stage <span class="number">4</span> clear!”))</span><br><span class="line"> </span><br><span class="line"><span class="comment">#sleep(3)</span></span><br><span class="line">reconn = remote(“<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>”, <span class="number">35790</span>)</span><br><span class="line">reconn.send(“\xde\xad\xbe\xef”)</span><br><span class="line">reconn.close()</span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span>(conn.recvline())</span><br><span class="line"><span class="built_in">print</span>(conn.recvall())</span><br><span class="line"> </span><br><span class="line">conn.interactive()</span><br></pre></td></tr></table></figure>
+
+<p>Code 6.</p>
+<p>However, this code, in the current directory,</p>
+<p>can’t be used, you see.</p>
+<p>Due to a lack of permissions…。</p>
+<p>So, that’s why they say you need to use &#x2F;tmp</p>
+<p>which has the necessary permissions.</p>
+<p>Right, so from &#x2F;tmp</p>
+<p>let’s proceed.</p>
+<p>Oh, and before, I almost forgot to</p>
+<p>take a screenshot, you see.</p>
+<p>If you just run it straight,<br>it’ll say the flag file</p>
+<p>isn’t there,</p>
+<p>and the flag won’t show up.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ln</span> -s /home/input2/flag flag</span><br></pre></td></tr></table></figure>
+
+<p>So, you have to add a symbolic link like this,</p>
+<p>and then give it a go.</p>
+<p>then, if you leave the symbolic link in place</p>
+<p>and proceed,</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/11.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>Screenshot.4</p>
+<p>A short while later, that mint-coloured bit</p>
+<p>that’s the key value, then.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/12.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>With the key value thus acquired</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/13.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>Screenshot.5</p>
+<p>you go back to the first screen,</p>
+<p>input it into the blank space,</p>
+<p>and then just press the ‘auth’ button.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/14.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>And as soon as the mission’s completed,</p>
+<p>you snag 4 points.</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/15.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>And if you come back, you’ll see it’s marked</p>
+<p>with a green dotted line, meaning it’s been solved.</p>
+<p>it’s been marked.</p>
+<p>​</p>
+<p>Thanks for sticking through this long post.</p>
+<p>Well done, then. : )</p>
+<div style="text-alingn: right;">
+<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/16.png" alt="미리보기 방지" width="300">
+</div> <bt>
+
+<p>Have a good day, and<br>I hope everything works out well for you</p>
+<p>It’s quite warm out,<br>so do try and avoid getting heatstroke</p>
+<p>and do take care with<br>the erm, Wuhan pneumonia situation : )</p>
 <div id="disqus_thread"></div>
 <script>
     /**
@@ -425,7 +478,7 @@ Alright then,
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/27/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/27/">27</a><span class="page-number current">28</span><a class="page-number" href="/page/29/">29</a><a class="page-number" href="/page/30/">30</a><a class="extend next" rel="next" href="/page/29/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
+    <a class="extend prev" rel="prev" href="/page/27/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/27/">27</a><span class="page-number current">28</span><a class="page-number" href="/page/29/">29</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/">33</a><a class="extend next" rel="next" href="/page/29/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
   </nav>
 
 
@@ -493,20 +546,20 @@ Alright then,
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">33</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-count">16</span>
         <span class="site-state-item-name">카테고리</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">태그</span></a>
       </div>
   </nav>
