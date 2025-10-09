@@ -226,7 +226,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Updated at: 2025-08-22 06:47:53" itemprop="dateModified" datetime="2025-08-22T06:47:53+09:00">2025-08-22</time>
+                <time title="Updated at: 2025-10-10 01:17:22" itemprop="dateModified" datetime="2025-10-10T01:17:22+09:00">2025-10-10</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -261,7 +261,7 @@
 
 <h1 id="pwnable-kr-Memcpy-Problem-solving"><a href="#pwnable-kr-Memcpy-Problem-solving" class="headerlink" title="[pwnable.kr]_Memcpy Problem solving"></a>[pwnable.kr]_Memcpy Problem solving</h1><hr>
 <div style="text-align: center;">
-<img src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/1_Rina.gif" alt="미리보기 방지" width="300">
+<img src="https://Luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/1_Rina.gif" alt="미리보기 방지" width="300">
 </div>
 
 <style>
@@ -274,7 +274,7 @@
 <p>Right then, haha. Every problem I pick,<br>the difficulty just goes utterly mental,<br>doesn’t it? </p>
 <p>It’s been quite lunatic so far, ōxō.<br><del>It’s been quite lunatic so far, ōxō.</del></p>
 <div style="text-align: center;">
-<img src="https://Luna0x03.github.io/PostImages/White Hacking/CTF/pwnable.kr/Memcpy Problem solving/2.png" alt="미리보기 방지" width="300">
+<img src="https://Luna00110010.github.io/PostImages/White Hacking/CTF/pwnable.kr/Memcpy Problem solving/2.png" alt="미리보기 방지" width="300">
 </div>
 
 <br>
@@ -287,7 +287,7 @@
 </ul>
 <br>
 
-<img class="left-img" src="https://Luna0x03.github.io/PostImages/White Hacking/CTF/pwnable.kr/Memcpy Problem solving/3.png"  width="500">
+<img class="left-img" src="https://Luna00110010.github.io/PostImages/White Hacking/CTF/pwnable.kr/Memcpy Problem solving/3.png"  width="500">
  <br>
 
 <p>Screenshot.1</p>
@@ -304,25 +304,25 @@
 <p>(그럼 키값은 니꺼랑꼐?)</p>
 <p>​</p>
 <p>Right then. Apparently,<br>it’s not a hack this time around.<br>Still, best to have a look, wouldn’t you say?</p>
-<img class="left-img" src="https://luna0x03.github.io/PostImages/White Hacking/CTF/pwnable.kr/Memcpy Problem solving/4.png"  width="500">
+<img class="left-img" src="https://Luna00110010.github.io/PostImages/White Hacking/CTF/pwnable.kr/Memcpy Problem solving/4.png"  width="500">
 Screenshot.2 <br><br>
 
 <p>Right then. As before, just fire up your terminal, get yourself connected, </p>
 <p>and then, naturally, you’ll employ the trusty</p>
 <p>command to have a gander at the files.<br>Is <code>ls</code><br>​</p>
 <p>Right. So,it’s just <code>memcpy</code> and <code>readme</code>,is it?<br>That’s your lot.<br>Doubt we’ll be snagging any keys from this account,then.</p>
-<img class="left-img" src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/003.png"  width="500">
+<img class="left-img" src="https://Luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/003.png"  width="500">
 Screenshot.3<br><br>
 
 <p>Right, then. Looks like we’ll<br>probably need a temporary bit of privilege escalation,<br>likely via an <code>nc</code>listener, to get our hands on that key.</p>
-<img class="left-img" src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/5.png"  width="500">
+<img class="left-img" src="https://Luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/5.png"  width="500">
 
 <p>Screenshot.4</p>
 <p>Right then. Let’s just hop onto that listener.<br>And as soon as we’re in,</p>
 <p>you’ll see <code>memcpy</code> is running.<br>Turns out, this file…</p>
 <p>​</p>
 <p>It appears to be operating as a C function,<br>then, designed for copying memory.</p>
-<img class="left-img" src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/6.png"  width="500">
+<img class="left-img" src="https://Luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/6.png"  width="500">
 Screenshot. 5
 
 <p>The <code>memcpy</code> file apparently takes<br>numbers within a given range.</p>
@@ -370,27 +370,27 @@ Screenshot. 5
 <p>Right then.<br>That instruction, it’ll throw an exception if it’s not aligned to<br>a 16-byte boundary.So, if you just ensure</p>
 <p>the destination operand’s address is 16-byte aligned,<br>that’ll sort the issue right out.</p>
 <p>​<br>Right then. We’ll just fire up GDB,debug it,<br>and then go about snagging that key, won’t we?<br>ㅋㅅㅋ</p>
-<img class="left-img" src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/7.png"  width="500">
+<img class="left-img" src="https://Luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/7.png"  width="500">
 
 <p>Screenshot. 6</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /tmp</span><br><span class="line"><span class="built_in">mkdir</span> tm</span><br><span class="line"><span class="built_in">cd</span> tm</span><br><span class="line"><span class="built_in">ln</span> -s /home/memcpy/memcpy.c</span><br><span class="line">gcc -o memcpy memcpy.c -m32 -lm</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;8 16 32 64 128 256 512 1024 2048 4096&quot;</span> &gt; exploit</span><br></pre></td></tr></table></figure>
 
 <p>Right then. Once we’ve executed that through GDB,<br>we’ll then step into the <code>fast\_memcpy</code> function and have a proper look, shall we?</p>
-<img class="left-img" src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/8.png"  width="500">
+<img class="left-img" src="https://Luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/8.png"  width="500">
 
 <p>Screenshot. 7</p>
 <p>Right then. It’s sat at that location,<br>and the EDX value is <code>0x080487cc</code>.</p>
 <p>Up to the fourth instance,<br>the alignment was perfectly fine,</p>
 <p>so no errors popped up.<br>But the fifth one? It wasn’t aligned at all.</p>
-<img class="left-img" src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/9.png"  width="500">
+<img class="left-img" src="https://Luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/9.png"  width="500">
 
-<img class="left-img" src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/10.png"  width="500">
+<img class="left-img" src="https://Luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/10.png"  width="500">
 
-<img class="left-img" src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/11.png"  width="500">
+<img class="left-img" src="https://Luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/11.png"  width="500">
 
-<img class="left-img" src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/12.png"  width="500">
+<img class="left-img" src="https://Luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/12.png"  width="500">
 
-<img class="left-img" src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/13.png"  width="500">
+<img class="left-img" src="https://Luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/13.png"  width="500">
 Screenshot. 8
 
 <p>Right then. Just set a breakpoint at<br>the <code>fast\_memcpy</code> function,<br>specifically at +71. Check the register value,<br>and you’ll find EDX is indeed aligned at <code>804d060</code></p>
@@ -406,20 +406,20 @@ Screenshot. 8
 <p>​<br>…feed each of those in, and then you’ll finally manage to snag the key.</p>
 <p>​<br>Right. One could,naturally,dabble with other approaches,<br>I suppose.But for my money,using GDB is probably<br>the most sensible way to go about it.</p>
 <p>​<br>So, if you run the program,<br>you’ll find the key value displayed, much as below.</p>
-<img class="left-img" src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/14.png"  width="500">
+<img class="left-img" src="https://Luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/14.png"  width="500">
 
 <p>Screenshot. 9</p>
 <p>With the key value we’ve just, ah,’snagged’,<br>you simply head back to the start,pop it into<br>the blank,and then,naturally,hit that’auth’ button.</p>
-<img class="left-img" src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/15.png"  width="500">
+<img class="left-img" src="https://Luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/15.png"  width="500">
 
 <p>Screenshot.10</p>
 <p>Right.<br>And then you’re presented<br>with a message about securing 10 points</p>
-<img class="left-img" src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/16.png"  width="500">
+<img class="left-img" src="https://Luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/16.png"  width="500">
 <br>
 <br>
 <br>
 <br>
-<img class="left-img" src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/17.png"  width="500">
+<img class="left-img" src="https://Luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/17.png"  width="500">
 
 <p>Screenshot.11</p>
 <p>then. And upon returning,<br>you’ll find it’s indicated<br>with a green dotted line.<br>Signifying it’s, well, resolved.</p>
@@ -427,13 +427,13 @@ Screenshot. 8
 <p>And thanks for actually<br>bothering to read through all that.</p>
 <p>Right then.That’s done, then. :)</p>
 <div style="text-align: center;">
-<img src="https://Luna0x03.github.io/PostImages/White Hacking/CTF/pwnable.kr/Memcpy Problem solving/2.png" alt="미리보기 방지" width="300">
+<img src="https://Luna00110010.github.io/PostImages/White Hacking/CTF/pwnable.kr/Memcpy Problem solving/2.png" alt="미리보기 방지" width="300">
 </div>
 
 <p>Right then.<br>Hope your day isn’t completely rubbish,<br>and whatever you’re cracking on with goes smoothly.</p>
 <p>It’s a bit of a scorcher today,mind you,<br>so try not to go getting heatstroke.<br>And, naturally,<br>do be careful of that Wuhan pneumonia.</p>
 <div  style="text-align: center;">
-<img  src="https://luna0x03.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/18.png" width= 300></div>  <br>  <br>
+<img  src="https://Luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/18.png" width= 300></div>  <br>  <br>
 
 <div id="disqus_thread"></div>
 <script>
