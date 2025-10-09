@@ -5,54 +5,54 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 7.3.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/pihne/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/pihne/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/pihne/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/pihne/images/logo.svg" color="#222">
 
-<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/pihne/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-bounce.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
+<link rel="stylesheet" href="/pihne/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/pihne/lib/pace/pace-theme-bounce.min.css">
+  <script src="/pihne/lib/pace/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"kurailuna.github.io","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","width":240,"display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"github.com","root":"/pihne/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","width":240,"display":"always","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="The difficulty is quite substantial,ōxō The difficulty is quite substantial,ōxō In the case of exploits I referred to someone else’s exploit code externally I referred to it. It seems to be">
 <meta property="og:type" content="article">
 <meta property="og:title" content="『pwnable.kr』Input Problem Solving">
-<meta property="og:url" content="https://kurailuna.github.io/2020/08/04/White%20Hacking/pwnable.kr/pwnable-kr-Input-Problem-Solving/index.html">
-<meta property="og:site_name" content="Luna&#39;s Developer Diary">
+<meta property="og:url" content="https://github.com/pihne/2020/08/04/White%20Hacking/pwnable.kr/pwnable-kr-Input-Problem-Solving/index.html">
+<meta property="og:site_name" content="Pihne&#39;s Developer Diary">
 <meta property="og:description" content="The difficulty is quite substantial,ōxō The difficulty is quite substantial,ōxō In the case of exploits I referred to someone else’s exploit code externally I referred to it. It seems to be">
 <meta property="og:locale" content="ko_KR">
-<meta property="og:image" content="https://luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/01_Rina.gif">
-<meta property="og:image" content="https://luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/02.png">
-<meta property="og:image" content="https://luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/03.png">
-<meta property="og:image" content="https://luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/04.png">
-<meta property="og:image" content="https://luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/05.png">
-<meta property="og:image" content="https://luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/06.png">
-<meta property="og:image" content="https://luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/07.png">
-<meta property="og:image" content="https://luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/08.png">
-<meta property="og:image" content="https://luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/09.png">
-<meta property="og:image" content="https://luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/10.png">
-<meta property="og:image" content="https://luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/11.png">
-<meta property="og:image" content="https://luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/12.png">
-<meta property="og:image" content="https://luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/13.png">
-<meta property="og:image" content="https://luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/14.png">
-<meta property="og:image" content="https://luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/15.png">
-<meta property="og:image" content="https://luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/16.png">
+<meta property="og:image" content="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/01_Rina.gif">
+<meta property="og:image" content="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/02.png">
+<meta property="og:image" content="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/03.png">
+<meta property="og:image" content="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/04.png">
+<meta property="og:image" content="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/05.png">
+<meta property="og:image" content="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/06.png">
+<meta property="og:image" content="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/07.png">
+<meta property="og:image" content="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/08.png">
+<meta property="og:image" content="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/09.png">
+<meta property="og:image" content="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/10.png">
+<meta property="og:image" content="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/11.png">
+<meta property="og:image" content="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/12.png">
+<meta property="og:image" content="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/13.png">
+<meta property="og:image" content="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/14.png">
+<meta property="og:image" content="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/15.png">
+<meta property="og:image" content="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/16.png">
 <meta property="article:published_time" content="2020-08-03T17:40:11.000Z">
-<meta property="article:modified_time" content="2025-10-09T16:15:09.521Z">
-<meta property="article:author" content="Luna">
+<meta property="article:modified_time" content="2025-10-09T21:11:12.199Z">
+<meta property="article:author" content="Pihne">
 <meta property="article:tag" content="White Hacking">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/01_Rina.gif">
+<meta name="twitter:image" content="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/01_Rina.gif">
 
-<link rel="canonical" href="https://kurailuna.github.io/2020/08/04/White%20Hacking/pwnable.kr/pwnable-kr-Input-Problem-Solving/">
+<link rel="canonical" href="https://github.com/pihne/2020/08/04/White%20Hacking/pwnable.kr/pwnable-kr-Input-Problem-Solving/">
 
 
 <script id="page-configurations">
@@ -64,7 +64,7 @@
   };
 </script>
 
-  <title>『pwnable.kr』Input Problem Solving | Luna's Developer Diary</title>
+  <title>『pwnable.kr』Input Problem Solving | Pihne's Developer Diary</title>
   
 
 
@@ -95,7 +95,7 @@
   </style>
 </noscript>
 
-<link rel="alternate" href="/atom.xml" title="Luna's Developer Diary" type="application/atom+xml">
+<link rel="alternate" href="/pihne/atom.xml" title="Pihne's Developer Diary" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -115,9 +115,9 @@
   <div class="site-meta">
 
     <div>
-      <a href="/" class="brand" rel="start">
+      <a href="/pihne/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Luna's Developer Diary</span>
+        <span class="site-title">Pihne's Developer Diary</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -138,32 +138,32 @@
   <ul id="menu" class="menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>홈</a>
+    <a href="/pihne/" rel="section"><i class="fa fa-fw fa-home"></i>홈</a>
 
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+    <a href="/pihne/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>태그</a>
+    <a href="/pihne/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>태그</a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>카테고리</a>
+    <a href="/pihne/categories/" rel="section"><i class="fa fa-fw fa-th"></i>카테고리</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>아카이브</a>
+    <a href="/pihne/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>아카이브</a>
 
   </li>
         <li class="menu-item menu-item-finance💴">
 
-    <a href="https://luna0x03.github.io/Finance.html" rel="noopener" target="_blank"><i class="fa fa-fw fa-Finance"></i>Finance💴</a>
+    <a href="https://pihne22710.github.io/Finance.html" rel="noopener" target="_blank"><i class="fa fa-fw fa-Finance"></i>Finance💴</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -201,7 +201,7 @@
   <div class="reading-progress-bar"></div>
   <a role="button" class="book-mark-link book-mark-link-fixed"></a>
 
-  <a href="https://github.com/KuraiLuna" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+  <a href="https://github.com/pihne" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 
 
     <main class="main">
@@ -217,16 +217,16 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://kurailuna.github.io/2020/08/04/White%20Hacking/pwnable.kr/pwnable-kr-Input-Problem-Solving/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/pihne/2020/08/04/White%20Hacking/pwnable.kr/pwnable-kr-Input-Problem-Solving/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://kurailuna.github.io/images/lumine.png">
-      <meta itemprop="name" content="Luna">
+      <meta itemprop="image" content="https://pihne22710.github.io/images/lumine.png">
+      <meta itemprop="name" content="Pihne">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Luna's Developer Diary">
+      <meta itemprop="name" content="Pihne's Developer Diary">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -247,7 +247,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Updated at: 2025-10-10 01:15:09" itemprop="dateModified" datetime="2025-10-10T01:15:09+09:00">2025-10-10</time>
+                <time title="Updated at: 2025-10-10 06:11:12" itemprop="dateModified" datetime="2025-10-10T06:11:12+09:00">2025-10-10</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -255,15 +255,15 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/White-Hacking/" itemprop="url" rel="index"><span itemprop="name">White Hacking</span></a>
+                  <a href="/pihne/categories/White-Hacking/" itemprop="url" rel="index"><span itemprop="name">White Hacking</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/White-Hacking/CTF/" itemprop="url" rel="index"><span itemprop="name">CTF</span></a>
+                  <a href="/pihne/categories/White-Hacking/CTF/" itemprop="url" rel="index"><span itemprop="name">CTF</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/White-Hacking/CTF/pwnable-kr/" itemprop="url" rel="index"><span itemprop="name">pwnable.kr</span></a>
+                  <a href="/pihne/categories/White-Hacking/CTF/pwnable-kr/" itemprop="url" rel="index"><span itemprop="name">pwnable.kr</span></a>
                 </span>
             </span>
 
@@ -288,7 +288,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <div style="text-align: center;">
-<img src="https://Luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/01_Rina.gif" alt="미리보기 방지" width="300">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/01_Rina.gif" alt="미리보기 방지" width="300">
 </div>
 
 <br>
@@ -307,12 +307,12 @@
 <p>old socket programming books.</p>
 <p>I need to refer to them.</p>
 <div style="text-align: center;">
-<img src="https://Luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/02.png" alt="미리보기 방지" width="300">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/02.png" alt="미리보기 방지" width="300">
 </div>
 
 <p><del>Kim Jong-sung</del></p>
 <div style="text-alingn: right;">
-<img src="https://Luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/03.png" alt="미리보기 방지" width="300">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/03.png" alt="미리보기 방지" width="300">
 </div>
 
 <br>
@@ -321,7 +321,7 @@ Screenshot 1.
 <p>Again, with my straightforward, literal translation, the question is as follows:</p>
 <p><strong>Mom? how can I pass my input to a computer program?</strong></p>
 <div style="text-alingn: right;">
-<img src="https://Luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/04.png" alt="미리보기 방지" width="300">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/04.png" alt="미리보기 방지" width="300">
 </div>
 
 <p>Screenshot.2</p>
@@ -335,7 +335,7 @@ Screenshot 1.
 <p><code>input.c</code></p>
 <p>I’ll check it.</p>
 <div style="text-alingn: right;">
-<img src="https://Luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/05.png" alt="미리보기 방지" width="300">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/05.png" alt="미리보기 방지" width="300">
 </div>
 
 <p>Screenshot.3</p>
@@ -347,7 +347,7 @@ Screenshot 1.
 <p>let’s consider the conditions for passing.</p>
 <p>: )</p>
 <div style="text-alingn: right;">
-<img src="https://Luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/06.png" alt="미리보기 방지" width="300">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/06.png" alt="미리보기 방지" width="300">
 </div>
 
 <p>Code.1</p>
@@ -356,7 +356,7 @@ Screenshot 1.
 <p>3. argv[‘B’] &#x3D; \x20\x0a\x0d</p>
 <p>If that’s the case, Stage 1 will be completed.</p>
 <div style="text-alingn: right;">
-<img src="https://Luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/07.png" alt="미리보기 방지" width="300">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/07.png" alt="미리보기 방지" width="300">
 </div>
 
 <p>Code.2</p>
@@ -367,7 +367,7 @@ Screenshot 1.
 <p>you must give<code>\\x00\\x0a\\x02\\xff</code></p>
 <p>for it to be completed.</p>
 <div style="text-alingn: right;">
-<img src="https://Luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/08.png" alt="미리보기 방지" width="300">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/08.png" alt="미리보기 방지" width="300">
 </div>
 
 <p>Code.3</p>
@@ -378,7 +378,7 @@ Screenshot 1.
 <p><code>\\xca\\xfe\\xba\\xbe</code></p>
 <p>you simply insert the value.</p>
 <div style="text-alingn: right;">
-<img src="https://Luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/09.png" alt="미리보기 방지" width="300">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/09.png" alt="미리보기 방지" width="300">
 </div>
 
 <p>Code.4</p>
@@ -388,7 +388,7 @@ Screenshot 1.
 <p><code>\\x00\\x00\\x00\\x00</code></p>
 <p>for it to be completed.</p>
 <div style="text-alingn: right;">
-<img src="https://Luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/10.png" alt="미리보기 방지" width="300">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/10.png" alt="미리보기 방지" width="300">
 </div>
 
 <p>Code.5</p>
@@ -428,19 +428,19 @@ Screenshot 1.
 <p>then, if you leave the symbolic link in place</p>
 <p>and proceed,</p>
 <div style="text-alingn: right;">
-<img src="https://Luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/11.png" alt="미리보기 방지" width="300">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/11.png" alt="미리보기 방지" width="300">
 </div>
 
 <p>Screenshot.4</p>
 <p>A short while later, that mint-coloured bit</p>
 <p>that’s the key value, then.</p>
 <div style="text-alingn: right;">
-<img src="https://Luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/12.png" alt="미리보기 방지" width="300">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/12.png" alt="미리보기 방지" width="300">
 </div>
 
 <p>With the key value thus acquired</p>
 <div style="text-alingn: right;">
-<img src="https://Luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/13.png" alt="미리보기 방지" width="300">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/13.png" alt="미리보기 방지" width="300">
 </div>
 
 <p>Screenshot.5</p>
@@ -448,13 +448,13 @@ Screenshot 1.
 <p>input it into the blank space,</p>
 <p>and then just press the ‘auth’ button.</p>
 <div style="text-alingn: right;">
-<img src="https://Luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/14.png" alt="미리보기 방지" width="300">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/14.png" alt="미리보기 방지" width="300">
 </div>
 
 <p>And as soon as the mission’s completed,</p>
 <p>you snag 4 points.</p>
 <div style="text-alingn: right;">
-<img src="https://Luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/15.png" alt="미리보기 방지" width="300">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/15.png" alt="미리보기 방지" width="300">
 </div>
 
 <p>And if you come back, you’ll see it’s marked</p>
@@ -464,7 +464,7 @@ Screenshot 1.
 <p>Thanks for sticking through this long post.</p>
 <p>Well done, then. : )</p>
 <div style="text-alingn: right;">
-<img src="https://Luna00110010.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/16.png" alt="미리보기 방지" width="300">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/16.png" alt="미리보기 방지" width="300">
 </div> <bt>
 
 <p>Have a good day, and<br>I hope everything works out well for you</p>
@@ -483,11 +483,12 @@ Screenshot 1.
     */
     (function() { // DON'T EDIT BELOW THIS LINE
     var d = document, s = d.createElement('script');
-    s.src = 'https://kurailuna.disqus.com/embed.js';
+    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
     s.setAttribute('data-timestamp', +new Date());
     (d.head || d.body).appendChild(s);
     })();
 </script>
+<noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 
     
@@ -496,7 +497,7 @@ Screenshot 1.
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/White-Hacking/" rel="tag"># White Hacking</a>
+              <a href="/pihne/tags/White-Hacking/" rel="tag"># White Hacking</a>
           </div>
 
         
@@ -505,11 +506,11 @@ Screenshot 1.
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/08/03/White%20Hacking/pwnable.kr/pwnable-kr-Passcode-Problem-Solving/" rel="prev" title="『pwnable.kr』 passcode Problem solving">
+    <a href="/pihne/2020/08/03/White%20Hacking/pwnable.kr/pwnable-kr-Passcode-Problem-Solving/" rel="prev" title="『pwnable.kr』 passcode Problem solving">
       <i class="fa fa-chevron-left"></i> 『pwnable.kr』 passcode Problem solving
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/08/04/White%20Hacking/pwnable.kr/pwnable-kr-Ieg-Problem-Solving/" rel="next" title="『pwnable.kr』Ieg Problem Solving">
+    <a href="/pihne/2020/08/04/White%20Hacking/pwnable.kr/pwnable-kr-Ieg-Problem-Solving/" rel="next" title="『pwnable.kr』Ieg Problem Solving">
       『pwnable.kr』Ieg Problem Solving <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
@@ -576,37 +577,37 @@ Screenshot 1.
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Luna"
-      src="https://kurailuna.github.io/images/lumine.png">
-  <p class="site-author-name" itemprop="name">Luna</p>
+    <img class="site-author-image" itemprop="image" alt="Pihne"
+      src="https://pihne22710.github.io/images/lumine.png">
+  <p class="site-author-name" itemprop="name">Pihne</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives/">
+          <a href="/pihne/archives/">
         
-          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-            <a href="/categories/">
+            <a href="/pihne/categories/">
           
-        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">카테고리</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-            <a href="/tags/">
+            <a href="/pihne/tags/">
           
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">태그</span></a>
       </div>
   </nav>
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://x.com/Luna0x03" title="Twitter → https:&#x2F;&#x2F;x.com&#x2F;Luna0x03" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i></a>
+        <a href="https://x.com/Pihne22710" title="Twitter → https:&#x2F;&#x2F;x.com&#x2F;Pihne22710" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i></a>
       </span>
       <span class="links-of-author-item">
         <a href="https://www.pixiv.net/users/1112945" title="Instagram → https:&#x2F;&#x2F;www.pixiv.net&#x2F;users&#x2F;1112945" rel="noopener" target="_blank"><i class="fa fa-fw fa-instagram"></i></a>
@@ -638,9 +639,9 @@ Screenshot 1.
   &copy; 2016 – 
   <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
-    <i class="fa fa-Luna0x03"></i>
+    <i class="fa fa-Pihne"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Luna</span>
+  <span class="author" itemprop="copyrightHolder">Pihne</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v7.3.0
   </div>
@@ -683,34 +684,34 @@ Screenshot 1.
 
   
   
-  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
-  <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/pihne/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script size="300" alpha="0.6" zIndex="-1" src="/pihne/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/pihne/lib/anime.min.js"></script>
+  <script src="/pihne/lib/velocity/velocity.min.js"></script>
+  <script src="/pihne/lib/velocity/velocity.ui.min.js"></script>
 
-<script src="/js/utils.js"></script>
+<script src="/pihne/js/utils.js"></script>
 
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
+<script src="/pihne/js/motion.js"></script>
 
 
-<script src="/js/next-boot.js"></script>
-
-<script src="/js/bookmark.js"></script>
+<script src="/pihne/js/schemes/pisces.js"></script>
 
 
+<script src="/pihne/js/next-boot.js"></script>
 
-
-  
+<script src="/pihne/js/bookmark.js"></script>
 
 
 
 
   
-<script src="/js/local-search.js"></script>
+
+
+
+
+  
+<script src="/pihne/js/local-search.js"></script>
 
 
 
