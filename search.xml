@@ -19,34 +19,109 @@
 ]]></content>
   </entry>
   <entry>
-    <title>『C Programming』Random Draw</title>
-    <url>/2025/08/24/DevDiary/C%20Programming/C-Programming-Random-Draw/</url>
+    <title>【Genshin Impact】Aether Cooking For Lisa</title>
+    <url>/2025/09/18/ETC/Genshin-Cartoons/Aether-Cooking-For-Lisa/</url>
     <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<p style="text-align:center">
-<img border="0" width="60%" height="70%" src="https://pihne22710.github.io/PostImages/DevDiary/etc/C_Programming/0.png"><br></p>
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/4.%E3%80%90Genshin%20Impact%E3%80%91Aether%20Cooking%20For%20Lisa/%E3%80%90Genshin%E3%80%91Cartoons.png" alt="" width="400" height="300">
+</div>
+<br><br>
 
-<p>🎼Songs I listened to whilst writing🎼</p>
-<ul>
-<li>Mermaid Melody Pichi Pichi Pitch OST</li>
-<li>Genshin Impact OST For Mondstadt</li>
-<li>Bullet Heaven 2 OST : Powerful and Bright</li>
-<li>Fallen Blood (OblivionAXiS Remix) | Epic Battle Fantasy 4</li>
-</ul>
+<h2 id="Cartoon"><a href="#Cartoon" class="headerlink" title="Cartoon"></a>Cartoon</h2><br>
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/4.%E3%80%90Genshin%20Impact%E3%80%91Aether%20Cooking%20For%20Lisa/1-.jpg" alt="" >
+</div><br>
+<!-- 접은 글 시작 -->
+<details>
+<summary>👉 Korean </summary>
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/4.%E3%80%90Genshin%20Impact%E3%80%91Aether%20Cooking%20For%20Lisa/1.webp" alt="" >
+</div>
+ <Br>
+</details>
+<!-- 접은 글 끝 -->
 <br>
 
-<h2 id="C-Programming-Random-Draw"><a href="#C-Programming-Random-Draw" class="headerlink" title="[C Programming]Random Draw"></a>[C Programming]Random Draw</h2><p>Right, so this past Friday,<br>before the weekend proper,<br>I’d put up a poll on Twitter (X) to choose which</p>
-<p>Genshin Impact character to draw this time.</p>
-<p>But, as it often goes with these things,<br>I didn’t quite get a conclusive result.</p>
-<p>So, in the end, I ended up having to just knock up a<br>C program myself to make the final decision.</p>
-<h3 id="💻Code"><a href="#💻Code" class="headerlink" title="💻Code"></a>💻Code</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span> &#123;</span><br><span class="line">    <span class="type">char</span> names[<span class="number">4</span>][<span class="number">50</span>];  <span class="comment">// Store names (up to 49 characters each)</span></span><br><span class="line">    <span class="type">int</span> n = <span class="number">4</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// User input</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Please enter 4 names:\n&quot;</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Name %d:\n&quot;</span>, i + <span class="number">1</span>);</span><br><span class="line">        fgets(names[i], <span class="keyword">sizeof</span>(names[i]), <span class="built_in">stdin</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Remove trailing newline from fgets</span></span><br><span class="line">        <span class="type">size_t</span> len = <span class="built_in">strlen</span>(names[i]);</span><br><span class="line">        <span class="keyword">if</span> (len &gt; <span class="number">0</span> &amp;&amp; names[i][len - <span class="number">1</span>] == <span class="string">&#x27;\n&#x27;</span>) &#123;</span><br><span class="line">            names[i][len - <span class="number">1</span>] = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Set random seed</span></span><br><span class="line">    srand((<span class="type">unsigned</span> <span class="type">int</span>)time(<span class="literal">NULL</span>));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Select a random index</span></span><br><span class="line">    <span class="type">int</span> winner = rand() % n;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Output result</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n🎉 Result of the draw! The winner is: %s 🎉\n&quot;</span>, names[winner]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<!-- 접은 글 시작 -->
+<details>
+<summary>👉 Click to expand </summary>
+#Lisa #LisaMinci #Aether <br>
+#GenshinImpact <br>
+#リサ #空(原神) #原神 <Br> 
+ <Br>
+</details>
+<!-- 접은 글 끝 -->
 
-<h3 id="🪔Result"><a href="#🪔Result" class="headerlink" title="🪔Result"></a>🪔Result</h3><div style="text-alingn: right;">
-<p style="text-align:center">
-<img border="0" width="60%" height="70%" src="https://pihne22710.github.io/PostImages/DevDiary/etc/C_Programming/2.png">
-</div><br></p>
+<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><p>🪔 Art : <a href="https://x.com/yuushibadesu">@yuushibadesu</a><br><br></p>
+<h3 id="📎-Link-Unknown"><a href="#📎-Link-Unknown" class="headerlink" title="📎 Link :  Unknown"></a>📎 Link :  Unknown</h3><div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
+      <categories>
+        <category>(ETC) Taking a Break</category>
+        <category>【Genshin】Cartoons</category>
+      </categories>
+      <tags>
+        <tag>ETC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【Cartoons】Klee Birthday 2025</title>
+    <url>/2025/08/27/ETC/Genshin-Cartoons/Genshin-Cartoons-Klee-Birthday-2025/</url>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
 
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/4.%E3%80%90Genshin%20Impact%E3%80%91Aether%20Cooking%20For%20Lisa/%E3%80%90Genshin%E3%80%91Cartoons.png" alt="" width="400" height="300">
+</div>
+<br><br>
+
+<h2 id="Cartoon"><a href="#Cartoon" class="headerlink" title="Cartoon"></a>Cartoon</h2><br>
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/2.Klee%20Birthday%202025/1.jpg" alt="" >
+</div><br><br>
+
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/2.Klee%20Birthday%202025/2.jpg" alt="" >
+</div><br><br>
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/2.Klee%20Birthday%202025/3.jpg" alt="" >
+</div>
 <br>
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/2.Klee%20Birthday%202025/4.jpg" alt="" >
+</div>
+<!-- 접은 글 시작 -->
+<details>
+<summary>👉 Click to expand </summary>
+#Alice #Klee #Dodoco #Kaeya #Jean<br>
+#GenshinImpact #KleeBirthday2025 <br>
+#クレー #アリス #ドドコ #ジン <Br> 
+#ガイア・アルベリヒ #原神 <Br>
+#クレー生誕祭2025 
+</details>
+<!-- 접은 글 끝 -->
+
+<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><blockquote class="twitter-tweet"><p lang="en" dir="ltr">I’m late；▽； but happy birthday, Klee!!!🎉💣🎉🍀<br> Alice gives Klee a wonderful present every year！🎁✨<a href="https://twitter.com/hashtag/%E3%82%AF%E3%83%AC%E3%83%BC%E7%94%9F%E8%AA%95%E7%A5%AD2025?src=hash&amp;ref_src=twsrc%5Etfw">#クレー生誕祭2025</a> <a href="https://twitter.com/hashtag/Klee?src=hash&amp;ref_src=twsrc%5Etfw">#Klee</a> <a href="https://t.co/UUSfAmo2Ub">pic.twitter.com/UUSfAmo2Ub</a></p>&mdash; えんぴつ　原神 (@a_kaeyada) <a href="https://twitter.com/a_kaeyada/status/1949579775393354177?ref_src=twsrc%5Etfw">July 27, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
 
 <div id="disqus_thread"></div>
 <script>
@@ -68,11 +143,278 @@
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
       <categories>
-        <category>DevDiary</category>
-        <category>C Programming</category>
+        <category>(ETC) Taking a Break</category>
+        <category>【Genshin】Cartoons</category>
       </categories>
       <tags>
-        <tag>C Programming</tag>
+        <tag>ETC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【Genshin Impact】Hungry Mona and Dodoco Bomb</title>
+    <url>/2025/09/14/ETC/Genshin-Cartoons/Hungry-Mona-And-Dodoco-Bomb/</url>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/4.%E3%80%90Genshin%20Impact%E3%80%91Aether%20Cooking%20For%20Lisa/%E3%80%90Genshin%E3%80%91Cartoons.png" alt="" width="400" height="300">
+</div>
+<br><br>
+
+<h2 id="Cartoon"><a href="#Cartoon" class="headerlink" title="Cartoon"></a>Cartoon</h2><br>
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/3.%20Hungry%20Mona%20and%20Dodoco%20Bomb/1.jpg" alt="" >
+</div><br><br>
+
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/3.%20Hungry%20Mona%20and%20Dodoco%20Bomb/2.jpg" alt="" >
+</div><br><br>
+
+<!-- 접은 글 시작 -->
+<details>
+<summary>👉 Click to expand </summary>
+#Mona #Klee #Dodoco <br>
+#GenshinImpact <br>
+#クレー #モナ #ドドコ <Br> 
+#原神 <Br>
+</details>
+<!-- 접은 글 끝 -->
+
+<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><h3 id="Unknown"><a href="#Unknown" class="headerlink" title="Unknown"></a>Unknown</h3><div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
+      <categories>
+        <category>(ETC) Taking a Break</category>
+        <category>【Genshin】Cartoons</category>
+      </categories>
+      <tags>
+        <tag>ETC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【Genshin Impact】Sucrose Sweet Flower Collecting</title>
+    <url>/2025/09/29/ETC/Genshin-Cartoons/Sweet-Flower-Collecting-Sucrose/</url>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/5.%E3%80%90Genshin%20Impact%E3%80%91Sweet%20Flower%20Collecting%20Sucrose/%E3%80%90Genshin%E3%80%91Cartoons.png" alt="" width="400" height="300">
+</div>
+<br><br>
+
+<h2 id="Cartoon"><a href="#Cartoon" class="headerlink" title="Cartoon"></a>Cartoon</h2><br>
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/5.%E3%80%90Genshin%20Impact%E3%80%91Sweet%20Flower%20Collecting%20Sucrose/Original/1.png" alt="">
+</div><br>
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/5.%E3%80%90Genshin%20Impact%E3%80%91Sweet%20Flower%20Collecting%20Sucrose/Original/2.png" alt="">
+</div><br>
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/5.%E3%80%90Genshin%20Impact%E3%80%91Sweet%20Flower%20Collecting%20Sucrose/Original/3.png" alt="">
+</div><br>
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/5.%E3%80%90Genshin%20Impact%E3%80%91Sweet%20Flower%20Collecting%20Sucrose/Original/4.png" alt="">
+</div><br>
+
+<!-- 접은 글 시작 -->
+<details>
+<summary>👉 Click to expand </summary>
+ <br>
+#GenshinImpact #Sucrose<br>
+#スクロース(原神) #原神<Br> 
+ <Br>
+</details>
+<!-- 접은 글 끝 -->
+
+<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><p>📎 Art : <a href="https://x.com/GS_pno/">@GS_pno</a></p>
+<p>📎 Link : <a href="https://twitter.com/GS_pno/status/1357425415770394624?s=19">Deleted</a></p>
+<p>📎 The First Discovery :<br><a href="https://arca.live/b/genshin/20890197?mode=best&category=%EB%A7%8C%ED%99%94&target=all&keyword=&p=4">https://arca.live/b/genshin/20890197?mode=best&amp;category=%EB%A7%8C%ED%99%94&amp;target=all&amp;keyword=&amp;p=4</a></p>
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
+      <categories>
+        <category>(ETC) Taking a Break</category>
+        <category>【Genshin】Cartoons</category>
+      </categories>
+      <tags>
+        <tag>ETC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【Genshin Impact】Title Unknown 1</title>
+    <url>/2025/09/29/ETC/Genshin-Cartoons/Title-Unknown-1/</url>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/6.%E3%80%90Genshin%20Impact%E3%80%91%20Title%20Unknown%201/%E3%80%90Genshin%E3%80%91Cartoons.png" alt="" width="400" height="300">
+</div>
+<br><br>
+
+<h2 id="Cartoon"><a href="#Cartoon" class="headerlink" title="Cartoon"></a>Cartoon</h2><br>
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC) Taking a Break/【Genshin】Cartoons/6.【Genshin Impact】 Title Unknown 1
+/1.jpg" alt="">
+</div><br>
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC) Taking a Break/【Genshin】Cartoons/6.【Genshin Impact】 Title Unknown 1
+/2.jpg" alt="">
+</div><br>
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC) Taking a Break/【Genshin】Cartoons/6.【Genshin Impact】 Title Unknown 1
+/3.jpg" alt="">
+</div><br>
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC) Taking a Break/【Genshin】Cartoons/6.【Genshin Impact】 Title Unknown 1
+/4.jpg" alt="">
+</div><br>
+
+<h2 id="Bonus"><a href="#Bonus" class="headerlink" title="Bonus"></a>Bonus</h2><!-- 접은 글 시작 -->
+<details>
+<summary><a style="font-size: 18px;">🪔Click To Bonus</a> </summary>
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/6.%E3%80%90Genshin%20Impact%E3%80%91%20Title%20Unknown%201/Bonus.jpg" alt="">
+</div><br>
+</details>
+<!-- 접은 글 끝 -->
+<br><br>
+
+<!-- 접은 글 시작 -->
+<details>
+<summary>👉 Click to expand </summary>
+ <br>
+#GenshinImpact #Venti<br>
+#Tartaglia #Fischl #Amber #Ganyu<Br>
+#ウェンティ(原神) #原神(原神)<Br> 
+#タルタリヤ(原神) #フィッシュル(原神)<Br>
+#アンバー(原神) #カンウ(原神)</details>
+<!-- 접은 글 끝 -->
+
+<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><p>📎 Art : <a href="https://x.com/GS_pno/">@GS_pno</a></p>
+<p>📎 Link : <a href="https://twitter.com/GS_pno/status/1357425415770394624?s=19">Deleted</a></p>
+<p>📎 The First Discovery :<br><a href="https://arca.live/b/genshin/20890197?mode=best&category=%EB%A7%8C%ED%99%94&target=all&keyword=&p=4">https://arca.live/b/genshin/20890197?mode=best&amp;category=%EB%A7%8C%ED%99%94&amp;target=all&amp;keyword=&amp;p=4</a></p>
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
+      <categories>
+        <category>(ETC) Taking a Break</category>
+        <category>【Genshin】Cartoons</category>
+      </categories>
+      <tags>
+        <tag>ETC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【漫画】スクロースの研究日誌</title>
+    <url>/2025/08/24/ETC/Genshin-Cartoons/%E6%BC%AB%E7%94%BB-%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E3%81%AE%E7%A0%94%E7%A9%B6%E6%97%A5%E8%AA%8C/</url>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/4.%E3%80%90Genshin%20Impact%E3%80%91Aether%20Cooking%20For%20Lisa/%E3%80%90Genshin%E3%80%91Cartoons.png" alt="" width="400" height="300">
+</div>
+<br><br>
+
+<h2 id="Cartoon"><a href="#Cartoon" class="headerlink" title="Cartoon"></a>Cartoon</h2><br>
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/1.%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E3%81%AE%E7%A0%94%E7%A9%B6%E6%97%A5%E8%AA%8C/1.jpg" alt="" >
+</div><br><br>
+
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/1.%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E3%81%AE%E7%A0%94%E7%A9%B6%E6%97%A5%E8%AA%8C/2.jpg" alt="" >
+</div>
+<!-- 접은 글 시작 -->
+<details>
+<summary>👉 Click to expand </summary>
+#Sucrose #GenshinImpact #Klee <br>
+#スクロース #原神 #クレー
+</details>
+<!-- 접은 글 끝 -->
+
+<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">推しの誕生日…言葉は要らない…<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/GenshinImpact?src=hash&amp;ref_src=twsrc%5Etfw">#GenshinImpact</a> <a href="https://twitter.com/hashtag/%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9?src=hash&amp;ref_src=twsrc%5Etfw">#スクロース</a> <a href="https://twitter.com/hashtag/Sucrose?src=hash&amp;ref_src=twsrc%5Etfw">#Sucrose</a> <a href="https://twitter.com/hashtag/%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E7%94%9F%E8%AA%95%E7%A5%AD2021?src=hash&amp;ref_src=twsrc%5Etfw">#スクロース生誕祭2021</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E_%E3%82%AD%E3%83%A3%E3%83%A9%E7%94%9F%E8%AA%95%E7%A5%AD?src=hash&amp;ref_src=twsrc%5Etfw">#原神_キャラ生誕祭</a> <a href="https://t.co/8lJS6ERZCV">pic.twitter.com/8lJS6ERZCV</a></p>&mdash; アリクイのイカク (@arikuigames1105) <a href="https://twitter.com/arikuigames1105/status/1463885185875808261?ref_src=twsrc%5Etfw">November 25, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
+      <categories>
+        <category>(ETC) Taking a Break</category>
+        <category>【Genshin】Cartoons</category>
+      </categories>
+      <tags>
+        <tag>ETC</tag>
       </tags>
   </entry>
   <entry>
@@ -871,6 +1213,136 @@
       </tags>
   </entry>
   <entry>
+    <title>『C Programming』Random Draw</title>
+    <url>/2025/08/24/DevDiary/C%20Programming/C-Programming-Random-Draw/</url>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<p style="text-align:center">
+<img border="0" width="60%" height="70%" src="https://pihne22710.github.io/PostImages/DevDiary/etc/C_Programming/0.png"><br></p>
+
+<p>🎼Songs I listened to whilst writing🎼</p>
+<ul>
+<li>Mermaid Melody Pichi Pichi Pitch OST</li>
+<li>Genshin Impact OST For Mondstadt</li>
+<li>Bullet Heaven 2 OST : Powerful and Bright</li>
+<li>Fallen Blood (OblivionAXiS Remix) | Epic Battle Fantasy 4</li>
+</ul>
+<br>
+
+<h2 id="C-Programming-Random-Draw"><a href="#C-Programming-Random-Draw" class="headerlink" title="[C Programming]Random Draw"></a>[C Programming]Random Draw</h2><p>Right, so this past Friday,<br>before the weekend proper,<br>I’d put up a poll on Twitter (X) to choose which</p>
+<p>Genshin Impact character to draw this time.</p>
+<p>But, as it often goes with these things,<br>I didn’t quite get a conclusive result.</p>
+<p>So, in the end, I ended up having to just knock up a<br>C program myself to make the final decision.</p>
+<h3 id="💻Code"><a href="#💻Code" class="headerlink" title="💻Code"></a>💻Code</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span> &#123;</span><br><span class="line">    <span class="type">char</span> names[<span class="number">4</span>][<span class="number">50</span>];  <span class="comment">// Store names (up to 49 characters each)</span></span><br><span class="line">    <span class="type">int</span> n = <span class="number">4</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// User input</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Please enter 4 names:\n&quot;</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Name %d:\n&quot;</span>, i + <span class="number">1</span>);</span><br><span class="line">        fgets(names[i], <span class="keyword">sizeof</span>(names[i]), <span class="built_in">stdin</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Remove trailing newline from fgets</span></span><br><span class="line">        <span class="type">size_t</span> len = <span class="built_in">strlen</span>(names[i]);</span><br><span class="line">        <span class="keyword">if</span> (len &gt; <span class="number">0</span> &amp;&amp; names[i][len - <span class="number">1</span>] == <span class="string">&#x27;\n&#x27;</span>) &#123;</span><br><span class="line">            names[i][len - <span class="number">1</span>] = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Set random seed</span></span><br><span class="line">    srand((<span class="type">unsigned</span> <span class="type">int</span>)time(<span class="literal">NULL</span>));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Select a random index</span></span><br><span class="line">    <span class="type">int</span> winner = rand() % n;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Output result</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n🎉 Result of the draw! The winner is: %s 🎉\n&quot;</span>, names[winner]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="🪔Result"><a href="#🪔Result" class="headerlink" title="🪔Result"></a>🪔Result</h3><div style="text-alingn: right;">
+<p style="text-align:center">
+<img border="0" width="60%" height="70%" src="https://pihne22710.github.io/PostImages/DevDiary/etc/C_Programming/2.png">
+</div><br></p>
+
+<br>
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
+      <categories>
+        <category>DevDiary</category>
+        <category>C Programming</category>
+      </categories>
+      <tags>
+        <tag>C Programming</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(Linux) Debian Linux LunarVim Install</title>
+    <url>/2025/08/06/DevDiary/Debian%20Linux/Debian-Linux-LunarVim-Install/</url>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div style="TEXT-ALIGN: center">
+        <div id="google_translate_element"></div>
+            <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                <script type="text/javascript">
+                            function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: 'ko',autoDisplay: false}, 'google_translate_element');}
+                </script>
+                    </script>
+</div>
+
+
+<h1 id="Debian-Linux-LunarVim-Install"><a href="#Debian-Linux-LunarVim-Install" class="headerlink" title="[Debian Linux] LunarVim Install"></a>[Debian Linux] LunarVim Install</h1><p style="text-align:center">
+<img border="0" width="60%" height="70%" src="https://pihne22710.github.io/PostImages/LunarVim.png"><br></p>
+
+<p>🎼Songs I listened to whilst writing🎼</p>
+<ul>
+<li>Mermaid Melody Pichi Pichi Pitch OST</li>
+<li>Genshin Impact OST For Mondstadt</li>
+<li>Bullet Heaven 2 OST : Powerful and Bright</li>
+</ul>
+<br>
+
+<h2 id="Debian-LunarVim-Install"><a href="#Debian-LunarVim-Install" class="headerlink" title="[Debian]LunarVim Install"></a>[Debian]LunarVim Install</h2><p>Kali Linux is used for ethical hacking activities,<br><br>but this Debian Linux is for <code>Baekjoon</code> <br><br><a href="https://www.acmicpc.net/">Baekjoon</a> algorithms and various programming activities<br><br><br><br>I’ve added another virtual OS for this purpose.<br><br>Of course, the most critical drawback is that it consumes quite a bit of memory ;ㅅ; <br><br><br></p>
+<p>Among <code>NeoVim</code> editors, one that could be installed instantly<br><br>existed, but its support has ended,<br><br>so I ended up using <code>LunarVim</code>.<br></p>
+<h3 id="Step-1-Upgrade-and-Refresh"><a href="#Step-1-Upgrade-and-Refresh" class="headerlink" title="Step 1. Upgrade and Refresh"></a>Step 1. Upgrade and Refresh</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Upgrade and Refresh</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt update &amp;&amp; <span class="built_in">sudo</span> apt upgrade</span><br><span class="line"></span><br><span class="line"><span class="comment"># This updates all packages on the system</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt upgrade -y</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<br>
+
+<h3 id="Step-2-Debian-Linux-Nerd-Font-Install"><a href="#Step-2-Debian-Linux-Nerd-Font-Install" class="headerlink" title="Step 2. Debian Linux Nerd Font Install"></a>Step 2. Debian Linux Nerd Font Install</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Nerd Font Install</span></span><br><span class="line">$ <span class="built_in">mkdir</span> -p ~/.local/share/fonts</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cd</span> ~/.local/share/fonts &amp;&amp; curl -fLO https://raw.githubusercontent.com/choikangjae/.dotfiles/main/font/JetBrainsMonoNerdFont-Regular.ttf</span><br><span class="line"></span><br><span class="line">$ ~/.local/share/fonts </span><br><span class="line"></span><br><span class="line"><span class="comment"># Font Setting</span></span><br><span class="line"></span><br><span class="line">$ fc-cache -f -v</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="Step-3-NeoVim-0-9-5-Install"><a href="#Step-3-NeoVim-0-9-5-Install" class="headerlink" title="Step 3. NeoVim 0.9.5 Install"></a>Step 3. NeoVim 0.9.5 Install</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># NeoVim 0.9.5 Install</span></span><br><span class="line"></span><br><span class="line">$ wget https://github.com/neovim/neovim/releases/download/v0.9.5/nvim-linux64.tar.gz</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">chmod</span> u+x nvim-linux64.tar.gz</span><br><span class="line"></span><br><span class="line">$ tar -zxvf nvim-linux64.tar.gz</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">sudo</span> <span class="built_in">cp</span> -r nvim-linux64/* /usr/local/</span><br><span class="line"></span><br><span class="line">$ make CMAKE_BUILD_TYPE=Release</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">sudo</span> make install</span><br><span class="line"></span><br><span class="line">$ nvim --version</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="Step-4-Ruby-Install"><a href="#Step-4-Ruby-Install" class="headerlink" title="Step 4. Ruby Install"></a>Step 4. Ruby Install</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Ruby Install</span></span><br><span class="line"></span><br><span class="line">   $ <span class="built_in">sudo</span> apt upgrade -y</span><br><span class="line"></span><br><span class="line">   $ <span class="built_in">sudo</span> apt install ruby-full</span><br><span class="line"></span><br><span class="line">   $ ruby --version</span><br><span class="line"></span><br><span class="line">   $ gem --version</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="Step-5-LunarVim-Install"><a href="#Step-5-LunarVim-Install" class="headerlink" title="Step 5. LunarVim Install"></a>Step 5. LunarVim Install</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># LunarVim Install</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt install make git python3 python3-pip npm nodejs <span class="comment"># Install necessary dependencies</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Install rustup</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt update <span class="comment"># Initialise and refresh</span></span><br><span class="line">  </span><br><span class="line">$ <span class="built_in">sudo</span> apt install curl build-essential</span><br><span class="line"></span><br><span class="line">$ curl --proto <span class="string">&#x27;=https&#x27;</span> --tlsv1.2 -sSf https://sh.rustup.rs | sh</span><br><span class="line"></span><br><span class="line">$ rustup --version</span><br><span class="line"></span><br><span class="line"><span class="comment"># Install necessary dependencies 2</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt install cargo </span><br><span class="line"></span><br><span class="line">$ LV_BRANCH=<span class="string">&#x27;release-1.4/neovim-0.9&#x27;</span> bash &lt;(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.4/neovim-0.9/utils/installer/install.sh)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Semi-permanent usage</span></span><br><span class="line">$ <span class="built_in">alias</span> lvim=<span class="string">&#x27;~/.local/bin/lvim&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Permanent usage</span></span><br><span class="line">$ <span class="built_in">sudo</span> ~/.bashrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># Add to the very bottom, then save</span></span><br><span class="line">$ <span class="built_in">alias</span> lvim=<span class="string">&#x27;~/.local/bin/lvim&#x27;</span> </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
+      <categories>
+        <category>DevDiary</category>
+        <category>Debian Linux</category>
+      </categories>
+      <tags>
+        <tag>Debian Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>(Kali Linux) VerUpgrade</title>
     <url>/2025/09/30/DevDiary/Kali%20Linux/Kali-Linux-VerUpgrade/</url>
     <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1057,11 +1529,9 @@ https://www.kali.org/blog/kali-linux-2025-3-release/
       </tags>
   </entry>
   <entry>
-    <title>(Linux) Debian Linux LunarVim Install</title>
-    <url>/2025/08/06/DevDiary/Debian%20Linux/Debian-Linux-LunarVim-Install/</url>
-    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<div style="TEXT-ALIGN: center">
+    <title>(Directory,Draw Folder Structure) Cmd Tree Command</title>
+    <url>/2025/09/01/DevDiary/Windows/Directory-Draw-Folder-Structure-Cmd-Tree-Command/</url>
+    <content><![CDATA[<div style="TEXT-ALIGN: center">
         <div id="google_translate_element"></div>
             <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
                 <script type="text/javascript">
@@ -1070,37 +1540,37 @@ https://www.kali.org/blog/kali-linux-2025-3-release/
                     </script>
 </div>
 
+<!-- 
+참고 : 
+https://mentha2.tistory.com/211 [행궁동 데이터 엔지니어:티스토리]
+-->
 
-<h1 id="Debian-Linux-LunarVim-Install"><a href="#Debian-Linux-LunarVim-Install" class="headerlink" title="[Debian Linux] LunarVim Install"></a>[Debian Linux] LunarVim Install</h1><p style="text-align:center">
-<img border="0" width="60%" height="70%" src="https://pihne22710.github.io/PostImages/LunarVim.png"><br></p>
+<h1 id="Directory-Draw-Folder-Structure-Cmd-Tree-Command"><a href="#Directory-Draw-Folder-Structure-Cmd-Tree-Command" class="headerlink" title="[Directory,Draw Folder Structure]Cmd Tree Command"></a>[Directory,Draw Folder Structure]Cmd Tree Command</h1><br>
+<p style="text-align:center">
+<img border="0" width="50%" height="50%" src="https://pihne22710.github.io/PostImages/DevDiary/etc/Windows/[ETC]Windows.gif"><br></p>
 
-<p>🎼Songs I listened to whilst writing🎼</p>
-<ul>
-<li>Mermaid Melody Pichi Pichi Pitch OST</li>
-<li>Genshin Impact OST For Mondstadt</li>
-<li>Bullet Heaven 2 OST : Powerful and Bright</li>
+
+<h2 id="Directory-Draw-Folder-Structure-Cmd-Tree-Command-1"><a href="#Directory-Draw-Folder-Structure-Cmd-Tree-Command-1" class="headerlink" title="[Directory,Draw Folder Structure]Cmd Tree Command"></a>[Directory,Draw Folder Structure]Cmd Tree Command</h2><p>Right,So This Is How You’d Go About Drawing<br>And Saving Directory And Folder Structures Using<br>The Tree Command In Windows cmd.<br><br></p>
+<h3 id="1-Outputting-Only-Folders-In-A-Tree-Structure"><a href="#1-Outputting-Only-Folders-In-A-Tree-Structure" class="headerlink" title="1. Outputting Only Folders In A Tree Structure."></a>1. Outputting Only Folders In A Tree Structure.</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ tree &#123;Folder Name&#125;</span><br></pre></td></tr></table></figure>
+<br>
+
+<h3 id="2-Including-files-in-the-tree-structure"><a href="#2-Including-files-in-the-tree-structure" class="headerlink" title="2. Including files in the tree structure"></a>2. Including files in the tree structure</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tree /f &#123;Folder Name&#125;</span><br></pre></td></tr></table></figure>
+<br>
+
+<h3 id="3-Displaying-the-tree-structure-using-ASCII-characters"><a href="#3-Displaying-the-tree-structure-using-ASCII-characters" class="headerlink" title="3. Displaying the tree structure using ASCII characters"></a>3. Displaying the tree structure using ASCII characters</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tree /f /a &#123;Folder Name&#125;</span><br></pre></td></tr></table></figure>
+<br>
+
+<h3 id="4-Saving-the-output-results-Redirect-Output"><a href="#4-Saving-the-output-results-Redirect-Output" class="headerlink" title="4. Saving the output results (Redirect Output)"></a>4. Saving the output results (Redirect Output)</h3><ul>
+<li>You Use The Cmd’s Redirect Output Overwrite And Append Characters,<br><code>&gt;</code>and<code>&gt;&gt;</code>,To Save The Output Results.</li>
 </ul>
-<br>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1. Creating a File (if a file with the same name exists,it will be overwritten)</span></span><br><span class="line">$ tree Folder Name &gt; File Name</span><br><span class="line"><span class="comment"># 2. Appending content (appending content to the existing file)</span></span><br><span class="line">$ tree Folder Name &gt;&gt; File Name</span><br></pre></td></tr></table></figure>
 
-<h2 id="Debian-LunarVim-Install"><a href="#Debian-LunarVim-Install" class="headerlink" title="[Debian]LunarVim Install"></a>[Debian]LunarVim Install</h2><p>Kali Linux is used for ethical hacking activities,<br><br>but this Debian Linux is for <code>Baekjoon</code> <br><br><a href="https://www.acmicpc.net/">Baekjoon</a> algorithms and various programming activities<br><br><br><br>I’ve added another virtual OS for this purpose.<br><br>Of course, the most critical drawback is that it consumes quite a bit of memory ;ㅅ; <br><br><br></p>
-<p>Among <code>NeoVim</code> editors, one that could be installed instantly<br><br>existed, but its support has ended,<br><br>so I ended up using <code>LunarVim</code>.<br></p>
-<h3 id="Step-1-Upgrade-and-Refresh"><a href="#Step-1-Upgrade-and-Refresh" class="headerlink" title="Step 1. Upgrade and Refresh"></a>Step 1. Upgrade and Refresh</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Upgrade and Refresh</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt update &amp;&amp; <span class="built_in">sudo</span> apt upgrade</span><br><span class="line"></span><br><span class="line"><span class="comment"># This updates all packages on the system</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt upgrade -y</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<br>
-
-<h3 id="Step-2-Debian-Linux-Nerd-Font-Install"><a href="#Step-2-Debian-Linux-Nerd-Font-Install" class="headerlink" title="Step 2. Debian Linux Nerd Font Install"></a>Step 2. Debian Linux Nerd Font Install</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Nerd Font Install</span></span><br><span class="line">$ <span class="built_in">mkdir</span> -p ~/.local/share/fonts</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cd</span> ~/.local/share/fonts &amp;&amp; curl -fLO https://raw.githubusercontent.com/choikangjae/.dotfiles/main/font/JetBrainsMonoNerdFont-Regular.ttf</span><br><span class="line"></span><br><span class="line">$ ~/.local/share/fonts </span><br><span class="line"></span><br><span class="line"><span class="comment"># Font Setting</span></span><br><span class="line"></span><br><span class="line">$ fc-cache -f -v</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>The final output looks like this below.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; tree Directory Name</span><br><span class="line">--- Output Type 1 ---</span><br><span class="line">D:.</span><br><span class="line">├─SQL Expert Guide Practice Files</span><br><span class="line">├─Problems</span><br><span class="line">│  ├─21, 24, 25, 26, 30th Exam Collection</span><br><span class="line">│  ├─21st Exam</span><br><span class="line">│  ├─30th Exam</span><br><span class="line">│  ├─34th Exam</span><br><span class="line">│  └─Short Answer Question Collection</span><br><span class="line">└─Theory_Textbook</span><br><span class="line"></span><br><span class="line">&gt; tree /a Directory Name</span><br><span class="line">--- Output Type 2 (/a option used) ---</span><br><span class="line">+---SQL Expert Guide Practice Files</span><br><span class="line">+---Problems</span><br><span class="line">|   +---21, 24, 25, 26, 30th Exam Collection</span><br><span class="line">|   +---21st Exam</span><br><span class="line">|   +---30th Exam</span><br><span class="line">|   +---34th Exam</span><br><span class="line">|   \---Short Answer Question Collection</span><br><span class="line">\---Theory_Textbook</span><br></pre></td></tr></table></figure>
 
 <br>
 
-<h3 id="Step-3-NeoVim-0-9-5-Install"><a href="#Step-3-NeoVim-0-9-5-Install" class="headerlink" title="Step 3. NeoVim 0.9.5 Install"></a>Step 3. NeoVim 0.9.5 Install</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># NeoVim 0.9.5 Install</span></span><br><span class="line"></span><br><span class="line">$ wget https://github.com/neovim/neovim/releases/download/v0.9.5/nvim-linux64.tar.gz</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">chmod</span> u+x nvim-linux64.tar.gz</span><br><span class="line"></span><br><span class="line">$ tar -zxvf nvim-linux64.tar.gz</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">sudo</span> <span class="built_in">cp</span> -r nvim-linux64/* /usr/local/</span><br><span class="line"></span><br><span class="line">$ make CMAKE_BUILD_TYPE=Release</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">sudo</span> make install</span><br><span class="line"></span><br><span class="line">$ nvim --version</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h3 id="Step-4-Ruby-Install"><a href="#Step-4-Ruby-Install" class="headerlink" title="Step 4. Ruby Install"></a>Step 4. Ruby Install</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Ruby Install</span></span><br><span class="line"></span><br><span class="line">   $ <span class="built_in">sudo</span> apt upgrade -y</span><br><span class="line"></span><br><span class="line">   $ <span class="built_in">sudo</span> apt install ruby-full</span><br><span class="line"></span><br><span class="line">   $ ruby --version</span><br><span class="line"></span><br><span class="line">   $ gem --version</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h3 id="Step-5-LunarVim-Install"><a href="#Step-5-LunarVim-Install" class="headerlink" title="Step 5. LunarVim Install"></a>Step 5. LunarVim Install</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># LunarVim Install</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt install make git python3 python3-pip npm nodejs <span class="comment"># Install necessary dependencies</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Install rustup</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt update <span class="comment"># Initialise and refresh</span></span><br><span class="line">  </span><br><span class="line">$ <span class="built_in">sudo</span> apt install curl build-essential</span><br><span class="line"></span><br><span class="line">$ curl --proto <span class="string">&#x27;=https&#x27;</span> --tlsv1.2 -sSf https://sh.rustup.rs | sh</span><br><span class="line"></span><br><span class="line">$ rustup --version</span><br><span class="line"></span><br><span class="line"><span class="comment"># Install necessary dependencies 2</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt install cargo </span><br><span class="line"></span><br><span class="line">$ LV_BRANCH=<span class="string">&#x27;release-1.4/neovim-0.9&#x27;</span> bash &lt;(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.4/neovim-0.9/utils/installer/install.sh)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Semi-permanent usage</span></span><br><span class="line">$ <span class="built_in">alias</span> lvim=<span class="string">&#x27;~/.local/bin/lvim&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Permanent usage</span></span><br><span class="line">$ <span class="built_in">sudo</span> ~/.bashrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># Add to the very bottom, then save</span></span><br><span class="line">$ <span class="built_in">alias</span> lvim=<span class="string">&#x27;~/.local/bin/lvim&#x27;</span> </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+<h3 id="5-Saving-the-output-results"><a href="#5-Saving-the-output-results" class="headerlink" title="5. Saving the output results"></a>5. Saving the output results</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ tree /f /a &gt; Desired File Name.txt</span><br></pre></td></tr></table></figure>
 
 <div id="disqus_thread"></div>
 <script>
@@ -1123,10 +1593,10 @@ https://www.kali.org/blog/kali-linux-2025-3-release/
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
       <categories>
         <category>DevDiary</category>
-        <category>Debian Linux</category>
+        <category>Windows</category>
       </categories>
       <tags>
-        <tag>Debian Linux</tag>
+        <tag>Windows</tag>
       </tags>
   </entry>
   <entry>
@@ -1307,77 +1777,6 @@ https://www.kali.org/blog/kali-linux-2025-3-release/
       </categories>
       <tags>
         <tag>etc</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>(Directory,Draw Folder Structure) Cmd Tree Command</title>
-    <url>/2025/09/01/DevDiary/Windows/Directory-Draw-Folder-Structure-Cmd-Tree-Command/</url>
-    <content><![CDATA[<div style="TEXT-ALIGN: center">
-        <div id="google_translate_element"></div>
-            <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-                <script type="text/javascript">
-                            function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: 'ko',autoDisplay: false}, 'google_translate_element');}
-                </script>
-                    </script>
-</div>
-
-<!-- 
-참고 : 
-https://mentha2.tistory.com/211 [행궁동 데이터 엔지니어:티스토리]
--->
-
-<h1 id="Directory-Draw-Folder-Structure-Cmd-Tree-Command"><a href="#Directory-Draw-Folder-Structure-Cmd-Tree-Command" class="headerlink" title="[Directory,Draw Folder Structure]Cmd Tree Command"></a>[Directory,Draw Folder Structure]Cmd Tree Command</h1><br>
-<p style="text-align:center">
-<img border="0" width="50%" height="50%" src="https://pihne22710.github.io/PostImages/DevDiary/etc/Windows/[ETC]Windows.gif"><br></p>
-
-
-<h2 id="Directory-Draw-Folder-Structure-Cmd-Tree-Command-1"><a href="#Directory-Draw-Folder-Structure-Cmd-Tree-Command-1" class="headerlink" title="[Directory,Draw Folder Structure]Cmd Tree Command"></a>[Directory,Draw Folder Structure]Cmd Tree Command</h2><p>Right,So This Is How You’d Go About Drawing<br>And Saving Directory And Folder Structures Using<br>The Tree Command In Windows cmd.<br><br></p>
-<h3 id="1-Outputting-Only-Folders-In-A-Tree-Structure"><a href="#1-Outputting-Only-Folders-In-A-Tree-Structure" class="headerlink" title="1. Outputting Only Folders In A Tree Structure."></a>1. Outputting Only Folders In A Tree Structure.</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ tree &#123;Folder Name&#125;</span><br></pre></td></tr></table></figure>
-<br>
-
-<h3 id="2-Including-files-in-the-tree-structure"><a href="#2-Including-files-in-the-tree-structure" class="headerlink" title="2. Including files in the tree structure"></a>2. Including files in the tree structure</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tree /f &#123;Folder Name&#125;</span><br></pre></td></tr></table></figure>
-<br>
-
-<h3 id="3-Displaying-the-tree-structure-using-ASCII-characters"><a href="#3-Displaying-the-tree-structure-using-ASCII-characters" class="headerlink" title="3. Displaying the tree structure using ASCII characters"></a>3. Displaying the tree structure using ASCII characters</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tree /f /a &#123;Folder Name&#125;</span><br></pre></td></tr></table></figure>
-<br>
-
-<h3 id="4-Saving-the-output-results-Redirect-Output"><a href="#4-Saving-the-output-results-Redirect-Output" class="headerlink" title="4. Saving the output results (Redirect Output)"></a>4. Saving the output results (Redirect Output)</h3><ul>
-<li>You Use The Cmd’s Redirect Output Overwrite And Append Characters,<br><code>&gt;</code>and<code>&gt;&gt;</code>,To Save The Output Results.</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1. Creating a File (if a file with the same name exists,it will be overwritten)</span></span><br><span class="line">$ tree Folder Name &gt; File Name</span><br><span class="line"><span class="comment"># 2. Appending content (appending content to the existing file)</span></span><br><span class="line">$ tree Folder Name &gt;&gt; File Name</span><br></pre></td></tr></table></figure>
-
-<p>The final output looks like this below.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt; tree Directory Name</span><br><span class="line">--- Output Type 1 ---</span><br><span class="line">D:.</span><br><span class="line">├─SQL Expert Guide Practice Files</span><br><span class="line">├─Problems</span><br><span class="line">│  ├─21, 24, 25, 26, 30th Exam Collection</span><br><span class="line">│  ├─21st Exam</span><br><span class="line">│  ├─30th Exam</span><br><span class="line">│  ├─34th Exam</span><br><span class="line">│  └─Short Answer Question Collection</span><br><span class="line">└─Theory_Textbook</span><br><span class="line"></span><br><span class="line">&gt; tree /a Directory Name</span><br><span class="line">--- Output Type 2 (/a option used) ---</span><br><span class="line">+---SQL Expert Guide Practice Files</span><br><span class="line">+---Problems</span><br><span class="line">|   +---21, 24, 25, 26, 30th Exam Collection</span><br><span class="line">|   +---21st Exam</span><br><span class="line">|   +---30th Exam</span><br><span class="line">|   +---34th Exam</span><br><span class="line">|   \---Short Answer Question Collection</span><br><span class="line">\---Theory_Textbook</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h3 id="5-Saving-the-output-results"><a href="#5-Saving-the-output-results" class="headerlink" title="5. Saving the output results"></a>5. Saving the output results</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ tree /f /a &gt; Desired File Name.txt</span><br></pre></td></tr></table></figure>
-
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
-      <categories>
-        <category>DevDiary</category>
-        <category>Windows</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
       </tags>
   </entry>
   <entry>
@@ -3053,405 +3452,6 @@ Alright then,
       </categories>
       <tags>
         <tag>White Hacking</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【Genshin Impact】Hungry Mona and Dodoco Bomb</title>
-    <url>/2025/09/14/ETC/Genshin-Cartoons/Hungry-Mona-And-Dodoco-Bomb/</url>
-    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/4.%E3%80%90Genshin%20Impact%E3%80%91Aether%20Cooking%20For%20Lisa/%E3%80%90Genshin%E3%80%91Cartoons.png" alt="" width="400" height="300">
-</div>
-<br><br>
-
-<h2 id="Cartoon"><a href="#Cartoon" class="headerlink" title="Cartoon"></a>Cartoon</h2><br>
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/3.%20Hungry%20Mona%20and%20Dodoco%20Bomb/1.jpg" alt="" >
-</div><br><br>
-
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/3.%20Hungry%20Mona%20and%20Dodoco%20Bomb/2.jpg" alt="" >
-</div><br><br>
-
-<!-- 접은 글 시작 -->
-<details>
-<summary>👉 Click to expand </summary>
-#Mona #Klee #Dodoco <br>
-#GenshinImpact <br>
-#クレー #モナ #ドドコ <Br> 
-#原神 <Br>
-</details>
-<!-- 접은 글 끝 -->
-
-<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><h3 id="Unknown"><a href="#Unknown" class="headerlink" title="Unknown"></a>Unknown</h3><div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
-      <categories>
-        <category>(ETC) Taking a Break</category>
-        <category>【Genshin】Cartoons</category>
-      </categories>
-      <tags>
-        <tag>ETC</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【Cartoons】Klee Birthday 2025</title>
-    <url>/2025/08/27/ETC/Genshin-Cartoons/Genshin-Cartoons-Klee-Birthday-2025/</url>
-    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/4.%E3%80%90Genshin%20Impact%E3%80%91Aether%20Cooking%20For%20Lisa/%E3%80%90Genshin%E3%80%91Cartoons.png" alt="" width="400" height="300">
-</div>
-<br><br>
-
-<h2 id="Cartoon"><a href="#Cartoon" class="headerlink" title="Cartoon"></a>Cartoon</h2><br>
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/2.Klee%20Birthday%202025/1.jpg" alt="" >
-</div><br><br>
-
-
-<div style="text-align: center;">
-<img src="https://Luna00110010.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/2.Klee%20Birthday%202025/2.jpg" alt="" >
-</div><br><br>
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/2.Klee%20Birthday%202025/3.jpg" alt="" >
-</div>
-<br>
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/2.Klee%20Birthday%202025/4.jpg" alt="" >
-</div>
-<!-- 접은 글 시작 -->
-<details>
-<summary>👉 Click to expand </summary>
-#Alice #Klee #Dodoco #Kaeya #Jean<br>
-#GenshinImpact #KleeBirthday2025 <br>
-#クレー #アリス #ドドコ #ジン <Br> 
-#ガイア・アルベリヒ #原神 <Br>
-#クレー生誕祭2025 
-</details>
-<!-- 접은 글 끝 -->
-
-<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><blockquote class="twitter-tweet"><p lang="en" dir="ltr">I’m late；▽； but happy birthday, Klee!!!🎉💣🎉🍀<br> Alice gives Klee a wonderful present every year！🎁✨<a href="https://twitter.com/hashtag/%E3%82%AF%E3%83%AC%E3%83%BC%E7%94%9F%E8%AA%95%E7%A5%AD2025?src=hash&amp;ref_src=twsrc%5Etfw">#クレー生誕祭2025</a> <a href="https://twitter.com/hashtag/Klee?src=hash&amp;ref_src=twsrc%5Etfw">#Klee</a> <a href="https://t.co/UUSfAmo2Ub">pic.twitter.com/UUSfAmo2Ub</a></p>&mdash; えんぴつ　原神 (@a_kaeyada) <a href="https://twitter.com/a_kaeyada/status/1949579775393354177?ref_src=twsrc%5Etfw">July 27, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
-      <categories>
-        <category>(ETC) Taking a Break</category>
-        <category>【Genshin】Cartoons</category>
-      </categories>
-      <tags>
-        <tag>ETC</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【Genshin Impact】Sucrose Sweet Flower Collecting</title>
-    <url>/2025/09/29/ETC/Genshin-Cartoons/Sweet-Flower-Collecting-Sucrose/</url>
-    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/5.%E3%80%90Genshin%20Impact%E3%80%91Sweet%20Flower%20Collecting%20Sucrose/%E3%80%90Genshin%E3%80%91Cartoons.png" alt="" width="400" height="300">
-</div>
-<br><br>
-
-<h2 id="Cartoon"><a href="#Cartoon" class="headerlink" title="Cartoon"></a>Cartoon</h2><br>
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/5.%E3%80%90Genshin%20Impact%E3%80%91Sweet%20Flower%20Collecting%20Sucrose/Original/1.png" alt="">
-</div><br>
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/5.%E3%80%90Genshin%20Impact%E3%80%91Sweet%20Flower%20Collecting%20Sucrose/Original/2.png" alt="">
-</div><br>
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/5.%E3%80%90Genshin%20Impact%E3%80%91Sweet%20Flower%20Collecting%20Sucrose/Original/3.png" alt="">
-</div><br>
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/5.%E3%80%90Genshin%20Impact%E3%80%91Sweet%20Flower%20Collecting%20Sucrose/Original/4.png" alt="">
-</div><br>
-
-<!-- 접은 글 시작 -->
-<details>
-<summary>👉 Click to expand </summary>
- <br>
-#GenshinImpact #Sucrose<br>
-#スクロース(原神) #原神<Br> 
- <Br>
-</details>
-<!-- 접은 글 끝 -->
-
-<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><p>📎 Art : <a href="https://x.com/GS_pno/">@GS_pno</a></p>
-<p>📎 Link : <a href="https://twitter.com/GS_pno/status/1357425415770394624?s=19">Deleted</a></p>
-<p>📎 The First Discovery :<br><a href="https://arca.live/b/genshin/20890197?mode=best&category=%EB%A7%8C%ED%99%94&target=all&keyword=&p=4">https://arca.live/b/genshin/20890197?mode=best&amp;category=%EB%A7%8C%ED%99%94&amp;target=all&amp;keyword=&amp;p=4</a></p>
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
-      <categories>
-        <category>(ETC) Taking a Break</category>
-        <category>【Genshin】Cartoons</category>
-      </categories>
-      <tags>
-        <tag>ETC</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【Genshin Impact】Title Unknown 1</title>
-    <url>/2025/09/29/ETC/Genshin-Cartoons/Title-Unknown-1/</url>
-    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/6.%E3%80%90Genshin%20Impact%E3%80%91%20Title%20Unknown%201/%E3%80%90Genshin%E3%80%91Cartoons.png" alt="" width="400" height="300">
-</div>
-<br><br>
-
-<h2 id="Cartoon"><a href="#Cartoon" class="headerlink" title="Cartoon"></a>Cartoon</h2><br>
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC) Taking a Break/【Genshin】Cartoons/6.【Genshin Impact】 Title Unknown 1
-/1.jpg" alt="">
-</div><br>
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC) Taking a Break/【Genshin】Cartoons/6.【Genshin Impact】 Title Unknown 1
-/2.jpg" alt="">
-</div><br>
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC) Taking a Break/【Genshin】Cartoons/6.【Genshin Impact】 Title Unknown 1
-/3.jpg" alt="">
-</div><br>
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC) Taking a Break/【Genshin】Cartoons/6.【Genshin Impact】 Title Unknown 1
-/4.jpg" alt="">
-</div><br>
-
-<h2 id="Bonus"><a href="#Bonus" class="headerlink" title="Bonus"></a>Bonus</h2><!-- 접은 글 시작 -->
-<details>
-<summary><a style="font-size: 18px;">🪔Click To Bonus</a> </summary>
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/6.%E3%80%90Genshin%20Impact%E3%80%91%20Title%20Unknown%201/Bonus.jpg" alt="">
-</div><br>
-</details>
-<!-- 접은 글 끝 -->
-<br><br>
-
-<!-- 접은 글 시작 -->
-<details>
-<summary>👉 Click to expand </summary>
- <br>
-#GenshinImpact #Venti<br>
-#Tartaglia #Fischl #Amber #Ganyu<Br>
-#ウェンティ(原神) #原神(原神)<Br> 
-#タルタリヤ(原神) #フィッシュル(原神)<Br>
-#アンバー(原神) #カンウ(原神)</details>
-<!-- 접은 글 끝 -->
-
-<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><p>📎 Art : <a href="https://x.com/GS_pno/">@GS_pno</a></p>
-<p>📎 Link : <a href="https://twitter.com/GS_pno/status/1357425415770394624?s=19">Deleted</a></p>
-<p>📎 The First Discovery :<br><a href="https://arca.live/b/genshin/20890197?mode=best&category=%EB%A7%8C%ED%99%94&target=all&keyword=&p=4">https://arca.live/b/genshin/20890197?mode=best&amp;category=%EB%A7%8C%ED%99%94&amp;target=all&amp;keyword=&amp;p=4</a></p>
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
-      <categories>
-        <category>(ETC) Taking a Break</category>
-        <category>【Genshin】Cartoons</category>
-      </categories>
-      <tags>
-        <tag>ETC</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【漫画】スクロースの研究日誌</title>
-    <url>/2025/08/24/ETC/Genshin-Cartoons/%E6%BC%AB%E7%94%BB-%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E3%81%AE%E7%A0%94%E7%A9%B6%E6%97%A5%E8%AA%8C/</url>
-    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/4.%E3%80%90Genshin%20Impact%E3%80%91Aether%20Cooking%20For%20Lisa/%E3%80%90Genshin%E3%80%91Cartoons.png" alt="" width="400" height="300">
-</div>
-<br><br>
-
-<h2 id="Cartoon"><a href="#Cartoon" class="headerlink" title="Cartoon"></a>Cartoon</h2><br>
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/1.%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E3%81%AE%E7%A0%94%E7%A9%B6%E6%97%A5%E8%AA%8C/1.jpg" alt="" >
-</div><br><br>
-
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/1.%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E3%81%AE%E7%A0%94%E7%A9%B6%E6%97%A5%E8%AA%8C/2.jpg" alt="" >
-</div>
-<!-- 접은 글 시작 -->
-<details>
-<summary>👉 Click to expand </summary>
-#Sucrose #GenshinImpact #Klee <br>
-#スクロース #原神 #クレー
-</details>
-<!-- 접은 글 끝 -->
-
-<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">推しの誕生日…言葉は要らない…<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/GenshinImpact?src=hash&amp;ref_src=twsrc%5Etfw">#GenshinImpact</a> <a href="https://twitter.com/hashtag/%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9?src=hash&amp;ref_src=twsrc%5Etfw">#スクロース</a> <a href="https://twitter.com/hashtag/Sucrose?src=hash&amp;ref_src=twsrc%5Etfw">#Sucrose</a> <a href="https://twitter.com/hashtag/%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E7%94%9F%E8%AA%95%E7%A5%AD2021?src=hash&amp;ref_src=twsrc%5Etfw">#スクロース生誕祭2021</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E_%E3%82%AD%E3%83%A3%E3%83%A9%E7%94%9F%E8%AA%95%E7%A5%AD?src=hash&amp;ref_src=twsrc%5Etfw">#原神_キャラ生誕祭</a> <a href="https://t.co/8lJS6ERZCV">pic.twitter.com/8lJS6ERZCV</a></p>&mdash; アリクイのイカク (@arikuigames1105) <a href="https://twitter.com/arikuigames1105/status/1463885185875808261?ref_src=twsrc%5Etfw">November 25, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
-      <categories>
-        <category>(ETC) Taking a Break</category>
-        <category>【Genshin】Cartoons</category>
-      </categories>
-      <tags>
-        <tag>ETC</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【Genshin Impact】Aether Cooking For Lisa</title>
-    <url>/2025/09/18/ETC/Genshin-Cartoons/Aether-Cooking-For-Lisa/</url>
-    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/4.%E3%80%90Genshin%20Impact%E3%80%91Aether%20Cooking%20For%20Lisa/%E3%80%90Genshin%E3%80%91Cartoons.png" alt="" width="400" height="300">
-</div>
-<br><br>
-
-<h2 id="Cartoon"><a href="#Cartoon" class="headerlink" title="Cartoon"></a>Cartoon</h2><br>
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/4.%E3%80%90Genshin%20Impact%E3%80%91Aether%20Cooking%20For%20Lisa/1-.jpg" alt="" >
-</div><br>
-<!-- 접은 글 시작 -->
-<details>
-<summary>👉 Korean </summary>
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/4.%E3%80%90Genshin%20Impact%E3%80%91Aether%20Cooking%20For%20Lisa/1.webp" alt="" >
-</div>
- <Br>
-</details>
-<!-- 접은 글 끝 -->
-<br>
-
-<!-- 접은 글 시작 -->
-<details>
-<summary>👉 Click to expand </summary>
-#Lisa #LisaMinci #Aether <br>
-#GenshinImpact <br>
-#リサ #空(原神) #原神 <Br> 
- <Br>
-</details>
-<!-- 접은 글 끝 -->
-
-<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><p>🪔 Art : <a href="https://x.com/yuushibadesu">@yuushibadesu</a><br><br></p>
-<h3 id="📎-Link-Unknown"><a href="#📎-Link-Unknown" class="headerlink" title="📎 Link :  Unknown"></a>📎 Link :  Unknown</h3><div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
-      <categories>
-        <category>(ETC) Taking a Break</category>
-        <category>【Genshin】Cartoons</category>
-      </categories>
-      <tags>
-        <tag>ETC</tag>
       </tags>
   </entry>
 </search>
