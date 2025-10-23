@@ -195,7 +195,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://pihne.github.io/2020/08/04/White%20Hacking/pwnable.kr/pwnable-kr-Random-Problem-Solving/">
+    <link itemprop="mainEntityOfPage" href="https://pihne.github.io/2023/07/02/DevDiary/Baekjoon/Baekjoon_10998/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://pihne22710.github.io/images/lumine.png">
@@ -209,7 +209,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/08/04/White%20Hacking/pwnable.kr/pwnable-kr-Random-Problem-Solving/" class="post-title-link" itemprop="url">『pwnable.kr』Random Problem Solving</a>
+            <a href="/2023/07/02/DevDiary/Baekjoon/Baekjoon_10998/" class="post-title-link" itemprop="url">『ベクジュン·アルゴリズム』A×B</a>
         </h2>
 
         <div class="post-meta">
@@ -219,14 +219,14 @@
               </span>
               <span class="post-meta-item-text">작성일</span>
 
-              <time title="Post created: 2020-08-04 19:35:11" itemprop="dateCreated datePublished" datetime="2020-08-04T19:35:11+09:00">2020-08-04</time>
+              <time title="Post created: 2023-07-02 17:26:11" itemprop="dateCreated datePublished" datetime="2023-07-02T17:26:11+09:00">2023-07-02</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Updated at: 2025-10-10 06:12:01" itemprop="dateModified" datetime="2025-10-10T06:12:01+09:00">2025-10-10</time>
+                <time title="Updated at: 2025-10-10 05:56:56" itemprop="dateModified" datetime="2025-10-10T05:56:56+09:00">2025-10-10</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -234,15 +234,11 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/White-Hacking/" itemprop="url" rel="index"><span itemprop="name">White Hacking</span></a>
+                  <a href="/categories/DevDiary/" itemprop="url" rel="index"><span itemprop="name">DevDiary</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/White-Hacking/CTF/" itemprop="url" rel="index"><span itemprop="name">CTF</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/White-Hacking/CTF/pwnable-kr/" itemprop="url" rel="index"><span itemprop="name">pwnable.kr</span></a>
+                  <a href="/categories/DevDiary/Baekjoon-JP/" itemprop="url" rel="index"><span itemprop="name">Baekjoon(JP)</span></a>
                 </span>
             </span>
 
@@ -257,153 +253,56 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
 <div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/01_Rina.gif" alt="미리보기 방지" width="300">
+<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/10998/Baekjoon.png" alt="미리보기 방지" width="450">
 </div>
 
-<p>Right, this one’s comparatively not too bad</p>
-<p>difficulty-wise, you see</p>
-<p>Right, anyway<br>due to my own circumstances,<br>I suppose</p>
-<p>this study-related post</p>
-<p>will have to be the last of its kind for now</p>
-<p>I should really try a<br>bug bounty this year,<br>at the very latest.</p>
-<p>The situation shows no sign of<br>improving, honestly.</p>
-<p>ε-(´・｀)</p>
-<p>Honestly, rather than wasting all<br>my time and health with some<br>unwanted weekday part-time work,</p>
-<p>with some unwanted weekday part-time work,</p>
-<p>it’d be far less galling to do<br>bug bounties on weekdays</p>
-<p>and just part-time work on weekends.</p>
-<p>it’d be far less galling.</p>
-<p>-`д´-</p>
-<p>Right, anyway I’ll just carry on writing.</p>
-<p>(ㆁᴗㆁ✿)</p>
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/02.png" width="300">
-</div>
-
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/03.png" alt="" width="300">
-</div>
-Screenshot 1.
-
-<p>Right, first let’s have a gander at the question,</p>
-<p>with my own rather straightforward,<br>literal translation</p>
-<p>Daddy, teach me how to use random value in programming!</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/04.png" alt="" width="300">
-</div>
-Screenshot 2.
-
-<p>Right, and then</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh random@pwnable.kr -p2222</span><br></pre></td></tr></table></figure>
-
-<p>you connect straight away.</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/05.png" alt="" width="300">
-</div>
-Screenshot 3.
-
-<p>First,you work out whether<br>the file exists,and then</p>
-<p>you check the <code>random.c</code> file</p>
-<p>I check it</p>
-<p>Right, so it’s a program that receives a<br>key value if you XOR a 4-byte<br>random value with an input value</p>
-<p>if you XOR a 4-byte random value with an input value</p>
-<p>and <code>0xdeadbeef</code> comes out.</p>
-<p>So, ANG? If it’s a random value,<br>does one have to try all possible cases?</p>
-<p>Does one have to try all possible cases? ōxō</p>
-<p><del>Does one have to try all possible cases? ōxō</del></p>
-<p>one might think, but</p>
-<p>the rand() function, unless<br>you provide it with a<br>seed value that changes every time</p>
-<p>will always convert to a constant value</p>
-<p>This constant value, if you work it out,</p>
-<p>will give you the answer.</p>
-<p>Right, then, let’s trace the value using gdb.</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/06.png" alt="" width="300">
-</div>
-Screenshot 4.
-
-<p>Right, so you do the XOR operation,</p>
-<p>and it seems you just need to check<br>the value of eax <code>0xdeadbeef</code></p>
-<p>you just need to check.</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/07.png" alt="" width="300">
-</div>
-
-<p>Screenshot 5.</p>
-<p>If you set a breakpoint and run it, putting in 0</p>
-<p>you can see that 0x6b8b4567 is in eax.</p>
-<p>0x6b8b4567 is in eax</p>
-<p>you can see that it’s in there.</p>
-<p>As XORing with 0 produces the same value,</p>
-<p>you can deduce that the value of rand() is 0x6b8b4567</p>
-<p>you can deduce that it is.</p>
-<p>So, the value we need to input can be found through</p>
-<p><strong>0xdeadbeef ^ 0x6b8b4567</strong></p>
-<p>can be found</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/08.png" alt="" width="300">
-</div>
-
-<p>Screenshot 6: Hexadecimal operation in Java</p>
-<p>If you operate these two using Java programming</p>
-<p>if you operate these two</p>
-<p>the result is</p>
-<p><strong>0xB526FB88</strong></p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/09.png" alt="" width="300">
-</div>
-
-<p>Screenshot 7.</p>
-<p>And if you go to a conversion website and convert it,</p>
-<p><strong>3039230856</strong></p>
-<p>a value like the above is output</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/10.png" alt="" width="300">
-</div>
-Screenshot 8
-
-<p>If you input the outputted value,</p>
-<p>you acquire the key value like this.</p>
-<p>Right, and then with the key value that’s<br>been snagged,</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/11.png" alt="" width="300">
-</div>
-
-<p>Screenshot 9.</p>
-<p>you go back to the first screen,</p>
-<p>input it into the blank space</p>
-<p>and then just press the ‘auth’ button.</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/12.png" alt="" width="300">
-</div>
-
-<p>As soon as the mission’s completed,</p>
-<p>1 point has been snagged.</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/13.png" alt="" width="300">
-</div>
+<style>
+.left-img {
+  float: left;
+  margin-right: 320; /* 텍스트와 간격 */
+}
+</style>
 
 
-<p>then, if you go back to the initial screen again,</p>
-<p>you’ll see that</p>
-<p>it’s marked as completed with a green</p>
-<p>dotted line.</p>
-<p>Thanks for reading through this long post.</p>
-<p>Well done. (ㆁᴗㆁ✿)</p>
-<p>Have a good day, and<br>I hope everything works out well for you</p>
-<p>It’s quite warm out,<br>so do try and avoid getting heatstroke,</p>
-<p>And do take care with the,erm,<br>Wuhan pneumonia situation.</p>
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/14.png" alt="" width="300">
-</div>
+<h2 id="ベクジュン·アルゴリズム-A×B"><a href="#ベクジュン·アルゴリズム-A×B" class="headerlink" title="[ベクジュン·アルゴリズム]  A×B"></a>[ベクジュン·アルゴリズム]  A×B</h2><br>
+
+<h2 id="10998"><a href="#10998" class="headerlink" title="10998"></a>10998</h2><br>
+
+<h3 id="指紋表示"><a href="#指紋表示" class="headerlink" title="指紋表示"></a>指紋表示</h3><p>📎Link : <br><br><a target="_blank" rel="noopener" href="https://www.acmicpc.net/problem/10998">https://www.acmicpc.net/problem/10998</a></p>
+<p>使用言語:C#（.NET）</p>
+<p>アルゴリズム:実装、四則演算</p>
+<div class="left-img">
+<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/10998/10998.jpg" alt="미리보기 방지" width="250%">
+</div> <br> <br><br><br><br><br><br><br><br><br><br>
+
 <br>
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/15.png" alt="" width="300">
-</div>
 
+
+<h3 id="解答『かいとう』"><a href="#解答『かいとう』" class="headerlink" title="解答『かいとう』"></a>解答『かいとう』</h3><br>
+
+<h3 id="コード"><a href="#コード" class="headerlink" title="コード"></a>コード</h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">boj</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">                <span class="comment">// 入力された文字列を空白基準で切って配列に保存する。</span></span><br><span class="line">            <span class="built_in">string</span>[] s = Console.ReadLine().Split();</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 1番目の数字s[0]と2番目の数字s[1]をintに変換して適当に掛けて出力する。</span></span><br><span class="line"></span><br><span class="line">            Console.WriteLine(<span class="built_in">int</span>.Parse(s[<span class="number">0</span>]) * <span class="built_in">int</span>.Parse(s[<span class="number">1</span>]));</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="結果『けっか』"><a href="#結果『けっか』" class="headerlink" title="結果『けっか』"></a>結果『けっか』</h3><br>
+<div class="left-img">
+<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/10998/10998_2.png" alt="미리보기 방지" width="580">
+</div>  
+<br><br><br>
+<br><br><br>
+<div class="left-img">
+<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/10998/10998_3.png" alt="미리보기 방지" width="580">
+</div>  
+
+<p><br> <br> <br> <br> <br> <br> <br> <br> <br></p>
+<div style="text-align: center;">
+<p style="font-size: 30px; color: #2844e2ff;"> 終わり</p>
+</div>
 
 <div id="disqus_thread"></div>
 <script>
@@ -442,7 +341,7 @@ Screenshot 8
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/25/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/25/">25</a><span class="page-number current">26</span><a class="page-number" href="/page/27/">27</a><span class="space">&hellip;</span><a class="page-number" href="/page/31/">31</a><a class="extend next" rel="next" href="/page/27/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
+    <a class="extend prev" rel="prev" href="/page/25/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/25/">25</a><span class="page-number current">26</span><a class="page-number" href="/page/27/">27</a><span class="space">&hellip;</span><a class="page-number" href="/page/34/">34</a><a class="extend next" rel="next" href="/page/27/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
   </nav>
 
 
@@ -510,7 +409,7 @@ Screenshot 8
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-count">34</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
