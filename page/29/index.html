@@ -195,7 +195,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://pihne.github.io/2020/08/04/White%20Hacking/pwnable.kr/pwnable-kr-Random-Problem-Solving/">
+    <link itemprop="mainEntityOfPage" href="https://pihne.github.io/2022/04/10/White%20Hacking/pwnable.kr/pwnable-kr-Fla-Problem-Solving/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://pihne22710.github.io/images/lumine.png">
@@ -209,7 +209,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/08/04/White%20Hacking/pwnable.kr/pwnable-kr-Random-Problem-Solving/" class="post-title-link" itemprop="url">『pwnable.kr』Random Problem Solving</a>
+            <a href="/2022/04/10/White%20Hacking/pwnable.kr/pwnable-kr-Fla-Problem-Solving/" class="post-title-link" itemprop="url">『pwnable.kr』Fla Problem Solving</a>
         </h2>
 
         <div class="post-meta">
@@ -219,14 +219,14 @@
               </span>
               <span class="post-meta-item-text">작성일</span>
 
-              <time title="Post created: 2020-08-04 19:35:11" itemprop="dateCreated datePublished" datetime="2020-08-04T19:35:11+09:00">2020-08-04</time>
+              <time title="Post created: 2022-04-10 17:51:11" itemprop="dateCreated datePublished" datetime="2022-04-10T17:51:11+09:00">2022-04-10</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Updated at: 2025-10-10 06:12:01" itemprop="dateModified" datetime="2025-10-10T06:12:01+09:00">2025-10-10</time>
+                <time title="Updated at: 2025-10-10 06:10:38" itemprop="dateModified" datetime="2025-10-10T06:10:38+09:00">2025-10-10</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -259,152 +259,125 @@
       
           <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style6" />
+<p style="text-align: center;" data-ke-size="size18"><b><span style="color: #8a3db6;">back on the 10th of April, 2022</span></b></p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18"><b><span style="color: #8a3db6;">Right, so this post was penned on a Naver blog.</span></b></p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18"><b><span style="color: #8a3db6;"><a href="https://blog.naver.com/bnm0170/222696804662" target="_blank" rel="noopener"></a></span></b><b><span style="color: #8a3db6;"></span></b></p>
+<p data-ke-size="size16">&nbsp;</p>
+<hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style6" />
+<div style="text-align: center;" align="center">&nbsp;</div>
+
+
 <div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/01_Rina.gif" alt="미리보기 방지" width="300">
-</div>
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/01_Rina.gif" alt="미리보기 방지" width="300">
+</div><br>
+Right, well this is perhaps one of
 
-<p>Right, this one’s comparatively not too bad</p>
-<p>difficulty-wise, you see</p>
-<p>Right, anyway<br>due to my own circumstances,<br>I suppose</p>
-<p>this study-related post</p>
-<p>will have to be the last of its kind for now</p>
-<p>I should really try a<br>bug bounty this year,<br>at the very latest.</p>
-<p>The situation shows no sign of<br>improving, honestly.</p>
-<p>ε-(´・｀)</p>
-<p>Honestly, rather than wasting all<br>my time and health with some<br>unwanted weekday part-time work,</p>
-<p>with some unwanted weekday part-time work,</p>
-<p>it’d be far less galling to do<br>bug bounties on weekdays</p>
-<p>and just part-time work on weekends.</p>
-<p>it’d be far less galling.</p>
-<p>-`д´-</p>
-<p>Right, anyway I’ll just carry on writing.</p>
-<p>(ㆁᴗㆁ✿)</p>
+<p>the easier problems I’ve tackled so far.</p>
+<p>Having a go at a CTF for ethical hacking<br>after a bit of a break, then.</p>
+<br> 
+
 <div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/02.png" width="300">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/02.png" alt="" width="300">
+</div><br><br>
+
+<div style="text-alingn: right;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/03.png" alt="" width="300">
+</div>
+
+<p>First off,let’s have a look at the question itself.</p>
+<p>Papa brought me a packed present! let’s open it,</p>
+<p>This problem, you see,<br>isn’t about SSH access.<br>Rather, it’s about downloading a<br>standalone program,</p>
+<p>reversing it to get a key,<br>and then collecting points with that key.<br>Quite straightforward.</p>
+<p>Right, anyway using<br>the download address written<br>in the question above,</p>
+<p>you download it with the command below.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> wget http://pwnable.kr/bin/flag</span><br></pre></td></tr></table></figure>
+
+<div style="text-alingn: right;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/04.png" alt="" width="300">
+</div>
+
+<p>Once it’s all downloaded,<br>you then use the command below</p>
+<p>to grant permission for the program to be used.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">chmod</span> 755 flag</span><br></pre></td></tr></table></figure>
+
+<p>However,this program happens to be UPX-packed,</p>
+<p>so you’ll need to unpack it as well.</p>
+<p>Right, let’s go unpack it with the command below.</p>
+<p>unpack it : )</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> upx -d flag</span><br></pre></td></tr></table></figure>
+
+<div style="text-alingn: right;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/05.png" alt="" width="300">
+</div>
+
+<p>Now that the unpacking is complete, this time,</p>
+<p>let’s try debugging it with the command below.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> gdb -q flag</span><br></pre></td></tr></table></figure>
+
+<div style="text-alingn: right;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/06.png" alt="" width="300">
+</div>
+
+<p>(And in the meantime,<br>I completely wasted over<br>30 minutes trying to install gdb-peda,<br>you see.)</p>
+<p>So, when you debug it in this manner,<br>after main+32,<br>there’s a rather suspicious part,</p>
+<p>where it seems the flag value was copied to #</p>
+<p>where there’s a rather suspicious part.</p>
+<p>It’s presumed to be 64-bit, and</p>
+<p>“if you disassemble 0x6c2070 with x&#x2F;xg,</p>
+<p>it comes out as <flag>:0x496628.</p>
+<p>So, 0x496628 is probably where the real flag value</p>
+<p>is copied to, I’d imagine.</p>
+<p>Oh, and if you write 496628,<br>an error will be displayed,</p>
+<p>so you absolutely must attach 0x,</p>
+<p>and then write it. Otherwise,<br>it won’t be output correctly without an error.</p>
+<p>it will be output.</p>
+<p>Anyway, if you input it as per<br>the command below with x&#x2F;s</p>
+<p>if you input it.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gdb-peda$ x/s 0x496628</span><br></pre></td></tr></table></figure>
+
+<div style="text-alingn: right;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/07.png" alt="" width="300">
+</div>
+
+<p>the real flag value will come out.</p>
+<p>And with the flag value obtained,</p>
+<p>you input the value as shown<br>in the captured image below.</p>
+<div style="text-alingn: right;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/08.png" alt="" width="300">
 </div>
 
 <div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/03.png" alt="" width="300">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/09.png" alt="" width="300">
 </div>
-Screenshot 1.
 
-<p>Right, first let’s have a gander at the question,</p>
-<p>with my own rather straightforward,<br>literal translation</p>
-<p>Daddy, teach me how to use random value in programming!</p>
+<p>And that’s how 7 points were collected. : )</p>
 <div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/04.png" alt="" width="300">
-</div>
-Screenshot 2.
-
-<p>Right, and then</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh random@pwnable.kr -p2222</span><br></pre></td></tr></table></figure>
-
-<p>you connect straight away.</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/05.png" alt="" width="300">
-</div>
-Screenshot 3.
-
-<p>First,you work out whether<br>the file exists,and then</p>
-<p>you check the <code>random.c</code> file</p>
-<p>I check it</p>
-<p>Right, so it’s a program that receives a<br>key value if you XOR a 4-byte<br>random value with an input value</p>
-<p>if you XOR a 4-byte random value with an input value</p>
-<p>and <code>0xdeadbeef</code> comes out.</p>
-<p>So, ANG? If it’s a random value,<br>does one have to try all possible cases?</p>
-<p>Does one have to try all possible cases? ōxō</p>
-<p><del>Does one have to try all possible cases? ōxō</del></p>
-<p>one might think, but</p>
-<p>the rand() function, unless<br>you provide it with a<br>seed value that changes every time</p>
-<p>will always convert to a constant value</p>
-<p>This constant value, if you work it out,</p>
-<p>will give you the answer.</p>
-<p>Right, then, let’s trace the value using gdb.</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/06.png" alt="" width="300">
-</div>
-Screenshot 4.
-
-<p>Right, so you do the XOR operation,</p>
-<p>and it seems you just need to check<br>the value of eax <code>0xdeadbeef</code></p>
-<p>you just need to check.</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/07.png" alt="" width="300">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/10.png" alt="" width="300">
 </div>
 
-<p>Screenshot 5.</p>
-<p>If you set a breakpoint and run it, putting in 0</p>
-<p>you can see that 0x6b8b4567 is in eax.</p>
-<p>0x6b8b4567 is in eax</p>
-<p>you can see that it’s in there.</p>
-<p>As XORing with 0 produces the same value,</p>
-<p>you can deduce that the value of rand() is 0x6b8b4567</p>
-<p>you can deduce that it is.</p>
-<p>So, the value we need to input can be found through</p>
-<p><strong>0xdeadbeef ^ 0x6b8b4567</strong></p>
-<p>can be found</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/08.png" alt="" width="300">
-</div>
-
-<p>Screenshot 6: Hexadecimal operation in Java</p>
-<p>If you operate these two using Java programming</p>
-<p>if you operate these two</p>
-<p>the result is</p>
-<p><strong>0xB526FB88</strong></p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/09.png" alt="" width="300">
-</div>
-
-<p>Screenshot 7.</p>
-<p>And if you go to a conversion website and convert it,</p>
-<p><strong>3039230856</strong></p>
-<p>a value like the above is output</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/10.png" alt="" width="300">
-</div>
-Screenshot 8
-
-<p>If you input the outputted value,</p>
-<p>you acquire the key value like this.</p>
-<p>Right, and then with the key value that’s<br>been snagged,</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/11.png" alt="" width="300">
-</div>
-
-<p>Screenshot 9.</p>
-<p>you go back to the first screen,</p>
-<p>input it into the blank space</p>
-<p>and then just press the ‘auth’ button.</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/12.png" alt="" width="300">
-</div>
-
-<p>As soon as the mission’s completed,</p>
-<p>1 point has been snagged.</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/13.png" alt="" width="300">
-</div>
-
-
-<p>then, if you go back to the initial screen again,</p>
-<p>you’ll see that</p>
-<p>it’s marked as completed with a green</p>
-<p>dotted line.</p>
-<p>Thanks for reading through this long post.</p>
-<p>Well done. (ㆁᴗㆁ✿)</p>
-<p>Have a good day, and<br>I hope everything works out well for you</p>
-<p>It’s quite warm out,<br>so do try and avoid getting heatstroke,</p>
-<p>And do take care with the,erm,<br>Wuhan pneumonia situation.</p>
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/14.png" alt="" width="300">
-</div>
-<br>
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/15.png" alt="" width="300">
-</div>
-
-
+<p>Having a go at pwnable.kr<br>CTF after a bit of a break, then.</p>
+<p>“I’m not sure if it’ll<br>be possible since it’s<br>the weekend, honestly.</p>
+<p>Right, well I suppose it’s about time<br>I started preparing for<br>some rather pointless part-time work.</p>
+<p>My chances of finding employment in S.Korea(?)<br>are effectively long gone, you see.</p>
+<p>So, while I’m doing short-term part-time work,</p>
+<p>I’ll try to save up around ten million won,<br>move out of my family home,</p>
+<p>and then find some temporary<br>accommodation near<br>the Japanese Cultural Centre,</p>
+<p>in a well-soundproofed goshiwon.</p>
+<p>and then find some temporary accommodation.</p>
+<p>Ethical hacking, Japanese study,</p>
+<p>preparing for JLPT N series or EJU,</p>
+<p><a target="_blank" rel="noopener" href="https://www.bugbountyclub.com/beginning">bug bounty</a> programmes related to ethical hacking,</p>
+<p>preparing for and attempting that,<br>and then writing bug hunting reports<br>in English and Japanese,</p>
+<p>writing bug hunting reports.</p>
+<p>or preparing for OSCP,<br>an international ethical hacking<br>certification.</p>
+<p>It’ll be like doing a penitent task,<br>just like the nuns in a Catholic convent.</p>
+<p>I’ll have to do that.</p>
+<p>And then, simultaneously with<br>preparing to move to Japan,</p>
+<p>I’ll have to prepare for<br>financial income investment as well</p>
+<p>2022.04.10</p>
 <div id="disqus_thread"></div>
 <script>
     /**
@@ -442,7 +415,7 @@ Screenshot 8
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/28/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/">28</a><span class="page-number current">29</span><a class="page-number" href="/page/30/">30</a><span class="space">&hellip;</span><a class="page-number" href="/page/34/">34</a><a class="extend next" rel="next" href="/page/30/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
+    <a class="extend prev" rel="prev" href="/page/28/"><i class="fa fa-angle-left" aria-label="이전 페이지"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/">28</a><span class="page-number current">29</span><a class="page-number" href="/page/30/">30</a><span class="space">&hellip;</span><a class="page-number" href="/page/35/">35</a><a class="extend next" rel="next" href="/page/30/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
   </nav>
 
 
@@ -510,7 +483,7 @@ Screenshot 8
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-count">35</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
