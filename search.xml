@@ -814,63 +814,6 @@
       </tags>
   </entry>
   <entry>
-    <title>『C Programming』Random Draw</title>
-    <url>/2025/08/24/DevDiary/C%20Programming/C-Programming-Random-Draw/</url>
-    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<p style="text-align:center">
-<img border="0" width="60%" height="70%" src="https://pihne22710.github.io/PostImages/DevDiary/etc/C_Programming/0.png"><br></p>
-
-<p>🎼Songs I listened to whilst writing🎼</p>
-<ul>
-<li>Mermaid Melody Pichi Pichi Pitch OST</li>
-<li>Genshin Impact OST For Mondstadt</li>
-<li>Bullet Heaven 2 OST : Powerful and Bright</li>
-<li>Fallen Blood (OblivionAXiS Remix) | Epic Battle Fantasy 4</li>
-</ul>
-<br>
-
-<h2 id="C-Programming-Random-Draw"><a href="#C-Programming-Random-Draw" class="headerlink" title="[C Programming]Random Draw"></a>[C Programming]Random Draw</h2><p>Right, so this past Friday,<br>before the weekend proper,<br>I’d put up a poll on Twitter (X) to choose which</p>
-<p>Genshin Impact character to draw this time.</p>
-<p>But, as it often goes with these things,<br>I didn’t quite get a conclusive result.</p>
-<p>So, in the end, I ended up having to just knock up a<br>C program myself to make the final decision.</p>
-<h3 id="💻Code"><a href="#💻Code" class="headerlink" title="💻Code"></a>💻Code</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span> &#123;</span><br><span class="line">    <span class="type">char</span> names[<span class="number">4</span>][<span class="number">50</span>];  <span class="comment">// Store names (up to 49 characters each)</span></span><br><span class="line">    <span class="type">int</span> n = <span class="number">4</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// User input</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Please enter 4 names:\n&quot;</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Name %d:\n&quot;</span>, i + <span class="number">1</span>);</span><br><span class="line">        fgets(names[i], <span class="keyword">sizeof</span>(names[i]), <span class="built_in">stdin</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Remove trailing newline from fgets</span></span><br><span class="line">        <span class="type">size_t</span> len = <span class="built_in">strlen</span>(names[i]);</span><br><span class="line">        <span class="keyword">if</span> (len &gt; <span class="number">0</span> &amp;&amp; names[i][len - <span class="number">1</span>] == <span class="string">&#x27;\n&#x27;</span>) &#123;</span><br><span class="line">            names[i][len - <span class="number">1</span>] = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Set random seed</span></span><br><span class="line">    srand((<span class="type">unsigned</span> <span class="type">int</span>)time(<span class="literal">NULL</span>));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Select a random index</span></span><br><span class="line">    <span class="type">int</span> winner = rand() % n;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Output result</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n🎉 Result of the draw! The winner is: %s 🎉\n&quot;</span>, names[winner]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="🪔Result"><a href="#🪔Result" class="headerlink" title="🪔Result"></a>🪔Result</h3><div style="text-alingn: right;">
-<p style="text-align:center">
-<img border="0" width="60%" height="70%" src="https://pihne22710.github.io/PostImages/DevDiary/etc/C_Programming/2.png">
-</div><br></p>
-
-<br>
-
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
-      <categories>
-        <category>DevDiary</category>
-        <category>C Programming</category>
-      </categories>
-      <tags>
-        <tag>C Programming</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(Linux) Debian Linux LunarVim Install</title>
     <url>/2025/08/06/DevDiary/Debian%20Linux/Debian-Linux-LunarVim-Install/</url>
     <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -944,6 +887,63 @@
       </tags>
   </entry>
   <entry>
+    <title>『C Programming』Random Draw</title>
+    <url>/2025/08/24/DevDiary/C%20Programming/C-Programming-Random-Draw/</url>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<p style="text-align:center">
+<img border="0" width="60%" height="70%" src="https://pihne22710.github.io/PostImages/DevDiary/etc/C_Programming/0.png"><br></p>
+
+<p>🎼Songs I listened to whilst writing🎼</p>
+<ul>
+<li>Mermaid Melody Pichi Pichi Pitch OST</li>
+<li>Genshin Impact OST For Mondstadt</li>
+<li>Bullet Heaven 2 OST : Powerful and Bright</li>
+<li>Fallen Blood (OblivionAXiS Remix) | Epic Battle Fantasy 4</li>
+</ul>
+<br>
+
+<h2 id="C-Programming-Random-Draw"><a href="#C-Programming-Random-Draw" class="headerlink" title="[C Programming]Random Draw"></a>[C Programming]Random Draw</h2><p>Right, so this past Friday,<br>before the weekend proper,<br>I’d put up a poll on Twitter (X) to choose which</p>
+<p>Genshin Impact character to draw this time.</p>
+<p>But, as it often goes with these things,<br>I didn’t quite get a conclusive result.</p>
+<p>So, in the end, I ended up having to just knock up a<br>C program myself to make the final decision.</p>
+<h3 id="💻Code"><a href="#💻Code" class="headerlink" title="💻Code"></a>💻Code</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span> &#123;</span><br><span class="line">    <span class="type">char</span> names[<span class="number">4</span>][<span class="number">50</span>];  <span class="comment">// Store names (up to 49 characters each)</span></span><br><span class="line">    <span class="type">int</span> n = <span class="number">4</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// User input</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Please enter 4 names:\n&quot;</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Name %d:\n&quot;</span>, i + <span class="number">1</span>);</span><br><span class="line">        fgets(names[i], <span class="keyword">sizeof</span>(names[i]), <span class="built_in">stdin</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Remove trailing newline from fgets</span></span><br><span class="line">        <span class="type">size_t</span> len = <span class="built_in">strlen</span>(names[i]);</span><br><span class="line">        <span class="keyword">if</span> (len &gt; <span class="number">0</span> &amp;&amp; names[i][len - <span class="number">1</span>] == <span class="string">&#x27;\n&#x27;</span>) &#123;</span><br><span class="line">            names[i][len - <span class="number">1</span>] = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Set random seed</span></span><br><span class="line">    srand((<span class="type">unsigned</span> <span class="type">int</span>)time(<span class="literal">NULL</span>));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Select a random index</span></span><br><span class="line">    <span class="type">int</span> winner = rand() % n;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Output result</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n🎉 Result of the draw! The winner is: %s 🎉\n&quot;</span>, names[winner]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="🪔Result"><a href="#🪔Result" class="headerlink" title="🪔Result"></a>🪔Result</h3><div style="text-alingn: right;">
+<p style="text-align:center">
+<img border="0" width="60%" height="70%" src="https://pihne22710.github.io/PostImages/DevDiary/etc/C_Programming/2.png">
+</div><br></p>
+
+<br>
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
+      <categories>
+        <category>DevDiary</category>
+        <category>C Programming</category>
+      </categories>
+      <tags>
+        <tag>C Programming</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【Kali Linux】 network setup guide</title>
     <url>/2025/10/30/DevDiary/Kali%20Linux/Kali-Linux-Network-Setup-Guide/</url>
     <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -961,7 +961,7 @@
 <p>Now run the command below<br>to apply the network settings.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">┌──(Luna㉿kali)-[~]</span><br><span class="line">└─$ systemctl restart networking</span><br></pre></td></tr></table></figure>
 <p>Also, both adapters will<br>be configured automatically even after rebooting. </p>
-<h3 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h3><p>🪔 Art : <a href="https://cafe.naver.com/f-e/cafes/28961395/articles/100?referrerAllArticles=true&inCafeSearch=true&query=%EC%B9%BC%EB%A6%AC%EB%A6%AC%EB%88%85%EC%8A%A4%20%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC&art=aW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtaW5DYWZlLXNlYXJjaC1saXN0.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjEwMCwiaXNzdWVkQXQiOjE3NjE4MzIzMjM5NzEsImNhZmVJZCI6Mjg5NjEzOTV9.o5RJCIMzMGnyiDX6mpZHI5jOSfIuwEZrDniJpqUCFao">Source</a><br><br></p>
+<h3 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h3><p>🪔 <a href="https://cafe.naver.com/f-e/cafes/28961395/articles/100?referrerAllArticles=true&inCafeSearch=true&query=%EC%B9%BC%EB%A6%AC%EB%A6%AC%EB%88%85%EC%8A%A4%20%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC&art=aW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtaW5DYWZlLXNlYXJjaC1saXN0.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjEwMCwiaXNzdWVkQXQiOjE3NjE4MzIzMjM5NzEsImNhZmVJZCI6Mjg5NjEzOTV9.o5RJCIMzMGnyiDX6mpZHI5jOSfIuwEZrDniJpqUCFao">Source</a><br><br></p>
 <p style="font-size: 25px; color: #2844e2ff;"> Done</p>
 </div>
 
@@ -2548,6 +2548,222 @@ Right, well this is perhaps one of
       </tags>
   </entry>
   <entry>
+    <title>『pwnable.kr』Input Problem Solving</title>
+    <url>/2020/08/04/White%20Hacking/pwnable.kr/pwnable-kr-Input-Problem-Solving/</url>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/01_Rina.gif" alt="미리보기 방지" width="300">
+</div>
+
+<br>
+<br>
+
+
+
+<p>The difficulty is quite substantial,ōxō</p>
+<p><del>The difficulty is quite substantial,ōxō</del></p>
+<p>In the case of exploits</p>
+<p>I referred to someone else’s exploit code externally</p>
+<p>I referred to it.</p>
+<p>It seems to be socket programming</p>
+<p>and it’s as if I need<br>to refer to some old socket programming books</p>
+<p>lying around at home.</p>
+<p>old socket programming books.</p>
+<p>I need to refer to them.</p>
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/02.png" alt="미리보기 방지" width="300">
+</div>
+
+<p><del>Kim Jong-sung</del></p>
+<div style="text-alingn: right;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/03.png" alt="미리보기 방지" width="300">
+</div>
+
+<br>
+Screenshot 1.
+
+<p>Again, with my straightforward, literal translation, the question is as follows:</p>
+<p><strong>Mom? how can I pass my input to a computer program?</strong></p>
+<div style="text-alingn: right;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/04.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>Screenshot.2</p>
+<p>Right, then I’ll try connecting straight away.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh input2@pwnable.kr -p2222 (pw:guest)</span><br></pre></td></tr></table></figure>
+
+<p>And if I type <code>ls</code> again, you’ll see</p>
+<p>a total of 3 files appear.</p>
+<p>And then,</p>
+<p>with the <code>cat</code> command,</p>
+<p><code>input.c</code></p>
+<p>I’ll check it.</p>
+<div style="text-alingn: right;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/05.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>Screenshot.3</p>
+<p>Ba ha ha ha ha ha ha</p>
+<p>This source code, you see,</p>
+<p>is rather long, ōxō.</p>
+<p><del>is rather long, ōxō.</del></p>
+<p>Looking at it overall,<br>let’s consider the conditions<br>for passing Stage 1.</p>
+<p>let’s consider the conditions for passing.</p>
+<p>: )</p>
+<div style="text-alingn: right;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/06.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>Code.1</p>
+<p>1. Number of arguments &#x3D; 100</p>
+<p>2. argv[‘A’] &#x3D; \x00</p>
+<p>3. argv[‘B’] &#x3D; \x20\x0a\x0d</p>
+<p>If that’s the case, Stage 1 will be completed.</p>
+<div style="text-alingn: right;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/07.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>Code.2</p>
+<p>It’s Stage 2</p>
+<p>You provide <code>\x00\x0a\x00\xff</code> as stdin input</p>
+<p>you provide input,</p>
+<p>sterr,</p>
+<p>you must give<code>\\x00\\x0a\\x02\\xff</code></p>
+<p>for it to be completed.</p>
+<div style="text-alingn: right;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/08.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>Code.3</p>
+<p>stage 3.</p>
+<p>It’s an environment variable.</p>
+<p>You simply insert the value<code>\\xde\\xad\\xbe\\xef</code> be into the environment variable called</p>
+<p>into the environment variable.</p>
+<p><code>\\xca\\xfe\\xba\\xbe</code></p>
+<p>you simply insert the value.</p>
+<div style="text-alingn: right;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/09.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>Code.4</p>
+<p>It’s Stage 4</p>
+<p>You open the file called <code>\\x0a</code></p>
+<p>and the first 4 bytes that are read</p>
+<p><code>\\x00\\x00\\x00\\x00</code></p>
+<p>for it to be completed.</p>
+<div style="text-alingn: right;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/10.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>Code.5</p>
+<p>It’s Stage 5</p>
+<p><code>atoi(argv\[‘C’\]) = argv\[‘C’\]</code></p>
+<p>The value converted to an integer</p>
+<p>as the port number,</p>
+<p>you open a socket server,</p>
+<p><code>\\xde\\xad\\xbe\\xef</code></p>
+<p>and if you send it,</p>
+<p>Stage 5 will be completed.</p>
+<p>Right, then I’ll attempt the exploit.</p>
+<p>My skills aren’t quite up to<br>writing it myself just yet,</p>
+<p><a href="https://xerxes-break.tistory.com/290">so I’ll be referring to</a> exploit code</p>
+<p>so I’ll be referring to it.</p>
+<p>It’s written in Python, you see.</p>
+<p>it’s written.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"> </span><br><span class="line">prog = []</span><br><span class="line">prog.append(“/home/input2/<span class="built_in">input</span>”)</span><br><span class="line"><span class="comment">#prog.append(“./test”)</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">99</span>):</span><br><span class="line">    prog.append(“A”)</span><br><span class="line">prog[<span class="built_in">ord</span>(“A”)]=“”</span><br><span class="line">prog[<span class="built_in">ord</span>(‘B’)]=“\x20\x0a\x0d”</span><br><span class="line">prog[<span class="built_in">ord</span>(‘C’)]=“<span class="number">35790</span>”</span><br><span class="line"> </span><br><span class="line">conn = process(prog, stderr=<span class="built_in">open</span>(“stderr”,‘r’), env=&#123;“\xde\xad\xbe\xef”:“\xca\xfe\xba\xbe”&#125;)</span><br><span class="line"><span class="built_in">print</span>(conn.recvuntil(“Stage <span class="number">1</span> clear!”))</span><br><span class="line"> </span><br><span class="line">f = <span class="built_in">open</span>(“\x0a”,‘w’)</span><br><span class="line">f.write(“\x00\x00\x00\x00”)</span><br><span class="line">f.close()</span><br><span class="line"> </span><br><span class="line">conn.sendline(“\x00\x0a\x00\xff”)</span><br><span class="line"><span class="built_in">print</span>(conn.recvuntil(“Stage <span class="number">4</span> clear!”))</span><br><span class="line"> </span><br><span class="line"><span class="comment">#sleep(3)</span></span><br><span class="line">reconn = remote(“<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>”, <span class="number">35790</span>)</span><br><span class="line">reconn.send(“\xde\xad\xbe\xef”)</span><br><span class="line">reconn.close()</span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span>(conn.recvline())</span><br><span class="line"><span class="built_in">print</span>(conn.recvall())</span><br><span class="line"> </span><br><span class="line">conn.interactive()</span><br></pre></td></tr></table></figure>
+
+<p>Code 6.</p>
+<p>However, this code, in the current directory,</p>
+<p>can’t be used, you see.</p>
+<p>Due to a lack of permissions…。</p>
+<p>So, that’s why they say you need to use &#x2F;tmp</p>
+<p>which has the necessary permissions.</p>
+<p>Right, so from &#x2F;tmp</p>
+<p>let’s proceed.</p>
+<p>Oh, and before, I almost forgot to</p>
+<p>take a screenshot, you see.</p>
+<p>If you just run it straight,<br>it’ll say the flag file</p>
+<p>isn’t there,</p>
+<p>and the flag won’t show up.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ln</span> -s /home/input2/flag flag</span><br></pre></td></tr></table></figure>
+
+<p>So, you have to add a symbolic link like this,</p>
+<p>and then give it a go.</p>
+<p>then, if you leave the symbolic link in place</p>
+<p>and proceed,</p>
+<div style="text-alingn: right;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/11.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>Screenshot.4</p>
+<p>A short while later, that mint-coloured bit</p>
+<p>that’s the key value, then.</p>
+<div style="text-alingn: right;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/12.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>With the key value thus acquired</p>
+<div style="text-alingn: right;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/13.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>Screenshot.5</p>
+<p>you go back to the first screen,</p>
+<p>input it into the blank space,</p>
+<p>and then just press the ‘auth’ button.</p>
+<div style="text-alingn: right;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/14.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>And as soon as the mission’s completed,</p>
+<p>you snag 4 points.</p>
+<div style="text-alingn: right;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/15.png" alt="미리보기 방지" width="300">
+</div>
+
+<p>And if you come back, you’ll see it’s marked</p>
+<p>with a green dotted line, meaning it’s been solved.</p>
+<p>it’s been marked.</p>
+<p>​</p>
+<p>Thanks for sticking through this long post.</p>
+<p>Well done, then. : )</p>
+<div style="text-alingn: right;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/16.png" alt="미리보기 방지" width="300">
+</div> <bt>
+
+<p>Have a good day, and<br>I hope everything works out well for you</p>
+<p>It’s quite warm out,<br>so do try and avoid getting heatstroke</p>
+<p>and do take care with<br>the erm, Wuhan pneumonia situation : )</p>
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
+      <categories>
+        <category>White Hacking</category>
+        <category>CTF</category>
+        <category>pwnable.kr</category>
+      </categories>
+      <tags>
+        <tag>White Hacking</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>『pwnable.kr』Ieg Problem Solving</title>
     <url>/2020/08/04/White%20Hacking/pwnable.kr/pwnable-kr-Ieg-Problem-Solving/</url>
     <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -2736,222 +2952,6 @@ Screenshot 5.
 </div>
 
 
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
-      <categories>
-        <category>White Hacking</category>
-        <category>CTF</category>
-        <category>pwnable.kr</category>
-      </categories>
-      <tags>
-        <tag>White Hacking</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>『pwnable.kr』Input Problem Solving</title>
-    <url>/2020/08/04/White%20Hacking/pwnable.kr/pwnable-kr-Input-Problem-Solving/</url>
-    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/01_Rina.gif" alt="미리보기 방지" width="300">
-</div>
-
-<br>
-<br>
-
-
-
-<p>The difficulty is quite substantial,ōxō</p>
-<p><del>The difficulty is quite substantial,ōxō</del></p>
-<p>In the case of exploits</p>
-<p>I referred to someone else’s exploit code externally</p>
-<p>I referred to it.</p>
-<p>It seems to be socket programming</p>
-<p>and it’s as if I need<br>to refer to some old socket programming books</p>
-<p>lying around at home.</p>
-<p>old socket programming books.</p>
-<p>I need to refer to them.</p>
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/02.png" alt="미리보기 방지" width="300">
-</div>
-
-<p><del>Kim Jong-sung</del></p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/03.png" alt="미리보기 방지" width="300">
-</div>
-
-<br>
-Screenshot 1.
-
-<p>Again, with my straightforward, literal translation, the question is as follows:</p>
-<p><strong>Mom? how can I pass my input to a computer program?</strong></p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/04.png" alt="미리보기 방지" width="300">
-</div>
-
-<p>Screenshot.2</p>
-<p>Right, then I’ll try connecting straight away.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh input2@pwnable.kr -p2222 (pw:guest)</span><br></pre></td></tr></table></figure>
-
-<p>And if I type <code>ls</code> again, you’ll see</p>
-<p>a total of 3 files appear.</p>
-<p>And then,</p>
-<p>with the <code>cat</code> command,</p>
-<p><code>input.c</code></p>
-<p>I’ll check it.</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/05.png" alt="미리보기 방지" width="300">
-</div>
-
-<p>Screenshot.3</p>
-<p>Ba ha ha ha ha ha ha</p>
-<p>This source code, you see,</p>
-<p>is rather long, ōxō.</p>
-<p><del>is rather long, ōxō.</del></p>
-<p>Looking at it overall,<br>let’s consider the conditions<br>for passing Stage 1.</p>
-<p>let’s consider the conditions for passing.</p>
-<p>: )</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/06.png" alt="미리보기 방지" width="300">
-</div>
-
-<p>Code.1</p>
-<p>1. Number of arguments &#x3D; 100</p>
-<p>2. argv[‘A’] &#x3D; \x00</p>
-<p>3. argv[‘B’] &#x3D; \x20\x0a\x0d</p>
-<p>If that’s the case, Stage 1 will be completed.</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/07.png" alt="미리보기 방지" width="300">
-</div>
-
-<p>Code.2</p>
-<p>It’s Stage 2</p>
-<p>You provide <code>\x00\x0a\x00\xff</code> as stdin input</p>
-<p>you provide input,</p>
-<p>sterr,</p>
-<p>you must give<code>\\x00\\x0a\\x02\\xff</code></p>
-<p>for it to be completed.</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/08.png" alt="미리보기 방지" width="300">
-</div>
-
-<p>Code.3</p>
-<p>stage 3.</p>
-<p>It’s an environment variable.</p>
-<p>You simply insert the value<code>\\xde\\xad\\xbe\\xef</code> be into the environment variable called</p>
-<p>into the environment variable.</p>
-<p><code>\\xca\\xfe\\xba\\xbe</code></p>
-<p>you simply insert the value.</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/09.png" alt="미리보기 방지" width="300">
-</div>
-
-<p>Code.4</p>
-<p>It’s Stage 4</p>
-<p>You open the file called <code>\\x0a</code></p>
-<p>and the first 4 bytes that are read</p>
-<p><code>\\x00\\x00\\x00\\x00</code></p>
-<p>for it to be completed.</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/10.png" alt="미리보기 방지" width="300">
-</div>
-
-<p>Code.5</p>
-<p>It’s Stage 5</p>
-<p><code>atoi(argv\[‘C’\]) = argv\[‘C’\]</code></p>
-<p>The value converted to an integer</p>
-<p>as the port number,</p>
-<p>you open a socket server,</p>
-<p><code>\\xde\\xad\\xbe\\xef</code></p>
-<p>and if you send it,</p>
-<p>Stage 5 will be completed.</p>
-<p>Right, then I’ll attempt the exploit.</p>
-<p>My skills aren’t quite up to<br>writing it myself just yet,</p>
-<p><a href="https://xerxes-break.tistory.com/290">so I’ll be referring to</a> exploit code</p>
-<p>so I’ll be referring to it.</p>
-<p>It’s written in Python, you see.</p>
-<p>it’s written.</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"> </span><br><span class="line">prog = []</span><br><span class="line">prog.append(“/home/input2/<span class="built_in">input</span>”)</span><br><span class="line"><span class="comment">#prog.append(“./test”)</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">99</span>):</span><br><span class="line">    prog.append(“A”)</span><br><span class="line">prog[<span class="built_in">ord</span>(“A”)]=“”</span><br><span class="line">prog[<span class="built_in">ord</span>(‘B’)]=“\x20\x0a\x0d”</span><br><span class="line">prog[<span class="built_in">ord</span>(‘C’)]=“<span class="number">35790</span>”</span><br><span class="line"> </span><br><span class="line">conn = process(prog, stderr=<span class="built_in">open</span>(“stderr”,‘r’), env=&#123;“\xde\xad\xbe\xef”:“\xca\xfe\xba\xbe”&#125;)</span><br><span class="line"><span class="built_in">print</span>(conn.recvuntil(“Stage <span class="number">1</span> clear!”))</span><br><span class="line"> </span><br><span class="line">f = <span class="built_in">open</span>(“\x0a”,‘w’)</span><br><span class="line">f.write(“\x00\x00\x00\x00”)</span><br><span class="line">f.close()</span><br><span class="line"> </span><br><span class="line">conn.sendline(“\x00\x0a\x00\xff”)</span><br><span class="line"><span class="built_in">print</span>(conn.recvuntil(“Stage <span class="number">4</span> clear!”))</span><br><span class="line"> </span><br><span class="line"><span class="comment">#sleep(3)</span></span><br><span class="line">reconn = remote(“<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>”, <span class="number">35790</span>)</span><br><span class="line">reconn.send(“\xde\xad\xbe\xef”)</span><br><span class="line">reconn.close()</span><br><span class="line"> </span><br><span class="line"><span class="built_in">print</span>(conn.recvline())</span><br><span class="line"><span class="built_in">print</span>(conn.recvall())</span><br><span class="line"> </span><br><span class="line">conn.interactive()</span><br></pre></td></tr></table></figure>
-
-<p>Code 6.</p>
-<p>However, this code, in the current directory,</p>
-<p>can’t be used, you see.</p>
-<p>Due to a lack of permissions…。</p>
-<p>So, that’s why they say you need to use &#x2F;tmp</p>
-<p>which has the necessary permissions.</p>
-<p>Right, so from &#x2F;tmp</p>
-<p>let’s proceed.</p>
-<p>Oh, and before, I almost forgot to</p>
-<p>take a screenshot, you see.</p>
-<p>If you just run it straight,<br>it’ll say the flag file</p>
-<p>isn’t there,</p>
-<p>and the flag won’t show up.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ln</span> -s /home/input2/flag flag</span><br></pre></td></tr></table></figure>
-
-<p>So, you have to add a symbolic link like this,</p>
-<p>and then give it a go.</p>
-<p>then, if you leave the symbolic link in place</p>
-<p>and proceed,</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/11.png" alt="미리보기 방지" width="300">
-</div>
-
-<p>Screenshot.4</p>
-<p>A short while later, that mint-coloured bit</p>
-<p>that’s the key value, then.</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/12.png" alt="미리보기 방지" width="300">
-</div>
-
-<p>With the key value thus acquired</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/13.png" alt="미리보기 방지" width="300">
-</div>
-
-<p>Screenshot.5</p>
-<p>you go back to the first screen,</p>
-<p>input it into the blank space,</p>
-<p>and then just press the ‘auth’ button.</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/14.png" alt="미리보기 방지" width="300">
-</div>
-
-<p>And as soon as the mission’s completed,</p>
-<p>you snag 4 points.</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/15.png" alt="미리보기 방지" width="300">
-</div>
-
-<p>And if you come back, you’ll see it’s marked</p>
-<p>with a green dotted line, meaning it’s been solved.</p>
-<p>it’s been marked.</p>
-<p>​</p>
-<p>Thanks for sticking through this long post.</p>
-<p>Well done, then. : )</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Input%20Problem%20Solving/16.png" alt="미리보기 방지" width="300">
-</div> <bt>
-
-<p>Have a good day, and<br>I hope everything works out well for you</p>
-<p>It’s quite warm out,<br>so do try and avoid getting heatstroke</p>
-<p>and do take care with<br>the erm, Wuhan pneumonia situation : )</p>
 <div id="disqus_thread"></div>
 <script>
     /**
