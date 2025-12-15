@@ -195,7 +195,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://pihne.github.io/2020/08/02/White%20Hacking/pwnable.kr/pwnable-kr-Memcpy-Problem-Solving/">
+    <link itemprop="mainEntityOfPage" href="https://pihne.github.io/2020/08/03/White%20Hacking/pwnable.kr/pwnable-kr-Passcode-Problem-Solving/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://pihne22710.github.io/images/lumine.png">
@@ -209,7 +209,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/08/02/White%20Hacking/pwnable.kr/pwnable-kr-Memcpy-Problem-Solving/" class="post-title-link" itemprop="url">『pwnable.kr』 Memcpy Problem solving</a>
+            <a href="/2020/08/03/White%20Hacking/pwnable.kr/pwnable-kr-Passcode-Problem-Solving/" class="post-title-link" itemprop="url">『pwnable.kr』 passcode Problem solving</a>
         </h2>
 
         <div class="post-meta">
@@ -219,14 +219,14 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2020-08-02 06:07:11" itemprop="dateCreated datePublished" datetime="2020-08-02T06:07:11+09:00">2020-08-02</time>
+              <time title="Created: 2020-08-03 20:51:11" itemprop="dateCreated datePublished" datetime="2020-08-03T20:51:11+09:00">2020-08-03</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2025-10-10 06:11:32" itemprop="dateModified" datetime="2025-10-10T06:11:32+09:00">2025-10-10</time>
+                <time title="Modified: 2025-10-10 06:11:39" itemprop="dateModified" datetime="2025-10-10T06:11:39+09:00">2025-10-10</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -259,181 +259,140 @@
       
           <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<h1 id="pwnable-kr-Memcpy-Problem-solving"><a href="#pwnable-kr-Memcpy-Problem-solving" class="headerlink" title="[pwnable.kr]_Memcpy Problem solving"></a>[pwnable.kr]_Memcpy Problem solving</h1><hr>
 <div style="text-align: center;">
 <img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/1_Rina.gif" alt="미리보기 방지" width="300">
 </div>
 
-<style>
-.left-img {
-  float: left;
-  margin-right: 320px; /* 텍스트와 간격 */
-}
-</style>
+<p><br><br><br>Right So,<br>I suppose I’ll just crack on with this,then.</p>
+<br>
 
-<p>Right then, haha. Every problem I pick,<br>the difficulty just goes utterly mental,<br>doesn’t it? </p>
-<p>It’s been quite lunatic so far, ōxō.<br><del>It’s been quite lunatic so far, ōxō.</del></p>
 <div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/White Hacking/CTF/pwnable.kr/Memcpy Problem solving/2.png" alt="미리보기 방지" width="300">
-</div>
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/02.png" alt="미리보기 방지" width="300">
+</div><br><br>
 
-<br>
 
-<h3 id="참고-사항"><a href="#참고-사항" class="headerlink" title="|참고 사항|"></a>|참고 사항|</h3><ul>
-<li><p><a target="_blank" rel="noopener" href="http://www.jaist.ac.jp/iscenter-new/mpc/altix/altixdata/opt/intel/vtune/doc/users_guide/mergedProjects/analyzer_ec/mergedProjects/reference_olh/mergedProjects/instructions/instruct32_hh/vc183.htm">assembly movdqa command</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://www.felixcloutier.com/x86/movntps">assembly movntps command</a></p>
-</li>
-</ul>
-<br>
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/03.png" alt="미리보기 방지" width="300" style="text-align: left;">
 
-<img class="left-img" src="https://pihne22710.github.io/PostImages/White Hacking/CTF/pwnable.kr/Memcpy Problem solving/3.png"  width="500">
- <br>
 
-<p>Screenshot.1</p>
-<p>Alright, then. If<br>I just do a rough-and-ready literal translation of the passage,<br>it goes something like this:</p>
+<p>Screenshot. 1</p>
+<p><strong>Mommy told me to make a passcode based login system.</strong></p>
+<p><strong>My initial C code was compiled without any error!</strong></p>
+<p><strong>Well, there was some compiler warning, but who cares about that?</strong><br>​</p>
+<p>Then,Let’s Just Connect Straight Away As Above.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh passcode@pwnable.kr -p2222 (pw:guest)</span><br></pre></td></tr></table></figure>
+
+
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/04.png" alt="미리보기 방지" width="300" style="text-align: left;">
+
+
+<p>Screenshot. 2</p>
+<p>Once Connected,You’d Then Use <code>ls -l</code> to<br>Check For Files.<br>And Upon Checking,You’ll Find:</p>
 <p>​</p>
-<p>Are you tired of hacking?, take some rest here.</p>
-<p>(으따 해킹하는 거 지겨워졌고 마이 잠깐 좀 쉬랑께?)</p>
+<p>flag</p>
+<p>passecode</p>
+<p>passecode.c</p>
 <p>​</p>
-<p>Just help me out with my small</p>
-<p>experiment regarding memcpy performance.</p>
-<p>(memcpy 성능 실험 좀 도와달랑께)</p>
+<p>There Are Three Files In Total, You See.</p>
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/05.png" alt="미리보기 방지" width="300" style="text-align: left;">
+
+
+<p>Screenshot. 3</p>
+<p>First off, if you run <code>passcode</code></p>
+<p>You Can See It Behaves As Shown Above.</p>
 <p>​</p>
-<p>after that, flag is yours.</p>
-<p>(그럼 키값은 니꺼랑꼐?)</p>
+<p>Right,And Then With The <code>cat</code> Command</p>
+<p>Let’s Have A Look At The <code>passcode.c</code> File.</p>
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/06.png" alt="미리보기 방지" width="300" style="text-align: left;">
+
+
+<p>Screenshot. 4</p>
+<p>I know, rummaging through some decades-old</p>
+<p>C language books at home,<br>and having a look at the code</p>
+<p>it appears</p>
 <p>​</p>
-<p>Right then. Apparently,<br>it’s not a hack this time around.<br>Still, best to have a look, wouldn’t you say?</p>
-<img class="left-img" src="https://pihne22710.github.io/PostImages/White Hacking/CTF/pwnable.kr/Memcpy Problem solving/4.png"  width="500">
-Screenshot.2 <br><br>
+<p>there’s a function that takes input</p>
+<p>I suppose it’s likely the <code>login()</code> function.</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, passcode1);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, passcode2);</span><br></pre></td></tr></table></figure>
 
-<p>Right then. As before, just fire up your terminal, get yourself connected, </p>
-<p>and then, naturally, you’ll employ the trusty</p>
-<p>command to have a gander at the files.<br>Is <code>ls</code><br>​</p>
-<p>Right. So,it’s just <code>memcpy</code> and <code>readme</code>,is it?<br>That’s your lot.<br>Doubt we’ll be snagging any keys from this account,then.</p>
-<img class="left-img" src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/003.png"  width="500">
-Screenshot.3<br><br>
-
-<p>Right, then. Looks like we’ll<br>probably need a temporary bit of privilege escalation,<br>likely via an <code>nc</code>listener, to get our hands on that key.</p>
-<img class="left-img" src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/5.png"  width="500">
-
-<p>Screenshot.4</p>
-<p>Right then. Let’s just hop onto that listener.<br>And as soon as we’re in,</p>
-<p>you’ll see <code>memcpy</code> is running.<br>Turns out, this file…</p>
+<p>So, these two, I’d imagine</p>
+<p>The input value isn’t being stored in <code>passcode1</code></p>
+<p>it’s not.</p>
 <p>​</p>
-<p>It appears to be operating as a C function,<br>then, designed for copying memory.</p>
-<img class="left-img" src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/6.png"  width="500">
-Screenshot. 5
-
-<p>The <code>memcpy</code> file apparently takes<br>numbers within a given range.</p>
-<p>Feed it anything outside that,<br>and it just bails immediately.</p>
-<p>But get ten in-range numbers into it,<br>and then it’s said to perform both a<br>​<br>slow and a fast memory copy process.</p>
-<p>Right. It only gets through five stages of that process,<br>and then suddenly…</p>
-<p>Then it just spat out an error and promptly died. ōxō<br><del>Then it just spat out an error and promptly died. ōxō</del>  </p>
-<p>Right. So, what we’ve found is this program has a tendency to<br>just cut out mid-process.<br>And,as the messages on execution rather plainly suggest</p>
-<p>it’s all tied to the slow and fast <code>memcpy</code> implementations.</p>
-<p>​<br>Right. Apparently,<br>if you can compare<br>the various data sizes without it cutting out mid-process,</p>
-<p>and manage to get through all the sections,<br>it’s said to hand over the key.</p>
-<p>So,I suppose we’d better dive into the source code, then.</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// compiled with : gcc -o memcpy memcpy.c -m32 -lm</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;signal.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/mman.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> <span class="title function_">rdtsc</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">asm</span>(<span class="string">&quot;rdtsc&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">char</span>* <span class="title function_">slow_memcpy</span><span class="params">(<span class="type">char</span>* dest, <span class="type">const</span> <span class="type">char</span>* src, <span class="type">size_t</span> len)</span>&#123;</span><br><span class="line">	<span class="type">int</span> i;</span><br><span class="line">	<span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;len; i++) &#123;</span><br><span class="line">		dest[i] = src[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> dest;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">char</span>* <span class="title function_">fast_memcpy</span><span class="params">(<span class="type">char</span>* dest, <span class="type">const</span> <span class="type">char</span>* src, <span class="type">size_t</span> len)</span>&#123;</span><br><span class="line">	<span class="type">size_t</span> i;</span><br><span class="line">	<span class="comment">// 64-byte block fast copy</span></span><br><span class="line">	<span class="keyword">if</span>(len &gt;= <span class="number">64</span>)&#123;</span><br><span class="line">		i = len / <span class="number">64</span>;</span><br><span class="line">		len &amp;= (<span class="number">64</span><span class="number">-1</span>);</span><br><span class="line">		<span class="keyword">while</span>(i-- &gt; <span class="number">0</span>)&#123;</span><br><span class="line">			__asm__ __volatile__ (</span><br><span class="line">			<span class="string">&quot;movdqa (%0), %%xmm0\n&quot;</span></span><br><span class="line">			<span class="string">&quot;movdqa 16(%0), %%xmm1\n&quot;</span></span><br><span class="line">			<span class="string">&quot;movdqa 32(%0), %%xmm2\n&quot;</span></span><br><span class="line">			<span class="string">&quot;movdqa 48(%0), %%xmm3\n&quot;</span></span><br><span class="line">			<span class="string">&quot;movntps %%xmm0, (%1)\n&quot;</span></span><br><span class="line">			<span class="string">&quot;movntps %%xmm1, 16(%1)\n&quot;</span></span><br><span class="line">			<span class="string">&quot;movntps %%xmm2, 32(%1)\n&quot;</span></span><br><span class="line">			<span class="string">&quot;movntps %%xmm3, 48(%1)\n&quot;</span></span><br><span class="line">			::<span class="string">&quot;r&quot;</span>(src),<span class="string">&quot;r&quot;</span>(dest):<span class="string">&quot;memory&quot;</span>);</span><br><span class="line">			dest += <span class="number">64</span>;</span><br><span class="line">			src += <span class="number">64</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// byte-to-byte slow copy</span></span><br><span class="line">	<span class="keyword">if</span>(len) slow_memcpy(dest, src, len);</span><br><span class="line">	<span class="keyword">return</span> dest;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">	setvbuf(<span class="built_in">stdout</span>, <span class="number">0</span>, _IONBF, <span class="number">0</span>);</span><br><span class="line">	setvbuf(<span class="built_in">stdin</span>, <span class="number">0</span>, _IOLBF, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;Hey, I have a boring assignment for CS class.. :(\n&quot;</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;The assignment is simple.\n&quot;</span>);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;-----------------------------------------------------\n&quot;</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;- What is the best implementation of memcpy?        -\n&quot;</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;- 1. implement your own slow/fast version of memcpy -\n&quot;</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;- 2. compare them with various size of data         -\n&quot;</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;- 3. conclude your experiment and submit report     -\n&quot;</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;-----------------------------------------------------\n&quot;</span>);</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;This time, just help me out with my experiment and get flag\n&quot;</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;No fancy hacking, I promise :D\n&quot;</span>);</span><br><span class="line"></span><br><span class="line">	<span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> t1, t2;</span><br><span class="line">	<span class="type">int</span> e;</span><br><span class="line">	<span class="type">char</span>* src;</span><br><span class="line">	<span class="type">char</span>* dest;</span><br><span class="line">	<span class="type">unsigned</span> <span class="type">int</span> low, high;</span><br><span class="line">	<span class="type">unsigned</span> <span class="type">int</span> size;</span><br><span class="line">	<span class="comment">// allocate memory</span></span><br><span class="line">	<span class="type">char</span>* cache1 = mmap(<span class="number">0</span>, <span class="number">0x4000</span>, <span class="number">7</span>, MAP_PRIVATE|MAP_ANONYMOUS, <span class="number">-1</span>, <span class="number">0</span>);</span><br><span class="line">	<span class="type">char</span>* cache2 = mmap(<span class="number">0</span>, <span class="number">0x4000</span>, <span class="number">7</span>, MAP_PRIVATE|MAP_ANONYMOUS, <span class="number">-1</span>, <span class="number">0</span>);</span><br><span class="line">	src = mmap(<span class="number">0</span>, <span class="number">0x2000</span>, <span class="number">7</span>, MAP_PRIVATE|MAP_ANONYMOUS, <span class="number">-1</span>, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">	<span class="type">size_t</span> sizes[<span class="number">10</span>];</span><br><span class="line">	<span class="type">int</span> i=<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// setup experiment parameters</span></span><br><span class="line">	<span class="keyword">for</span>(e=<span class="number">4</span>; e&lt;<span class="number">14</span>; e++)&#123;	<span class="comment">// 2^13 = 8K</span></span><br><span class="line">		low = <span class="built_in">pow</span>(<span class="number">2</span>,e<span class="number">-1</span>);</span><br><span class="line">		high = <span class="built_in">pow</span>(<span class="number">2</span>,e);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;specify the memcpy amount between %d ~ %d : &quot;</span>, low, high);</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;size);</span><br><span class="line">		<span class="keyword">if</span>( size &lt; low || size &gt; high )&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;don&#x27;t mess with the experiment.\n&quot;</span>);</span><br><span class="line">			<span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		sizes[i++] = size;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	sleep(<span class="number">1</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;ok, lets run the experiment with your configuration\n&quot;</span>);</span><br><span class="line">	sleep(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">	<span class="comment">// run experiment</span></span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;<span class="number">10</span>; i++)&#123;</span><br><span class="line">		size = sizes[i];</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;experiment %d : memcpy with buffer size %d\n&quot;</span>, i+<span class="number">1</span>, size);</span><br><span class="line">		dest = <span class="built_in">malloc</span>( size );</span><br><span class="line"></span><br><span class="line">		<span class="built_in">memcpy</span>(cache1, cache2, <span class="number">0x4000</span>);		<span class="comment">// to eliminate cache effect</span></span><br><span class="line">		t1 = rdtsc();</span><br><span class="line">		slow_memcpy(dest, src, size);		<span class="comment">// byte-to-byte memcpy</span></span><br><span class="line">		t2 = rdtsc();</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;ellapsed CPU cycles for slow_memcpy : %llu\n&quot;</span>, t2-t1);</span><br><span class="line"></span><br><span class="line">		<span class="built_in">memcpy</span>(cache1, cache2, <span class="number">0x4000</span>);		<span class="comment">// to eliminate cache effect</span></span><br><span class="line">		t1 = rdtsc();</span><br><span class="line">		fast_memcpy(dest, src, size);		<span class="comment">// block-to-block memcpy</span></span><br><span class="line">		t2 = rdtsc();</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;ellapsed CPU cycles for fast_memcpy : %llu\n&quot;</span>, t2-t1);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;thanks for helping my experiment!\n&quot;</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;flag : ----- erased in this source code -----\n&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Right. So, back in <code>experiment5</code>,<br>the <code>fast_memcpy</code> section threw an error, didn’t it?<br>That just cut off the rest of it.</p>
-<p>Means we can only actually get the key if all<br>the subsequent sections run through without a hitch.</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// run experiment</span></span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;<span class="number">10</span>; i++)&#123; <span class="comment">//</span></span><br><span class="line">        size = sizes[i];</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;experiment %d : memcpy with buffer size %d\n&quot;</span>, i+<span class="number">1</span>, size);</span><br><span class="line">        dest = <span class="built_in">malloc</span>( size ); <span class="comment">//</span></span><br><span class="line"></span><br><span class="line">        <span class="built_in">memcpy</span>(cache1, cache2, <span class="number">0x4000</span>);		<span class="comment">// </span></span><br><span class="line">        t1 = rdtsc(); <span class="comment">//</span></span><br><span class="line">        slow_memcpy(dest, src, size);		<span class="comment">// </span></span><br><span class="line">        t2 = rdtsc();</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;ellapsed CPU cycles for slow_memcpy : %llu\n&quot;</span>, t2-t1);</span><br><span class="line"></span><br><span class="line">        <span class="built_in">memcpy</span>(cache1, cache2, <span class="number">0x4000</span>);		</span><br><span class="line">        t1 = rdtsc();</span><br><span class="line">        fast_memcpy(dest, src, size);		<span class="comment">// </span></span><br><span class="line">        t2 = rdtsc();</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;ellapsed CPU cycles for fast_memcpy : %llu\n&quot;</span>, t2-t1);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;thanks for helping my experiment!\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;flag : ----- erased in this source code -----\n&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>1. It runs ten times, as per the input count.</p>
-<p>2. Memory is dynamically allocated to the set size,<br>and that’s stored in <code>dest</code>.</p>
-<p>3. The <code>rdtsc()</code> function, for precise timing, calculates<br> the duration of the slow memory copy and puts that into <code>t1</code>.</p>
-<p>4. And <code>t2</code>, of course, will then hold the time taken for the fast memory copy.</p>
-<p>5. Right. So, the slow memory copy, that’s done byte by byte.<br> The fast one? That’s block by block.</p>
-<p>→ Solution : First off, we’ll need those functions where<br> the slow and fast memory copies are actually defined.</p>
-<p>Right. You’ll need to head over to that section and<br>figure out what the function’s actually doing.</p>
-<p>Next <code>slow\_memcpy, fast\_memcpy</code>It’s a function.</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span>* <span class="title function_">slow_memcpy</span><span class="params">(<span class="type">char</span>* dest, <span class="type">const</span> <span class="type">char</span>* src, <span class="type">size_t</span> len)</span>&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;len; i++) &#123;</span><br><span class="line">        dest[i] = src[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dest;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="type">char</span>* <span class="title function_">fast_memcpy</span><span class="params">(<span class="type">char</span>* dest, <span class="type">const</span> <span class="type">char</span>* src, <span class="type">size_t</span> len)</span>&#123;</span><br><span class="line">    <span class="type">size_t</span> i;</span><br><span class="line">    <span class="comment">// 64-byte block fast copy</span></span><br><span class="line">    <span class="keyword">if</span>(len &gt;= <span class="number">64</span>)&#123; <span class="comment">//길이가 64이상만 아래 빠른 복사 이용</span></span><br><span class="line">        i = len / <span class="number">64</span>;</span><br><span class="line">        len &amp;= (<span class="number">64</span><span class="number">-1</span>);</span><br><span class="line">        <span class="keyword">while</span>(i-- &gt; <span class="number">0</span>)&#123;</span><br><span class="line">            __asm__ __volatile__ (</span><br><span class="line">            <span class="string">&quot;movdqa (%0), %%xmm0\n&quot;</span></span><br><span class="line">            <span class="string">&quot;movdqa 16(%0), %%xmm1\n&quot;</span></span><br><span class="line">            <span class="string">&quot;movdqa 32(%0), %%xmm2\n&quot;</span></span><br><span class="line">            <span class="string">&quot;movdqa 48(%0), %%xmm3\n&quot;</span></span><br><span class="line">            <span class="string">&quot;movntps %%xmm0, (%1)\n&quot;</span></span><br><span class="line">            <span class="string">&quot;movntps %%xmm1, 16(%1)\n&quot;</span></span><br><span class="line">            <span class="string">&quot;movntps %%xmm2, 32(%1)\n&quot;</span></span><br><span class="line">            <span class="string">&quot;movntps %%xmm3, 48(%1)\n&quot;</span></span><br><span class="line">            ::<span class="string">&quot;r&quot;</span>(src),<span class="string">&quot;r&quot;</span>(dest):<span class="string">&quot;memory&quot;</span>);</span><br><span class="line">            dest += <span class="number">64</span>;</span><br><span class="line">            src += <span class="number">64</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// byte-to-byte slow copy</span></span><br><span class="line">    <span class="keyword">if</span>(len) slow_memcpy(dest, src, len);</span><br><span class="line">    <span class="keyword">return</span> dest;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>Right. <code>slow\_memcpy</code>,<br>that’s your basic byte-by-byte operation<br>from source to destination.<br>Simple enough, but a bit sluggish,<br>mind you. <code>fast\_memcpy()</code>, on the other</p>
-<p>hand, well, that’s designed for 64-byte chunks…<br>​<br>Right then. If it’s anything under that,<br>it just runs <code>slow\_memcpy</code>.<br>But for 64 bytes or more,<br>it then executes the assembly-level code</p>
-<p>Right then. In the <code>fast\_memcpy()</code> section,<br>it cut out midway through execution, didn’t it?<br>That meant this assembly code simply wasn’t able to</p>
-<p>properly get invoked, thus throwing an error.<br>​</p>
-<p>Right. The analysis breaks down as follows.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">__asm__ __volatile__ (</span><br><span class="line"><span class="string">&quot;movdqa (%0), %%xmm0\n&quot;</span></span><br><span class="line"><span class="string">&quot;movdqa 16(%0), %%xmm1\n&quot;</span></span><br><span class="line"><span class="string">&quot;movdqa 32(%0), %%xmm2\n&quot;</span></span><br><span class="line"><span class="string">&quot;movdqa 48(%0), %%xmm3\n&quot;</span></span><br><span class="line"><span class="string">&quot;movntps %%xmm0, (%1)\n&quot;</span></span><br><span class="line"><span class="string">&quot;movntps %%xmm1, 16(%1)\n&quot;</span></span><br><span class="line"><span class="string">&quot;movntps %%xmm2, 32(%1)\n&quot;</span></span><br><span class="line"><span class="string">&quot;movntps %%xmm3, 48(%1)\n&quot;</span></span><br><span class="line">::<span class="string">&quot;r&quot;</span>(src),<span class="string">&quot;r&quot;</span>(dest):<span class="string">&quot;memory&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-<p>movdqa : Right.The’Aligned Double Quadword Move’.</p>
-<p>Right. It takes the double quadword from the source operand<br>—that’s your second—and moves it to<br>the destination operand, which is the first one.<br>​<br>Right then.<br>This instruction moves a double quadword between an XMM<br>register and a 128-bit memory location,<br>or between two of those…<br>​<br>…XMM registers. And, naturally,<br>it can be used for movement between those.<br>Now, regarding the source or destination operand…</p>
-<p>Right. If your operand’s memory-based,<br>it absolutely has to be aligned to a 16-byte boundary.<br>Fail to do that, and you’ll get yourself a<br>General Protection Exception (#GP).</p>
+<p>Rather, it’s being stored at an address that’s meant for <code>passcode1</code>.</p>
+<p>it’s being stored.</p>
 <p>​</p>
-<p>movntps : Right then.<br>That’s for storing packed single-precision floating-point values,<br>utilising that non-temporal hint, of course.</p>
-<p>then. You’re using the non-temporal hint to move<br>the packed floating-point values from the source operand,<br>over to the destination.</p>
-<p>…operand, and that, naturally,<br>prevents any data caching whilst it’s being written to memory.</p>
+<p>So, for example, if <code>passcode1=0x123死5678</code>,</p>
+<p>it seems the value we input would then be stored at the <code>0x123死5678</code> address.</p>
+<p>it seems the value we input would then be stored.</p>
+<p>​<br>Both variables likely contain dummy values as they haven’t been initialised</p>
+<p>and given that the input value is then being stored at an address derived from that dummy value</p>
+<p>well, that’s where the error crops up, isn’t it?</p>
 <p>​</p>
-<p>Right then. In <code>movdqa</code><br>the’mov’bit there is,of course,<br>your instruction for shifting values about.<br>And’dq’? Well,that’s just your’double quad’, isn’t it?</p>
-<p>Right then.<br>That instruction, it’ll throw an exception if it’s not aligned to<br>a 16-byte boundary.So, if you just ensure</p>
-<p>the destination operand’s address is 16-byte aligned,<br>that’ll sort the issue right out.</p>
-<p>​<br>Right then. We’ll just fire up GDB,debug it,<br>and then go about snagging that key, won’t we?<br>ㅋㅅㅋ</p>
-<img class="left-img" src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/7.png"  width="500">
+<p>Right, then let’s have a look with gdb.</p>
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/07.png" alt="미리보기 방지" width="300" style="text-align: left;">
 
-<p>Screenshot. 6</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /tmp</span><br><span class="line"><span class="built_in">mkdir</span> tm</span><br><span class="line"><span class="built_in">cd</span> tm</span><br><span class="line"><span class="built_in">ln</span> -s /home/memcpy/memcpy.c</span><br><span class="line">gcc -o memcpy memcpy.c -m32 -lm</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;8 16 32 64 128 256 512 1024 2048 4096&quot;</span> &gt; exploit</span><br></pre></td></tr></table></figure>
 
-<p>Right then. Once we’ve executed that through GDB,<br>we’ll then step into the <code>fast\_memcpy</code> function and have a proper look, shall we?</p>
-<img class="left-img" src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/8.png"  width="500">
 
-<p>Screenshot. 7</p>
-<p>Right then. It’s sat at that location,<br>and the EDX value is <code>0x080487cc</code>.</p>
-<p>Up to the fourth instance,<br>the alignment was perfectly fine,</p>
-<p>so no errors popped up.<br>But the fifth one? It wasn’t aligned at all.</p>
-<img class="left-img" src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/9.png"  width="500">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/08.png" alt="미리보기 방지" width="300" style="text-align: left;">
 
-<img class="left-img" src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/10.png"  width="500">
 
-<img class="left-img" src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/11.png"  width="500">
 
-<img class="left-img" src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/12.png"  width="500">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/09.png" alt="미리보기 방지" width="300" style="text-align: left;">
 
-<img class="left-img" src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/13.png"  width="500">
-Screenshot. 8
 
-<p>Right then. Just set a breakpoint at<br>the <code>fast\_memcpy</code> function,<br>specifically at +71. Check the register value,<br>and you’ll find EDX is indeed aligned at <code>804d060</code></p>
-<p>​<br>Essentially,<br>it’s 8 bytes short of 64,<br>meaning you’ll need an 8-byte offset.</p>
-<p>And for any other values you’re debugging,<br>it’s fair to assume they’ll<br>all be missing 8 as well.</p>
+<p>Screenshot. 4</p>
+<p>First off, if you have a look at the ‘welcome’ function, it stores the input value at <code>ebp-0x70</code></p>
+<p>it stores the input value at <code>ebp-0x70</code>.<br>​</p>
+<p>And then, with the <code>login</code> function, you’ll see:</p>
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/10.png" alt="미리보기 방지" width="300" style="text-align: left;">
+
+
+<p>Screenshot. 5</p>
+<p>You can tell that <code>ebp-0x10</code> is where <code>passcode1</code> is located.</p>
+<p>is located.</p>
 <p>​</p>
-<p>So, we’ll just add eight to the fifth value and<br>every subsequent one after that…</p>
-<p>​</p>
-<p>8 16 32 64 128 256 512 1024 2048 4096</p>
-<p><strong>8 16 32 72 136 264 520 1032 2056 4096</strong></p>
-<p>​<br>then.<br>So, it’ll assume that form we’ve just established.</p>
-<p>And armed with that little theory of ours,<br>we’ll then just fire up an <code>nc</code>listening server…</p>
-<p>​<br>…feed each of those in, and then you’ll finally manage to snag the key.</p>
-<p>​<br>Right. One could,naturally,dabble with other approaches,<br>I suppose.But for my money,using GDB is probably<br>the most sensible way to go about it.</p>
-<p>​<br>So, if you run the program,<br>you’ll find the key value displayed, much as below.</p>
-<img class="left-img" src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/14.png"  width="500">
+<p>Now, <code>welcome()</code> receives 100 bytes of input, but</p>
+<figure class="highlight plaintext"><figcaption><span>– \[ebp-0x10\] </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">So,one can in fact manipulate the ```passcode``` value</span><br><span class="line"></span><br><span class="line">​</span><br><span class="line"></span><br><span class="line">Right, then as we can insert the desired value at the address that is the value of &#x27;passcode1&#x27;</span><br><span class="line"></span><br><span class="line">we can therefore insert the desired value at the desired address</span><br><span class="line"></span><br><span class="line">we can therefore insert the desired value</span><br><span class="line"></span><br><span class="line">​</span><br><span class="line"></span><br><span class="line">Following that, we simply change the GOT address of ```fflush()``` to the ```system()``` portion of ```login()```.</span><br><span class="line"></span><br><span class="line">we simply change the ```system()``` address</span><br><span class="line"></span><br><span class="line">​</span><br><span class="line"></span><br><span class="line">So, then let&#x27;s find the GOT address of ```fflush()``` and</span><br><span class="line">the address of the ```system()``` portion of ```login()```</span><br><span class="line"></span><br><span class="line">let&#x27;s find the address of the ```system()```portion of ```login()```</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;img src=&quot;https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/11.png&quot; alt=&quot;미리보기 방지&quot; width=&quot;300&quot; style=&quot;text-align: left;&quot;&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Screenshot. 6</span><br><span class="line"></span><br><span class="line">The GOT address for ```fflush``` is ```0x0804a004```.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;img src=&quot;https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/12.png&quot; alt=&quot;미리보기 방지&quot; width=&quot;300&quot; style=&quot;text-align: left;&quot;&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Screenshot. 7</span><br><span class="line"></span><br><span class="line">If you look at the beginning of </span><br><span class="line">the &#x27;system&#x27; function</span><br><span class="line"></span><br><span class="line">you can see it&#x27;s ```0x080485e3```</span><br><span class="line"></span><br><span class="line">then, if we construct the payload</span><br><span class="line"></span><br><span class="line">​</span><br><span class="line"></span><br><span class="line">It becomes ```dummy\[96\]+fflush()```s ```got\[4\]```</span><br><span class="line"></span><br><span class="line">and ```system()``` ```\[4\]```</span><br><span class="line"></span><br><span class="line">​</span><br><span class="line"></span><br><span class="line">Now, ```system()\[4\]``` as ```scanf()``` receives integers here Is</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">we need to convert ```system()\[4\]``` to an integer and send it</span><br><span class="line"></span><br><span class="line">we need to convert it to an integer and send it</span><br><span class="line"></span><br><span class="line">​</span><br><span class="line"></span><br><span class="line">```0x80485e3 = 134514147```</span><br><span class="line"></span><br><span class="line">``` bash</span><br><span class="line">(python -c &#x27;print &quot;D&quot;*96 + &quot;\x04\xa0\x04\x08&quot;&#x27;; cat) | ./passcode</span><br></pre></td></tr></table></figure>
+
+
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/13.png" alt="미리보기 방지" width="300px" style="text-align: left;">
+
+
+<p>Screenshot. 8</p>
+<p>And that’s how we snagged the key, you see.</p>
+<p>And then, heading back to the initial page</p>
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/14.png" alt="미리보기 방지" width="300px" style="text-align: left;">
+
 
 <p>Screenshot. 9</p>
-<p>With the key value we’ve just, ah,’snagged’,<br>you simply head back to the start,pop it into<br>the blank,and then,naturally,hit that’auth’ button.</p>
-<img class="left-img" src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/15.png"  width="500">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/15.png" alt="미리보기 방지" width="300px" style="text-align: left;">
 
-<p>Screenshot.10</p>
-<p>Right.<br>And then you’re presented<br>with a message about securing 10 points</p>
-<img class="left-img" src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/16.png"  width="500">
-<br>
-<br>
-<br>
-<br>
-<img class="left-img" src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/17.png"  width="500">
 
-<p>Screenshot.11</p>
-<p>then. And upon returning,<br>you’ll find it’s indicated<br>with a green dotted line.<br>Signifying it’s, well, resolved.</p>
+<p>Screenshot. 10</p>
+<p>You can confirm that 10 points were in fact, received upon mission completion</p>
+<p>You can confirm that 10 points were received</p>
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/16.png" alt="미리보기 방지" width="300px" style="text-align: left;">
+
+
+<p>Screenshot. 11</p>
+<p>And then, a green dotted line indicates completion</p>
+<p>it indicates completion.</p>
 <p>​</p>
-<p>And thanks for actually<br>bothering to read through all that.</p>
-<p>Right then.That’s done, then. :)</p>
+<p>Oh, and even upon completion, it seems one can repeatedly practice the same problem</p>
+<p>it seems one can repeatedly practice it</p>
+<p>​</p>
+<p>Looks like it’s solvable, then, eh? ōxō</p>
+<p><del>Looks like it’s solvable, then, eh? ōxō</del></p>
 <div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/White Hacking/CTF/pwnable.kr/Memcpy Problem solving/2.png" alt="미리보기 방지" width="300">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/02.png" alt="미리보기 방지" width="300px">
 </div>
 
-<p>Right then.<br>Hope your day isn’t completely rubbish,<br>and whatever you’re cracking on with goes smoothly.</p>
-<p>It’s a bit of a scorcher today,mind you,<br>so try not to go getting heatstroke.<br>And, naturally,<br>do be careful of that Wuhan pneumonia.</p>
-<div  style="text-align: center;">
-<img  src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Memcpy%20Problem%20solving/18.png" width= 300></div>  <br>  <br>
+<p>Have a good day,<br>and I hope everything works out well for you</p>
+<p>It’s quite warm out,<br>so do try and avoid getting heatstroke</p>
+<p>And do take care with the erm,<br>Wuhan pneumonia situation</p>
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Passcode%20Problem%20Solving/17.png" alt="미리보기 방지" width="300px">
+</div>
 
 <div id="disqus_thread"></div>
 <script>
@@ -472,7 +431,7 @@ Screenshot. 8
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/33/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/">33</a><span class="page-number current">34</span><a class="page-number" href="/page/35/">35</a><a class="extend next" rel="next" href="/page/35/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/33/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/">33</a><span class="page-number current">34</span><a class="page-number" href="/page/35/">35</a><a class="page-number" href="/page/36/">36</a><a class="extend next" rel="next" href="/page/35/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -540,7 +499,7 @@ Screenshot. 8
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">35</span>
+          <span class="site-state-item-count">36</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
