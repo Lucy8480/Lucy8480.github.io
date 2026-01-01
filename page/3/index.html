@@ -195,7 +195,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://pihne.github.io/2025/10/24/ETC/Genshin-Cartoons/Genshin-Impact-Amber-Yandere-Part1/">
+    <link itemprop="mainEntityOfPage" href="https://pihne.github.io/2025/10/30/DevDiary/Kali%20Linux/Kali-Linux-Network-Setup-Guide/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://pihne22710.github.io/images/lumine.png">
@@ -209,7 +209,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2025/10/24/ETC/Genshin-Cartoons/Genshin-Impact-Amber-Yandere-Part1/" class="post-title-link" itemprop="url">【Genshin Impact】Amber Yandere Part1</a>
+            <a href="/2025/10/30/DevDiary/Kali%20Linux/Kali-Linux-Network-Setup-Guide/" class="post-title-link" itemprop="url">【Kali Linux】 network setup guide</a>
         </h2>
 
         <div class="post-meta">
@@ -218,21 +218,27 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2025-10-24 12:40:11 / Modified: 00:48:06" itemprop="dateCreated datePublished" datetime="2025-10-24T12:40:11+09:00">2025-10-24</time>
+              <time title="Created: 2025-10-30 11:03:36" itemprop="dateCreated datePublished" datetime="2025-10-30T11:03:36+09:00">2025-10-30</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2025-12-15 19:39:54" itemprop="dateModified" datetime="2025-12-15T19:39:54+09:00">2025-12-15</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ETC-Taking-a-Break/" itemprop="url" rel="index"><span itemprop="name">(ETC) Taking a Break</span></a>
+                  <a href="/categories/DevDiary/" itemprop="url" rel="index"><span itemprop="name">DevDiary</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ETC-Taking-a-Break/%E3%80%90Genshin%E3%80%91Cartoons/" itemprop="url" rel="index"><span itemprop="name">【Genshin】Cartoons</span></a>
+                  <a href="/categories/DevDiary/Kali-Linux/" itemprop="url" rel="index"><span itemprop="name">Kali Linux</span></a>
                 </span>
             </span>
 
@@ -249,36 +255,25 @@
       
           <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/4.%E3%80%90Genshin%20Impact%E3%80%91Aether%20Cooking%20For%20Lisa/%E3%80%90Genshin%E3%80%91Cartoons.png" alt="" width="400" height="300">
+<h1 id="Kali-Linux-Network-Setup-guide"><a href="#Kali-Linux-Network-Setup-guide" class="headerlink" title="[Kali Linux] Network Setup guide"></a>[Kali Linux] Network Setup guide</h1><p style="text-align:center">
+<img border="0" width="400" height="400" src="https://pihne22710.github.io/PostImages/DevDiary/etc/Kali%20Linux/[Kali-Linux]Network-Setup-guide.png"><br></p>
+
+<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>This is The Network Configuration For Kali Linux.</p>
+<h3 id="1-Permanent-configuration"><a href="#1-Permanent-configuration" class="headerlink" title="1. Permanent configuration"></a>1. Permanent configuration</h3><p>Edit The <code>/etc/network/interfaces</code><br>File With An Editor Such As gedit or vi.<br>Add The Following Lines At The End Of The File.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">auto eth0</span><br><span class="line">iface eth0 inet dhcp</span><br><span class="line"></span><br><span class="line">auto eth1</span><br><span class="line">iface eth1 inet dhcp</span><br></pre></td></tr></table></figure>
+
+<p>Verify that the file’s<br>complete contents are displayed as follows.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">┌──(User㉿kali)-[~]</span><br><span class="line">└─$ <span class="built_in">cat</span> /etc/network/interfaces</span><br><span class="line"><span class="comment"># This file describes the network interfaces available on your system</span></span><br><span class="line"><span class="comment"># and how to activate them. For more information, see interfaces(5).</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">source</span> /etc/network/interfaces.d/*</span><br><span class="line"></span><br><span class="line"><span class="comment"># The loopback network interface</span></span><br><span class="line">auto lo</span><br><span class="line">iface lo inet loopback</span><br><span class="line"></span><br><span class="line">auto eth0</span><br><span class="line">iface eth0 inet dhcp</span><br><span class="line"></span><br><span class="line">auto eth1</span><br><span class="line">iface eth1 inet dhcp</span><br><span class="line">┌──(User㉿kali)-[~]</span><br><span class="line">└─$ </span><br></pre></td></tr></table></figure>
+
+<p>Now run the command below<br>to apply the network settings.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">┌──(User㉿kali)-[~]</span><br><span class="line">└─$ systemctl restart networking</span><br></pre></td></tr></table></figure>
+<p>Also, both adapters will<br>be configured automatically even after rebooting. </p>
+<h3 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h3><p>🪔 <a target="_blank" rel="noopener" href="https://cafe.naver.com/f-e/cafes/28961395/articles/100?referrerAllArticles=true&inCafeSearch=true&query=%EC%B9%BC%EB%A6%AC%EB%A6%AC%EB%88%85%EC%8A%A4%20%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC&art=aW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtaW5DYWZlLXNlYXJjaC1saXN0.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjEwMCwiaXNzdWVkQXQiOjE3NjE4MzIzMjM5NzEsImNhZmVJZCI6Mjg5NjEzOTV9.o5RJCIMzMGnyiDX6mpZHI5jOSfIuwEZrDniJpqUCFao">Source</a><br><br></p>
+<p style="font-size: 25px; color: #2844e2ff;"> Done</p>
 </div>
-<br><br>
 
-<h2 id="Cartoon"><a href="#Cartoon" class="headerlink" title="Cartoon"></a>Cartoon</h2><br>
 
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/8.%E3%80%90Genshin%20Impact%E3%80%91%20Amber%20Yandere%20Part1/1.png" alt="" >
-</div><br><br>
 
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/8.%E3%80%90Genshin%20Impact%E3%80%91%20Amber%20Yandere%20Part1/2.jpg" alt="" >
-</div><br><br>
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/8.%E3%80%90Genshin%20Impact%E3%80%91%20Amber%20Yandere%20Part1/3.jpg" alt="" >
-</div><br><br>
-
-<!-- 접은 글 시작 -->
-<details>
-<summary>👉 Click to expand </summary>
-#Amber #GenshinImpact <br>
-#アンバー #原神
-</details>
-<!-- 접은 글 끝 -->
-
-<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><p>🎨 Art : <a target="_blank" rel="noopener" href="https://x.com/nowlasd">@nowlasd</a> <br><br>🪔 Pixiv : <a target="_blank" rel="noopener" href="https://www.pixiv.net/users/61289463/">https://www.pixiv.net/users/61289463/</a></p>
-<p>📎Link : <a target="_blank" rel="noopener" href="https://www.pixiv.net/artworks/91426879">1</a> <a target="_blank" rel="noopener" href="https://www.pixiv.net/artworks/91688610">2</a> <a target="_blank" rel="noopener" href="https://www.pixiv.net/artworks/91800065">3</a></p>
-<p>☕ The First Discovery :<br><a target="_blank" rel="noopener" href="https://arca.live/b/genshin/67142190">https://arca.live/b/genshin/67142190</a><br><a target="_blank" rel="noopener" href="https://m.blog.naver.com/zenio3700/222980406353">https://m.blog.naver.com/zenio3700/222980406353</a></p>
 <div id="disqus_thread"></div>
 <script>
     /**
@@ -298,7 +293,6 @@
     })();
 </script>
 <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
       
     </div>
 
@@ -317,7 +311,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/36/">36</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/37/">37</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -385,20 +379,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">36</span>
+          <span class="site-state-item-count">37</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">15</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -427,7 +421,7 @@
 <div class="copyright">
   
   &copy; 2016 – 
-  <span itemprop="copyrightYear">2025</span>
+  <span itemprop="copyrightYear">2026</span>
   <span class="with-love">
     <i class="fa fa-Lucy"></i>
   </span>

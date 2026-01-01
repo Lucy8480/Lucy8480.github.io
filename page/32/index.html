@@ -195,7 +195,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://pihne.github.io/2020/08/04/White%20Hacking/pwnable.kr/pwnable-kr-Ieg-Problem-Solving/">
+    <link itemprop="mainEntityOfPage" href="https://pihne.github.io/2020/08/04/White%20Hacking/pwnable.kr/pwnable-kr-Random-Problem-Solving/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://pihne22710.github.io/images/lumine.png">
@@ -209,7 +209,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/08/04/White%20Hacking/pwnable.kr/pwnable-kr-Ieg-Problem-Solving/" class="post-title-link" itemprop="url">『pwnable.kr』Ieg Problem Solving</a>
+            <a href="/2020/08/04/White%20Hacking/pwnable.kr/pwnable-kr-Random-Problem-Solving/" class="post-title-link" itemprop="url">『pwnable.kr』Random Problem Solving</a>
         </h2>
 
         <div class="post-meta">
@@ -219,14 +219,14 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2020-08-04 14:03:11" itemprop="dateCreated datePublished" datetime="2020-08-04T14:03:11+09:00">2020-08-04</time>
+              <time title="Created: 2020-08-04 19:35:11" itemprop="dateCreated datePublished" datetime="2020-08-04T19:35:11+09:00">2020-08-04</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2025-10-10 06:10:50" itemprop="dateModified" datetime="2025-10-10T06:10:50+09:00">2025-10-10</time>
+                <time title="Modified: 2025-10-10 06:12:01" itemprop="dateModified" datetime="2025-10-10T06:12:01+09:00">2025-10-10</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -260,186 +260,148 @@
           <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/01_Rina.gif" alt="미리보기 방지" width="300">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/01_Rina.gif" alt="미리보기 방지" width="300">
 </div>
 
-<p>This one, it’s slightly lower</p>
-<p>on the Hard Level scale than the last,</p>
-<p>so perhaps that’s why</p>
-<p>it feels like it’s coming together</p>
-<p>a bit more quickly.（　´∀｀）</p>
+<p>Right, this one’s comparatively not too bad</p>
+<p>difficulty-wise, you see</p>
+<p>Right, anyway<br>due to my own circumstances,<br>I suppose</p>
+<p>this study-related post</p>
+<p>will have to be the last of its kind for now</p>
+<p>I should really try a<br>bug bounty this year,<br>at the very latest.</p>
+<p>The situation shows no sign of<br>improving, honestly.</p>
+<p>ε-(´・｀)</p>
+<p>Honestly, rather than wasting all<br>my time and health with some<br>unwanted weekday part-time work,</p>
+<p>with some unwanted weekday part-time work,</p>
+<p>it’d be far less galling to do<br>bug bounties on weekdays</p>
+<p>and just part-time work on weekends.</p>
+<p>it’d be far less galling.</p>
+<p>-`д´-</p>
+<p>Right, anyway I’ll just carry on writing.</p>
+<p>(ㆁᴗㆁ✿)</p>
 <div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/02.png" alt="미리보기 방지" width="300">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/02.png" width="300">
 </div>
 
-<br>
-<br>
-
 <div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White Hacking/CTF/pwnable.kr/Ieg Problem Solving/03.png" alt="미리보기 방지" width="300">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/03.png" alt="" width="300">
+</div>
+Screenshot 1.
+
+<p>Right, first let’s have a gander at the question,</p>
+<p>with my own rather straightforward,<br>literal translation</p>
+<p>Daddy, teach me how to use random value in programming!</p>
+<div style="text-alingn: right;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/04.png" alt="" width="300">
+</div>
+Screenshot 2.
+
+<p>Right, and then</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh random@pwnable.kr -p2222</span><br></pre></td></tr></table></figure>
+
+<p>you connect straight away.</p>
+<div style="text-alingn: right;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/05.png" alt="" width="300">
+</div>
+Screenshot 3.
+
+<p>First,you work out whether<br>the file exists,and then</p>
+<p>you check the <code>random.c</code> file</p>
+<p>I check it</p>
+<p>Right, so it’s a program that receives a<br>key value if you XOR a 4-byte<br>random value with an input value</p>
+<p>if you XOR a 4-byte random value with an input value</p>
+<p>and <code>0xdeadbeef</code> comes out.</p>
+<p>So, ANG? If it’s a random value,<br>does one have to try all possible cases?</p>
+<p>Does one have to try all possible cases? ōxō</p>
+<p><del>Does one have to try all possible cases? ōxō</del></p>
+<p>one might think, but</p>
+<p>the rand() function, unless<br>you provide it with a<br>seed value that changes every time</p>
+<p>will always convert to a constant value</p>
+<p>This constant value, if you work it out,</p>
+<p>will give you the answer.</p>
+<p>Right, then, let’s trace the value using gdb.</p>
+<div style="text-alingn: right;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/06.png" alt="" width="300">
+</div>
+Screenshot 4.
+
+<p>Right, so you do the XOR operation,</p>
+<p>and it seems you just need to check<br>the value of eax <code>0xdeadbeef</code></p>
+<p>you just need to check.</p>
+<div style="text-alingn: right;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/07.png" alt="" width="300">
 </div>
 
-<p>Screenshot 1.</p>
-<p>Right, so my own rather<br>literal translation of<br>the question is as follows:</p>
-<p>is as follows.</p>
-<p>Daddy told me I should study arm.  </p>
-<p>But I prefer to study my leg!  </p>
+<p>Screenshot 5.</p>
+<p>If you set a breakpoint and run it, putting in 0</p>
+<p>you can see that 0x6b8b4567 is in eax.</p>
+<p>0x6b8b4567 is in eax</p>
+<p>you can see that it’s in there.</p>
+<p>As XORing with 0 produces the same value,</p>
+<p>you can deduce that the value of rand() is 0x6b8b4567</p>
+<p>you can deduce that it is.</p>
+<p>So, the value we need to input can be found through</p>
+<p><strong>0xdeadbeef ^ 0x6b8b4567</strong></p>
+<p>can be found</p>
 <div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/04.png" alt="미리보기 방지" width="300"></div>
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/08.png" alt="" width="300">
+</div>
 
-<p>Screenshot 2.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh leg@pwnable.kr -p2222</span><br></pre></td></tr></table></figure>
-
-<p>You just connect straight away.</p>
+<p>Screenshot 6: Hexadecimal operation in Java</p>
+<p>If you operate these two using Java programming</p>
+<p>if you operate these two</p>
+<p>the result is</p>
+<p><strong>0xB526FB88</strong></p>
 <div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/05.png" alt="미리보기 방지" width="300"></div>
-
-<p>Screenshot 3.</p>
-<p>First, you verify the files with <code>ls -l</code></p>
-<p>But there doesn’t seem to be a way to do it,</p>
-<p>the access attempt just isn’t working…? ōxō</p>
-<p><del>the access attempt just isn’t working…? ōxō</del>​​  </p>
-<p>Right, then let’s look at<br>the download section that was in<br>the question earlier:</p>
-<p>that was in the question earlier.</p>
-<p>Download :</p>
-<p> <a target="_blank" rel="noopener" href="http://pwnable.kr/bin/leg.c">http://pwnable.kr/bin/leg.c</a><br><a target="_blank" rel="noopener" href="http://pwnable.kr/bin/leg.asm">http://pwnable.kr/bin/leg.asm</a></p>
-<p>You download them both.</p>
-<p>Once downloaded, let’s immediately</p>
-<p>check <code>leg.c</code>.</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/06.png" alt="미리보기 방지" width="300"></div>
-
-<p>Screenshot 4.</p>
-<p>The functions for key1 through 3</p>
-<p>are written in ARM assembly.</p>
-<p>are written.</p>
-<p>First, if you look at the main function,<br>it seems that if you match the value<br>that’s the sum of all three of those<br>function values,<br>you can snag the key value.</p>
-<p>if you match the value that’s<br>the sum of all three of those function values,</p>
-<p>you can snag the key value.</p>
-<p>Let’s have a look at the main function’s<br>assembly code as well.</p>
-<p>as well.</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/07.png" alt="미리보기 방지" width="300"></div>
-Screenshot 5.
-
-<p>It’s evident that the r0 values obtained<br>through the functions are all summed up,<br>and the final result goes into r2.</p>
-<p>are all summed up,<br>and the final result goes into r2</p>
-<p>it’s evident</p>
-<p>then, let’s look at each function.</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/08.png" alt="미리보기 방지" width="300"></div>
-
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/09.png" alt="미리보기 방지" width="300"></div>
-
-<p>Screenshot 6.</p>
-<p>This is the C and assembly code for the key1 function.</p>
-<p>It puts the pc value into r3</p>
-<p>and then puts r3 into r0 again.</p>
-<p>So, the pc value will then be the value for key1</p>
-<p>will then be the value</p>
-<p>If we just take a quick look at what pc is:</p>
-<hr>
-<ol>
-<li><p>Right, so when a CPU executes a<br>single instruction,<br>it’s said to go through<br>the fetch, decode, and execute stages.</p>
-</li>
-<li><p>To execute two opcodes,<br>you’d then need a total of six operations:<br>fetch, decode, execute, fetch, decode, execute.</p>
-</li>
-<li><p>By performing these stages in<br>parallel, however, you can reduce those<br>six operations needed for two opcodes<br>down to just four.</p>
-</li>
-<li><p>It’s simply more efficient than doing it<br>sequentially, you see.<br>The Program Counter,or PC,<br>holds the address for the fetch operation.</p>
-</li>
-<li><p>If the current instruction is at<br>the execute stage,<br>the next one will be at the decode stage,<br>and the one after that will<br>then be at the fetch stage.</p>
-</li>
-<li><p>Consequently,<br>the PC will then hold the address of<br>the instruction that’s<br>due for the next fetch operation.</p>
-</li>
-</ol>
-<hr>
-<p>Right, back to the main point now.</p>
-<p>The pc value in the key1 function is</p>
-<p><strong>0x00008ce4</strong></p>
-<p>is.</p>
-<p>Now, let’s move on to key2.</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/10.png" alt="미리보기 방지" width="300"></div>
-
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/11.png" alt="미리보기 방지" width="300"></div>
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/09.png" alt="" width="300">
+</div>
 
 <p>Screenshot 7.</p>
-<p>You assign the pc value(<strong>0x00008d08</strong>)</p>
-<p>to r3, and then add 4,assigning that to r0</p>
-<p>assigning that to r0</p>
-<p>The value of key2 is</p>
-<p><strong>0x8d08 + 4 &#x3D; 0x8d0c</strong></p>
-<p>Let’s look at key3.</p>
+<p>And if you go to a conversion website and convert it,</p>
+<p><strong>3039230856</strong></p>
+<p>a value like the above is output</p>
 <div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/12.png" alt="미리보기 방지" width="300"></div>
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/10.png" alt="" width="300">
+</div>
+Screenshot 8
 
+<p>If you input the outputted value,</p>
+<p>you acquire the key value like this.</p>
+<p>Right, and then with the key value that’s<br>been snagged,</p>
 <div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/13.png" alt="미리보기 방지" width="300"></div>
-
-<p>Screenshot 8.</p>
-<p>You assign the lr value to r3</p>
-<p>and then assign the r3 value to r0</p>
-<p>So, I suppose one just needs to find the lr value.</p>
-<p>one just needs to find it.</p>
-<p>If you look at the main function:</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/14.png" alt="미리보기 방지" width="300"></div>
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/11.png" alt="" width="300">
+</div>
 
 <p>Screenshot 9.</p>
-<p>The lr value is</p>
-<p><strong>0x00008d80</strong></p>
-<p>All three values have now been obtained</p>
-<p> <strong>key1 | 0x8ce4</strong></p>
-<p> <strong>key2 | 0x8d0c</strong></p>
-<p> <strong>key3 | 0x8d80</strong></p>
-<p>If you sum them all up,</p>
-<p><strong>0x1a770</strong></p>
-<p>Right, then let’s go snag that key value<br>immediately, eh?</p>
-<p>let’s go snag it ㅋㅅㅋ</p>
-<p>So, into the input window here</p>
-<p> I’ll input <code>108400</code>.</p>
-<p>And due to the program’s nature</p>
-<p>it absolutely must be entered</p>
-<p>as an integer.</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/15.png" alt="미리보기 방지" width="300"></div>
-
-<p>Screenshot 10.</p>
-<p>And so the key value comes out</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/16.png" alt="미리보기 방지" width="300"></div>
-
-<p>Screenshot 11.</p>
-<p>With the value that’s been snagged,</p>
 <p>you go back to the first screen,</p>
-<p>input it into the blank space,</p>
+<p>input it into the blank space</p>
 <p>and then just press the ‘auth’ button.</p>
 <div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/17.png" alt="미리보기 방지" width="300"></div>
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/12.png" alt="" width="300">
+</div>
 
-<p>As soon as the mission is completed,</p>
-<p>2 points have been snagged.</p>
+<p>As soon as the mission’s completed,</p>
+<p>1 point has been snagged.</p>
 <div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/18.png" alt="미리보기 방지" width="300"></div>
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/13.png" alt="" width="300">
+</div>
+
 
 <p>then, if you go back to the initial screen again,</p>
 <p>you’ll see that</p>
 <p>it’s marked as completed with a green</p>
-<p>dotted line</p>
+<p>dotted line.</p>
 <p>Thanks for reading through this long post.</p>
 <p>Well done. (ㆁᴗㆁ✿)</p>
-<p>Have a good day, and<br>I hope everything works out well for you,</p>
-<p>It’s quite warm out,<br>so do try and avoid getting heatstroke</p>
+<p>Have a good day, and<br>I hope everything works out well for you</p>
+<p>It’s quite warm out,<br>so do try and avoid getting heatstroke,</p>
 <p>And do take care with the,erm,<br>Wuhan pneumonia situation.</p>
 <div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/19.png" alt="미리보기 방지" width="300">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/14.png" alt="" width="300">
 </div>
-
+<br>
 <div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Ieg%20Problem%20Solving/20.png" alt="미리보기 방지" width="300">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Random%20Problem%20Solving/15.png" alt="" width="300">
 </div>
 
 
@@ -480,7 +442,7 @@ Screenshot 5.
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/31/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/31/">31</a><span class="page-number current">32</span><a class="page-number" href="/page/33/">33</a><span class="space">&hellip;</span><a class="page-number" href="/page/36/">36</a><a class="extend next" rel="next" href="/page/33/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/31/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/31/">31</a><span class="page-number current">32</span><a class="page-number" href="/page/33/">33</a><span class="space">&hellip;</span><a class="page-number" href="/page/37/">37</a><a class="extend next" rel="next" href="/page/33/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -548,20 +510,20 @@ Screenshot 5.
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">36</span>
+          <span class="site-state-item-count">37</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">15</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -590,7 +552,7 @@ Screenshot 5.
 <div class="copyright">
   
   &copy; 2016 – 
-  <span itemprop="copyrightYear">2025</span>
+  <span itemprop="copyrightYear">2026</span>
   <span class="with-love">
     <i class="fa fa-Lucy"></i>
   </span>
