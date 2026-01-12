@@ -871,79 +871,6 @@
       </tags>
   </entry>
   <entry>
-    <title>(Linux) Debian Linux LunarVim Install</title>
-    <url>/2025/08/06/DevDiary/Debian%20Linux/Debian-Linux-LunarVim-Install/</url>
-    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<div style="TEXT-ALIGN: center">
-        <div id="google_translate_element"></div>
-            <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-                <script type="text/javascript">
-                            function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: 'ko',autoDisplay: false}, 'google_translate_element');}
-                </script>
-                    </script>
-</div>
-
-
-<h1 id="Debian-Linux-LunarVim-Install"><a href="#Debian-Linux-LunarVim-Install" class="headerlink" title="[Debian Linux] LunarVim Install"></a>[Debian Linux] LunarVim Install</h1><p style="text-align:center">
-<img border="0" width="60%" height="70%" src="https://pihne22710.github.io/PostImages/LunarVim.png"><br></p>
-
-<p>🎼Songs I listened to whilst writing🎼</p>
-<ul>
-<li>Mermaid Melody Pichi Pichi Pitch OST</li>
-<li>Genshin Impact OST For Mondstadt</li>
-<li>Bullet Heaven 2 OST : Powerful and Bright</li>
-</ul>
-<br>
-
-<h2 id="Debian-LunarVim-Install"><a href="#Debian-LunarVim-Install" class="headerlink" title="[Debian]LunarVim Install"></a>[Debian]LunarVim Install</h2><p>Kali Linux is used for ethical hacking activities,<br><br>but this Debian Linux is for <code>Baekjoon</code> <br><br><a href="https://www.acmicpc.net/">Baekjoon</a> algorithms and various programming activities<br><br><br><br>I’ve added another virtual OS for this purpose.<br><br>Of course, the most critical drawback is that it consumes quite a bit of memory ;ㅅ; <br><br><br></p>
-<p>Among <code>NeoVim</code> editors, one that could be installed instantly<br><br>existed, but its support has ended,<br><br>so I ended up using <code>LunarVim</code>.<br></p>
-<h3 id="Step-1-Upgrade-and-Refresh"><a href="#Step-1-Upgrade-and-Refresh" class="headerlink" title="Step 1. Upgrade and Refresh"></a>Step 1. Upgrade and Refresh</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Upgrade and Refresh</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt update &amp;&amp; <span class="built_in">sudo</span> apt upgrade</span><br><span class="line"></span><br><span class="line"><span class="comment"># This updates all packages on the system</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt upgrade -y</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<br>
-
-<h3 id="Step-2-Debian-Linux-Nerd-Font-Install"><a href="#Step-2-Debian-Linux-Nerd-Font-Install" class="headerlink" title="Step 2. Debian Linux Nerd Font Install"></a>Step 2. Debian Linux Nerd Font Install</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Nerd Font Install</span></span><br><span class="line">$ <span class="built_in">mkdir</span> -p ~/.local/share/fonts</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cd</span> ~/.local/share/fonts &amp;&amp; curl -fLO https://raw.githubusercontent.com/choikangjae/.dotfiles/main/font/JetBrainsMonoNerdFont-Regular.ttf</span><br><span class="line"></span><br><span class="line">$ ~/.local/share/fonts </span><br><span class="line"></span><br><span class="line"><span class="comment"># Font Setting</span></span><br><span class="line"></span><br><span class="line">$ fc-cache -f -v</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h3 id="Step-3-NeoVim-0-9-5-Install"><a href="#Step-3-NeoVim-0-9-5-Install" class="headerlink" title="Step 3. NeoVim 0.9.5 Install"></a>Step 3. NeoVim 0.9.5 Install</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># NeoVim 0.9.5 Install</span></span><br><span class="line"></span><br><span class="line">$ wget https://github.com/neovim/neovim/releases/download/v0.9.5/nvim-linux64.tar.gz</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">chmod</span> u+x nvim-linux64.tar.gz</span><br><span class="line"></span><br><span class="line">$ tar -zxvf nvim-linux64.tar.gz</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">sudo</span> <span class="built_in">cp</span> -r nvim-linux64/* /usr/local/</span><br><span class="line"></span><br><span class="line">$ make CMAKE_BUILD_TYPE=Release</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">sudo</span> make install</span><br><span class="line"></span><br><span class="line">$ nvim --version</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h3 id="Step-4-Ruby-Install"><a href="#Step-4-Ruby-Install" class="headerlink" title="Step 4. Ruby Install"></a>Step 4. Ruby Install</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Ruby Install</span></span><br><span class="line"></span><br><span class="line">   $ <span class="built_in">sudo</span> apt upgrade -y</span><br><span class="line"></span><br><span class="line">   $ <span class="built_in">sudo</span> apt install ruby-full</span><br><span class="line"></span><br><span class="line">   $ ruby --version</span><br><span class="line"></span><br><span class="line">   $ gem --version</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h3 id="Step-5-LunarVim-Install"><a href="#Step-5-LunarVim-Install" class="headerlink" title="Step 5. LunarVim Install"></a>Step 5. LunarVim Install</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># LunarVim Install</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt install make git python3 python3-pip npm nodejs <span class="comment"># Install necessary dependencies</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Install rustup</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt update <span class="comment"># Initialise and refresh</span></span><br><span class="line">  </span><br><span class="line">$ <span class="built_in">sudo</span> apt install curl build-essential</span><br><span class="line"></span><br><span class="line">$ curl --proto <span class="string">&#x27;=https&#x27;</span> --tlsv1.2 -sSf https://sh.rustup.rs | sh</span><br><span class="line"></span><br><span class="line">$ rustup --version</span><br><span class="line"></span><br><span class="line"><span class="comment"># Install necessary dependencies 2</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt install cargo </span><br><span class="line"></span><br><span class="line">$ LV_BRANCH=<span class="string">&#x27;release-1.4/neovim-0.9&#x27;</span> bash &lt;(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.4/neovim-0.9/utils/installer/install.sh)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Semi-permanent usage</span></span><br><span class="line">$ <span class="built_in">alias</span> lvim=<span class="string">&#x27;~/.local/bin/lvim&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Permanent usage</span></span><br><span class="line">$ <span class="built_in">sudo</span> ~/.bashrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># Add to the very bottom, then save</span></span><br><span class="line">$ <span class="built_in">alias</span> lvim=<span class="string">&#x27;~/.local/bin/lvim&#x27;</span> </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
-      <categories>
-        <category>DevDiary</category>
-        <category>Debian Linux</category>
-      </categories>
-      <tags>
-        <tag>Debian Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【Kali Linux】 network setup guide</title>
     <url>/2025/10/30/DevDiary/Kali%20Linux/Kali-Linux-Network-Setup-Guide/</url>
     <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1178,6 +1105,79 @@ https://www.kali.org/blog/kali-linux-2025-3-release/
       </categories>
       <tags>
         <tag>Kali Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(Linux) Debian Linux LunarVim Install</title>
+    <url>/2025/08/06/DevDiary/Debian%20Linux/Debian-Linux-LunarVim-Install/</url>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div style="TEXT-ALIGN: center">
+        <div id="google_translate_element"></div>
+            <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                <script type="text/javascript">
+                            function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: 'ko',autoDisplay: false}, 'google_translate_element');}
+                </script>
+                    </script>
+</div>
+
+
+<h1 id="Debian-Linux-LunarVim-Install"><a href="#Debian-Linux-LunarVim-Install" class="headerlink" title="[Debian Linux] LunarVim Install"></a>[Debian Linux] LunarVim Install</h1><p style="text-align:center">
+<img border="0" width="60%" height="70%" src="https://pihne22710.github.io/PostImages/LunarVim.png"><br></p>
+
+<p>🎼Songs I listened to whilst writing🎼</p>
+<ul>
+<li>Mermaid Melody Pichi Pichi Pitch OST</li>
+<li>Genshin Impact OST For Mondstadt</li>
+<li>Bullet Heaven 2 OST : Powerful and Bright</li>
+</ul>
+<br>
+
+<h2 id="Debian-LunarVim-Install"><a href="#Debian-LunarVim-Install" class="headerlink" title="[Debian]LunarVim Install"></a>[Debian]LunarVim Install</h2><p>Kali Linux is used for ethical hacking activities,<br><br>but this Debian Linux is for <code>Baekjoon</code> <br><br><a href="https://www.acmicpc.net/">Baekjoon</a> algorithms and various programming activities<br><br><br><br>I’ve added another virtual OS for this purpose.<br><br>Of course, the most critical drawback is that it consumes quite a bit of memory ;ㅅ; <br><br><br></p>
+<p>Among <code>NeoVim</code> editors, one that could be installed instantly<br><br>existed, but its support has ended,<br><br>so I ended up using <code>LunarVim</code>.<br></p>
+<h3 id="Step-1-Upgrade-and-Refresh"><a href="#Step-1-Upgrade-and-Refresh" class="headerlink" title="Step 1. Upgrade and Refresh"></a>Step 1. Upgrade and Refresh</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Upgrade and Refresh</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt update &amp;&amp; <span class="built_in">sudo</span> apt upgrade</span><br><span class="line"></span><br><span class="line"><span class="comment"># This updates all packages on the system</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt upgrade -y</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<br>
+
+<h3 id="Step-2-Debian-Linux-Nerd-Font-Install"><a href="#Step-2-Debian-Linux-Nerd-Font-Install" class="headerlink" title="Step 2. Debian Linux Nerd Font Install"></a>Step 2. Debian Linux Nerd Font Install</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Nerd Font Install</span></span><br><span class="line">$ <span class="built_in">mkdir</span> -p ~/.local/share/fonts</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cd</span> ~/.local/share/fonts &amp;&amp; curl -fLO https://raw.githubusercontent.com/choikangjae/.dotfiles/main/font/JetBrainsMonoNerdFont-Regular.ttf</span><br><span class="line"></span><br><span class="line">$ ~/.local/share/fonts </span><br><span class="line"></span><br><span class="line"><span class="comment"># Font Setting</span></span><br><span class="line"></span><br><span class="line">$ fc-cache -f -v</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="Step-3-NeoVim-0-9-5-Install"><a href="#Step-3-NeoVim-0-9-5-Install" class="headerlink" title="Step 3. NeoVim 0.9.5 Install"></a>Step 3. NeoVim 0.9.5 Install</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># NeoVim 0.9.5 Install</span></span><br><span class="line"></span><br><span class="line">$ wget https://github.com/neovim/neovim/releases/download/v0.9.5/nvim-linux64.tar.gz</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">chmod</span> u+x nvim-linux64.tar.gz</span><br><span class="line"></span><br><span class="line">$ tar -zxvf nvim-linux64.tar.gz</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">sudo</span> <span class="built_in">cp</span> -r nvim-linux64/* /usr/local/</span><br><span class="line"></span><br><span class="line">$ make CMAKE_BUILD_TYPE=Release</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">sudo</span> make install</span><br><span class="line"></span><br><span class="line">$ nvim --version</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="Step-4-Ruby-Install"><a href="#Step-4-Ruby-Install" class="headerlink" title="Step 4. Ruby Install"></a>Step 4. Ruby Install</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Ruby Install</span></span><br><span class="line"></span><br><span class="line">   $ <span class="built_in">sudo</span> apt upgrade -y</span><br><span class="line"></span><br><span class="line">   $ <span class="built_in">sudo</span> apt install ruby-full</span><br><span class="line"></span><br><span class="line">   $ ruby --version</span><br><span class="line"></span><br><span class="line">   $ gem --version</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="Step-5-LunarVim-Install"><a href="#Step-5-LunarVim-Install" class="headerlink" title="Step 5. LunarVim Install"></a>Step 5. LunarVim Install</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># LunarVim Install</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt install make git python3 python3-pip npm nodejs <span class="comment"># Install necessary dependencies</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Install rustup</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt update <span class="comment"># Initialise and refresh</span></span><br><span class="line">  </span><br><span class="line">$ <span class="built_in">sudo</span> apt install curl build-essential</span><br><span class="line"></span><br><span class="line">$ curl --proto <span class="string">&#x27;=https&#x27;</span> --tlsv1.2 -sSf https://sh.rustup.rs | sh</span><br><span class="line"></span><br><span class="line">$ rustup --version</span><br><span class="line"></span><br><span class="line"><span class="comment"># Install necessary dependencies 2</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt install cargo </span><br><span class="line"></span><br><span class="line">$ LV_BRANCH=<span class="string">&#x27;release-1.4/neovim-0.9&#x27;</span> bash &lt;(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.4/neovim-0.9/utils/installer/install.sh)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Semi-permanent usage</span></span><br><span class="line">$ <span class="built_in">alias</span> lvim=<span class="string">&#x27;~/.local/bin/lvim&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Permanent usage</span></span><br><span class="line">$ <span class="built_in">sudo</span> ~/.bashrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># Add to the very bottom, then save</span></span><br><span class="line">$ <span class="built_in">alias</span> lvim=<span class="string">&#x27;~/.local/bin/lvim&#x27;</span> </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
+      <categories>
+        <category>DevDiary</category>
+        <category>Debian Linux</category>
+      </categories>
+      <tags>
+        <tag>Debian Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -1564,89 +1564,6 @@ https://mentha2.tistory.com/211 [행궁동 데이터 엔지니어:티스토리]
       </tags>
   </entry>
   <entry>
-    <title>【Genshin Impact】Amber Yandere Part 2</title>
-    <url>/2025/10/23/ETC/Genshin-Cartoons/Genshin-Impact-Amber-Yandere-Part2/</url>
-    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/4.%E3%80%90Genshin%20Impact%E3%80%91Aether%20Cooking%20For%20Lisa/%E3%80%90Genshin%E3%80%91Cartoons.png" alt="" width="400" height="300">
-</div>
-<br><br>
-
-<h2 id="Cartoon"><a href="#Cartoon" class="headerlink" title="Cartoon"></a>Cartoon</h2><br>
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/9.%E3%80%90Genshin%20Impact%E3%80%91%20Amber%20Yandere%20Part2/1.jpg" alt="" >
-</div><br><br>
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/9.%E3%80%90Genshin%20Impact%E3%80%91%20Amber%20Yandere%20Part2/2.jpg" alt="" >
-</div><br><br>
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/9.%E3%80%90Genshin%20Impact%E3%80%91%20Amber%20Yandere%20Part2/3.jpg" alt="" >
-</div><br><br>
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/9.%E3%80%90Genshin%20Impact%E3%80%91%20Amber%20Yandere%20Part2/4.jpg" alt="" >
-</div><br><br>
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/9.%E3%80%90Genshin%20Impact%E3%80%91%20Amber%20Yandere%20Part2/5.jpg" alt="" >
-</div><br><br>
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/9.%E3%80%90Genshin%20Impact%E3%80%91%20Amber%20Yandere%20Part2/6.jpg" alt="" >
-</div><br><br>
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/9.%E3%80%90Genshin%20Impact%E3%80%91%20Amber%20Yandere%20Part2/7.jpg" alt="" >
-</div><br><br>
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/9.%E3%80%90Genshin%20Impact%E3%80%91%20Amber%20Yandere%20Part2/8.jpg" alt="" >
-</div><br><br>
-
-
-<!-- 접은 글 시작 -->
-<details>
-<summary>👉 Click to expand </summary>
-#Amber #GenshinImpact <br>
-#アンバー #原神
-</details>
-<!-- 접은 글 끝 -->
-
-<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><p>🎨 Art :<br><a href="https://x.com/nowlasd">@nowlasd</a><br><br>🪔 Pixiv : <a href="https://www.pixiv.net/users/61289463/">https://www.pixiv.net/users/61289463/</a></p>
-<p>📎 Link : <br><br><a href="https://www.pixiv.net/artworks/92043621">1</a> <a href="https://www.pixiv.net/artworks/92112811">2</a> <a href="https://www.pixiv.net/artworks/92215960">3</a> <a href="https://www.pixiv.net/artworks/92285085">4</a> <br><br><a href="https://www.pixiv.net/artworks/92417296">5</a> <a href="https://www.pixiv.net/artworks/92566153">6</a> <a href="https://www.pixiv.net/artworks/92755286">7</a> <a href="https://www.pixiv.net/artworks/92899587">8</a></p>
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-]]></content>
-      <categories>
-        <category>(ETC) Taking a Break</category>
-        <category>【Genshin】Cartoons</category>
-      </categories>
-      <tags>
-        <tag>ETC</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【Genshin Impact】Amber Pumpkin</title>
     <url>/2025/10/24/ETC/Genshin-Cartoons/Genshin-Impact-Amber-Pumpkin/</url>
     <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1739,6 +1656,89 @@ https://mentha2.tistory.com/211 [행궁동 데이터 엔지니어:티스토리]
 <h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><p>🎨 Art : <a href="https://x.com/nowlasd">@nowlasd</a> <br><br>🪔 Pixiv : <a href="https://www.pixiv.net/users/61289463/">https://www.pixiv.net/users/61289463/</a></p>
 <p>📎Link : <a href="https://www.pixiv.net/artworks/91426879">1</a> <a href="https://www.pixiv.net/artworks/91688610">2</a> <a href="https://www.pixiv.net/artworks/91800065">3</a></p>
 <p>☕ The First Discovery :<br><a href="https://arca.live/b/genshin/67142190">https://arca.live/b/genshin/67142190</a><br><a href="https://m.blog.naver.com/zenio3700/222980406353">https://m.blog.naver.com/zenio3700/222980406353</a></p>
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+]]></content>
+      <categories>
+        <category>(ETC) Taking a Break</category>
+        <category>【Genshin】Cartoons</category>
+      </categories>
+      <tags>
+        <tag>ETC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【Genshin Impact】Amber Yandere Part 2</title>
+    <url>/2025/10/23/ETC/Genshin-Cartoons/Genshin-Impact-Amber-Yandere-Part2/</url>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/4.%E3%80%90Genshin%20Impact%E3%80%91Aether%20Cooking%20For%20Lisa/%E3%80%90Genshin%E3%80%91Cartoons.png" alt="" width="400" height="300">
+</div>
+<br><br>
+
+<h2 id="Cartoon"><a href="#Cartoon" class="headerlink" title="Cartoon"></a>Cartoon</h2><br>
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/9.%E3%80%90Genshin%20Impact%E3%80%91%20Amber%20Yandere%20Part2/1.jpg" alt="" >
+</div><br><br>
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/9.%E3%80%90Genshin%20Impact%E3%80%91%20Amber%20Yandere%20Part2/2.jpg" alt="" >
+</div><br><br>
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/9.%E3%80%90Genshin%20Impact%E3%80%91%20Amber%20Yandere%20Part2/3.jpg" alt="" >
+</div><br><br>
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/9.%E3%80%90Genshin%20Impact%E3%80%91%20Amber%20Yandere%20Part2/4.jpg" alt="" >
+</div><br><br>
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/9.%E3%80%90Genshin%20Impact%E3%80%91%20Amber%20Yandere%20Part2/5.jpg" alt="" >
+</div><br><br>
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/9.%E3%80%90Genshin%20Impact%E3%80%91%20Amber%20Yandere%20Part2/6.jpg" alt="" >
+</div><br><br>
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/9.%E3%80%90Genshin%20Impact%E3%80%91%20Amber%20Yandere%20Part2/7.jpg" alt="" >
+</div><br><br>
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/9.%E3%80%90Genshin%20Impact%E3%80%91%20Amber%20Yandere%20Part2/8.jpg" alt="" >
+</div><br><br>
+
+
+<!-- 접은 글 시작 -->
+<details>
+<summary>👉 Click to expand </summary>
+#Amber #GenshinImpact <br>
+#アンバー #原神
+</details>
+<!-- 접은 글 끝 -->
+
+<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><p>🎨 Art :<br><a href="https://x.com/nowlasd">@nowlasd</a><br><br>🪔 Pixiv : <a href="https://www.pixiv.net/users/61289463/">https://www.pixiv.net/users/61289463/</a></p>
+<p>📎 Link : <br><br><a href="https://www.pixiv.net/artworks/92043621">1</a> <a href="https://www.pixiv.net/artworks/92112811">2</a> <a href="https://www.pixiv.net/artworks/92215960">3</a> <a href="https://www.pixiv.net/artworks/92285085">4</a> <br><br><a href="https://www.pixiv.net/artworks/92417296">5</a> <a href="https://www.pixiv.net/artworks/92566153">6</a> <a href="https://www.pixiv.net/artworks/92755286">7</a> <a href="https://www.pixiv.net/artworks/92899587">8</a></p>
 <div id="disqus_thread"></div>
 <script>
     /**
@@ -3467,169 +3467,6 @@ Screenshot. 8
       </tags>
   </entry>
   <entry>
-    <title>『pwnable.kr』 Collision Problem solving</title>
-    <url>/2020/08/01/White%20Hacking/pwnable.kr/pwnable_kr_Collision_Problem_solving/</url>
-    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link  href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap"  rel="stylesheet">
-
-<style>
-.left-img {
-  float: left;
-  margin-right: 320px; /* 텍스트와 간격 */
-}
-</style>
-
-<div  style="text-align: center;">
-<img  src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/1%20Rina.gif"  alt="미리보기 방지"  width="300">
-</div> <br>
-
-
-<p>Wow… I had a feeling, but the difficulty’s on another level.<br></p>
-<p>Thats absolutely lunatic, ōxō;;<br><s>That’s absolutely lunatic, ōxō;;</s></p>
-<p>ε-(´・｀)</p>
-<p>Perhaps because it involves a system hack,</p>
-<p>it’s a whole level above the usual web-based</p>
-<p>war games on Wargame.kr in terms of difficulty.</p>
-<p>I ended up referring to someone else’s</p>
-<p>solution while working through it.</p>
-<p>And since posting the actual</p>
-<p>source code would make the thread messy,</p>
-<p>I’ll place it in a text file so it can simply be copy-pasted.</p>
-<p>Anyway, let’s get started right away.</p>
-<div  style="text-align: center;">
-<img  src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/2.png"  width="300">
-</div> <br>
-
-<br>
-<img class="left-img" src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/3.png"  width="500">
- <br>
-
-<p>Right, if I’m having a punt at roughly translating<br>the gist of this in my own way,<br>it’s something like this:<br>So, you’re on about MD5 hash collisions then,<br>are we? (···) Right,anyway.</p>
-<br>
-<div class="left-img">
-<img  src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/4.png"  width="500">
-</div>  <br>
-
-<p>Right then, first things first,<br>open up yer Linux terminal.<br>Then you just wanna connect using</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh col@pwnable.kr -p2222</span><br></pre></td></tr></table></figure>
-
-<p>Now,the password right?<br>It won’t actually show up as you’re typing it<br>– don’t mind that,just bash it in,hit Enter,<br>and bam, you’re logged in. Easy peasy!</p>
- <br>
-<div class="left-img">
-<img  src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/5.png"  width="500">
-</div>  <br>
-Right then next up,you just wanna whack in
-
-<p>the ls command to see what files you’ve got lurking around.</p>
-<p>Now col you’d probably reckon that’s<br>some sort of executable or maybe even a Python file, right?</p>
-<p>But the actual one we really need to be bothered with,</p>
-<p>the crucial bit, is <code>col.c</code></p>
- <br>
-<div class="left-img">
-<img  src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/6.png"  width="500px">
-</div>  <br>  <br>
-so if you have a proper gander at the main bit,
-
-<p>the password, right, that needs to be 20</p>
-<p>characters long. And here’s the crucial part:<br>the hash code <code>(0x21DD09EC)</code> and</p>
-<p>the password return value,<br>they’ve both gotta be</p>
-<p>absolutely spot on, exactly the same.<br>No messing about with that, understood</p>
-<p>That<br><code> bash check_password(const char* p)</code><br>Bit, Yeah?<br>What it’s doing is, it’s taking chunks of the data<br>like, 4 bytes at a time – that’s the size of an int, innit?<br>– and it’s then accumulating those into ‘res’ five times.</p>
-<p>So, the thinking is,<br>if you just add the exact same value five times over you should,</p>
-<p>I reckon, get that hash code it’s after. Simple as that, really.</p>
-<h3 id="Derivation-of-results"><a href="#Derivation-of-results" class="headerlink" title="Derivation of results"></a>Derivation of results</h3><div class="left-img">
-<img  src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/7.png"  width="500">
-</div>
-Figure.1) For and res data expressed by cutting int type 4 bytes each
-
-<p>Right, so that’res’value,yeah?</p>
-<p>That’s just the result of piling up<br>whatever came out of the ‘for’loop,<br>five times over.<br>And if you then,like,divvy that’res’value by five,<br>it turns out that the data</p>
-<p>so if you then like,multiply this lot by five again<br>you’ll find you’re short by 0x4.So,<br>the assumption we’re making here is </p>
-<p>that the data is essentially four lots of<br><code>0x6C5CEC8</code> and then one bit of <code>0x6C5CECC</code> added in.</p>
-<div class="left-img">
-<img  src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/8.png"  width="500">
-</div>
-Figure. 2> Data expressed in little endian<br><br>
-
-
-<p>then,since it’s all about little endian,yeah?<br>All you need to do is just feed the program that data<br>in hexadecimal,in the exact sequence.<br>That’s the one.<br><br></p>
-<div class="left-img">
-<img  src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/9.png"  width="500">
-</div>  
-then, so you've gone and chucked the value in hexadecimal
-
-<p>using Python for that, yeah?</p>
-<p>Now, here’s the kicker, mind you:<br>when the program picks that up as an input<br>it’ll jolly well recognise it as a char.<br>So, you just gotta watch out for that. Proper careful,like.</p>
-<h3 id="Flag"><a href="#Flag" class="headerlink" title="Flag"></a>Flag</h3><div class="left-img">
-<img  src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/10.png"  width="500">
-</div>
-Right then, so we've finally bagged the key value.
-
-<p>And with this rather handy key we’ve just nabbed<br>it’s back to the very beginning, isn’t it?</p>
- <br>
-<div class="left-img">
-<img  src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/11.png"  width="500">
-</div>
-Right then, for that 'Flag?' bit down below,
-
-<p>you just gotta punch in your key value.<br>And once that’s</p>
-<p>sorted, hit the’auth’button Simples.</p>
- <br>
-<div class="left-img">
-<img  src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/12.png"  width="500">
-</div>
-Right, and just like that,
-three points were had, apparently.
-
-<p><br><br></p>
-<div class="left-img">
-<img  src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/13.png"  width="500">
-</div>  <br>  <br>
-
-<p>Right,and then you swing back round,<br>and there it is: marked up with a green dotted line.<br>Means you’ve bloody well sorted it, doesn’t it?</p>
-<p>Right, well that’s the whole bloody spiel done.<br>Cheers for wading through all that, yeah : )<br> <br></p>
-<div  style="text-align: center;">
-<img  src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/2.png"  width="300">
-</div> <br>
-Alright then,
-
-<p>hope you have a decent day and<br>all your bits and bobs go swimmingly. </p>
-<p>It’s a proper scorcher out there,<br>mind you, so try not to go getting heatstroke, yeah?</p>
-<p>And, uh, watch out for that bloody Wuhan pneumonia. Stay safe, mate. : )</p>
-<br>
-<div  style="text-align: center;">
-<img  src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/14.png" width= 300></div>  <br>  <br>
-
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
-      <categories>
-        <category>White Hacking</category>
-        <category>CTF</category>
-        <category>pwnable.kr</category>
-      </categories>
-      <tags>
-        <tag>White Hacking</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>『pwnable.kr』Random Problem Solving</title>
     <url>/2020/08/04/White%20Hacking/pwnable.kr/pwnable-kr-Random-Problem-Solving/</url>
     <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -3809,43 +3646,212 @@ Screenshot 8
       </tags>
   </entry>
   <entry>
-    <title>(DevDiary) Adversarial Algorithms Against AI Image Synthesis A Computational Formalization Using Pascal</title>
+    <title>『pwnable.kr』 Collision Problem solving</title>
+    <url>/2020/08/01/White%20Hacking/pwnable.kr/pwnable_kr_Collision_Problem_solving/</url>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link  href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap"  rel="stylesheet">
+
+<style>
+.left-img {
+  float: left;
+  margin-right: 320px; /* 텍스트와 간격 */
+}
+</style>
+
+<div  style="text-align: center;">
+<img  src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/1%20Rina.gif"  alt="미리보기 방지"  width="300">
+</div> <br>
+
+
+<p>Wow… I had a feeling, but the difficulty’s on another level.<br></p>
+<p>Thats absolutely lunatic, ōxō;;<br><s>That’s absolutely lunatic, ōxō;;</s></p>
+<p>ε-(´・｀)</p>
+<p>Perhaps because it involves a system hack,</p>
+<p>it’s a whole level above the usual web-based</p>
+<p>war games on Wargame.kr in terms of difficulty.</p>
+<p>I ended up referring to someone else’s</p>
+<p>solution while working through it.</p>
+<p>And since posting the actual</p>
+<p>source code would make the thread messy,</p>
+<p>I’ll place it in a text file so it can simply be copy-pasted.</p>
+<p>Anyway, let’s get started right away.</p>
+<div  style="text-align: center;">
+<img  src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/2.png"  width="300">
+</div> <br>
+
+<br>
+<img class="left-img" src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/3.png"  width="500">
+ <br>
+
+<p>Right, if I’m having a punt at roughly translating<br>the gist of this in my own way,<br>it’s something like this:<br>So, you’re on about MD5 hash collisions then,<br>are we? (···) Right,anyway.</p>
+<br>
+<div class="left-img">
+<img  src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/4.png"  width="500">
+</div>  <br>
+
+<p>Right then, first things first,<br>open up yer Linux terminal.<br>Then you just wanna connect using</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh col@pwnable.kr -p2222</span><br></pre></td></tr></table></figure>
+
+<p>Now,the password right?<br>It won’t actually show up as you’re typing it<br>– don’t mind that,just bash it in,hit Enter,<br>and bam, you’re logged in. Easy peasy!</p>
+ <br>
+<div class="left-img">
+<img  src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/5.png"  width="500">
+</div>  <br>
+Right then next up,you just wanna whack in
+
+<p>the ls command to see what files you’ve got lurking around.</p>
+<p>Now col you’d probably reckon that’s<br>some sort of executable or maybe even a Python file, right?</p>
+<p>But the actual one we really need to be bothered with,</p>
+<p>the crucial bit, is <code>col.c</code></p>
+ <br>
+<div class="left-img">
+<img  src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/6.png"  width="500px">
+</div>  <br>  <br>
+so if you have a proper gander at the main bit,
+
+<p>the password, right, that needs to be 20</p>
+<p>characters long. And here’s the crucial part:<br>the hash code <code>(0x21DD09EC)</code> and</p>
+<p>the password return value,<br>they’ve both gotta be</p>
+<p>absolutely spot on, exactly the same.<br>No messing about with that, understood</p>
+<p>That<br><code> bash check_password(const char* p)</code><br>Bit, Yeah?<br>What it’s doing is, it’s taking chunks of the data<br>like, 4 bytes at a time – that’s the size of an int, innit?<br>– and it’s then accumulating those into ‘res’ five times.</p>
+<p>So, the thinking is,<br>if you just add the exact same value five times over you should,</p>
+<p>I reckon, get that hash code it’s after. Simple as that, really.</p>
+<h3 id="Derivation-of-results"><a href="#Derivation-of-results" class="headerlink" title="Derivation of results"></a>Derivation of results</h3><div class="left-img">
+<img  src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/7.png"  width="500">
+</div>
+Figure.1) For and res data expressed by cutting int type 4 bytes each
+
+<p>Right, so that’res’value,yeah?</p>
+<p>That’s just the result of piling up<br>whatever came out of the ‘for’loop,<br>five times over.<br>And if you then,like,divvy that’res’value by five,<br>it turns out that the data</p>
+<p>so if you then like,multiply this lot by five again<br>you’ll find you’re short by 0x4.So,<br>the assumption we’re making here is </p>
+<p>that the data is essentially four lots of<br><code>0x6C5CEC8</code> and then one bit of <code>0x6C5CECC</code> added in.</p>
+<div class="left-img">
+<img  src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/8.png"  width="500">
+</div>
+Figure. 2> Data expressed in little endian<br><br>
+
+
+<p>then,since it’s all about little endian,yeah?<br>All you need to do is just feed the program that data<br>in hexadecimal,in the exact sequence.<br>That’s the one.<br><br></p>
+<div class="left-img">
+<img  src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/9.png"  width="500">
+</div>  
+then, so you've gone and chucked the value in hexadecimal
+
+<p>using Python for that, yeah?</p>
+<p>Now, here’s the kicker, mind you:<br>when the program picks that up as an input<br>it’ll jolly well recognise it as a char.<br>So, you just gotta watch out for that. Proper careful,like.</p>
+<h3 id="Flag"><a href="#Flag" class="headerlink" title="Flag"></a>Flag</h3><div class="left-img">
+<img  src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/10.png"  width="500">
+</div>
+Right then, so we've finally bagged the key value.
+
+<p>And with this rather handy key we’ve just nabbed<br>it’s back to the very beginning, isn’t it?</p>
+ <br>
+<div class="left-img">
+<img  src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/11.png"  width="500">
+</div>
+Right then, for that 'Flag?' bit down below,
+
+<p>you just gotta punch in your key value.<br>And once that’s</p>
+<p>sorted, hit the’auth’button Simples.</p>
+ <br>
+<div class="left-img">
+<img  src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/12.png"  width="500">
+</div>
+Right, and just like that,
+three points were had, apparently.
+
+<p><br><br></p>
+<div class="left-img">
+<img  src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/13.png"  width="500">
+</div>  <br>  <br>
+
+<p>Right,and then you swing back round,<br>and there it is: marked up with a green dotted line.<br>Means you’ve bloody well sorted it, doesn’t it?</p>
+<p>Right, well that’s the whole bloody spiel done.<br>Cheers for wading through all that, yeah : )<br> <br></p>
+<div  style="text-align: center;">
+<img  src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/2.png"  width="300">
+</div> <br>
+Alright then,
+
+<p>hope you have a decent day and<br>all your bits and bobs go swimmingly. </p>
+<p>It’s a proper scorcher out there,<br>mind you, so try not to go getting heatstroke, yeah?</p>
+<p>And, uh, watch out for that bloody Wuhan pneumonia. Stay safe, mate. : )</p>
+<br>
+<div  style="text-align: center;">
+<img  src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Collision%20Problem%20solving/14.png" width= 300></div>  <br>  <br>
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
+      <categories>
+        <category>White Hacking</category>
+        <category>CTF</category>
+        <category>pwnable.kr</category>
+      </categories>
+      <tags>
+        <tag>White Hacking</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(DevDiary) Adversarial Algorithms Against AI Image Synthesis A Computational Formalization Using Fortran</title>
     <url>/2026/01/02/DevDiary/Projact/DOKUGEN/Projact_DOKUGEN/</url>
     <content><![CDATA[<br>
 <p style="text-align:center">
 <img border="0" width="50%" height="50%" src="https://pihne22710.github.io/PostImages/DevDiary/Projact/DOKUGEN/[Projact]%20DOKUGEN.gif"><br></p>
 
-<h1 id="DevDiary-Adversarial-Algorithms-Against-AI-Image-Synthesis-A-Computational-Formalization-Using-Pascal"><a href="#DevDiary-Adversarial-Algorithms-Against-AI-Image-Synthesis-A-Computational-Formalization-Using-Pascal" class="headerlink" title="[DevDiary]Adversarial Algorithms Against AI Image Synthesis: A Computational Formalization Using Pascal"></a>[DevDiary]Adversarial Algorithms Against AI Image Synthesis: A Computational Formalization Using Pascal</h1><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Recently, technologies designed to counter<br>the indiscriminate crawling of artistic styles by<br>AI have been gaining significant attention.</p>
+<h1 id="DevDiary-Adversarial-Algorithms-Against-AI-Image-Synthesis-A-Computational-Formalization-Using-Fortran"><a href="#DevDiary-Adversarial-Algorithms-Against-AI-Image-Synthesis-A-Computational-Formalization-Using-Fortran" class="headerlink" title="[DevDiary] Adversarial Algorithms Against AI Image Synthesis: A Computational Formalization Using Fortran"></a>[DevDiary] Adversarial Algorithms Against AI Image Synthesis: A Computational Formalization Using Fortran</h1><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Recently, technologies designed to counter<br>the indiscriminate crawling of artistic styles by<br>AI have been gaining significant attention.</p>
 <p>Drawing inspiration from the mechanism of Nightshade—widely<br>regarded as the most potent among them—<br>I have explored how to implement this within a modern</p>
-<p>C# environment (specifically optimized for 4-core CPUs and memory efficiency).<br>To ensure a rigorous examination of the pure logical flow,<br>I have drafted the architectural blueprint using Pascal,</p>
-<p>a language known for its strict structural integrity.<br><br></p>
-<h2 id="1-A-Computational-Approach-Perturbation-of-the-Feature-Space"><a href="#1-A-Computational-Approach-Perturbation-of-the-Feature-Space" class="headerlink" title="1. A Computational Approach: Perturbation of the Feature Space"></a>1. A Computational Approach: Perturbation of the Feature Space</h2><p>AI perceives images as high-dimensional vectors<br>rather than mere pixels.<br>My objective is to ‘minimize visual disparity while maximizing<br>the displacement within the vector space.<br><br></p>
-<h3 id="Core-Data-Structures-Memory-Efficiency"><a href="#Core-Data-Structures-Memory-Efficiency" class="headerlink" title="Core Data Structures (Memory Efficiency)"></a>Core Data Structures (Memory Efficiency)</h3><p>To optimize L3 cache efficiency for the i5-4460,<br>the structure utilizes contiguous memory<br>allocation rather than fragmented layouts.<br><br></p>
-<figure class="highlight delphi"><table><tr><td class="code"><pre><span class="line"><span class="keyword">type</span></span><br><span class="line">  <span class="comment">&#123; Managing pixel data as linear 1D memory instead of 3D arrays. &#125;</span></span><br><span class="line">  <span class="comment">&#123; Design for leveraging C#&#x27;s Span&lt;float&gt; and ArrayPool. &#125;</span></span><br><span class="line">  TLinearTensor = <span class="keyword">record</span></span><br><span class="line">    Data: <span class="keyword">array</span> <span class="keyword">of</span> Single; <span class="comment">&#123; 32-bit Floating Point: The Trade-off Between Calculation Speed and Precision &#125;</span></span><br><span class="line">    Width, Height, Channels: Integer;</span><br><span class="line">    TotalSize: Int64;</span><br><span class="line">  <span class="keyword">end</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">&#123; Defining the Target Concept to Mislead the AI &#125;</span></span><br><span class="line">  TConceptAnchor = <span class="keyword">record</span></span><br><span class="line">    Vector: <span class="keyword">array</span>[<span class="number">0</span>..<span class="number">767</span>] <span class="keyword">of</span> Single; <span class="comment">&#123; Fake Indicators (e.g., Dog Image → Cat Vector) &#125;</span></span><br><span class="line">  <span class="keyword">end</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>C# environment (specifically optimized for 4-core CPUs and memory efficiency).<br>To ensure a rigorous examination of the pure logical flow,<br>I have drafted the architectural blueprint using <strong>Fortran</strong>,</p>
+<p>a language renowned for its unparalleled efficiency in numerical arrays<br>and scientific computation.</p>
+<br>
+
+<h2 id="1-A-Computational-Approach-Perturbation-of-the-Feature-Space"><a href="#1-A-Computational-Approach-Perturbation-of-the-Feature-Space" class="headerlink" title="1. A Computational Approach: Perturbation of the Feature Space"></a>1. A Computational Approach: Perturbation of the Feature Space</h2><p>AI perceives images as high-dimensional vectors<br>rather than mere pixels.<br>My objective is to ‘minimize visual disparity while maximizing<br>the displacement within the vector space.’<br><br></p>
+<h3 id="Core-Data-Structures-Memory-Efficiency"><a href="#Core-Data-Structures-Memory-Efficiency" class="headerlink" title="Core Data Structures (Memory Efficiency)"></a>Core Data Structures (Memory Efficiency)</h3><p>To optimize L3 cache efficiency for the i5-4460,<br>the structure utilizes Fortran’s contiguous array mapping,<br>which is natively optimized for SIMD operations.<br><br></p>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line"><span class="keyword">module</span> DataStructures</span><br><span class="line">    <span class="keyword">implicit</span> <span class="keyword">none</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">! Managing pixel data as linear 1D memory instead of 3D arrays.</span></span><br><span class="line">    <span class="comment">! Design for leveraging C#&#x27;s Span&lt;float&gt; and Fortran&#x27;s contiguous pointers.</span></span><br><span class="line">    <span class="keyword">type</span> :: TLinearTensor</span><br><span class="line">        <span class="keyword">real</span>(<span class="number">4</span>), <span class="keyword">allocatable</span> :: <span class="keyword">Data</span>(:) <span class="comment">! 32-bit Floating Point (Single Precision)</span></span><br><span class="line">        <span class="keyword">integer</span> :: Width, Height, Channels</span><br><span class="line">        <span class="keyword">integer</span>(<span class="number">8</span>) :: TotalSize</span><br><span class="line">    <span class="keyword">end</span> <span class="keyword">type</span> TLinearTensor</span><br><span class="line"></span><br><span class="line">    <span class="comment">! Defining the Target Concept to Mislead the AI</span></span><br><span class="line">    <span class="keyword">type</span> :: TConceptAnchor</span><br><span class="line">        <span class="keyword">real</span>(<span class="number">4</span>) :: Vector(<span class="number">0</span>:<span class="number">767</span>) <span class="comment">! Fake Indicators (e.g., Dog Image → Cat Vector)</span></span><br><span class="line">    <span class="keyword">end</span> <span class="keyword">type</span> TConceptAnchor</span><br><span class="line"><span class="keyword">end</span> <span class="keyword">module</span> DataStructures</span><br></pre></td></tr></table></figure>
 
 <br>
 
-<h3 id="2-Core-Algorithm-PGD-Projected-Gradient-Descent"><a href="#2-Core-Algorithm-PGD-Projected-Gradient-Descent" class="headerlink" title="2. Core Algorithm: PGD (Projected Gradient Descent)"></a>2. Core Algorithm: PGD (Projected Gradient Descent)</h3><p>This is not simple noise,<br>but a precise procedure to refine ‘poisoning’ data through<br>the reverse-calculation of the AI’s feature extraction layers.<br><br></p>
-<figure class="highlight delphi"><table><tr><td class="code"><pre><span class="line"><span class="comment">&#123; [Algorithm] Projected Gradient Descent: Core Routine for Poisoning While Preserving Originality &#125;</span></span><br><span class="line"><span class="function"><span class="keyword">procedure</span> <span class="title">InjectPoison</span><span class="params">(<span class="keyword">var</span> Img: TLinearTensor; Config: TConceptAnchor; Epsilon: Single)</span>;</span></span><br><span class="line"><span class="keyword">var</span></span><br><span class="line">  i, p: Integer;</span><br><span class="line">  Gradient: Single;</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">  <span class="comment">&#123; Finely adjusting the poison over a set number of iterations. &#125;</span></span><br><span class="line">  <span class="keyword">for</span> i := <span class="number">1</span> <span class="keyword">to</span> <span class="number">50</span> <span class="keyword">do</span></span><br><span class="line">  <span class="keyword">begin</span></span><br><span class="line">    <span class="comment">&#123; 1. Feature Extraction Simulation &#125;</span></span><br><span class="line">    <span class="comment">&#123; Passing the image through the AI model to determine its current classification. &#125;</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> p := <span class="number">0</span> <span class="keyword">to</span> Img.TotalSize - <span class="number">1</span> <span class="keyword">do</span></span><br><span class="line">    <span class="keyword">begin</span></span><br><span class="line">      <span class="comment">&#123; 2. Gradient Calculation &#125;</span></span><br><span class="line">      <span class="comment">&#123; Deriving the direction in which pixels must be adjusted to move toward the target concept. &#125;</span></span><br><span class="line">      Gradient := CalculateGradient(Img.Data[p], Config.Vector[p <span class="keyword">mod</span> <span class="number">768</span>]);</span><br><span class="line"></span><br><span class="line">      <span class="comment">&#123; 3. Poisoning (Step Update) &#125;</span></span><br><span class="line">      Img.Data[p] := Img.Data[p] - (<span class="number">0.005</span> * Sign(Gradient));</span><br><span class="line"></span><br><span class="line">      <span class="comment">&#123; 4. Projection: Constraining Disparities to Ensure Visual Imperceptibility &#125;</span></span><br><span class="line">      <span class="comment">&#123; Performing clipping to ensure values remain within the Epsilon range.&#125;</span></span><br><span class="line">      <span class="keyword">if</span> Abs(Img.Data[p] - OriginalData[p]) &gt; Epsilon <span class="keyword">then</span></span><br><span class="line">        Img.Data[p] := OriginalData[p] + (Sign(Img.Data[p] - OriginalData[p]) * Epsilon);</span><br><span class="line">    <span class="keyword">end</span>;</span><br><span class="line">  <span class="keyword">end</span>;</span><br><span class="line"><span class="keyword">end</span>;</span><br></pre></td></tr></table></figure>
-
+<h2 id="2-Core-Algorithm-PGD-Projected-Gradient-Descent"><a href="#2-Core-Algorithm-PGD-Projected-Gradient-Descent" class="headerlink" title="2. Core Algorithm: PGD (Projected Gradient Descent)"></a>2. Core Algorithm: PGD (Projected Gradient Descent)</h2><p>This is not simple noise, but a precise procedure to refine <code>poisoning</code> <br> data through the reverse-calculation of the AI’s feature extraction layers.</p>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line"><span class="comment">! [Algorithm] Projected Gradient Descent: Core Routine for Poisoning While Preserving Originality</span></span><br><span class="line"><span class="function"><span class="keyword">subroutine</span></span> InjectPoison(Img, Config, <span class="built_in">Epsilon</span>)</span><br><span class="line">  <span class="keyword">use</span> ImageTypes</span><br><span class="line">  <span class="keyword">implicit</span> <span class="keyword">none</span></span><br><span class="line">  </span><br><span class="line">  <span class="keyword">type</span>(TLinearTensor), <span class="keyword">intent</span>(inout) :: Img</span><br><span class="line">  <span class="keyword">type</span>(TConceptAnchor), <span class="keyword">intent</span>(<span class="keyword">in</span>) :: Config</span><br><span class="line">  <span class="keyword">real</span>(<span class="number">4</span>), <span class="keyword">intent</span>(<span class="keyword">in</span>) :: <span class="built_in">Epsilon</span></span><br><span class="line">  </span><br><span class="line">  <span class="keyword">integer</span> :: i, p</span><br><span class="line">  <span class="keyword">real</span>(<span class="number">4</span>) :: Gradient, Delta</span><br><span class="line"></span><br><span class="line">  <span class="comment">! Finely adjusting the poison over a set number of iterations.</span></span><br><span class="line">  <span class="keyword">do</span> i = <span class="number">1</span>, <span class="number">50</span></span><br><span class="line">    <span class="comment">! 1. Feature Extraction Simulation</span></span><br><span class="line">    <span class="comment">! (AI model inference logic would be called here)</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">do</span> p = <span class="number">1</span>, <span class="built_in">int</span>(Img%TotalSize)</span><br><span class="line">      <span class="comment">! 2. Gradient Calculation</span></span><br><span class="line">      <span class="comment">! Deriving the direction in which pixels must be adjusted to move toward the target concept.</span></span><br><span class="line">      Gradient = CalculateGradient(Img%<span class="keyword">Data</span>(p), Config%Vector(<span class="built_in">mod</span>(p-<span class="number">1</span>, <span class="number">768</span>)))</span><br><span class="line"></span><br><span class="line">      <span class="comment">! 3. Poisoning (Step Update)</span></span><br><span class="line">      Img%<span class="keyword">Data</span>(p) = Img%<span class="keyword">Data</span>(p) - (<span class="number">0.005</span> * <span class="built_in">sign</span>(<span class="number">1.0</span>, Gradient))</span><br><span class="line"></span><br><span class="line">      <span class="comment">! 4. Projection: Constraining Disparities to Ensure Visual Imperceptibility</span></span><br><span class="line">      Delta = Img%<span class="keyword">Data</span>(p) - OriginalData(p)</span><br><span class="line">      <span class="keyword">if</span> (<span class="built_in">abs</span>(Delta) &gt; <span class="built_in">Epsilon</span>) <span class="keyword">then</span></span><br><span class="line">        Img%<span class="keyword">Data</span>(p) = OriginalData(p) + (<span class="built_in">sign</span>(<span class="number">1.0</span>, Delta) * <span class="built_in">Epsilon</span>)</span><br><span class="line">      <span class="keyword">end</span> <span class="keyword">if</span></span><br><span class="line">    <span class="keyword">end</span> <span class="keyword">do</span></span><br><span class="line">  <span class="keyword">end</span> <span class="keyword">do</span></span><br><span class="line"><span class="keyword">end</span> <span class="function"><span class="keyword">subroutine</span></span> InjectPoison</span><br></pre></td></tr></table></figure>
 <br>
 
-<h2 id="3-Hardware-Optimization-Quad-Core-Utilization-and-Addressing-I-O-Bottlenecks"><a href="#3-Hardware-Optimization-Quad-Core-Utilization-and-Addressing-I-O-Bottlenecks" class="headerlink" title="3. Hardware Optimization: Quad-Core Utilization and Addressing I&#x2F;O Bottlenecks"></a>3. Hardware Optimization: Quad-Core Utilization and Addressing I&#x2F;O Bottlenecks</h2><p>Considering the 13-year-old PC specifications,<br>Disk I&#x2F;O and Garbage Collection (GC) are far more<br>daunting than raw computational speed.</p>
-<p><em><strong>Multi-Stage Pipeline Architecture</strong></em></p>
-<p>Using C#’s <code>System.Threading.Channels</code>,</p>
-<p>I designate each of the four CPU cores as<br>a specialized’expert’for specific tasks.</p>
+<h2 id="3-Hardware-Optimization-Quad-Core-Utilization-and-Addressing-I-O-Bottlenecks"><a href="#3-Hardware-Optimization-Quad-Core-Utilization-and-Addressing-I-O-Bottlenecks" class="headerlink" title="3. Hardware Optimization: Quad-Core Utilization and Addressing I&#x2F;O Bottlenecks"></a>3. Hardware Optimization: Quad-Core Utilization and Addressing I&#x2F;O Bottlenecks</h2><p>Considering the 13-year-old PC specifications, Disk I&#x2F;O and Garbage <br>Collection (GC) are far more daunting than raw computational speed.</p>
+<h3 id="Multi-Stage-Pipeline-Architecture"><a href="#Multi-Stage-Pipeline-Architecture" class="headerlink" title="Multi-Stage Pipeline Architecture "></a>Multi-Stage Pipeline Architecture <br></h3><p>Using C#’s <code>System.Threading.Channels</code>,</p>
 <ul>
-<li><em><strong>Core 1 (Loader)</strong></em>: Pre-reads images from the SSD and loads them into a memory pool</li>
-<li><em><strong>Core 2 &amp; 3 (Processors)</strong></em>: Executing the <code>InjectPoison</code> logic<br>at high speed using AVX2 (SIMD) instructions, processing 8 pixels at a time.</li>
+<li><em><strong>Core 1 (Loader)</strong></em>: Pre-reads images from the<br><br>SSD and loads them into a memory pool</li>
+<li><em><strong>Core 2 &amp; 3 (Processors)</strong></em>: Executing the <code>InjectPoison</code> <br><br>logic at high speed using AVX2 (SIMD) instructions, processing 8 pixels at a time.</li>
 <li><em><strong>Core 4 (Saver)</strong></em>: Saves the processed images in lossless formats, such as PNG.</li>
 </ul>
-<h2 id="4-The-Essence-of-the-Mechanism-Ensuring-Robustness"><a href="#4-The-Essence-of-the-Mechanism-Ensuring-Robustness" class="headerlink" title="4. The Essence of the Mechanism: Ensuring Robustness"></a>4. The Essence of the Mechanism: Ensuring Robustness</h2><p>To ensure the poisoning effect persists even when<br>the AI rotates or resizes images during training,<br>the concept of <em><strong>EOT (Expectation Over Transformation)</strong></em> is essential.</p>
-<figure class="highlight delphi"><table><tr><td class="code"><pre><span class="line"><span class="comment">&#123; A logic that ensures the poison remains effective on average across various transformed states. &#125;</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">CalculateRobustPoison</span><span class="params">(Img: TLinearTensor)</span>:</span> Single;</span><br><span class="line"><span class="keyword">var</span></span><br><span class="line">  t: Integer;</span><br><span class="line">  AggregatedGrad: Single;</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">  AggregatedGrad := <span class="number">0</span>;</span><br><span class="line">  <span class="comment">&#123; Testing under five different transformation states, including rotation, scaling, and noise injection. &#125;</span></span><br><span class="line">  <span class="keyword">for</span> t := <span class="number">1</span> <span class="keyword">to</span> <span class="number">5</span> <span class="keyword">do</span></span><br><span class="line">  <span class="keyword">begin</span></span><br><span class="line">    TempImg := ApplyTransformation(Img, t);</span><br><span class="line">    AggregatedGrad := AggregatedGrad + GetLoss(TempImg);</span><br><span class="line">  <span class="keyword">end</span>;</span><br><span class="line">  <span class="comment">&#123; Identifying the averaged vulnerabilities to launch a unified adversarial attack. &#125;</span></span><br><span class="line">  Result := AggregatedGrad / <span class="number">5</span>;</span><br><span class="line"><span class="keyword">end</span>;</span><br></pre></td></tr></table></figure>
+<br>
 
-<h2 id="5-Conclusion-and-Future-Work"><a href="#5-Conclusion-and-Future-Work" class="headerlink" title="5. Conclusion and Future Work"></a>5. Conclusion and Future Work</h2><p>While adopting the core concepts of Nightshade,<br>the actual implementation prioritizes hardware-specific optimizations<br>for <em><strong>the i5-4460</strong></em>,specifically focusing on memory pooling and SIMD vectorization.</p>
-<p>Limited hardware environments, such as a 13-year-old legacy PC,<br>do not necessitate compromise. On the contrary,<br>these constraints highlight the true value of computational optimization.<br>The subsequent phase of this research will involve <em><strong>integrating<br>C# and TorchSharp within the Visual Studio 2022 environment</strong></em> to develop a<br>functional model based on this Pascal-derived architecture.</p>
+<h2 id="4-The-Essence-of-the-Mechanism-Ensuring-Robustness"><a href="#4-The-Essence-of-the-Mechanism-Ensuring-Robustness" class="headerlink" title="4. The Essence of the Mechanism: Ensuring Robustness"></a>4. The Essence of the Mechanism: Ensuring Robustness</h2><p>To ensure the poisoning effect persists even when <br> the AI rotates or resizes images during<br>training, the concept of <br> <em><strong>EOT (Expectation Over Transformation)</strong></em> is essential.</p>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line"><span class="comment">! A logic that ensures the poison remains effective on average across various transformed states.</span></span><br><span class="line"><span class="function"><span class="keyword">function</span></span> CalculateRobustPoison(Img) result(AggregatedGrad)</span><br><span class="line">  <span class="keyword">use</span> ImageTypes</span><br><span class="line">  <span class="keyword">implicit</span> <span class="keyword">none</span></span><br><span class="line">  </span><br><span class="line">  <span class="keyword">type</span>(TLinearTensor), <span class="keyword">intent</span>(<span class="keyword">in</span>) :: Img</span><br><span class="line">  <span class="keyword">real</span>(<span class="number">4</span>) :: AggregatedGrad</span><br><span class="line">  <span class="keyword">type</span>(TLinearTensor) :: TempImg</span><br><span class="line">  <span class="keyword">integer</span> :: t</span><br><span class="line"></span><br><span class="line">  AggregatedGrad = <span class="number">0.0</span></span><br><span class="line">  <span class="comment">! Testing under five different transformation states, including rotation, scaling, and noise injection.</span></span><br><span class="line">  <span class="keyword">do</span> t = <span class="number">1</span>, <span class="number">5</span></span><br><span class="line">    TempImg = ApplyTransformation(Img, t)</span><br><span class="line">    AggregatedGrad = AggregatedGrad + GetLoss(TempImg)</span><br><span class="line">  <span class="keyword">end</span> <span class="keyword">do</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment">! Identifying the averaged vulnerabilities to launch a unified adversarial attack.</span></span><br><span class="line">  AggregatedGrad = AggregatedGrad / <span class="number">5.0</span></span><br><span class="line"><span class="keyword">end</span> <span class="function"><span class="keyword">function</span></span> CalculateRobustPoison</span><br></pre></td></tr></table></figure>
+<br>
+
+<h2 id="5-Conclusion-and-Future-Work"><a href="#5-Conclusion-and-Future-Work" class="headerlink" title="5. Conclusion and Future Work"></a>5. Conclusion and Future Work</h2><p>While adopting the core concepts of Nightshade,<br><br>the actual implementation prioritizes <br><br>hardware-specific optimizations for <em><strong>the i5-4460</strong></em>, <br><br>specifically focusing on memory pooling and SIMD vectorization.</p>
+<p>Limited hardware environments, such as a 13-year-old legacy PC, <br><br>do not necessitate<br><br>compromise. On the contrary, <Br>these constraints highlight the true value of computational <br><br>optimization. The subsequent phase of this research will involve <br></p>
+<p><em><strong>integrating C# and TorchSharp within the Visual Studio 2022 environment</strong></em> <br></p>
+<p>to develop a functional model based on this Fortran-derived architecture. <br></p>
 <hr>
-<p>Thank you very much for taking<br>the time to read through this long journey.</p>
+<br>
+
+<p>Thank you very much for taking the time to read through this long journey. <br></p>
 <p>I wish you all a wonderful day. : )</p>
 ]]></content>
       <categories>
