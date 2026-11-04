@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/2026/11/05/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>『ベクジュン·アルゴリズム』A-B</title>
     <url>/2023/07/02/DevDiary/Baekjoon/Baekjoon_1001/</url>
     <content><![CDATA[<meta charset="UTF-8">
@@ -84,32 +102,14 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2026/11/05/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>『ベクジュン·アルゴリズム』A/B</title>
-    <url>/2023/07/04/DevDiary/Baekjoon/Baekjoon_1008/</url>
+    <title>『ベクジュン·アルゴリズム』四則計算(しそくけいさん)</title>
+    <url>/2023/07/05/DevDiary/Baekjoon/Baekjoon_10869/</url>
     <content><![CDATA[<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 <div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/1008/Baekjoon.png" alt="미리보기 방지" width="450">
+<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/10869/Baekjoon.png" alt="미리보기 방지" width="450">
 </div>
 
 <style>
@@ -120,15 +120,15 @@
 </style>
 
 
-<h2 id="ベクジュン·アルゴリズム-A-B"><a href="#ベクジュン·アルゴリズム-A-B" class="headerlink" title="[ベクジュン·アルゴリズム]  A&#x2F;B"></a>[ベクジュン·アルゴリズム]  A&#x2F;B</h2><br>
+<h2 id="ベクジュン·アルゴリズム-四則計算-しそくけいさん"><a href="#ベクジュン·アルゴリズム-四則計算-しそくけいさん" class="headerlink" title="[ベクジュン·アルゴリズム] 四則計算(しそくけいさん)"></a>[ベクジュン·アルゴリズム] 四則計算(しそくけいさん)</h2><br>
 
-<h2 id="1008"><a href="#1008" class="headerlink" title="1008"></a>1008</h2><br>
+<h2 id="10869"><a href="#10869" class="headerlink" title="10869"></a>10869</h2><br>
 
-<h3 id="指紋表示"><a href="#指紋表示" class="headerlink" title="指紋表示"></a>指紋表示</h3><p>📎Link : <br><br><a href="https://www.acmicpc.net/problem/1008">https://www.acmicpc.net/problem/1008</a></p>
-<p>使用言語:C#(.NET)</p>
+<h3 id="指紋表示"><a href="#指紋表示" class="headerlink" title="指紋表示"></a>指紋表示</h3><p>📎Link : <br><br><a href="https://www.acmicpc.net/problem/10869">https://www.acmicpc.net/problem/10869</a></p>
+<p>使用言語:C#（.NET）</p>
 <p>アルゴリズム:実装、四則演算</p>
 <div class="left-img">
-<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/1008/1008.jpg" alt="미리보기 방지" width="250%">
+<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/10869/10869.jpg" alt="미리보기 방지" width="250%">
 </div> <br> <br><br><br><br><br><br><br><br><br><br>
 
 <br>
@@ -136,19 +136,15 @@
 
 <h3 id="解答『かいとう』"><a href="#解答『かいとう』" class="headerlink" title="解答『かいとう』"></a>解答『かいとう』</h3><br>
 
-<h3 id="コード"><a href="#コード" class="headerlink" title="コード"></a>コード</h3><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">boj</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">string</span>[] s = Console.ReadLine().Split();</span><br><span class="line"></span><br><span class="line">            Console.WriteLine(<span class="built_in">double</span>.Parse(s[<span class="number">0</span>]) / <span class="built_in">double</span>.Parse(s[<span class="number">1</span>]));</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="コード"><a href="#コード" class="headerlink" title="コード"></a>コード</h3><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">boj</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">string</span>[] s = Console.ReadLine().Split();</span><br><span class="line">            Console.WriteLine(<span class="built_in">int</span>.Parse(s[<span class="number">0</span>]) + <span class="built_in">int</span>.Parse(s[<span class="number">1</span>]));</span><br><span class="line">            Console.WriteLine(<span class="built_in">int</span>.Parse(s[<span class="number">0</span>]) - <span class="built_in">int</span>.Parse(s[<span class="number">1</span>]));</span><br><span class="line">            Console.WriteLine(<span class="built_in">int</span>.Parse(s[<span class="number">0</span>]) * <span class="built_in">int</span>.Parse(s[<span class="number">1</span>]));</span><br><span class="line">            Console.WriteLine(<span class="built_in">int</span>.Parse(s[<span class="number">0</span>]) / <span class="built_in">int</span>.Parse(s[<span class="number">1</span>]));</span><br><span class="line">            Console.WriteLine(<span class="built_in">int</span>.Parse(s[<span class="number">0</span>]) % <span class="built_in">int</span>.Parse(s[<span class="number">1</span>]));</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <br>
 
 <h3 id="結果『けっか』"><a href="#結果『けっか』" class="headerlink" title="結果『けっか』"></a>結果『けっか』</h3><br>
 <div class="left-img">
-<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/1008/1008_2.png" alt="미리보기 방지" width="580">
+<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/10869/10869_2.png" alt="미리보기 방지" width="580">
 </div>  
-<br><br><br>
-<br><br><br>
-<div class="left-img">
-<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/1008/1008_3.png" alt="미리보기 방지" width="580">
-</div>  
+
 
 <p><br> <br> <br> <br> <br> <br> <br> <br> <br></p>
 <div style="text-align: center;">
@@ -265,14 +261,14 @@
       </tags>
   </entry>
   <entry>
-    <title>『ベクジュン·アルゴリズム』??!</title>
-    <url>/2023/07/05/DevDiary/Baekjoon/Baekjoon_10926/</url>
+    <title>『ベクジュン·アルゴリズム』A/B</title>
+    <url>/2023/07/04/DevDiary/Baekjoon/Baekjoon_1008/</url>
     <content><![CDATA[<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 <div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/10926/Baekjoon.png" alt="미리보기 방지" width="450">
+<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/1008/Baekjoon.png" alt="미리보기 방지" width="450">
 </div>
 
 <style>
@@ -283,92 +279,15 @@
 </style>
 
 
-<h2 id="ベクジュン·アルゴリズム"><a href="#ベクジュン·アルゴリズム" class="headerlink" title="[ベクジュン·アルゴリズム] ??!"></a>[ベクジュン·アルゴリズム] ??!</h2><br>
+<h2 id="ベクジュン·アルゴリズム-A-B"><a href="#ベクジュン·アルゴリズム-A-B" class="headerlink" title="[ベクジュン·アルゴリズム]  A&#x2F;B"></a>[ベクジュン·アルゴリズム]  A&#x2F;B</h2><br>
 
-<h2 id="10926"><a href="#10926" class="headerlink" title="10926"></a>10926</h2><br>
+<h2 id="1008"><a href="#1008" class="headerlink" title="1008"></a>1008</h2><br>
 
-<h3 id="指紋表示"><a href="#指紋表示" class="headerlink" title="指紋表示"></a>指紋表示</h3><p>📎Link : <br><br><a href="https://www.acmicpc.net/problem/10926">https://www.acmicpc.net/problem/10926</a></p>
-<p>使用言語:C#（.NET）</p>
-<p>アルゴリズム: 実装</p>
-<div class="left-img">
-<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/10926/10926.jpg" alt="미리보기 방지" width="250%">
-</div> <br> <br><br><br><br><br><br><br><br><br><br>
-
-<br>
-
-
-<h3 id="解答『かいとう』"><a href="#解答『かいとう』" class="headerlink" title="解答『かいとう』"></a>解答『かいとう』</h3><br>
-
-<h3 id="コード"><a href="#コード" class="headerlink" title="コード"></a>コード</h3><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">boj</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//入力された出力テキストに?!貼り付けて出力</span></span><br><span class="line">            Console.WriteLine(Console.ReadLine() + <span class="string">&quot;??!&quot;</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h3 id="結果『けっか』"><a href="#結果『けっか』" class="headerlink" title="結果『けっか』"></a>結果『けっか』</h3><br>
-<div class="left-img">
-<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/10926/10926_2.png" alt="미리보기 방지" width="580">
-</div> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
-
-
-
-<div style="text-align: center;">
-<p style="font-size: 30px; color: #2844e2ff;"> 終わり</p>
-</div>
-
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
-      <categories>
-        <category>DevDiary</category>
-        <category>Baekjoon(JP)</category>
-      </categories>
-      <tags>
-        <tag>Baekjoon</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>『ベクジュン·アルゴリズム』四則計算(しそくけいさん)</title>
-    <url>/2023/07/05/DevDiary/Baekjoon/Baekjoon_10869/</url>
-    <content><![CDATA[<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/10869/Baekjoon.png" alt="미리보기 방지" width="450">
-</div>
-
-<style>
-.left-img {
-  float: left;
-  margin-right: 320; /* 텍스트와 간격 */
-}
-</style>
-
-
-<h2 id="ベクジュン·アルゴリズム-四則計算-しそくけいさん"><a href="#ベクジュン·アルゴリズム-四則計算-しそくけいさん" class="headerlink" title="[ベクジュン·アルゴリズム] 四則計算(しそくけいさん)"></a>[ベクジュン·アルゴリズム] 四則計算(しそくけいさん)</h2><br>
-
-<h2 id="10869"><a href="#10869" class="headerlink" title="10869"></a>10869</h2><br>
-
-<h3 id="指紋表示"><a href="#指紋表示" class="headerlink" title="指紋表示"></a>指紋表示</h3><p>📎Link : <br><br><a href="https://www.acmicpc.net/problem/10869">https://www.acmicpc.net/problem/10869</a></p>
-<p>使用言語:C#（.NET）</p>
+<h3 id="指紋表示"><a href="#指紋表示" class="headerlink" title="指紋表示"></a>指紋表示</h3><p>📎Link : <br><br><a href="https://www.acmicpc.net/problem/1008">https://www.acmicpc.net/problem/1008</a></p>
+<p>使用言語:C#(.NET)</p>
 <p>アルゴリズム:実装、四則演算</p>
 <div class="left-img">
-<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/10869/10869.jpg" alt="미리보기 방지" width="250%">
+<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/1008/1008.jpg" alt="미리보기 방지" width="250%">
 </div> <br> <br><br><br><br><br><br><br><br><br><br>
 
 <br>
@@ -376,15 +295,19 @@
 
 <h3 id="解答『かいとう』"><a href="#解答『かいとう』" class="headerlink" title="解答『かいとう』"></a>解答『かいとう』</h3><br>
 
-<h3 id="コード"><a href="#コード" class="headerlink" title="コード"></a>コード</h3><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">boj</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">string</span>[] s = Console.ReadLine().Split();</span><br><span class="line">            Console.WriteLine(<span class="built_in">int</span>.Parse(s[<span class="number">0</span>]) + <span class="built_in">int</span>.Parse(s[<span class="number">1</span>]));</span><br><span class="line">            Console.WriteLine(<span class="built_in">int</span>.Parse(s[<span class="number">0</span>]) - <span class="built_in">int</span>.Parse(s[<span class="number">1</span>]));</span><br><span class="line">            Console.WriteLine(<span class="built_in">int</span>.Parse(s[<span class="number">0</span>]) * <span class="built_in">int</span>.Parse(s[<span class="number">1</span>]));</span><br><span class="line">            Console.WriteLine(<span class="built_in">int</span>.Parse(s[<span class="number">0</span>]) / <span class="built_in">int</span>.Parse(s[<span class="number">1</span>]));</span><br><span class="line">            Console.WriteLine(<span class="built_in">int</span>.Parse(s[<span class="number">0</span>]) % <span class="built_in">int</span>.Parse(s[<span class="number">1</span>]));</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="コード"><a href="#コード" class="headerlink" title="コード"></a>コード</h3><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">boj</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">string</span>[] s = Console.ReadLine().Split();</span><br><span class="line"></span><br><span class="line">            Console.WriteLine(<span class="built_in">double</span>.Parse(s[<span class="number">0</span>]) / <span class="built_in">double</span>.Parse(s[<span class="number">1</span>]));</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <br>
 
 <h3 id="結果『けっか』"><a href="#結果『けっか』" class="headerlink" title="結果『けっか』"></a>結果『けっか』</h3><br>
 <div class="left-img">
-<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/10869/10869_2.png" alt="미리보기 방지" width="580">
+<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/1008/1008_2.png" alt="미리보기 방지" width="580">
 </div>  
-
+<br><br><br>
+<br><br><br>
+<div class="left-img">
+<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/1008/1008_3.png" alt="미리보기 방지" width="580">
+</div>  
 
 <p><br> <br> <br> <br> <br> <br> <br> <br> <br></p>
 <div style="text-align: center;">
@@ -500,14 +423,14 @@
       </tags>
   </entry>
   <entry>
-    <title>『ベクジュン·アルゴリズム』 ネコのアスキー·アート</title>
-    <url>/2022/04/13/DevDiary/Baekjoon/Baekjoon_Cat_ASCII_Art_10171/</url>
+    <title>『ベクジュン·アルゴリズム』??!</title>
+    <url>/2023/07/05/DevDiary/Baekjoon/Baekjoon_10926/</url>
     <content><![CDATA[<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 <div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/10171/Baekjoon.png" alt="미리보기 방지" width="450">
+<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/10926/Baekjoon.png" alt="미리보기 방지" width="450">
 </div>
 
 <style>
@@ -518,17 +441,15 @@
 </style>
 
 
-<h2 id="ベクジュン·アルゴリズム-ネコのアスキー·アート"><a href="#ベクジュン·アルゴリズム-ネコのアスキー·アート" class="headerlink" title="[ベクジュン·アルゴリズム] ネコのアスキー·アート"></a>[ベクジュン·アルゴリズム] ネコのアスキー·アート</h2><br>
+<h2 id="ベクジュン·アルゴリズム"><a href="#ベクジュン·アルゴリズム" class="headerlink" title="[ベクジュン·アルゴリズム] ??!"></a>[ベクジュン·アルゴリズム] ??!</h2><br>
 
-<h2 id="10171"><a href="#10171" class="headerlink" title="10171"></a>10171</h2><br>
+<h2 id="10926"><a href="#10926" class="headerlink" title="10926"></a>10926</h2><br>
 
-<h3 id="指紋表示"><a href="#指紋表示" class="headerlink" title="指紋表示"></a>指紋表示</h3><p>📎Link : <br><br><a href="https://www.acmicpc.net/problem/10171">https://www.acmicpc.net/problem/10171</a></p>
-<p>使用言語: Java<br><br>アルゴリズム: </p>
-<ul>
-<li>具現</li>
-</ul>
+<h3 id="指紋表示"><a href="#指紋表示" class="headerlink" title="指紋表示"></a>指紋表示</h3><p>📎Link : <br><br><a href="https://www.acmicpc.net/problem/10926">https://www.acmicpc.net/problem/10926</a></p>
+<p>使用言語:C#（.NET）</p>
+<p>アルゴリズム: 実装</p>
 <div class="left-img">
-<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/10171/001.jpg" alt="미리보기 방지" width="250%">
+<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/10926/10926.jpg" alt="미리보기 방지" width="250%">
 </div> <br> <br><br><br><br><br><br><br><br><br><br>
 
 <br>
@@ -536,13 +457,13 @@
 
 <h3 id="解答『かいとう』"><a href="#解答『かいとう』" class="headerlink" title="解答『かいとう』"></a>解答『かいとう』</h3><br>
 
-<h3 id="コード"><a href="#コード" class="headerlink" title="コード"></a>コード</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> baekjoon.ex_io;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 問題</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 以下の例のように</span></span><br><span class="line"><span class="comment"> * 猫の形のアスキーアート</span></span><br><span class="line"><span class="comment"> * を出力してみましょう。</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 入力</span></span><br><span class="line"><span class="comment"> * Nope.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 出力</span></span><br><span class="line"><span class="comment"> * 猫のアスキーアートを出力</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 入力例 1</span></span><br><span class="line"><span class="comment"> * 出力例 1</span></span><br><span class="line"><span class="comment"> * \ /\</span></span><br><span class="line"><span class="comment"> * ) ( &#x27;)</span></span><br><span class="line"><span class="comment"> * ( / )</span></span><br><span class="line"><span class="comment"> * \(__)|</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line">    System.out.println(<span class="string">&quot;\\    /\\&quot;</span>);</span><br><span class="line">    System.out.println(<span class="string">&quot; )  ( &#x27;)&quot;</span>);</span><br><span class="line">    System.out.println(<span class="string">&quot;(  /  )&quot;</span>);</span><br><span class="line">    System.out.println(<span class="string">&quot; \\(__)|&quot;</span>);</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="コード"><a href="#コード" class="headerlink" title="コード"></a>コード</h3><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">boj</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//入力された出力テキストに?!貼り付けて出力</span></span><br><span class="line">            Console.WriteLine(Console.ReadLine() + <span class="string">&quot;??!&quot;</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <br>
 
 <h3 id="結果『けっか』"><a href="#結果『けっか』" class="headerlink" title="結果『けっか』"></a>結果『けっか』</h3><br>
 <div class="left-img">
-<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/10171/002.png" alt="미리보기 방지" width="580">
+<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/10926/10926_2.png" alt="미리보기 방지" width="580">
 </div> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
 
 
@@ -661,82 +582,6 @@
       </tags>
   </entry>
   <entry>
-    <title>『ベクジュン·アルゴリズム』掛け算</title>
-    <url>/2023/07/05/DevDiary/Baekjoon/Baekjoon_multiply_2588/</url>
-    <content><![CDATA[<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/2588/Baekjoon.png" alt="미리보기 방지" width="450">
-</div>
-
-<style>
-.left-img {
-  float: left;
-  margin-right: 320; /* 텍스트와 간격 */
-}
-</style>
-
-
-<h2 id="ベクジュン·オンライン·ジャージー-掛け算"><a href="#ベクジュン·オンライン·ジャージー-掛け算" class="headerlink" title="ベクジュン·オンライン·ジャージー &#x2F; 掛け算"></a>ベクジュン·オンライン·ジャージー &#x2F; 掛け算</h2><br>
-
-<h2 id="2588"><a href="#2588" class="headerlink" title="2588"></a>2588</h2><p>📎Link : <br><br><a href="https://www.acmicpc.net/problem/2588">https://www.acmicpc.net/problem/2588</a></p>
-<p>使用言語:C#（.NET）</p>
-<p>アルゴリズム:</p>
-<ul>
-<li>数学</li>
-<li>四則演算</li>
-</ul>
-<h3 id="指紋表示"><a href="#指紋表示" class="headerlink" title="指紋表示"></a>指紋表示</h3><br>
-<div class="left-img">
-<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/2588/01.jpg" alt="미리보기 방지" width="250%">
-</div> <br> <br><br><br><br><br><br><br><br><br><br>
-
-<br>
-
-<h3 id="解答『かいとう』"><a href="#解答『かいとう』" class="headerlink" title="解答『かいとう』"></a>解答『かいとう』</h3><h3 id="コード"><a href="#コード" class="headerlink" title="コード"></a>コード</h3><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">static</span> System.Console;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">boj</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">string</span> a = ReadLine();</span><br><span class="line">            <span class="built_in">string</span> b = ReadLine();</span><br><span class="line"></span><br><span class="line">            WriteLine(<span class="built_in">int</span>.Parse(a) * (<span class="built_in">int</span>)Char.GetNumericValue(b[<span class="number">2</span>]));</span><br><span class="line">            WriteLine(<span class="built_in">int</span>.Parse(a) * (<span class="built_in">int</span>)Char.GetNumericValue(b[<span class="number">1</span>]));</span><br><span class="line">            WriteLine(<span class="built_in">int</span>.Parse(a) * (<span class="built_in">int</span>)Char.GetNumericValue(b[<span class="number">0</span>]));</span><br><span class="line">            WriteLine(<span class="built_in">int</span>.Parse(a) * <span class="built_in">int</span>.Parse(b));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h3 id="結果『けっか』"><a href="#結果『けっか』" class="headerlink" title="結果『けっか』"></a>結果『けっか』</h3><br>
-<div class="left-img">
-<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/2588/002.png" alt="미리보기 방지" width="580">
-</div> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
-
-
-<div style="text-align: center;">
-<p style="font-size: 30px; color: #2844e2ff;"> 終わり</p>
-</div>
-
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
-      <categories>
-        <category>DevDiary</category>
-        <category>Baekjoon(JP)</category>
-      </categories>
-      <tags>
-        <tag>Baekjoon</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>『ベクジュン·アルゴリズム』ちび·ジョンミン</title>
     <url>/2023/07/05/DevDiary/Baekjoon/Baekjoon_Little_Jeongmin_11382/</url>
     <content><![CDATA[<meta charset="UTF-8">
@@ -814,34 +659,56 @@
       </tags>
   </entry>
   <entry>
-    <title>『C Programming』Random Draw</title>
-    <url>/2025/08/24/DevDiary/C%20Programming/C-Programming-Random-Draw/</url>
-    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>『ベクジュン·アルゴリズム』 ネコのアスキー·アート</title>
+    <url>/2022/04/13/DevDiary/Baekjoon/Baekjoon_Cat_ASCII_Art_10171/</url>
+    <content><![CDATA[<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<p style="text-align:center">
-<img border="0" width="60%" height="70%" src="https://pihne22710.github.io/PostImages/DevDiary/etc/C_Programming/0.png"><br></p>
 
-<p>🎼Songs I listened to whilst writing🎼</p>
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/10171/Baekjoon.png" alt="미리보기 방지" width="450">
+</div>
+
+<style>
+.left-img {
+  float: left;
+  margin-right: 320; /* 텍스트와 간격 */
+}
+</style>
+
+
+<h2 id="ベクジュン·アルゴリズム-ネコのアスキー·アート"><a href="#ベクジュン·アルゴリズム-ネコのアスキー·アート" class="headerlink" title="[ベクジュン·アルゴリズム] ネコのアスキー·アート"></a>[ベクジュン·アルゴリズム] ネコのアスキー·アート</h2><br>
+
+<h2 id="10171"><a href="#10171" class="headerlink" title="10171"></a>10171</h2><br>
+
+<h3 id="指紋表示"><a href="#指紋表示" class="headerlink" title="指紋表示"></a>指紋表示</h3><p>📎Link : <br><br><a href="https://www.acmicpc.net/problem/10171">https://www.acmicpc.net/problem/10171</a></p>
+<p>使用言語: Java<br><br>アルゴリズム: </p>
 <ul>
-<li>Mermaid Melody Pichi Pichi Pitch OST</li>
-<li>Genshin Impact OST For Mondstadt</li>
-<li>Bullet Heaven 2 OST : Powerful and Bright</li>
-<li>Fallen Blood (OblivionAXiS Remix) | Epic Battle Fantasy 4</li>
+<li>具現</li>
 </ul>
-<br>
-
-<h2 id="C-Programming-Random-Draw"><a href="#C-Programming-Random-Draw" class="headerlink" title="[C Programming]Random Draw"></a>[C Programming]Random Draw</h2><p>Right, so this past Friday,<br>before the weekend proper,<br>I’d put up a poll on Twitter (X) to choose which</p>
-<p>Genshin Impact character to draw this time.</p>
-<p>But, as it often goes with these things,<br>I didn’t quite get a conclusive result.</p>
-<p>So, in the end, I ended up having to just knock up a<br>C program myself to make the final decision.</p>
-<h3 id="💻Code"><a href="#💻Code" class="headerlink" title="💻Code"></a>💻Code</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span> &#123;</span><br><span class="line">    <span class="type">char</span> names[<span class="number">4</span>][<span class="number">50</span>];  <span class="comment">// Store names (up to 49 characters each)</span></span><br><span class="line">    <span class="type">int</span> n = <span class="number">4</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// User input</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Please enter 4 names:\n&quot;</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Name %d:\n&quot;</span>, i + <span class="number">1</span>);</span><br><span class="line">        fgets(names[i], <span class="keyword">sizeof</span>(names[i]), <span class="built_in">stdin</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Remove trailing newline from fgets</span></span><br><span class="line">        <span class="type">size_t</span> len = <span class="built_in">strlen</span>(names[i]);</span><br><span class="line">        <span class="keyword">if</span> (len &gt; <span class="number">0</span> &amp;&amp; names[i][len - <span class="number">1</span>] == <span class="string">&#x27;\n&#x27;</span>) &#123;</span><br><span class="line">            names[i][len - <span class="number">1</span>] = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Set random seed</span></span><br><span class="line">    srand((<span class="type">unsigned</span> <span class="type">int</span>)time(<span class="literal">NULL</span>));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Select a random index</span></span><br><span class="line">    <span class="type">int</span> winner = rand() % n;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Output result</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n🎉 Result of the draw! The winner is: %s 🎉\n&quot;</span>, names[winner]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="🪔Result"><a href="#🪔Result" class="headerlink" title="🪔Result"></a>🪔Result</h3><div style="text-alingn: right;">
-<p style="text-align:center">
-<img border="0" width="60%" height="70%" src="https://pihne22710.github.io/PostImages/DevDiary/etc/C_Programming/2.png">
-</div><br></p>
+<div class="left-img">
+<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/10171/001.jpg" alt="미리보기 방지" width="250%">
+</div> <br> <br><br><br><br><br><br><br><br><br><br>
 
 <br>
+
+
+<h3 id="解答『かいとう』"><a href="#解答『かいとう』" class="headerlink" title="解答『かいとう』"></a>解答『かいとう』</h3><br>
+
+<h3 id="コード"><a href="#コード" class="headerlink" title="コード"></a>コード</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> baekjoon.ex_io;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 問題</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 以下の例のように</span></span><br><span class="line"><span class="comment"> * 猫の形のアスキーアート</span></span><br><span class="line"><span class="comment"> * を出力してみましょう。</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 入力</span></span><br><span class="line"><span class="comment"> * Nope.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 出力</span></span><br><span class="line"><span class="comment"> * 猫のアスキーアートを出力</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 入力例 1</span></span><br><span class="line"><span class="comment"> * 出力例 1</span></span><br><span class="line"><span class="comment"> * \ /\</span></span><br><span class="line"><span class="comment"> * ) ( &#x27;)</span></span><br><span class="line"><span class="comment"> * ( / )</span></span><br><span class="line"><span class="comment"> * \(__)|</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line">    System.out.println(<span class="string">&quot;\\    /\\&quot;</span>);</span><br><span class="line">    System.out.println(<span class="string">&quot; )  ( &#x27;)&quot;</span>);</span><br><span class="line">    System.out.println(<span class="string">&quot;(  /  )&quot;</span>);</span><br><span class="line">    System.out.println(<span class="string">&quot; \\(__)|&quot;</span>);</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="結果『けっか』"><a href="#結果『けっか』" class="headerlink" title="結果『けっか』"></a>結果『けっか』</h3><br>
+<div class="left-img">
+<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/10171/002.png" alt="미리보기 방지" width="580">
+</div> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+
+
+
+<div style="text-align: center;">
+<p style="font-size: 30px; color: #2844e2ff;"> 終わり</p>
+</div>
 
 <div id="disqus_thread"></div>
 <script>
@@ -864,10 +731,86 @@
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
       <categories>
         <category>DevDiary</category>
-        <category>C Programming</category>
+        <category>Baekjoon(JP)</category>
       </categories>
       <tags>
-        <tag>C Programming</tag>
+        <tag>Baekjoon</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>『ベクジュン·アルゴリズム』掛け算</title>
+    <url>/2023/07/05/DevDiary/Baekjoon/Baekjoon_multiply_2588/</url>
+    <content><![CDATA[<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/2588/Baekjoon.png" alt="미리보기 방지" width="450">
+</div>
+
+<style>
+.left-img {
+  float: left;
+  margin-right: 320; /* 텍스트와 간격 */
+}
+</style>
+
+
+<h2 id="ベクジュン·オンライン·ジャージー-掛け算"><a href="#ベクジュン·オンライン·ジャージー-掛け算" class="headerlink" title="ベクジュン·オンライン·ジャージー &#x2F; 掛け算"></a>ベクジュン·オンライン·ジャージー &#x2F; 掛け算</h2><br>
+
+<h2 id="2588"><a href="#2588" class="headerlink" title="2588"></a>2588</h2><p>📎Link : <br><br><a href="https://www.acmicpc.net/problem/2588">https://www.acmicpc.net/problem/2588</a></p>
+<p>使用言語:C#（.NET）</p>
+<p>アルゴリズム:</p>
+<ul>
+<li>数学</li>
+<li>四則演算</li>
+</ul>
+<h3 id="指紋表示"><a href="#指紋表示" class="headerlink" title="指紋表示"></a>指紋表示</h3><br>
+<div class="left-img">
+<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/2588/01.jpg" alt="미리보기 방지" width="250%">
+</div> <br> <br><br><br><br><br><br><br><br><br><br>
+
+<br>
+
+<h3 id="解答『かいとう』"><a href="#解答『かいとう』" class="headerlink" title="解答『かいとう』"></a>解答『かいとう』</h3><h3 id="コード"><a href="#コード" class="headerlink" title="コード"></a>コード</h3><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">static</span> System.Console;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">boj</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">string</span> a = ReadLine();</span><br><span class="line">            <span class="built_in">string</span> b = ReadLine();</span><br><span class="line"></span><br><span class="line">            WriteLine(<span class="built_in">int</span>.Parse(a) * (<span class="built_in">int</span>)Char.GetNumericValue(b[<span class="number">2</span>]));</span><br><span class="line">            WriteLine(<span class="built_in">int</span>.Parse(a) * (<span class="built_in">int</span>)Char.GetNumericValue(b[<span class="number">1</span>]));</span><br><span class="line">            WriteLine(<span class="built_in">int</span>.Parse(a) * (<span class="built_in">int</span>)Char.GetNumericValue(b[<span class="number">0</span>]));</span><br><span class="line">            WriteLine(<span class="built_in">int</span>.Parse(a) * <span class="built_in">int</span>.Parse(b));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="結果『けっか』"><a href="#結果『けっか』" class="headerlink" title="結果『けっか』"></a>結果『けっか』</h3><br>
+<div class="left-img">
+<img src="https://pihne22710.github.io/PostImages/DevDiary/Baekjoon(JP)/2588/002.png" alt="미리보기 방지" width="580">
+</div> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+
+
+<div style="text-align: center;">
+<p style="font-size: 30px; color: #2844e2ff;"> 終わり</p>
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
+      <categories>
+        <category>DevDiary</category>
+        <category>Baekjoon(JP)</category>
+      </categories>
+      <tags>
+        <tag>Baekjoon</tag>
       </tags>
   </entry>
   <entry>
@@ -944,6 +887,63 @@
       </tags>
   </entry>
   <entry>
+    <title>『C Programming』Random Draw</title>
+    <url>/2025/08/24/DevDiary/C%20Programming/C-Programming-Random-Draw/</url>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<p style="text-align:center">
+<img border="0" width="60%" height="70%" src="https://pihne22710.github.io/PostImages/DevDiary/etc/C_Programming/0.png"><br></p>
+
+<p>🎼Songs I listened to whilst writing🎼</p>
+<ul>
+<li>Mermaid Melody Pichi Pichi Pitch OST</li>
+<li>Genshin Impact OST For Mondstadt</li>
+<li>Bullet Heaven 2 OST : Powerful and Bright</li>
+<li>Fallen Blood (OblivionAXiS Remix) | Epic Battle Fantasy 4</li>
+</ul>
+<br>
+
+<h2 id="C-Programming-Random-Draw"><a href="#C-Programming-Random-Draw" class="headerlink" title="[C Programming]Random Draw"></a>[C Programming]Random Draw</h2><p>Right, so this past Friday,<br>before the weekend proper,<br>I’d put up a poll on Twitter (X) to choose which</p>
+<p>Genshin Impact character to draw this time.</p>
+<p>But, as it often goes with these things,<br>I didn’t quite get a conclusive result.</p>
+<p>So, in the end, I ended up having to just knock up a<br>C program myself to make the final decision.</p>
+<h3 id="💻Code"><a href="#💻Code" class="headerlink" title="💻Code"></a>💻Code</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span> &#123;</span><br><span class="line">    <span class="type">char</span> names[<span class="number">4</span>][<span class="number">50</span>];  <span class="comment">// Store names (up to 49 characters each)</span></span><br><span class="line">    <span class="type">int</span> n = <span class="number">4</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// User input</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Please enter 4 names:\n&quot;</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Name %d:\n&quot;</span>, i + <span class="number">1</span>);</span><br><span class="line">        fgets(names[i], <span class="keyword">sizeof</span>(names[i]), <span class="built_in">stdin</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Remove trailing newline from fgets</span></span><br><span class="line">        <span class="type">size_t</span> len = <span class="built_in">strlen</span>(names[i]);</span><br><span class="line">        <span class="keyword">if</span> (len &gt; <span class="number">0</span> &amp;&amp; names[i][len - <span class="number">1</span>] == <span class="string">&#x27;\n&#x27;</span>) &#123;</span><br><span class="line">            names[i][len - <span class="number">1</span>] = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Set random seed</span></span><br><span class="line">    srand((<span class="type">unsigned</span> <span class="type">int</span>)time(<span class="literal">NULL</span>));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Select a random index</span></span><br><span class="line">    <span class="type">int</span> winner = rand() % n;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Output result</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n🎉 Result of the draw! The winner is: %s 🎉\n&quot;</span>, names[winner]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="🪔Result"><a href="#🪔Result" class="headerlink" title="🪔Result"></a>🪔Result</h3><div style="text-alingn: right;">
+<p style="text-align:center">
+<img border="0" width="60%" height="70%" src="https://pihne22710.github.io/PostImages/DevDiary/etc/C_Programming/2.png">
+</div><br></p>
+
+<br>
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
+      <categories>
+        <category>DevDiary</category>
+        <category>C Programming</category>
+      </categories>
+      <tags>
+        <tag>C Programming</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>(Directory,Draw Folder Structure) Cmd Tree Command</title>
     <url>/2025/09/01/DevDiary/Windows/Directory-Draw-Folder-Structure-Cmd-Tree-Command/</url>
     <content><![CDATA[<div style="TEXT-ALIGN: center">
@@ -1012,6 +1012,107 @@ https://mentha2.tistory.com/211 [행궁동 데이터 엔지니어:티스토리]
       </categories>
       <tags>
         <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【Kali Linux】 network setup guide</title>
+    <url>/2025/10/30/DevDiary/Kali%20Linux/Kali-Linux-Network-Setup-Guide/</url>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<h1 id="Kali-Linux-Network-Setup-guide"><a href="#Kali-Linux-Network-Setup-guide" class="headerlink" title="[Kali Linux] Network Setup guide"></a>[Kali Linux] Network Setup guide</h1><p style="text-align:center">
+<img border="0" width="400" height="400" src="https://pihne22710.github.io/PostImages/DevDiary/etc/Kali%20Linux/[Kali-Linux]Network-Setup-guide.png"><br></p>
+
+<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>This is The Network Configuration For Kali Linux.</p>
+<h3 id="1-Permanent-configuration"><a href="#1-Permanent-configuration" class="headerlink" title="1. Permanent configuration"></a>1. Permanent configuration</h3><p>Edit The <code>/etc/network/interfaces</code><br>File With An Editor Such As gedit or vi.<br>Add The Following Lines At The End Of The File.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">auto eth0</span><br><span class="line">iface eth0 inet dhcp</span><br><span class="line"></span><br><span class="line">auto eth1</span><br><span class="line">iface eth1 inet dhcp</span><br></pre></td></tr></table></figure>
+
+<p>Verify that the file’s<br>complete contents are displayed as follows.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">┌──(User㉿kali)-[~]</span><br><span class="line">└─$ <span class="built_in">cat</span> /etc/network/interfaces</span><br><span class="line"><span class="comment"># This file describes the network interfaces available on your system</span></span><br><span class="line"><span class="comment"># and how to activate them. For more information, see interfaces(5).</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">source</span> /etc/network/interfaces.d/*</span><br><span class="line"></span><br><span class="line"><span class="comment"># The loopback network interface</span></span><br><span class="line">auto lo</span><br><span class="line">iface lo inet loopback</span><br><span class="line"></span><br><span class="line">auto eth0</span><br><span class="line">iface eth0 inet dhcp</span><br><span class="line"></span><br><span class="line">auto eth1</span><br><span class="line">iface eth1 inet dhcp</span><br><span class="line">┌──(User㉿kali)-[~]</span><br><span class="line">└─$ </span><br></pre></td></tr></table></figure>
+
+<p>Now run the command below<br>to apply the network settings.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">┌──(User㉿kali)-[~]</span><br><span class="line">└─$ systemctl restart networking</span><br></pre></td></tr></table></figure>
+<p>Also, both adapters will<br>be configured automatically even after rebooting. </p>
+<h3 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h3><p>🪔 <a href="https://cafe.naver.com/f-e/cafes/28961395/articles/100?referrerAllArticles=true&inCafeSearch=true&query=%EC%B9%BC%EB%A6%AC%EB%A6%AC%EB%88%85%EC%8A%A4%20%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC&art=aW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtaW5DYWZlLXNlYXJjaC1saXN0.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjEwMCwiaXNzdWVkQXQiOjE3NjE4MzIzMjM5NzEsImNhZmVJZCI6Mjg5NjEzOTV9.o5RJCIMzMGnyiDX6mpZHI5jOSfIuwEZrDniJpqUCFao">Source</a><br><br></p>
+<p style="font-size: 25px; color: #2844e2ff;"> Done</p>
+</div>
+
+
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
+      <categories>
+        <category>DevDiary</category>
+        <category>Kali Linux</category>
+      </categories>
+      <tags>
+        <tag>Kali Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【Kali Linux】 Adjusting screen size using VirtualBox Guest Additions</title>
+    <url>/2026/11/05/DevDiary/Kali%20Linux/Adjusting%20screen%20size%20using%20VirtualBox%20Guest%20Additions%20in%20Kali%20Linux/</url>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<h1 id="Kali-Linux-Adjusting-screen-size-using-VirtualBox-Guest-Additions-in-Kali-Linux"><a href="#Kali-Linux-Adjusting-screen-size-using-VirtualBox-Guest-Additions-in-Kali-Linux" class="headerlink" title="[Kali Linux] Adjusting screen size using VirtualBox Guest Additions in Kali Linux"></a>[Kali Linux] Adjusting screen size using VirtualBox Guest Additions in Kali Linux</h1><p style="text-align:center">
+<img border="0" width="400" height="400" src="https://github.com/Lucy8480/KuraiLuna4.github.io/blob/master/images/2026/11/Kali-linux/Kali-linux-Virtual-box-guest-addition/Kali-linux-Virtual-box-guest-addition.png?raw=true"><br></p>
+<br>
+Hi, <br>
+Let's look at how to adjust the screen size using <br>
+VirtualBox Guest Additions in Kali Linux <br>
+
+<br>
+
+<h2 id="Plan-1"><a href="#Plan-1" class="headerlink" title="Plan 1"></a>Plan 1</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">$ apt-get install dkms -y</span><br><span class="line">$ /etc/init.d/vboxadd setup</span><br><span class="line"></span><br><span class="line">$ apt-get update &amp;&amp; apt-get install -y linux-headers-$(<span class="built_in">uname</span> -r)</span><br><span class="line"></span><br><span class="line"><span class="comment"># In VirtualBox, go to the menu and click</span></span><br><span class="line"><span class="comment"># &#x27;Insert Guest Additions CD image&#x27;.</span></span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cd</span> /media/cdrom0</span><br><span class="line">$ <span class="built_in">cp</span> VBoxLinux* /root</span><br><span class="line">$ <span class="built_in">cd</span> /root</span><br><span class="line">$ <span class="built_in">chmod</span> 755 VBoxLinux*</span><br><span class="line">$ ./VBoxLinux*</span><br><span class="line"> </span><br><span class="line">$ reboot</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="Plan-2"><a href="#Plan-2" class="headerlink" title="Plan 2"></a>Plan 2</h2><p><img border="0" width="500" height="400" src="https://github.com/Lucy8480/KuraiLuna4.github.io/blob/master/images/2026/11/Kali-linux/Kali-linux-Virtual-box-guest-addition/2026-11-05.png?raw=true"><br></p><br><br></p>
+<p>By changing the Graphics Controller to <code>VBoxVGA</code> as shown below,<br><br>you can adjust the screen size and control it in full-screen mode.</p>
+<p style="font-size: 25px; color: #2844e2ff;"> Done</p>
+</div>
+
+
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
+      <categories>
+        <category>DevDiary</category>
+        <category>Kali Linux</category>
+      </categories>
+      <tags>
+        <tag>Kali Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -1201,107 +1302,6 @@ https://www.kali.org/blog/kali-linux-2025-3-release/
       </tags>
   </entry>
   <entry>
-    <title>【Kali Linux】 Adjusting screen size using VirtualBox Guest Additions</title>
-    <url>/2025/10/30/DevDiary/Kali%20Linux/Adjusting%20screen%20size%20using%20VirtualBox%20Guest%20Additions%20in%20Kali%20Linux/</url>
-    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<h1 id="Kali-Linux-Adjusting-screen-size-using-VirtualBox-Guest-Additions-in-Kali-Linux"><a href="#Kali-Linux-Adjusting-screen-size-using-VirtualBox-Guest-Additions-in-Kali-Linux" class="headerlink" title="[Kali Linux] Adjusting screen size using VirtualBox Guest Additions in Kali Linux"></a>[Kali Linux] Adjusting screen size using VirtualBox Guest Additions in Kali Linux</h1><p style="text-align:center">
-<img border="0" width="400" height="400" src="https://github.com/Lucy8480/KuraiLuna4.github.io/blob/master/images/2026/11/Kali-linux/Kali-linux-Virtual-box-guest-addition/Kali-linux-Virtual-box-guest-addition.png?raw=true"><br></p>
-<br>
-Hi, <br>
-Let's look at how to adjust the screen size using <br>
-VirtualBox Guest Additions in Kali Linux <br>
-
-<br>
-
-<h2 id="Plan-1"><a href="#Plan-1" class="headerlink" title="Plan 1"></a>Plan 1</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">$ apt-get install dkms -y</span><br><span class="line">$ /etc/init.d/vboxadd setup</span><br><span class="line"></span><br><span class="line">$ apt-get update &amp;&amp; apt-get install -y linux-headers-$(<span class="built_in">uname</span> -r)</span><br><span class="line"></span><br><span class="line"><span class="comment"># In VirtualBox, go to the menu and click</span></span><br><span class="line"><span class="comment"># &#x27;Insert Guest Additions CD image&#x27;.</span></span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cd</span> /media/cdrom0</span><br><span class="line">$ <span class="built_in">cp</span> VBoxLinux* /root</span><br><span class="line">$ <span class="built_in">cd</span> /root</span><br><span class="line">$ <span class="built_in">chmod</span> 755 VBoxLinux*</span><br><span class="line">$ ./VBoxLinux*</span><br><span class="line"> </span><br><span class="line">$ reboot</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="Plan-2"><a href="#Plan-2" class="headerlink" title="Plan 2"></a>Plan 2</h2><p><img border="0" width="500" height="400" src="https://github.com/Lucy8480/KuraiLuna4.github.io/blob/master/images/2026/11/Kali-linux/Kali-linux-Virtual-box-guest-addition/2026-11-05.png?raw=true"><br></p><br><br></p>
-<p>By changing the Graphics Controller to <code>VBoxVGA</code> as shown below,<br><br>you can adjust the screen size and control it in full-screen mode.</p>
-<p style="font-size: 25px; color: #2844e2ff;"> Done</p>
-</div>
-
-
-
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
-      <categories>
-        <category>DevDiary</category>
-        <category>Kali Linux</category>
-      </categories>
-      <tags>
-        <tag>Kali Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【Kali Linux】 network setup guide</title>
-    <url>/2025/10/30/DevDiary/Kali%20Linux/Kali-Linux-Network-Setup-Guide/</url>
-    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<h1 id="Kali-Linux-Network-Setup-guide"><a href="#Kali-Linux-Network-Setup-guide" class="headerlink" title="[Kali Linux] Network Setup guide"></a>[Kali Linux] Network Setup guide</h1><p style="text-align:center">
-<img border="0" width="400" height="400" src="https://pihne22710.github.io/PostImages/DevDiary/etc/Kali%20Linux/[Kali-Linux]Network-Setup-guide.png"><br></p>
-
-<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>This is The Network Configuration For Kali Linux.</p>
-<h3 id="1-Permanent-configuration"><a href="#1-Permanent-configuration" class="headerlink" title="1. Permanent configuration"></a>1. Permanent configuration</h3><p>Edit The <code>/etc/network/interfaces</code><br>File With An Editor Such As gedit or vi.<br>Add The Following Lines At The End Of The File.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">auto eth0</span><br><span class="line">iface eth0 inet dhcp</span><br><span class="line"></span><br><span class="line">auto eth1</span><br><span class="line">iface eth1 inet dhcp</span><br></pre></td></tr></table></figure>
-
-<p>Verify that the file’s<br>complete contents are displayed as follows.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">┌──(User㉿kali)-[~]</span><br><span class="line">└─$ <span class="built_in">cat</span> /etc/network/interfaces</span><br><span class="line"><span class="comment"># This file describes the network interfaces available on your system</span></span><br><span class="line"><span class="comment"># and how to activate them. For more information, see interfaces(5).</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">source</span> /etc/network/interfaces.d/*</span><br><span class="line"></span><br><span class="line"><span class="comment"># The loopback network interface</span></span><br><span class="line">auto lo</span><br><span class="line">iface lo inet loopback</span><br><span class="line"></span><br><span class="line">auto eth0</span><br><span class="line">iface eth0 inet dhcp</span><br><span class="line"></span><br><span class="line">auto eth1</span><br><span class="line">iface eth1 inet dhcp</span><br><span class="line">┌──(User㉿kali)-[~]</span><br><span class="line">└─$ </span><br></pre></td></tr></table></figure>
-
-<p>Now run the command below<br>to apply the network settings.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">┌──(User㉿kali)-[~]</span><br><span class="line">└─$ systemctl restart networking</span><br></pre></td></tr></table></figure>
-<p>Also, both adapters will<br>be configured automatically even after rebooting. </p>
-<h3 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h3><p>🪔 <a href="https://cafe.naver.com/f-e/cafes/28961395/articles/100?referrerAllArticles=true&inCafeSearch=true&query=%EC%B9%BC%EB%A6%AC%EB%A6%AC%EB%88%85%EC%8A%A4%20%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC&art=aW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtaW5DYWZlLXNlYXJjaC1saXN0.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjEwMCwiaXNzdWVkQXQiOjE3NjE4MzIzMjM5NzEsImNhZmVJZCI6Mjg5NjEzOTV9.o5RJCIMzMGnyiDX6mpZHI5jOSfIuwEZrDniJpqUCFao">Source</a><br><br></p>
-<p style="font-size: 25px; color: #2844e2ff;"> Done</p>
-</div>
-
-
-
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
-      <categories>
-        <category>DevDiary</category>
-        <category>Kali Linux</category>
-      </categories>
-      <tags>
-        <tag>Kali Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>미국 배당주 심플계산기</title>
     <url>/2025/04/14/DevDiary/etc/%EB%AF%B8%EA%B5%AD-%EB%B0%B0%EB%8B%B9%EC%A3%BC-%EC%8B%AC%ED%94%8C%EA%B3%84%EC%82%B0%EA%B8%B0/</url>
     <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1375,69 +1375,6 @@ VirtualBox Guest Additions in Kali Linux <br>
       </categories>
       <tags>
         <tag>etc</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【Genshin Impact】Aether Cooking For Lisa</title>
-    <url>/2025/09/18/ETC/Genshin-Cartoons/Aether-Cooking-For-Lisa/</url>
-    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/4.%E3%80%90Genshin%20Impact%E3%80%91Aether%20Cooking%20For%20Lisa/%E3%80%90Genshin%E3%80%91Cartoons.png" alt="" width="400" height="300">
-</div>
-<br><br>
-
-<h2 id="Cartoon"><a href="#Cartoon" class="headerlink" title="Cartoon"></a>Cartoon</h2><br>
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/4.%E3%80%90Genshin%20Impact%E3%80%91Aether%20Cooking%20For%20Lisa/1-.jpg" alt="" >
-</div><br>
-<!-- 접은 글 시작 -->
-<details>
-<summary>👉 Korean </summary>
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/4.%E3%80%90Genshin%20Impact%E3%80%91Aether%20Cooking%20For%20Lisa/1.webp" alt="" >
-</div>
- <Br>
-</details>
-<!-- 접은 글 끝 -->
-<br>
-
-<!-- 접은 글 시작 -->
-<details>
-<summary>👉 Click to expand </summary>
-#Lisa #LisaMinci #Aether <br>
-#GenshinImpact <br>
-#リサ #空(原神) #原神 <Br> 
- <Br>
-</details>
-<!-- 접은 글 끝 -->
-
-<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><p>🪔 Art : <a href="https://x.com/yuushibadesu">@yuushibadesu</a><br><br></p>
-<h3 id="📎-Link-Unknown"><a href="#📎-Link-Unknown" class="headerlink" title="📎 Link :  Unknown"></a>📎 Link :  Unknown</h3><div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
-      <categories>
-        <category>(ETC) Taking a Break</category>
-        <category>【Genshin】Cartoons</category>
-      </categories>
-      <tags>
-        <tag>ETC</tag>
       </tags>
   </entry>
   <entry>
@@ -1545,8 +1482,8 @@ VirtualBox Guest Additions in Kali Linux <br>
       </tags>
   </entry>
   <entry>
-    <title>【Genshin Impact】Amber Pumpkin</title>
-    <url>/2025/10/24/ETC/Genshin-Cartoons/Genshin-Impact-Amber-Pumpkin/</url>
+    <title>【Genshin Impact】Aether Cooking For Lisa</title>
+    <url>/2025/09/18/ETC/Genshin-Cartoons/Aether-Cooking-For-Lisa/</url>
     <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <div style="text-align: center;">
@@ -1555,26 +1492,32 @@ VirtualBox Guest Additions in Kali Linux <br>
 <br><br>
 
 <h2 id="Cartoon"><a href="#Cartoon" class="headerlink" title="Cartoon"></a>Cartoon</h2><br>
-
 <div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/7.%E3%80%90Genshin%20Impact%E3%80%91Amber%20Pumpkin/1.jpg" alt="" >
-</div><br><br>
-
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/4.%E3%80%90Genshin%20Impact%E3%80%91Aether%20Cooking%20For%20Lisa/1-.jpg" alt="" >
+</div><br>
+<!-- 접은 글 시작 -->
+<details>
+<summary>👉 Korean </summary>
 <div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/7.%E3%80%90Genshin%20Impact%E3%80%91Amber%20Pumpkin/2.jpg" alt="" >
-</div><br><br>
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/4.%E3%80%90Genshin%20Impact%E3%80%91Aether%20Cooking%20For%20Lisa/1.webp" alt="" >
+</div>
+ <Br>
+</details>
+<!-- 접은 글 끝 -->
+<br>
 
 <!-- 접은 글 시작 -->
 <details>
 <summary>👉 Click to expand </summary>
-#Amber #GenshinImpact <br>
-#アンバー #原神
+#Lisa #LisaMinci #Aether <br>
+#GenshinImpact <br>
+#リサ #空(原神) #原神 <Br> 
+ <Br>
 </details>
 <!-- 접은 글 끝 -->
 
-<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><p>🎨 Art : <a href="https://x.com/nowlasd">@nowlasd</a><br>🪔 Pixiv : <a href="https://www.pixiv.net/users/61289463/">https://www.pixiv.net/users/61289463/</a></p>
-<p>📎 Link : <a href="https://www.pixiv.net/artworks/93766571">1</a></p>
-<div id="disqus_thread"></div>
+<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><p>🪔 Art : <a href="https://x.com/yuushibadesu">@yuushibadesu</a><br><br></p>
+<h3 id="📎-Link-Unknown"><a href="#📎-Link-Unknown" class="headerlink" title="📎 Link :  Unknown"></a>📎 Link :  Unknown</h3><div id="disqus_thread"></div>
 <script>
     /**
     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -1592,8 +1535,7 @@ VirtualBox Guest Additions in Kali Linux <br>
     (d.head || d.body).appendChild(s);
     })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-]]></content>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
       <categories>
         <category>(ETC) Taking a Break</category>
         <category>【Genshin】Cartoons</category>
@@ -1672,8 +1614,8 @@ VirtualBox Guest Additions in Kali Linux <br>
       </tags>
   </entry>
   <entry>
-    <title>【Genshin Impact】Amber Yandere Part1</title>
-    <url>/2025/10/24/ETC/Genshin-Cartoons/Genshin-Impact-Amber-Yandere-Part1/</url>
+    <title>【Genshin Impact】Amber Pumpkin</title>
+    <url>/2025/10/24/ETC/Genshin-Cartoons/Genshin-Impact-Amber-Pumpkin/</url>
     <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <div style="text-align: center;">
@@ -1684,15 +1626,11 @@ VirtualBox Guest Additions in Kali Linux <br>
 <h2 id="Cartoon"><a href="#Cartoon" class="headerlink" title="Cartoon"></a>Cartoon</h2><br>
 
 <div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/8.%E3%80%90Genshin%20Impact%E3%80%91%20Amber%20Yandere%20Part1/1.png" alt="" >
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/7.%E3%80%90Genshin%20Impact%E3%80%91Amber%20Pumpkin/1.jpg" alt="" >
 </div><br><br>
 
 <div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/8.%E3%80%90Genshin%20Impact%E3%80%91%20Amber%20Yandere%20Part1/2.jpg" alt="" >
-</div><br><br>
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/8.%E3%80%90Genshin%20Impact%E3%80%91%20Amber%20Yandere%20Part1/3.jpg" alt="" >
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/7.%E3%80%90Genshin%20Impact%E3%80%91Amber%20Pumpkin/2.jpg" alt="" >
 </div><br><br>
 
 <!-- 접은 글 시작 -->
@@ -1703,9 +1641,8 @@ VirtualBox Guest Additions in Kali Linux <br>
 </details>
 <!-- 접은 글 끝 -->
 
-<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><p>🎨 Art : <a href="https://x.com/nowlasd">@nowlasd</a> <br><br>🪔 Pixiv : <a href="https://www.pixiv.net/users/61289463/">https://www.pixiv.net/users/61289463/</a></p>
-<p>📎Link : <a href="https://www.pixiv.net/artworks/91426879">1</a> <a href="https://www.pixiv.net/artworks/91688610">2</a> <a href="https://www.pixiv.net/artworks/91800065">3</a></p>
-<p>☕ The First Discovery :<br><a href="https://arca.live/b/genshin/67142190">https://arca.live/b/genshin/67142190</a><br><a href="https://m.blog.naver.com/zenio3700/222980406353">https://m.blog.naver.com/zenio3700/222980406353</a></p>
+<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><p>🎨 Art : <a href="https://x.com/nowlasd">@nowlasd</a><br>🪔 Pixiv : <a href="https://www.pixiv.net/users/61289463/">https://www.pixiv.net/users/61289463/</a></p>
+<p>📎 Link : <a href="https://www.pixiv.net/artworks/93766571">1</a></p>
 <div id="disqus_thread"></div>
 <script>
     /**
@@ -1818,65 +1755,8 @@ VirtualBox Guest Additions in Kali Linux <br>
       </tags>
   </entry>
   <entry>
-    <title>【Genshin Impact】Hungry Mona and Dodoco Bomb</title>
-    <url>/2025/09/14/ETC/Genshin-Cartoons/Hungry-Mona-And-Dodoco-Bomb/</url>
-    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/4.%E3%80%90Genshin%20Impact%E3%80%91Aether%20Cooking%20For%20Lisa/%E3%80%90Genshin%E3%80%91Cartoons.png" alt="" width="400" height="300">
-</div>
-<br><br>
-
-<h2 id="Cartoon"><a href="#Cartoon" class="headerlink" title="Cartoon"></a>Cartoon</h2><br>
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/3.%20Hungry%20Mona%20and%20Dodoco%20Bomb/1.jpg" alt="" >
-</div><br><br>
-
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/3.%20Hungry%20Mona%20and%20Dodoco%20Bomb/2.jpg" alt="" >
-</div><br><br>
-
-<!-- 접은 글 시작 -->
-<details>
-<summary>👉 Click to expand </summary>
-#Mona #Klee #Dodoco <br>
-#GenshinImpact <br>
-#クレー #モナ #ドドコ <Br> 
-#原神 <Br>
-</details>
-<!-- 접은 글 끝 -->
-
-<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><h3 id="Unknown"><a href="#Unknown" class="headerlink" title="Unknown"></a>Unknown</h3><div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
-      <categories>
-        <category>(ETC) Taking a Break</category>
-        <category>【Genshin】Cartoons</category>
-      </categories>
-      <tags>
-        <tag>ETC</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【Genshin Impact】Sucrose Research Diary</title>
-    <url>/2025/08/24/ETC/Genshin-Cartoons/Genshin-Impact-Sucrose-Research-Diary/</url>
+    <title>【Genshin Impact】Amber Yandere Part1</title>
+    <url>/2025/10/24/ETC/Genshin-Cartoons/Genshin-Impact-Amber-Yandere-Part1/</url>
     <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <div style="text-align: center;">
@@ -1887,25 +1767,28 @@ VirtualBox Guest Additions in Kali Linux <br>
 <h2 id="Cartoon"><a href="#Cartoon" class="headerlink" title="Cartoon"></a>Cartoon</h2><br>
 
 <div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/1.%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E3%81%AE%E7%A0%94%E7%A9%B6%E6%97%A5%E8%AA%8C/1.jpg" alt="" >
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/8.%E3%80%90Genshin%20Impact%E3%80%91%20Amber%20Yandere%20Part1/1.png" alt="" >
 </div><br><br>
 
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/8.%E3%80%90Genshin%20Impact%E3%80%91%20Amber%20Yandere%20Part1/2.jpg" alt="" >
+</div><br><br>
 
 <div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/1.%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E3%81%AE%E7%A0%94%E7%A9%B6%E6%97%A5%E8%AA%8C/2.jpg" alt="" >
-</div>
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/8.%E3%80%90Genshin%20Impact%E3%80%91%20Amber%20Yandere%20Part1/3.jpg" alt="" >
+</div><br><br>
+
 <!-- 접은 글 시작 -->
 <details>
 <summary>👉 Click to expand </summary>
-#Sucrose #GenshinImpact #Klee <br>
-#スクロース #原神 #クレー
+#Amber #GenshinImpact <br>
+#アンバー #原神
 </details>
 <!-- 접은 글 끝 -->
 
-<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">推しの誕生日…言葉は要らない…<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/GenshinImpact?src=hash&amp;ref_src=twsrc%5Etfw">#GenshinImpact</a> <a href="https://twitter.com/hashtag/%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9?src=hash&amp;ref_src=twsrc%5Etfw">#スクロース</a> <a href="https://twitter.com/hashtag/Sucrose?src=hash&amp;ref_src=twsrc%5Etfw">#Sucrose</a> <a href="https://twitter.com/hashtag/%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E7%94%9F%E8%AA%95%E7%A5%AD2021?src=hash&amp;ref_src=twsrc%5Etfw">#スクロース生誕祭2021</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E_%E3%82%AD%E3%83%A3%E3%83%A9%E7%94%9F%E8%AA%95%E7%A5%AD?src=hash&amp;ref_src=twsrc%5Etfw">#原神_キャラ生誕祭</a> <a href="https://t.co/8lJS6ERZCV">pic.twitter.com/8lJS6ERZCV</a></p>&mdash; アリクイのイカク (@arikuigames1105) <a href="https://twitter.com/arikuigames1105/status/1463885185875808261?ref_src=twsrc%5Etfw">November 25, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-
+<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><p>🎨 Art : <a href="https://x.com/nowlasd">@nowlasd</a> <br><br>🪔 Pixiv : <a href="https://www.pixiv.net/users/61289463/">https://www.pixiv.net/users/61289463/</a></p>
+<p>📎Link : <a href="https://www.pixiv.net/artworks/91426879">1</a> <a href="https://www.pixiv.net/artworks/91688610">2</a> <a href="https://www.pixiv.net/artworks/91800065">3</a></p>
+<p>☕ The First Discovery :<br><a href="https://arca.live/b/genshin/67142190">https://arca.live/b/genshin/67142190</a><br><a href="https://m.blog.naver.com/zenio3700/222980406353">https://m.blog.naver.com/zenio3700/222980406353</a></p>
 <div id="disqus_thread"></div>
 <script>
     /**
@@ -1924,7 +1807,8 @@ VirtualBox Guest Additions in Kali Linux <br>
     (d.head || d.body).appendChild(s);
     })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+]]></content>
       <categories>
         <category>(ETC) Taking a Break</category>
         <category>【Genshin】Cartoons</category>
@@ -2016,6 +1900,122 @@ VirtualBox Guest Additions in Kali Linux <br>
 <p>📎Link : <a href="https://x.com/sleepfool/status/1320749632163434497">Deleted</a></p>
 <p>☕ The First Discovery :<br><a href="https://bbs.ruliweb.com/etcs/board/300780/read/49381394">https://bbs.ruliweb.com/etcs/board/300780/read/49381394</a></p>
 <div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
+      <categories>
+        <category>(ETC) Taking a Break</category>
+        <category>【Genshin】Cartoons</category>
+      </categories>
+      <tags>
+        <tag>ETC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【Genshin Impact】Sucrose Research Diary</title>
+    <url>/2025/08/24/ETC/Genshin-Cartoons/Genshin-Impact-Sucrose-Research-Diary/</url>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/4.%E3%80%90Genshin%20Impact%E3%80%91Aether%20Cooking%20For%20Lisa/%E3%80%90Genshin%E3%80%91Cartoons.png" alt="" width="400" height="300">
+</div>
+<br><br>
+
+<h2 id="Cartoon"><a href="#Cartoon" class="headerlink" title="Cartoon"></a>Cartoon</h2><br>
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/1.%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E3%81%AE%E7%A0%94%E7%A9%B6%E6%97%A5%E8%AA%8C/1.jpg" alt="" >
+</div><br><br>
+
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/1.%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E3%81%AE%E7%A0%94%E7%A9%B6%E6%97%A5%E8%AA%8C/2.jpg" alt="" >
+</div>
+<!-- 접은 글 시작 -->
+<details>
+<summary>👉 Click to expand </summary>
+#Sucrose #GenshinImpact #Klee <br>
+#スクロース #原神 #クレー
+</details>
+<!-- 접은 글 끝 -->
+
+<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">推しの誕生日…言葉は要らない…<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/GenshinImpact?src=hash&amp;ref_src=twsrc%5Etfw">#GenshinImpact</a> <a href="https://twitter.com/hashtag/%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9?src=hash&amp;ref_src=twsrc%5Etfw">#スクロース</a> <a href="https://twitter.com/hashtag/Sucrose?src=hash&amp;ref_src=twsrc%5Etfw">#Sucrose</a> <a href="https://twitter.com/hashtag/%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9%E7%94%9F%E8%AA%95%E7%A5%AD2021?src=hash&amp;ref_src=twsrc%5Etfw">#スクロース生誕祭2021</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E_%E3%82%AD%E3%83%A3%E3%83%A9%E7%94%9F%E8%AA%95%E7%A5%AD?src=hash&amp;ref_src=twsrc%5Etfw">#原神_キャラ生誕祭</a> <a href="https://t.co/8lJS6ERZCV">pic.twitter.com/8lJS6ERZCV</a></p>&mdash; アリクイのイカク (@arikuigames1105) <a href="https://twitter.com/arikuigames1105/status/1463885185875808261?ref_src=twsrc%5Etfw">November 25, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
+      <categories>
+        <category>(ETC) Taking a Break</category>
+        <category>【Genshin】Cartoons</category>
+      </categories>
+      <tags>
+        <tag>ETC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【Genshin Impact】Hungry Mona and Dodoco Bomb</title>
+    <url>/2025/09/14/ETC/Genshin-Cartoons/Hungry-Mona-And-Dodoco-Bomb/</url>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/4.%E3%80%90Genshin%20Impact%E3%80%91Aether%20Cooking%20For%20Lisa/%E3%80%90Genshin%E3%80%91Cartoons.png" alt="" width="400" height="300">
+</div>
+<br><br>
+
+<h2 id="Cartoon"><a href="#Cartoon" class="headerlink" title="Cartoon"></a>Cartoon</h2><br>
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/3.%20Hungry%20Mona%20and%20Dodoco%20Bomb/1.jpg" alt="" >
+</div><br><br>
+
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/(ETC)%20Taking%20a%20Break/%E3%80%90Genshin%E3%80%91Cartoons/3.%20Hungry%20Mona%20and%20Dodoco%20Bomb/2.jpg" alt="" >
+</div><br><br>
+
+<!-- 접은 글 시작 -->
+<details>
+<summary>👉 Click to expand </summary>
+#Mona #Klee #Dodoco <br>
+#GenshinImpact <br>
+#クレー #モナ #ドドコ <Br> 
+#原神 <Br>
+</details>
+<!-- 접은 글 끝 -->
+
+<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><h3 id="Unknown"><a href="#Unknown" class="headerlink" title="Unknown"></a>Unknown</h3><div id="disqus_thread"></div>
 <script>
     /**
     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -2191,158 +2191,6 @@ VirtualBox Guest Additions in Kali Linux <br>
       </categories>
       <tags>
         <tag>ETC</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>『pwnable.kr』Fla Problem Solving</title>
-    <url>/2022/04/10/White%20Hacking/pwnable.kr/pwnable-kr-Fla-Problem-Solving/</url>
-    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style6" />
-<p style="text-align: center;" data-ke-size="size18"><b><span style="color: #8a3db6;">back on the 10th of April, 2022</span></b></p>
-<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
-<p style="text-align: center;" data-ke-size="size18"><b><span style="color: #8a3db6;">Right, so this post was penned on a Naver blog.</span></b></p>
-<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
-<p style="text-align: center;" data-ke-size="size18"><b><span style="color: #8a3db6;"><a href="https://blog.naver.com/bnm0170/222696804662" target="_blank" rel="noopener"></a></span></b><b><span style="color: #8a3db6;"></span></b></p>
-<p data-ke-size="size16">&nbsp;</p>
-<hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style6" />
-<div style="text-align: center;" align="center">&nbsp;</div>
-
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/01_Rina.gif" alt="미리보기 방지" width="300">
-</div><br>
-Right, well this is perhaps one of
-
-<p>the easier problems I’ve tackled so far.</p>
-<p>Having a go at a CTF for ethical hacking<br>after a bit of a break, then.</p>
-<br> 
-
-<div style="text-align: center;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/02.png" alt="" width="300">
-</div><br><br>
-
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/03.png" alt="" width="300">
-</div>
-
-<p>First off,let’s have a look at the question itself.</p>
-<p>Papa brought me a packed present! let’s open it,</p>
-<p>This problem, you see,<br>isn’t about SSH access.<br>Rather, it’s about downloading a<br>standalone program,</p>
-<p>reversing it to get a key,<br>and then collecting points with that key.<br>Quite straightforward.</p>
-<p>Right, anyway using<br>the download address written<br>in the question above,</p>
-<p>you download it with the command below.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> wget http://pwnable.kr/bin/flag</span><br></pre></td></tr></table></figure>
-
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/04.png" alt="" width="300">
-</div>
-
-<p>Once it’s all downloaded,<br>you then use the command below</p>
-<p>to grant permission for the program to be used.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">chmod</span> 755 flag</span><br></pre></td></tr></table></figure>
-
-<p>However,this program happens to be UPX-packed,</p>
-<p>so you’ll need to unpack it as well.</p>
-<p>Right, let’s go unpack it with the command below.</p>
-<p>unpack it : )</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> upx -d flag</span><br></pre></td></tr></table></figure>
-
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/05.png" alt="" width="300">
-</div>
-
-<p>Now that the unpacking is complete, this time,</p>
-<p>let’s try debugging it with the command below.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> gdb -q flag</span><br></pre></td></tr></table></figure>
-
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/06.png" alt="" width="300">
-</div>
-
-<p>(And in the meantime,<br>I completely wasted over<br>30 minutes trying to install gdb-peda,<br>you see.)</p>
-<p>So, when you debug it in this manner,<br>after main+32,<br>there’s a rather suspicious part,</p>
-<p>where it seems the flag value was copied to #</p>
-<p>where there’s a rather suspicious part.</p>
-<p>It’s presumed to be 64-bit, and</p>
-<p>“if you disassemble 0x6c2070 with x&#x2F;xg,</p>
-<p>it comes out as <flag>:0x496628.</p>
-<p>So, 0x496628 is probably where the real flag value</p>
-<p>is copied to, I’d imagine.</p>
-<p>Oh, and if you write 496628,<br>an error will be displayed,</p>
-<p>so you absolutely must attach 0x,</p>
-<p>and then write it. Otherwise,<br>it won’t be output correctly without an error.</p>
-<p>it will be output.</p>
-<p>Anyway, if you input it as per<br>the command below with x&#x2F;s</p>
-<p>if you input it.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gdb-peda$ x/s 0x496628</span><br></pre></td></tr></table></figure>
-
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/07.png" alt="" width="300">
-</div>
-
-<p>the real flag value will come out.</p>
-<p>And with the flag value obtained,</p>
-<p>you input the value as shown<br>in the captured image below.</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/08.png" alt="" width="300">
-</div>
-
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/09.png" alt="" width="300">
-</div>
-
-<p>And that’s how 7 points were collected. : )</p>
-<div style="text-alingn: right;">
-<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/10.png" alt="" width="300">
-</div>
-
-<p>Having a go at pwnable.kr<br>CTF after a bit of a break, then.</p>
-<p>“I’m not sure if it’ll<br>be possible since it’s<br>the weekend, honestly.</p>
-<p>Right, well I suppose it’s about time<br>I started preparing for<br>some rather pointless part-time work.</p>
-<p>My chances of finding employment in S.Korea(?)<br>are effectively long gone, you see.</p>
-<p>So, while I’m doing short-term part-time work,</p>
-<p>I’ll try to save up around ten million won,<br>move out of my family home,</p>
-<p>and then find some temporary<br>accommodation near<br>the Japanese Cultural Centre,</p>
-<p>in a well-soundproofed goshiwon.</p>
-<p>and then find some temporary accommodation.</p>
-<p>Ethical hacking, Japanese study,</p>
-<p>preparing for JLPT N series or EJU,</p>
-<p><a href="https://www.bugbountyclub.com/beginning">bug bounty</a> programmes related to ethical hacking,</p>
-<p>preparing for and attempting that,<br>and then writing bug hunting reports<br>in English and Japanese,</p>
-<p>writing bug hunting reports.</p>
-<p>or preparing for OSCP,<br>an international ethical hacking<br>certification.</p>
-<p>It’ll be like doing a penitent task,<br>just like the nuns in a Catholic convent.</p>
-<p>I’ll have to do that.</p>
-<p>And then, simultaneously with<br>preparing to move to Japan,</p>
-<p>I’ll have to prepare for<br>financial income investment as well</p>
-<p>2022.04.10</p>
-<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
-      <categories>
-        <category>White Hacking</category>
-        <category>CTF</category>
-        <category>pwnable.kr</category>
-      </categories>
-      <tags>
-        <tag>White Hacking</tag>
       </tags>
   </entry>
   <entry>
@@ -2895,6 +2743,158 @@ Screenshot 5.
 </div>
 
 
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://cang-jing-runa.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>]]></content>
+      <categories>
+        <category>White Hacking</category>
+        <category>CTF</category>
+        <category>pwnable.kr</category>
+      </categories>
+      <tags>
+        <tag>White Hacking</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>『pwnable.kr』Fla Problem Solving</title>
+    <url>/2022/04/10/White%20Hacking/pwnable.kr/pwnable-kr-Fla-Problem-Solving/</url>
+    <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style6" />
+<p style="text-align: center;" data-ke-size="size18"><b><span style="color: #8a3db6;">back on the 10th of April, 2022</span></b></p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18"><b><span style="color: #8a3db6;">Right, so this post was penned on a Naver blog.</span></b></p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18"><b><span style="color: #8a3db6;"><a href="https://blog.naver.com/bnm0170/222696804662" target="_blank" rel="noopener"></a></span></b><b><span style="color: #8a3db6;"></span></b></p>
+<p data-ke-size="size16">&nbsp;</p>
+<hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style6" />
+<div style="text-align: center;" align="center">&nbsp;</div>
+
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/01_Rina.gif" alt="미리보기 방지" width="300">
+</div><br>
+Right, well this is perhaps one of
+
+<p>the easier problems I’ve tackled so far.</p>
+<p>Having a go at a CTF for ethical hacking<br>after a bit of a break, then.</p>
+<br> 
+
+<div style="text-align: center;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/02.png" alt="" width="300">
+</div><br><br>
+
+<div style="text-alingn: right;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/03.png" alt="" width="300">
+</div>
+
+<p>First off,let’s have a look at the question itself.</p>
+<p>Papa brought me a packed present! let’s open it,</p>
+<p>This problem, you see,<br>isn’t about SSH access.<br>Rather, it’s about downloading a<br>standalone program,</p>
+<p>reversing it to get a key,<br>and then collecting points with that key.<br>Quite straightforward.</p>
+<p>Right, anyway using<br>the download address written<br>in the question above,</p>
+<p>you download it with the command below.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> wget http://pwnable.kr/bin/flag</span><br></pre></td></tr></table></figure>
+
+<div style="text-alingn: right;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/04.png" alt="" width="300">
+</div>
+
+<p>Once it’s all downloaded,<br>you then use the command below</p>
+<p>to grant permission for the program to be used.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">chmod</span> 755 flag</span><br></pre></td></tr></table></figure>
+
+<p>However,this program happens to be UPX-packed,</p>
+<p>so you’ll need to unpack it as well.</p>
+<p>Right, let’s go unpack it with the command below.</p>
+<p>unpack it : )</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> upx -d flag</span><br></pre></td></tr></table></figure>
+
+<div style="text-alingn: right;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/05.png" alt="" width="300">
+</div>
+
+<p>Now that the unpacking is complete, this time,</p>
+<p>let’s try debugging it with the command below.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> gdb -q flag</span><br></pre></td></tr></table></figure>
+
+<div style="text-alingn: right;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/06.png" alt="" width="300">
+</div>
+
+<p>(And in the meantime,<br>I completely wasted over<br>30 minutes trying to install gdb-peda,<br>you see.)</p>
+<p>So, when you debug it in this manner,<br>after main+32,<br>there’s a rather suspicious part,</p>
+<p>where it seems the flag value was copied to #</p>
+<p>where there’s a rather suspicious part.</p>
+<p>It’s presumed to be 64-bit, and</p>
+<p>“if you disassemble 0x6c2070 with x&#x2F;xg,</p>
+<p>it comes out as <flag>:0x496628.</p>
+<p>So, 0x496628 is probably where the real flag value</p>
+<p>is copied to, I’d imagine.</p>
+<p>Oh, and if you write 496628,<br>an error will be displayed,</p>
+<p>so you absolutely must attach 0x,</p>
+<p>and then write it. Otherwise,<br>it won’t be output correctly without an error.</p>
+<p>it will be output.</p>
+<p>Anyway, if you input it as per<br>the command below with x&#x2F;s</p>
+<p>if you input it.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gdb-peda$ x/s 0x496628</span><br></pre></td></tr></table></figure>
+
+<div style="text-alingn: right;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/07.png" alt="" width="300">
+</div>
+
+<p>the real flag value will come out.</p>
+<p>And with the flag value obtained,</p>
+<p>you input the value as shown<br>in the captured image below.</p>
+<div style="text-alingn: right;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/08.png" alt="" width="300">
+</div>
+
+<div style="text-alingn: right;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/09.png" alt="" width="300">
+</div>
+
+<p>And that’s how 7 points were collected. : )</p>
+<div style="text-alingn: right;">
+<img src="https://pihne22710.github.io/PostImages/White%20Hacking/CTF/pwnable.kr/Fla%20Problem%20Solving/10.png" alt="" width="300">
+</div>
+
+<p>Having a go at pwnable.kr<br>CTF after a bit of a break, then.</p>
+<p>“I’m not sure if it’ll<br>be possible since it’s<br>the weekend, honestly.</p>
+<p>Right, well I suppose it’s about time<br>I started preparing for<br>some rather pointless part-time work.</p>
+<p>My chances of finding employment in S.Korea(?)<br>are effectively long gone, you see.</p>
+<p>So, while I’m doing short-term part-time work,</p>
+<p>I’ll try to save up around ten million won,<br>move out of my family home,</p>
+<p>and then find some temporary<br>accommodation near<br>the Japanese Cultural Centre,</p>
+<p>in a well-soundproofed goshiwon.</p>
+<p>and then find some temporary accommodation.</p>
+<p>Ethical hacking, Japanese study,</p>
+<p>preparing for JLPT N series or EJU,</p>
+<p><a href="https://www.bugbountyclub.com/beginning">bug bounty</a> programmes related to ethical hacking,</p>
+<p>preparing for and attempting that,<br>and then writing bug hunting reports<br>in English and Japanese,</p>
+<p>writing bug hunting reports.</p>
+<p>or preparing for OSCP,<br>an international ethical hacking<br>certification.</p>
+<p>It’ll be like doing a penitent task,<br>just like the nuns in a Catholic convent.</p>
+<p>I’ll have to do that.</p>
+<p>And then, simultaneously with<br>preparing to move to Japan,</p>
+<p>I’ll have to prepare for<br>financial income investment as well</p>
+<p>2022.04.10</p>
 <div id="disqus_thread"></div>
 <script>
     /**
@@ -3696,61 +3696,6 @@ Screenshot 8
       </tags>
   </entry>
   <entry>
-    <title>(DevDiary) Adversarial Algorithms Against AI Image Synthesis A Computational Formalization Using Fortran</title>
-    <url>/2026/01/02/DevDiary/Projact/DOKUGEN/Projact_DOKUGEN/</url>
-    <content><![CDATA[<br>
-<p style="text-align:center">
-<img border="0" width="50%" height="50%" src="https://pihne22710.github.io/PostImages/DevDiary/Projact/DOKUGEN/[Projact]%20DOKUGEN.gif"><br></p>
-
-<h1 id="DevDiary-Adversarial-Algorithms-Against-AI-Image-Synthesis-A-Computational-Formalization-Using-Fortran"><a href="#DevDiary-Adversarial-Algorithms-Against-AI-Image-Synthesis-A-Computational-Formalization-Using-Fortran" class="headerlink" title="[DevDiary] Adversarial Algorithms Against AI Image Synthesis: A Computational Formalization Using Fortran"></a>[DevDiary] Adversarial Algorithms Against AI Image Synthesis: A Computational Formalization Using Fortran</h1><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Recently, technologies designed to counter<br>the indiscriminate crawling of artistic styles by<br>AI have been gaining significant attention.</p>
-<p>Drawing inspiration from the mechanism of Nightshade—widely<br>regarded as the most potent among them—<br>I have explored how to implement this within a modern</p>
-<p>C# environment (specifically optimized for 4-core CPUs and memory efficiency).<br>To ensure a rigorous examination of the pure logical flow,<br>I have drafted the architectural blueprint using <strong>Fortran</strong>,</p>
-<p>a language renowned for its unparalleled efficiency in numerical arrays<br>and scientific computation.</p>
-<br>
-
-<h2 id="1-A-Computational-Approach-Perturbation-of-the-Feature-Space"><a href="#1-A-Computational-Approach-Perturbation-of-the-Feature-Space" class="headerlink" title="1. A Computational Approach: Perturbation of the Feature Space"></a>1. A Computational Approach: Perturbation of the Feature Space</h2><p>AI perceives images as high-dimensional vectors<br>rather than mere pixels.<br>My objective is to ‘minimize visual disparity while maximizing<br>the displacement within the vector space.’<br><br></p>
-<h3 id="Core-Data-Structures-Memory-Efficiency"><a href="#Core-Data-Structures-Memory-Efficiency" class="headerlink" title="Core Data Structures (Memory Efficiency)"></a>Core Data Structures (Memory Efficiency)</h3><p>To optimize L3 cache efficiency for the i5-4460,<br>the structure utilizes Fortran’s contiguous array mapping,<br>which is natively optimized for SIMD operations.<br><br></p>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line"><span class="keyword">module</span> DataStructures</span><br><span class="line">    <span class="keyword">implicit</span> <span class="keyword">none</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">! Managing pixel data as linear 1D memory instead of 3D arrays.</span></span><br><span class="line">    <span class="comment">! Design for leveraging C#&#x27;s Span&lt;float&gt; and Fortran&#x27;s contiguous pointers.</span></span><br><span class="line">    <span class="keyword">type</span> :: TLinearTensor</span><br><span class="line">        <span class="keyword">real</span>(<span class="number">4</span>), <span class="keyword">allocatable</span> :: <span class="keyword">Data</span>(:) <span class="comment">! 32-bit Floating Point (Single Precision)</span></span><br><span class="line">        <span class="keyword">integer</span> :: Width, Height, Channels</span><br><span class="line">        <span class="keyword">integer</span>(<span class="number">8</span>) :: TotalSize</span><br><span class="line">    <span class="keyword">end</span> <span class="keyword">type</span> TLinearTensor</span><br><span class="line"></span><br><span class="line">    <span class="comment">! Defining the Target Concept to Mislead the AI</span></span><br><span class="line">    <span class="keyword">type</span> :: TConceptAnchor</span><br><span class="line">        <span class="keyword">real</span>(<span class="number">4</span>) :: Vector(<span class="number">0</span>:<span class="number">767</span>) <span class="comment">! Fake Indicators (e.g., Dog Image → Cat Vector)</span></span><br><span class="line">    <span class="keyword">end</span> <span class="keyword">type</span> TConceptAnchor</span><br><span class="line"><span class="keyword">end</span> <span class="keyword">module</span> DataStructures</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<h2 id="2-Core-Algorithm-PGD-Projected-Gradient-Descent"><a href="#2-Core-Algorithm-PGD-Projected-Gradient-Descent" class="headerlink" title="2. Core Algorithm: PGD (Projected Gradient Descent)"></a>2. Core Algorithm: PGD (Projected Gradient Descent)</h2><p>This is not simple noise, but a precise procedure to refine <code>poisoning</code> <br> data through the reverse-calculation of the AI’s feature extraction layers.</p>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line"><span class="comment">! [Algorithm] Projected Gradient Descent: Core Routine for Poisoning While Preserving Originality</span></span><br><span class="line"><span class="function"><span class="keyword">subroutine</span></span> InjectPoison(Img, Config, <span class="built_in">Epsilon</span>)</span><br><span class="line">  <span class="keyword">use</span> ImageTypes</span><br><span class="line">  <span class="keyword">implicit</span> <span class="keyword">none</span></span><br><span class="line">  </span><br><span class="line">  <span class="keyword">type</span>(TLinearTensor), <span class="keyword">intent</span>(inout) :: Img</span><br><span class="line">  <span class="keyword">type</span>(TConceptAnchor), <span class="keyword">intent</span>(<span class="keyword">in</span>) :: Config</span><br><span class="line">  <span class="keyword">real</span>(<span class="number">4</span>), <span class="keyword">intent</span>(<span class="keyword">in</span>) :: <span class="built_in">Epsilon</span></span><br><span class="line">  </span><br><span class="line">  <span class="keyword">integer</span> :: i, p</span><br><span class="line">  <span class="keyword">real</span>(<span class="number">4</span>) :: Gradient, Delta</span><br><span class="line"></span><br><span class="line">  <span class="comment">! Finely adjusting the poison over a set number of iterations.</span></span><br><span class="line">  <span class="keyword">do</span> i = <span class="number">1</span>, <span class="number">50</span></span><br><span class="line">    <span class="comment">! 1. Feature Extraction Simulation</span></span><br><span class="line">    <span class="comment">! (AI model inference logic would be called here)</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">do</span> p = <span class="number">1</span>, <span class="built_in">int</span>(Img%TotalSize)</span><br><span class="line">      <span class="comment">! 2. Gradient Calculation</span></span><br><span class="line">      <span class="comment">! Deriving the direction in which pixels must be adjusted to move toward the target concept.</span></span><br><span class="line">      Gradient = CalculateGradient(Img%<span class="keyword">Data</span>(p), Config%Vector(<span class="built_in">mod</span>(p-<span class="number">1</span>, <span class="number">768</span>)))</span><br><span class="line"></span><br><span class="line">      <span class="comment">! 3. Poisoning (Step Update)</span></span><br><span class="line">      Img%<span class="keyword">Data</span>(p) = Img%<span class="keyword">Data</span>(p) - (<span class="number">0.005</span> * <span class="built_in">sign</span>(<span class="number">1.0</span>, Gradient))</span><br><span class="line"></span><br><span class="line">      <span class="comment">! 4. Projection: Constraining Disparities to Ensure Visual Imperceptibility</span></span><br><span class="line">      Delta = Img%<span class="keyword">Data</span>(p) - OriginalData(p)</span><br><span class="line">      <span class="keyword">if</span> (<span class="built_in">abs</span>(Delta) &gt; <span class="built_in">Epsilon</span>) <span class="keyword">then</span></span><br><span class="line">        Img%<span class="keyword">Data</span>(p) = OriginalData(p) + (<span class="built_in">sign</span>(<span class="number">1.0</span>, Delta) * <span class="built_in">Epsilon</span>)</span><br><span class="line">      <span class="keyword">end</span> <span class="keyword">if</span></span><br><span class="line">    <span class="keyword">end</span> <span class="keyword">do</span></span><br><span class="line">  <span class="keyword">end</span> <span class="keyword">do</span></span><br><span class="line"><span class="keyword">end</span> <span class="function"><span class="keyword">subroutine</span></span> InjectPoison</span><br></pre></td></tr></table></figure>
-<br>
-
-<h2 id="3-Hardware-Optimization-Quad-Core-Utilization-and-Addressing-I-O-Bottlenecks"><a href="#3-Hardware-Optimization-Quad-Core-Utilization-and-Addressing-I-O-Bottlenecks" class="headerlink" title="3. Hardware Optimization: Quad-Core Utilization and Addressing I&#x2F;O Bottlenecks"></a>3. Hardware Optimization: Quad-Core Utilization and Addressing I&#x2F;O Bottlenecks</h2><p>Considering the 13-year-old PC specifications, Disk I&#x2F;O and Garbage <br>Collection (GC) are far more daunting than raw computational speed.</p>
-<h3 id="Multi-Stage-Pipeline-Architecture"><a href="#Multi-Stage-Pipeline-Architecture" class="headerlink" title="Multi-Stage Pipeline Architecture "></a>Multi-Stage Pipeline Architecture <br></h3><p>Using C#’s <code>System.Threading.Channels</code>,</p>
-<ul>
-<li><em><strong>Core 1 (Loader)</strong></em>: Pre-reads images from the<br><br>SSD and loads them into a memory pool</li>
-<li><em><strong>Core 2 &amp; 3 (Processors)</strong></em>: Executing the <code>InjectPoison</code> <br><br>logic at high speed using AVX2 (SIMD) instructions, processing 8 pixels at a time.</li>
-<li><em><strong>Core 4 (Saver)</strong></em>: Saves the processed images in lossless formats, such as PNG.</li>
-</ul>
-<br>
-
-<h2 id="4-The-Essence-of-the-Mechanism-Ensuring-Robustness"><a href="#4-The-Essence-of-the-Mechanism-Ensuring-Robustness" class="headerlink" title="4. The Essence of the Mechanism: Ensuring Robustness"></a>4. The Essence of the Mechanism: Ensuring Robustness</h2><p>To ensure the poisoning effect persists even when <br> the AI rotates or resizes images during<br>training, the concept of <br> <em><strong>EOT (Expectation Over Transformation)</strong></em> is essential.</p>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line"><span class="comment">! A logic that ensures the poison remains effective on average across various transformed states.</span></span><br><span class="line"><span class="function"><span class="keyword">function</span></span> CalculateRobustPoison(Img) result(AggregatedGrad)</span><br><span class="line">  <span class="keyword">use</span> ImageTypes</span><br><span class="line">  <span class="keyword">implicit</span> <span class="keyword">none</span></span><br><span class="line">  </span><br><span class="line">  <span class="keyword">type</span>(TLinearTensor), <span class="keyword">intent</span>(<span class="keyword">in</span>) :: Img</span><br><span class="line">  <span class="keyword">real</span>(<span class="number">4</span>) :: AggregatedGrad</span><br><span class="line">  <span class="keyword">type</span>(TLinearTensor) :: TempImg</span><br><span class="line">  <span class="keyword">integer</span> :: t</span><br><span class="line"></span><br><span class="line">  AggregatedGrad = <span class="number">0.0</span></span><br><span class="line">  <span class="comment">! Testing under five different transformation states, including rotation, scaling, and noise injection.</span></span><br><span class="line">  <span class="keyword">do</span> t = <span class="number">1</span>, <span class="number">5</span></span><br><span class="line">    TempImg = ApplyTransformation(Img, t)</span><br><span class="line">    AggregatedGrad = AggregatedGrad + GetLoss(TempImg)</span><br><span class="line">  <span class="keyword">end</span> <span class="keyword">do</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment">! Identifying the averaged vulnerabilities to launch a unified adversarial attack.</span></span><br><span class="line">  AggregatedGrad = AggregatedGrad / <span class="number">5.0</span></span><br><span class="line"><span class="keyword">end</span> <span class="function"><span class="keyword">function</span></span> CalculateRobustPoison</span><br></pre></td></tr></table></figure>
-<br>
-
-<h2 id="5-Conclusion-and-Future-Work"><a href="#5-Conclusion-and-Future-Work" class="headerlink" title="5. Conclusion and Future Work"></a>5. Conclusion and Future Work</h2><p>While adopting the core concepts of Nightshade,<br><br>the actual implementation prioritizes <br><br>hardware-specific optimizations for <em><strong>the i5-4460</strong></em>, <br><br>specifically focusing on memory pooling and SIMD vectorization.</p>
-<p>Limited hardware environments, such as a 13-year-old legacy PC, <br><br>do not necessitate<br><br>compromise. On the contrary, <Br>these constraints highlight the true value of computational <br><br>optimization. The subsequent phase of this research will involve <br></p>
-<p><em><strong>integrating C# and TorchSharp within the Visual Studio 2022 environment</strong></em> <br></p>
-<p>to develop a functional model based on this Fortran-derived architecture. <br></p>
-<hr>
-<br>
-
-<p>Thank you very much for taking the time to read through this long journey. <br></p>
-<p>I wish you all a wonderful day. : )</p>
-]]></content>
-      <categories>
-        <category>DevDiary</category>
-        <category>Projact</category>
-        <category>DOKUGEN</category>
-      </categories>
-      <tags>
-        <tag>Projact</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>『pwnable.kr』 Collision Problem solving</title>
     <url>/2020/08/01/White%20Hacking/pwnable.kr/pwnable_kr_Collision_Problem_solving/</url>
     <content><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -3911,6 +3856,61 @@ Alright then,
       </categories>
       <tags>
         <tag>White Hacking</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(DevDiary) Adversarial Algorithms Against AI Image Synthesis A Computational Formalization Using Fortran</title>
+    <url>/2026/01/02/DevDiary/Projact/DOKUGEN/Projact_DOKUGEN/</url>
+    <content><![CDATA[<br>
+<p style="text-align:center">
+<img border="0" width="50%" height="50%" src="https://pihne22710.github.io/PostImages/DevDiary/Projact/DOKUGEN/[Projact]%20DOKUGEN.gif"><br></p>
+
+<h1 id="DevDiary-Adversarial-Algorithms-Against-AI-Image-Synthesis-A-Computational-Formalization-Using-Fortran"><a href="#DevDiary-Adversarial-Algorithms-Against-AI-Image-Synthesis-A-Computational-Formalization-Using-Fortran" class="headerlink" title="[DevDiary] Adversarial Algorithms Against AI Image Synthesis: A Computational Formalization Using Fortran"></a>[DevDiary] Adversarial Algorithms Against AI Image Synthesis: A Computational Formalization Using Fortran</h1><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Recently, technologies designed to counter<br>the indiscriminate crawling of artistic styles by<br>AI have been gaining significant attention.</p>
+<p>Drawing inspiration from the mechanism of Nightshade—widely<br>regarded as the most potent among them—<br>I have explored how to implement this within a modern</p>
+<p>C# environment (specifically optimized for 4-core CPUs and memory efficiency).<br>To ensure a rigorous examination of the pure logical flow,<br>I have drafted the architectural blueprint using <strong>Fortran</strong>,</p>
+<p>a language renowned for its unparalleled efficiency in numerical arrays<br>and scientific computation.</p>
+<br>
+
+<h2 id="1-A-Computational-Approach-Perturbation-of-the-Feature-Space"><a href="#1-A-Computational-Approach-Perturbation-of-the-Feature-Space" class="headerlink" title="1. A Computational Approach: Perturbation of the Feature Space"></a>1. A Computational Approach: Perturbation of the Feature Space</h2><p>AI perceives images as high-dimensional vectors<br>rather than mere pixels.<br>My objective is to ‘minimize visual disparity while maximizing<br>the displacement within the vector space.’<br><br></p>
+<h3 id="Core-Data-Structures-Memory-Efficiency"><a href="#Core-Data-Structures-Memory-Efficiency" class="headerlink" title="Core Data Structures (Memory Efficiency)"></a>Core Data Structures (Memory Efficiency)</h3><p>To optimize L3 cache efficiency for the i5-4460,<br>the structure utilizes Fortran’s contiguous array mapping,<br>which is natively optimized for SIMD operations.<br><br></p>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line"><span class="keyword">module</span> DataStructures</span><br><span class="line">    <span class="keyword">implicit</span> <span class="keyword">none</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">! Managing pixel data as linear 1D memory instead of 3D arrays.</span></span><br><span class="line">    <span class="comment">! Design for leveraging C#&#x27;s Span&lt;float&gt; and Fortran&#x27;s contiguous pointers.</span></span><br><span class="line">    <span class="keyword">type</span> :: TLinearTensor</span><br><span class="line">        <span class="keyword">real</span>(<span class="number">4</span>), <span class="keyword">allocatable</span> :: <span class="keyword">Data</span>(:) <span class="comment">! 32-bit Floating Point (Single Precision)</span></span><br><span class="line">        <span class="keyword">integer</span> :: Width, Height, Channels</span><br><span class="line">        <span class="keyword">integer</span>(<span class="number">8</span>) :: TotalSize</span><br><span class="line">    <span class="keyword">end</span> <span class="keyword">type</span> TLinearTensor</span><br><span class="line"></span><br><span class="line">    <span class="comment">! Defining the Target Concept to Mislead the AI</span></span><br><span class="line">    <span class="keyword">type</span> :: TConceptAnchor</span><br><span class="line">        <span class="keyword">real</span>(<span class="number">4</span>) :: Vector(<span class="number">0</span>:<span class="number">767</span>) <span class="comment">! Fake Indicators (e.g., Dog Image → Cat Vector)</span></span><br><span class="line">    <span class="keyword">end</span> <span class="keyword">type</span> TConceptAnchor</span><br><span class="line"><span class="keyword">end</span> <span class="keyword">module</span> DataStructures</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="2-Core-Algorithm-PGD-Projected-Gradient-Descent"><a href="#2-Core-Algorithm-PGD-Projected-Gradient-Descent" class="headerlink" title="2. Core Algorithm: PGD (Projected Gradient Descent)"></a>2. Core Algorithm: PGD (Projected Gradient Descent)</h2><p>This is not simple noise, but a precise procedure to refine <code>poisoning</code> <br> data through the reverse-calculation of the AI’s feature extraction layers.</p>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line"><span class="comment">! [Algorithm] Projected Gradient Descent: Core Routine for Poisoning While Preserving Originality</span></span><br><span class="line"><span class="function"><span class="keyword">subroutine</span></span> InjectPoison(Img, Config, <span class="built_in">Epsilon</span>)</span><br><span class="line">  <span class="keyword">use</span> ImageTypes</span><br><span class="line">  <span class="keyword">implicit</span> <span class="keyword">none</span></span><br><span class="line">  </span><br><span class="line">  <span class="keyword">type</span>(TLinearTensor), <span class="keyword">intent</span>(inout) :: Img</span><br><span class="line">  <span class="keyword">type</span>(TConceptAnchor), <span class="keyword">intent</span>(<span class="keyword">in</span>) :: Config</span><br><span class="line">  <span class="keyword">real</span>(<span class="number">4</span>), <span class="keyword">intent</span>(<span class="keyword">in</span>) :: <span class="built_in">Epsilon</span></span><br><span class="line">  </span><br><span class="line">  <span class="keyword">integer</span> :: i, p</span><br><span class="line">  <span class="keyword">real</span>(<span class="number">4</span>) :: Gradient, Delta</span><br><span class="line"></span><br><span class="line">  <span class="comment">! Finely adjusting the poison over a set number of iterations.</span></span><br><span class="line">  <span class="keyword">do</span> i = <span class="number">1</span>, <span class="number">50</span></span><br><span class="line">    <span class="comment">! 1. Feature Extraction Simulation</span></span><br><span class="line">    <span class="comment">! (AI model inference logic would be called here)</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">do</span> p = <span class="number">1</span>, <span class="built_in">int</span>(Img%TotalSize)</span><br><span class="line">      <span class="comment">! 2. Gradient Calculation</span></span><br><span class="line">      <span class="comment">! Deriving the direction in which pixels must be adjusted to move toward the target concept.</span></span><br><span class="line">      Gradient = CalculateGradient(Img%<span class="keyword">Data</span>(p), Config%Vector(<span class="built_in">mod</span>(p-<span class="number">1</span>, <span class="number">768</span>)))</span><br><span class="line"></span><br><span class="line">      <span class="comment">! 3. Poisoning (Step Update)</span></span><br><span class="line">      Img%<span class="keyword">Data</span>(p) = Img%<span class="keyword">Data</span>(p) - (<span class="number">0.005</span> * <span class="built_in">sign</span>(<span class="number">1.0</span>, Gradient))</span><br><span class="line"></span><br><span class="line">      <span class="comment">! 4. Projection: Constraining Disparities to Ensure Visual Imperceptibility</span></span><br><span class="line">      Delta = Img%<span class="keyword">Data</span>(p) - OriginalData(p)</span><br><span class="line">      <span class="keyword">if</span> (<span class="built_in">abs</span>(Delta) &gt; <span class="built_in">Epsilon</span>) <span class="keyword">then</span></span><br><span class="line">        Img%<span class="keyword">Data</span>(p) = OriginalData(p) + (<span class="built_in">sign</span>(<span class="number">1.0</span>, Delta) * <span class="built_in">Epsilon</span>)</span><br><span class="line">      <span class="keyword">end</span> <span class="keyword">if</span></span><br><span class="line">    <span class="keyword">end</span> <span class="keyword">do</span></span><br><span class="line">  <span class="keyword">end</span> <span class="keyword">do</span></span><br><span class="line"><span class="keyword">end</span> <span class="function"><span class="keyword">subroutine</span></span> InjectPoison</span><br></pre></td></tr></table></figure>
+<br>
+
+<h2 id="3-Hardware-Optimization-Quad-Core-Utilization-and-Addressing-I-O-Bottlenecks"><a href="#3-Hardware-Optimization-Quad-Core-Utilization-and-Addressing-I-O-Bottlenecks" class="headerlink" title="3. Hardware Optimization: Quad-Core Utilization and Addressing I&#x2F;O Bottlenecks"></a>3. Hardware Optimization: Quad-Core Utilization and Addressing I&#x2F;O Bottlenecks</h2><p>Considering the 13-year-old PC specifications, Disk I&#x2F;O and Garbage <br>Collection (GC) are far more daunting than raw computational speed.</p>
+<h3 id="Multi-Stage-Pipeline-Architecture"><a href="#Multi-Stage-Pipeline-Architecture" class="headerlink" title="Multi-Stage Pipeline Architecture "></a>Multi-Stage Pipeline Architecture <br></h3><p>Using C#’s <code>System.Threading.Channels</code>,</p>
+<ul>
+<li><em><strong>Core 1 (Loader)</strong></em>: Pre-reads images from the<br><br>SSD and loads them into a memory pool</li>
+<li><em><strong>Core 2 &amp; 3 (Processors)</strong></em>: Executing the <code>InjectPoison</code> <br><br>logic at high speed using AVX2 (SIMD) instructions, processing 8 pixels at a time.</li>
+<li><em><strong>Core 4 (Saver)</strong></em>: Saves the processed images in lossless formats, such as PNG.</li>
+</ul>
+<br>
+
+<h2 id="4-The-Essence-of-the-Mechanism-Ensuring-Robustness"><a href="#4-The-Essence-of-the-Mechanism-Ensuring-Robustness" class="headerlink" title="4. The Essence of the Mechanism: Ensuring Robustness"></a>4. The Essence of the Mechanism: Ensuring Robustness</h2><p>To ensure the poisoning effect persists even when <br> the AI rotates or resizes images during<br>training, the concept of <br> <em><strong>EOT (Expectation Over Transformation)</strong></em> is essential.</p>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line"><span class="comment">! A logic that ensures the poison remains effective on average across various transformed states.</span></span><br><span class="line"><span class="function"><span class="keyword">function</span></span> CalculateRobustPoison(Img) result(AggregatedGrad)</span><br><span class="line">  <span class="keyword">use</span> ImageTypes</span><br><span class="line">  <span class="keyword">implicit</span> <span class="keyword">none</span></span><br><span class="line">  </span><br><span class="line">  <span class="keyword">type</span>(TLinearTensor), <span class="keyword">intent</span>(<span class="keyword">in</span>) :: Img</span><br><span class="line">  <span class="keyword">real</span>(<span class="number">4</span>) :: AggregatedGrad</span><br><span class="line">  <span class="keyword">type</span>(TLinearTensor) :: TempImg</span><br><span class="line">  <span class="keyword">integer</span> :: t</span><br><span class="line"></span><br><span class="line">  AggregatedGrad = <span class="number">0.0</span></span><br><span class="line">  <span class="comment">! Testing under five different transformation states, including rotation, scaling, and noise injection.</span></span><br><span class="line">  <span class="keyword">do</span> t = <span class="number">1</span>, <span class="number">5</span></span><br><span class="line">    TempImg = ApplyTransformation(Img, t)</span><br><span class="line">    AggregatedGrad = AggregatedGrad + GetLoss(TempImg)</span><br><span class="line">  <span class="keyword">end</span> <span class="keyword">do</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment">! Identifying the averaged vulnerabilities to launch a unified adversarial attack.</span></span><br><span class="line">  AggregatedGrad = AggregatedGrad / <span class="number">5.0</span></span><br><span class="line"><span class="keyword">end</span> <span class="function"><span class="keyword">function</span></span> CalculateRobustPoison</span><br></pre></td></tr></table></figure>
+<br>
+
+<h2 id="5-Conclusion-and-Future-Work"><a href="#5-Conclusion-and-Future-Work" class="headerlink" title="5. Conclusion and Future Work"></a>5. Conclusion and Future Work</h2><p>While adopting the core concepts of Nightshade,<br><br>the actual implementation prioritizes <br><br>hardware-specific optimizations for <em><strong>the i5-4460</strong></em>, <br><br>specifically focusing on memory pooling and SIMD vectorization.</p>
+<p>Limited hardware environments, such as a 13-year-old legacy PC, <br><br>do not necessitate<br><br>compromise. On the contrary, <Br>these constraints highlight the true value of computational <br><br>optimization. The subsequent phase of this research will involve <br></p>
+<p><em><strong>integrating C# and TorchSharp within the Visual Studio 2022 environment</strong></em> <br></p>
+<p>to develop a functional model based on this Fortran-derived architecture. <br></p>
+<hr>
+<br>
+
+<p>Thank you very much for taking the time to read through this long journey. <br></p>
+<p>I wish you all a wonderful day. : )</p>
+]]></content>
+      <categories>
+        <category>DevDiary</category>
+        <category>Projact</category>
+        <category>DOKUGEN</category>
+      </categories>
+      <tags>
+        <tag>Projact</tag>
       </tags>
   </entry>
 </search>
