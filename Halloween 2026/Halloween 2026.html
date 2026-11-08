@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title> Halloween Ghost 👻</title>
+<style>
+:root{--bg:#f4f1fb;--fg:#2b2350;--btn:#111;--btnfg:#fff;--glow:rgba(150,140,255,.55);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15112b;--fg:#d9d3ff;--btn:#f2f0ff;--btnfg:#111;--glow:rgba(170,160,255,.5)}}
+:root[data-theme="dark"]{--bg:#15112b;--fg:#d9d3ff;--btn:#f2f0ff;--btnfg:#111;--glow:rgba(170,160,255,.5)}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;overflow:hidden;position:relative}
+h1{position:absolute;top:8%;left:0;right:0;text-align:center;font-size:clamp(28px,6vw,56px);margin:0;letter-spacing:.02em}
+p.sub{position:absolute;top:calc(8% + clamp(40px,8vw,76px));left:0;right:0;text-align:center;margin:0;opacity:.7}
+#ghost{position:absolute;left:0;top:0;width:clamp(150px,22vw,240px);pointer-events:none;opacity:0;will-change:transform,opacity;
+filter:drop-shadow(0 0 22px var(--glow)) drop-shadow(0 10px 18px rgba(120,110,200,.35))}
+#ghost svg{display:block;width:100%;height:auto;overflow:visible}
+#fx{position:fixed;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:5}
+.btn{position:absolute;left:calc(16px + env(safe-area-inset-left,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));width:56px;height:56px;border-radius:50%;border:0;background:var(--btn);color:var(--btnfg);font-size:26px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.25);transition:transform .15s}
+.btn:hover{transform:scale(1.08)}
+.btn:active{transform:scale(.94)}
+</style>
+</head>
+<body>
+<h1>Halloween 2026 🎃</h1>
+<p class="sub" id="sub"> A Ghost Keeps Popping In And Out Every 5Sec · 👻 Hit The Button And Give The Ghost A Click. (By.<a href="https://github.com/Lucy8480"> @Lucy14479</a>) </p>
+
+<div id="ghost" aria-hidden="true">
+<svg viewBox="0 0 200 250">
+<defs>
+<radialGradient id="body" cx="45%" cy="30%" r="80%">
+<stop offset="0" stop-color="#ffffff"/>
+<stop offset=".55" stop-color="#f3f4ff"/>
+<stop offset="1" stop-color="#cfd3f5"/>
+</radialGradient>
+<linearGradient id="shade" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#9aa0e6" stop-opacity=".35"/>
+<stop offset=".25" stop-color="#9aa0e6" stop-opacity="0"/>
+<stop offset=".75" stop-color="#9aa0e6" stop-opacity="0"/>
+<stop offset="1" stop-color="#9aa0e6" stop-opacity=".4"/>
+</linearGradient>
+<radialGradient id="eye" cx="40%" cy="30%" r="80%">
+<stop offset="0" stop-color="#4a4d6e"/>
+<stop offset="1" stop-color="#16182c"/>
+</radialGradient>
+</defs>
+<path id="shape" d="M100 8C55 8 34 48 34 96C34 138 26 176 12 208C30 214 38 238 62 228C80 218 88 242 106 234C126 226 132 214 148 228C170 240 178 214 192 208C176 176 166 138 166 96C166 48 145 8 100 8Z" fill="url(#body)"/>
+<path d="M100 8C55 8 34 48 34 96C34 138 26 176 12 208C30 214 38 238 62 228C80 218 88 242 106 234C126 226 132 214 148 228C170 240 178 214 192 208C176 176 166 138 166 96C166 48 145 8 100 8Z" fill="url(#shade)"/>
+<path d="M64 150C60 180 58 205 66 226" stroke="#aab0ee" stroke-opacity=".45" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M112 160C116 188 112 212 108 232" stroke="#aab0ee" stroke-opacity=".4" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M146 170C150 190 156 204 160 222" stroke="#aab0ee" stroke-opacity=".35" stroke-width="3" fill="none" stroke-linecap="round"/>
+<g id="eyes">
+<ellipse cx="80" cy="76" rx="9.5" ry="14" fill="url(#eye)"/>
+<ellipse cx="121" cy="76" rx="9.5" ry="14" fill="url(#eye)"/>
+</g>
+</svg>
+</div>
+
+<button class="btn" id="btn" title="Ghost Summon" aria-label="Ghost Summon">👻</button>
+<canvas id="fx"></canvas>
+
+<script>
+(function(){
+var g=document.getElementById('ghost'),eyes=document.getElementById('eyes');
+var W=innerWidth,H=innerHeight,gw=g.offsetWidth||200;
+var AUTO=5000,DUR=11000;
+var x=60,y=H*.5,tx=x,ty=y,last=0;
+var shown=true,manual=false,start=0,nextToggle=0;
+var alpha=0,ex=0,ey=0,spd=1,respawnAt=0;
+
+// ---- Candy Effect ----
+var cv=document.getElementById('fx'),c2=cv.getContext('2d'),dpr=1,candies=[],dirty=false;
+function fit(){dpr=window.devicePixelRatio||1;cv.width=innerWidth*dpr;cv.height=innerHeight*dpr}
+fit();
+var WRAP=['#e8408f','#4fc65a','#ff7fbf'],POP=['#a346d8','#6ccf3f'];
+function burst(px,py){
+  for(var i=0;i<46;i++){
+    var a=-Math.PI/2+rnd(-1.5,1.5),s=rnd(250,850),r=Math.random();
+    var type=r<.3?'mint':r<.55?'wrap':r<.8?'sq':'pop',col;
+    if(type=='mint')col='#d8232f';
+    else if(type=='wrap')col=WRAP[i%3];
+    else if(type=='pop')col=POP[i%2];
+    else col=Math.random()<.7?'#f0a030':'#6b4226';
+    candies.push({x:px,y:py,vx:Math.cos(a)*s,vy:Math.sin(a)*s-120,rot:rnd(0,6.28),vr:rnd(-9,9),
+      fl:rnd(0,6.28),vf:rnd(3,9),type:type,col:col,sz:(type=='sq'&&col=='#6b4226')?5:rnd(7,10)});
+  }
+}
+function drawCandy(c){
+  var z=c.sz;
+  c2.save();c2.translate(c.x,c.y);c2.rotate(c.rot);c2.scale(.35+.65*Math.abs(Math.cos(c.fl)),1);
+  c2.fillStyle=c.col;
+  if(c.type=='mint'){
+    c2.beginPath();c2.arc(0,0,z,0,6.283);c2.fill();
+    c2.fillStyle='#fff';
+    for(var k=0;k<4;k++){c2.beginPath();c2.moveTo(0,0);c2.arc(0,0,z,k*1.571,k*1.571+.8);c2.closePath();c2.fill()}
+  }else if(c.type=='wrap'){
+    c2.beginPath();c2.ellipse(0,0,z*1.1,z*.65,0,0,6.283);c2.fill();
+    c2.beginPath();c2.moveTo(z,0);c2.lineTo(z*1.9,-z*.6);c2.lineTo(z*1.9,z*.6);c2.closePath();
+    c2.moveTo(-z,0);c2.lineTo(-z*1.9,-z*.6);c2.lineTo(-z*1.9,z*.6);c2.closePath();c2.fill();
+  }else if(c.type=='sq'){
+    c2.fillRect(-z/2,-z/2,z,z);
+    c2.fillStyle='rgba(255,255,255,.25)';c2.fillRect(-z/2,-z/2,z,z*.35);
+  }else{
+    c2.fillStyle='#eee';c2.fillRect(-1,0,2,z*1.8);
+    c2.fillStyle=c.col;c2.beginPath();c2.arc(0,0,z*.8,0,6.283);c2.fill();
+    c2.fillStyle='rgba(255,255,255,.55)';c2.beginPath();c2.arc(-z*.25,-z*.25,z*.25,0,6.283);c2.fill();
+  }
+  c2.restore();
+}
+function updateCandy(dt){
+  if(!candies.length&&!dirty)return;
+  c2.setTransform(dpr,0,0,dpr,0,0);c2.clearRect(0,0,innerWidth,innerHeight);
+  dirty=candies.length>0;
+  for(var i=candies.length-1;i>=0;i--){
+    var c=candies[i];
+    c.vy+=1500*dt;c.vx*=Math.pow(.6,dt);
+    c.x+=c.vx*dt;c.y+=c.vy*dt;c.rot+=c.vr*dt;c.fl+=c.vf*dt;
+    if(c.y>innerHeight+40){candies.splice(i,1);continue}
+    drawCandy(c);
+  }
+}
+// ---- Ghost Click Action: Random movement Or Candy Burst ----
+function ghostHit(px,py){
+  if(!shown||alpha<.4)return false;
+  var r=g.getBoundingClientRect(),u=(px-r.left)/r.width,v=(py-r.top)/r.height;
+  return u>.12&&u<.88&&v>.02&&v<.95;
+}
+function ghostAction(){
+  var now=performance.now();
+  if(Math.random()<.5){
+    var r=g.getBoundingClientRect();
+    burst(r.left+r.width/2,r.top+r.height*.4);
+    shown=false;alpha=0;g.style.opacity=0;
+    respawnAt=now+2600;start=respawnAt;
+  }else{
+    var ox=x,oy=y;
+    for(var i=0;i<10;i++){pick();if(Math.hypot(tx-ox,ty-oy)>Math.min(W,H)*.35)break}
+    spd=5;start=now;
+  }
+}
+var mx=W/2,my=H/2;
+
+function rnd(a,b){return a+Math.random()*(b-a)}
+function measure(){W=innerWidth;H=innerHeight;gw=g.offsetWidth||200}
+function pick(){
+  measure();
+  tx=rnd(10,Math.max(20,W-gw-10));
+  ty=rnd(H*.2,Math.max(H*.25,H-gw*1.25-10));
+}
+function place(px,py){
+  measure();
+  x=Math.max(0,Math.min(W-gw,(px==null?rnd(10,Math.max(20,W-gw-10)):px-gw/2)));
+  y=Math.max(0,Math.min(H-gw*1.2,(py==null?rnd(H*.2,Math.max(H*.25,H-gw*1.25-10)):py-gw*.6)));
+  tx=x;ty=y;pick();
+}
+function summon(px,py){
+  respawnAt=0;
+  place(px,py);
+  shown=true;manual=true;start=performance.now();
+}
+
+function frame(now){
+  requestAnimationFrame(frame);
+  var t=now/1000,dt=Math.min(.05,(now-last)/1000||.016);last=now;
+
+  updateCandy(dt);
+  if(manual&&respawnAt&&now>=respawnAt){respawnAt=0;place(null,null);shown=true;start=now}
+  if(manual&&now-start>DUR){manual=false;shown=false;nextToggle=now+AUTO}
+  if(!manual&&now>=nextToggle){
+    shown=!shown;nextToggle+=AUTO;
+    if(shown&&alpha<.05)place(null,null);
+  }
+
+  alpha+=((shown?1:0)-alpha)*Math.min(1,dt*2.6);
+  if(alpha<.01&&!shown){g.style.opacity=0;return}
+
+  spd+=(1-spd)*Math.min(1,dt*2.5);
+  x+=(tx-x)*dt*.55*spd;y+=(ty-y)*dt*.55*spd;
+  if(Math.abs(tx-x)<40&&Math.abs(ty-y)<40)pick();
+  var bob=Math.sin(t*2.1)*16;
+  var sway=Math.sin(t*1.3)*6;
+  var vx=(tx-x)*.02;
+  var tilt=sway+Math.max(-10,Math.min(10,vx));
+  var sx=1+Math.sin(t*2.1+1)*.025,sy=1-Math.sin(t*2.1+1)*.03;
+  g.style.transform='translate('+x.toFixed(1)+'px,'+(y+bob).toFixed(1)+'px) rotate('+tilt.toFixed(2)+'deg) scale('+sx.toFixed(3)+','+sy.toFixed(3)+')';
+  var pulse=.82+Math.sin(t*3)*.12;
+  g.style.opacity=(alpha*pulse).toFixed(3);
+
+  var tex,tey;
+  if(manual){
+    var k=gw/200;
+    var cx=x+gw/2,cy=y+bob+76*k;
+    var dx=mx-cx,dy=my-cy,d=Math.sqrt(dx*dx+dy*dy)||1;
+    var m=Math.min(1,d/220);
+    tex=dx/d*7*m;tey=dy/d*6*m;
+  }else{
+    tex=Math.max(-5,Math.min(5,(tx-x)*.03));
+    tey=Math.max(-3,Math.min(3,(ty-y)*.02));
+  }
+  ex+=(tex-ex)*Math.min(1,dt*10);ey+=(tey-ey)*Math.min(1,dt*10);
+  eyes.setAttribute('transform','translate('+ex.toFixed(2)+' '+ey.toFixed(2)+')');
+}
+requestAnimationFrame(function(n){last=n;nextToggle=n+AUTO;place(null,null);requestAnimationFrame(frame)});
+
+addEventListener('pointermove',function(e){mx=e.clientX;my=e.clientY});
+document.getElementById('btn').addEventListener('click',function(e){e.stopPropagation();summon(null,null)});
+document.body.addEventListener('click',function(e){mx=e.clientX;my=e.clientY;if(manual&&ghostHit(e.clientX,e.clientY))ghostAction();else summon(e.clientX,e.clientY)});
+addEventListener('resize',function(){measure();fit()});
+})();
+</script>
+</body>
+</html>
